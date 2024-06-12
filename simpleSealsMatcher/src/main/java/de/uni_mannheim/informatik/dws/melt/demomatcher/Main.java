@@ -12,7 +12,7 @@ import de.uni_mannheim.informatik.dws.melt.matching_eval.evaluator.EvaluatorCSV;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.AlignmentParser;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
 import org.apache.jena.ontology.*;
-import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.*;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -23,15 +23,31 @@ import java.util.*;
 
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import org.apache.jena.ontology.OntModel;
+import org.apache.jena.vocabulary.RDFS;
 import org.xml.sax.SAXException;
 
 public class Main {
     public static void main(String[] args) throws IOException, SAXException {
-        initDatabase();
-        runMatcherWithLocalData();
+        loadOntologiesAndCalculateBelief();
+        // initDatabase();
+        // runMatcherWithLocalData();
+        // testMatcherOnline();
+        // calculateStaticsManually();
+    }
 
-//        testMatcherOnline();
-//        calculateStaticsManually();
+    private static void loadOntologiesAndCalculateBelief() {
+        // load ontologies from files
+        OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+        source.read("src/main/java/DataSet/human.owl");
+        OntModel target = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+        target.read("src/main/java/DataSet/mouse.owl");
+
+        // TODO: calculate beliefs for each entities of ontologies
+        for (OntClass entity : source.listClasses().toList()){
+            OntClassHelper.print(entity);
+        }
+
+        // TODO: store the calculated beliefs into a file
     }
 
     private static void calculateStaticsManually() throws IOException, SAXException {
@@ -68,7 +84,7 @@ public class Main {
         OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         source.read("simpleSealsMatcher/src/main/java/DataSet/human.owl");
         OntModel target = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-        source.read("simpleSealsMatcher/src/main/java/DataSet/mouse.owl");
+        target.read("simpleSealsMatcher/src/main/java/DataSet/mouse.owl");
         MyMatcher matcher = new MyMatcher();
         matcher.setup(source, target, false);
         Alignment toRemove = matcher.removeAttack(alignment1, source, target);
