@@ -18,21 +18,6 @@ public class MyMatcher extends MatcherYAAAJena {
         return matchLogic(source, target, false);
     }
 
-    private Alignment MatchWithBeliefUsingGaleShapleyAlgorithm(OntModel source, OntModel target, boolean isOnline) {
-        print("Alignment begin.");
-        // setup agents, embeddings, database, and openAI
-        setup(source, target, isOnline);
-
-        Alignment alignment = new Alignment();
-        int alignmentCount = 0;
-        int negotiationRound = 0;
-
-
-
-
-        return alignment;
-    }
-
     private Alignment matchLogic(OntModel source, OntModel target, boolean isOnline){
         print("Alignment begin.");
         // setup agents, embeddings, database, and openAI
