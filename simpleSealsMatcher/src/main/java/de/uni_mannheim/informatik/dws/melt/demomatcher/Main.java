@@ -20,19 +20,19 @@ import java.util.*;
 
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import org.apache.jena.ontology.OntModel;
-import org.apache.jena.vocabulary.RDFS;
 import org.xml.sax.SAXException;
 
 public class Main {
     public static void main(String[] args) throws IOException, SAXException {
-        loadOntologiesAndCalculateBelief();
+//        calculateBelief();
+        storeNearbyClasses();
         // initDatabase();
         // runMatcherWithLocalData();
         // testMatcherOnline();
         // calculateStaticsManually();
     }
 
-    private static void loadOntologiesAndCalculateBelief() {
+    private static void calculateBelief() {
         // load ontologies from files
         OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         source.read("simpleSealsMatcher/src/main/java/DataSet/human.owl");
@@ -52,7 +52,6 @@ public class Main {
 //        }
 //        print(beliefs_source.get(beliefs_source.size() - 1).toString());
 
-
         String fileName = "Beliefs" + depth + ".csv";
         try (PrintWriter writer = new PrintWriter(fileName)) {
             writer.println("model, entity URI, belief");
@@ -62,7 +61,48 @@ public class Main {
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the file: " + e.getMessage());
         }
+    }
 
+    private static void storeNearbyClasses(){
+        // load ontologies from files
+        OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+        source.read("simpleSealsMatcher/src/main/java/DataSet/human.owl");
+        OntModel target = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+        target.read("simpleSealsMatcher/src/main/java/DataSet/mouse.owl");
+
+        int depth = 4;
+        Map<OntClass, Set<OntClass>> sourceNearbyClasses = calculateNearbyClasses(source, depth);
+        Map<OntClass, Set<OntClass>> targetNearbyClasses = calculateNearbyClasses(target, depth);
+        sourceNearbyClasses.putAll(targetNearbyClasses);
+
+        String fileName = "NearbyClasses" + depth + ".csv";
+        try (PrintWriter writer = new PrintWriter(fileName)) {
+            writer.println("Belief, OntClass, Nearby OntClasses");
+            for (Map.Entry<OntClass, Set<OntClass>> entry : sourceNearbyClasses.entrySet()){
+                writer.print(entry.getValue().size() + ", ");
+                writer.print(entry.getKey().getURI() + ", ");
+                for (OntClass ontClass : entry.getValue()){
+                    writer.print(ontClass.getURI() + ", ");
+                }
+                writer.println();
+            }
+        }catch (IOException e) {
+            System.out.println("An error occurred while writing to the file: " + e.getMessage());
+        }
+    }
+
+    private static Map<OntClass, Set<OntClass>> calculateNearbyClasses(OntModel model, int depth){
+        Map<OntClass, Set<OntClass>> nearbyClasses = new HashMap<>();
+        for (OntClass entity : model.listClasses().toList()){
+            if (entity.asNode().isBlank()) {
+                continue;
+            }
+            if (entity.getURI().equals("http://www.w3.org/2002/07/owl#Thing")){
+                continue;
+            }
+            nearbyClasses.put(entity,OntClassHelper.getNearbyClasses(depth, entity));
+        }
+        return nearbyClasses;
     }
 
     private static List<Belief> calculateBelief(OntModel model, int depth, String modelName){
@@ -76,7 +116,7 @@ public class Main {
             if (entity.getURI().equals("http://www.w3.org/2002/07/owl#Thing")){
                 continue;
             }
-            int belief = OntClassHelper.calculateNearbyClasses(depth, entity);
+            int belief = OntClassHelper.countNearbyClasses(depth, entity);
             beliefs.add(new Belief(entity, belief, model, modelName));
 //            print("Belief: " + belief);
 //            print("Finished: " + (++finished) + "/" + total);

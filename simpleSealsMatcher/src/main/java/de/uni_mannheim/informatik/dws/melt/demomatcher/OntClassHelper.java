@@ -76,7 +76,7 @@ public class OntClassHelper {
 
     }
 
-    public static int calculateNearbyClasses(int depth, OntClass ontClass) {
+    public static int countNearbyClasses(int depth, OntClass ontClass) {
 //        System.out.println("=================================================================================");
 //        System.out.println("Calculate nearby classes for OntClass: " + ontClass.getURI() + " - Label: " + ontClass.getLabel(null) + " - Depth: " + depth);
 
@@ -84,13 +84,16 @@ public class OntClassHelper {
             return 0;
         }
 
+        return getNearbyClasses(depth, ontClass).size();
+    }
 
+    public static Set<OntClass> getNearbyClasses(int depth, OntClass ontClass) {
         Set<OntClass> visitedClasses = new HashSet<>();
         visitedClasses.add(ontClass);
         calculateClasses(depth, ontClass.listSubClasses().toList(), visitedClasses);
         calculateClasses(depth, ontClass.listSuperClasses().toList(), visitedClasses);
 
-        return visitedClasses.size();
+        return visitedClasses;
     }
 
     private static void calculateClasses(int depth, List<OntClass> list, Set<OntClass> visitedClasses){
