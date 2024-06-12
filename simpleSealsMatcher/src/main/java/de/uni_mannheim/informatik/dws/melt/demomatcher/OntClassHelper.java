@@ -9,6 +9,10 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.RDFS;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class OntClassHelper {
     public static void print(OntClass ontClass) {
         if (ontClass.asNode().isBlank()) {
@@ -70,5 +74,47 @@ public class OntClassHelper {
             System.out.println("      - Property value: " + property.getPropertyValue(null));
         }
 
+    }
+
+    public static int calculateNearbyClasses(int depth, OntClass ontClass) {
+//        System.out.println("=================================================================================");
+//        System.out.println("Calculate nearby classes for OntClass: " + ontClass.getURI() + " - Label: " + ontClass.getLabel(null) + " - Depth: " + depth);
+
+        if (depth == 0) {
+            return 0;
+        }
+
+
+        Set<OntClass> visitedClasses = new HashSet<>();
+        visitedClasses.add(ontClass);
+        calculateClasses(depth, ontClass.listSubClasses().toList(), visitedClasses);
+        calculateClasses(depth, ontClass.listSuperClasses().toList(), visitedClasses);
+
+        return visitedClasses.size();
+    }
+
+    private static void calculateClasses(int depth, List<OntClass> list, Set<OntClass> visitedClasses){
+        if (depth == 0) {
+            return;
+        }
+
+        if (list == null || list.isEmpty()) {
+            return;
+        }
+
+        for (OntClass ontClass : list) {
+            if (ontClass.asNode().isBlank()) {
+                continue;
+            }
+            if (ontClass.getURI().equals("http://www.w3.org/2002/07/owl#Thing")) {
+                continue;
+            }
+            if (visitedClasses.add(ontClass)) {
+//                System.out.println("OntClass: " + ontClass.getURI() + " - Label: " + ontClass.getLabel(null) + " - Depth: " + depth + " - Count: " + visitedClasses.size());
+                calculateClasses(depth - 1, ontClass.listSubClasses().toList(), visitedClasses);
+                calculateClasses(depth - 1, ontClass.listSuperClasses().toList(), visitedClasses);
+            }
+
+        }
     }
 }

@@ -14,10 +14,7 @@ import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Corresponde
 import org.apache.jena.ontology.*;
 import org.apache.jena.rdf.model.*;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -38,16 +35,53 @@ public class Main {
     private static void loadOntologiesAndCalculateBelief() {
         // load ontologies from files
         OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-        source.read("src/main/java/DataSet/human.owl");
+        source.read("simpleSealsMatcher/src/main/java/DataSet/human.owl");
         OntModel target = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-        target.read("src/main/java/DataSet/mouse.owl");
+        target.read("simpleSealsMatcher/src/main/java/DataSet/mouse.owl");
+        // calculate beliefs for each entity of ontologies
+        int depth = 1;
+        print("===================== Calculating beliefs for source ======================");
+        List<Belief> beliefs_source = calculateBelief(source, depth, "human");
+        print("===================== Calculating beliefs for target ======================");
+        List<Belief> beliefs_target = calculateBelief(target, depth, "mouse");
+        beliefs_source.addAll(beliefs_target);
 
-        // TODO: calculate beliefs for each entities of ontologies
-        for (OntClass entity : source.listClasses().toList()){
-            OntClassHelper.print(entity);
+//        beliefs_source.sort(Comparator.comparingInt(b -> b.belief));
+//        for (Belief belief : beliefs_source){
+//            print(belief.toString());
+//        }
+//        print(beliefs_source.get(beliefs_source.size() - 1).toString());
+
+
+        String fileName = "Beliefs" + depth + ".csv";
+        try (PrintWriter writer = new PrintWriter(fileName)) {
+            writer.println("model, entity URI, belief");
+            for (Belief belief : beliefs_source){
+                writer.println(belief.toString());
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing to the file: " + e.getMessage());
         }
 
-        // TODO: store the calculated beliefs into a file
+    }
+
+    private static List<Belief> calculateBelief(OntModel model, int depth, String modelName){
+        List<Belief> beliefs = new ArrayList<>();
+        int finished = 0;
+        final int total = model.listClasses().toList().size();
+        for (OntClass entity : model.listClasses().toList()){
+            if (entity.asNode().isBlank()) {
+                continue;
+            }
+            if (entity.getURI().equals("http://www.w3.org/2002/07/owl#Thing")){
+                continue;
+            }
+            int belief = OntClassHelper.calculateNearbyClasses(depth, entity);
+            beliefs.add(new Belief(entity, belief, model, modelName));
+//            print("Belief: " + belief);
+//            print("Finished: " + (++finished) + "/" + total);
+        }
+        return beliefs;
     }
 
     private static void calculateStaticsManually() throws IOException, SAXException {
