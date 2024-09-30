@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.melt.demomatcher;
+package core;
 
 public interface Dialogue {
 

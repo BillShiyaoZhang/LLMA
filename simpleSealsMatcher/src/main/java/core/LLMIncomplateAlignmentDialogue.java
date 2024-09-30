@@ -1,6 +1,6 @@
-package de.uni_mannheim.informatik.dws.melt.demomatcher;
+package core;
 
-public class LLMIncomplateAlignmentDialogue extends AbstractDialogue{
+public class LLMIncomplateAlignmentDialogue extends AbstractDialogue {
 
 
     @Override
