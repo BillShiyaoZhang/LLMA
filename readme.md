@@ -90,5 +90,9 @@ Value: <getObject().toString()>
 ```
 
 
+## Citation
+Shiyao Zhang, Yuji Dong, Yichuan Zhang, Terry R. Payne, and Jie Zhang. 2024. Large Language Model Assissted Multi-Agent Dialogue for Ontology Alignment. In Proceedings of the 23rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS '24). International Foundation for Autonomous Agents and Multiagent Systems, Richland, SC, 2594–2596.
+
+
 ## License
 [MIT](LICENSE)
