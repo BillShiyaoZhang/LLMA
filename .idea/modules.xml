@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sealsproj.iml" filepath="$PROJECT_DIR$/.idea/sealsproj.iml" />
-      <module fileurl="file://$PROJECT_DIR$/simpleSealsMatcher/simpleSealsMatcher.iml" filepath="$PROJECT_DIR$/simpleSealsMatcher/simpleSealsMatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LLMA.iml" filepath="$PROJECT_DIR$/.idea/LLMA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simpleSealsMatcher/LLMAMatcher.iml" filepath="$PROJECT_DIR$/simpleSealsMatcher/LLMAMatcher.iml" />
     </modules>
   </component>
 </project>
