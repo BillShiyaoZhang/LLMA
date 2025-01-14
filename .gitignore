@@ -1,3 +1,4 @@
 .DS_Store
-simpleSealsMatcher/target
-simpleSealsMatcher/.idea
+LLMAMatcher/target
+.idea/
+.vscode/
