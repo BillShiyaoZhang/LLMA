@@ -25,7 +25,10 @@ import org.xml.sax.SAXException;
 
 public class Main {
     public static void main(String[] args) throws IOException, SAXException {
-        CalculateEmbeddings("http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+//        CalculateEmbeddings("http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+
+        storeEmbeddingsToFile("Source");
+
 //        initDatabase();
 //         runMatcherWithLocalData();
 //         testMatcherOnline();
@@ -40,13 +43,16 @@ public class Main {
         target.read("LLMAMatcher/src/main/java/DataSet/mouse.owl");
 
         // init db
+        calculateEmbedding(source, propertyUri, "Source");
+        calculateEmbedding(target, propertyUri, "Target");
 
-        CalculateEmbedding(source, propertyUri, "source");
-        CalculateEmbedding(target, propertyUri, "target");
-
+        // save all embeddings to files
+        storeEmbeddingsToFile("Source");
+        storeEmbeddingsToFile("Target");
     }
 
-    private static void CalculateEmbedding(OntModel source, String propertyUri, String collection) {
+    private static void calculateEmbedding(OntModel source, String propertyUri, String collection) {
+        int count = 0;
         for (OntClass entity : source.listClasses().toList()){
             if (entity.asNode().isBlank()) {
                 continue;
@@ -73,6 +79,18 @@ public class Main {
                         put("isNegotiated", false); // will be automatically added as a number property
                     }})
                     .run();
+            count++;
+        }
+        System.out.println("Collection " + collection + ": " + count);
+    }
+
+    private static void storeEmbeddingsToFile(String collection) {
+        // TODO: open file
+
+        var objs = Weaviate.getAllEntry(collection);
+        for (var obj : objs) {
+            var str = Weaviate.toString(obj);
+            // TODO: write to file
         }
     }
 

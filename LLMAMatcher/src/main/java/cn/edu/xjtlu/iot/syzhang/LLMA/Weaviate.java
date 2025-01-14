@@ -4,9 +4,11 @@ import com.google.gson.internal.LinkedTreeMap;
 import io.weaviate.client.Config;
 import io.weaviate.client.WeaviateClient;
 import io.weaviate.client.base.Result;
+import io.weaviate.client.v1.data.model.WeaviateObject;
 import io.weaviate.client.v1.filters.Operator;
 import io.weaviate.client.v1.filters.WhereFilter;
 import io.weaviate.client.v1.graphql.model.GraphQLResponse;
+import io.weaviate.client.v1.graphql.query.Get;
 import io.weaviate.client.v1.graphql.query.argument.NearVectorArgument;
 import io.weaviate.client.v1.graphql.query.fields.Field;
 import io.weaviate.client.v1.schema.model.Schema;
@@ -14,12 +16,11 @@ import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.ModelFactory;
-
+import io.weaviate.client.Config;
+import io.weaviate.client.WeaviateAuthClient;
+import io.weaviate.client.WeaviateClient;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /***
  * @See https://weaviate.io/developers/weaviate/api/graphql for more information.
@@ -35,9 +36,10 @@ public class Weaviate {
 
     public static void main(String[] args) throws IOException {
 //        getAllDefinition();
-//        getAllEntry("source");
-        findHowManyEntryThereAreInTheDatabaseForEachClass("Source");
-        findHowManyEntryThereAreInTheDatabaseForEachClass("Target");
+        getAllEntry("Source");
+//        getAllEntry("Target");
+//        findHowManyEntryThereAreInTheDatabaseForEachClass("Source", "human");
+//        findHowManyEntryThereAreInTheDatabaseForEachClass("Target", "mouse");
     }
 
     private static void getAllDefinition() {
@@ -48,58 +50,31 @@ public class Weaviate {
         System.out.println(json);
     }
 
-    private static void getAllEntry(String source) {
+    public static List<WeaviateObject> getAllEntry(String className) {
+        var resultObj = client.data().objectsGetter()
+                .withClassName(className)
+                .withVector()
+                .withLimit(10000)   // should be greater than the actual size
+                .run();
 
+//        System.out.println((long) resultObj.getResult().size());
+        print(resultObj.getResult().get(0));
+
+        return resultObj.getResult();
     }
 
-    private static void findHowManyEntryThereAreInTheDatabaseForEachClass(String testCollectionName) {
-        OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-        source.read("LLMAMatcher/src/main/java/DataSet/human.owl");
-        int count = 0;
-        for (OntClass var : source.listClasses().toList()){
-            if (var.asNode().isBlank()) {
-                continue;
-            }
-            if (var.getURI().equals("http://www.w3.org/2002/07/owl#Thing")){
-                continue;
-            }
-            Field uriField = Field.builder().name("uri").build();
-            Field netotiatedField = Field.builder().name("isNegotiated").build();
-            Field _additional = Field.builder()
-                    .name("_additional")
-                    .fields(new Field[]{
-                            Field.builder().name("vector").build(),
-                            Field.builder().name("id").build(),
-                    }).build();
-            WhereFilter where = WhereFilter.builder()
-                    .path(new String[]{ "uri" })
-                    .operator(Operator.Equal)
-                    .valueString(var.getURI())
-                    .build();
+    public static void print(WeaviateObject obj) {
+        System.out.println(toString(obj));
+    }
 
-            Result<GraphQLResponse> result = client.graphQL().get()
-                    .withClassName(testCollectionName)
-                    .withFields(uriField, netotiatedField, _additional)
-                    .withWhere(where)
-                    .run();
-            if (result.hasErrors()) {
-                continue;
-            }
-            System.out.println(result);
-            List<Map> list = (List<Map>)((Map) ((Map) result.getResult().getData()).get("Get")).get(testCollectionName);
-            if (list == null){
-                continue;
-            }
-            if (list.isEmpty()) {
-                continue;
-            }
-            count++;
-            if (list.size() != 1){
-                System.out.println(list.get(0).get("uri") + " " + count);
-            }
-        }
-        System.out.println(count);
-        return;
+    public static String toString(WeaviateObject obj) {
+        final String[] str = {"id: " + obj.getId() + "\n" +
+                "vector: " + Arrays.toString(obj.getVector()) + "\n" +
+                "properties:\n"};
+        obj.getProperties().forEach((k, v) -> {
+            str[0] = str[0] + "  " + k + ": " + v.toString() + "\n";
+        });
+        return str[0];
     }
 
     public String getUriForNotNegotiated(){
