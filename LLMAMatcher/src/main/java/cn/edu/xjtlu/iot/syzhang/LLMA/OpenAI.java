@@ -10,9 +10,7 @@ import com.azure.core.credential.AzureKeyCredential;
 import com.azure.ai.openai.models.Embeddings;
 import com.azure.ai.openai.models.EmbeddingsOptions;
 import com.azure.core.exception.HttpResponseException;
-
 import java.util.Arrays;
-
 import java.util.ArrayList;
 import java.util.List;
 

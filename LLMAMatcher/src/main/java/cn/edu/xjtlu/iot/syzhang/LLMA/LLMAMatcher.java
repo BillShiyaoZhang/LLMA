@@ -5,7 +5,6 @@ import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
-
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Set;

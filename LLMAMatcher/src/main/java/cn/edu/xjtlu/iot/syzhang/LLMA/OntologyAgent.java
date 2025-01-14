@@ -6,7 +6,6 @@ import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;

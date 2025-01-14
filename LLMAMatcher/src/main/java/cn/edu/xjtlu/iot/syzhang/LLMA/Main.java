@@ -14,7 +14,6 @@ import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Corresponde
 import io.github.ollama4j.exceptions.OllamaBaseException;
 import org.apache.jena.ontology.*;
 import org.apache.jena.rdf.model.*;
-
 import java.io.*;
 import java.math.BigDecimal;
 import java.util.*;

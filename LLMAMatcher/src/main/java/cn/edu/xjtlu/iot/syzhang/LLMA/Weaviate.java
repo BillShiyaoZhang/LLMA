@@ -8,17 +8,9 @@ import io.weaviate.client.v1.data.model.WeaviateObject;
 import io.weaviate.client.v1.filters.Operator;
 import io.weaviate.client.v1.filters.WhereFilter;
 import io.weaviate.client.v1.graphql.model.GraphQLResponse;
-import io.weaviate.client.v1.graphql.query.Get;
 import io.weaviate.client.v1.graphql.query.argument.NearVectorArgument;
 import io.weaviate.client.v1.graphql.query.fields.Field;
 import io.weaviate.client.v1.schema.model.Schema;
-import org.apache.jena.ontology.OntClass;
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.ontology.OntModelSpec;
-import org.apache.jena.rdf.model.ModelFactory;
-import io.weaviate.client.Config;
-import io.weaviate.client.WeaviateAuthClient;
-import io.weaviate.client.WeaviateClient;
 import java.io.IOException;
 import java.util.*;
 
@@ -35,11 +27,9 @@ public class Weaviate {
     }
 
     public static void main(String[] args) throws IOException {
-//        getAllDefinition();
+        getAllDefinition();
         getAllEntry("Source");
-//        getAllEntry("Target");
-//        findHowManyEntryThereAreInTheDatabaseForEachClass("Source", "human");
-//        findHowManyEntryThereAreInTheDatabaseForEachClass("Target", "mouse");
+        getAllEntry("Target");
     }
 
     private static void getAllDefinition() {
