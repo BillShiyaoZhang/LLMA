@@ -27,9 +27,9 @@ public class Weaviate {
     }
 
     public static void main(String[] args) throws IOException {
-        getAllDefinition();
+//        getAllDefinition();
         getAllEntry("Source");
-        getAllEntry("Target");
+//        getAllEntry("Target");
     }
 
     private static void getAllDefinition() {
@@ -48,13 +48,14 @@ public class Weaviate {
                 .run();
 
 //        System.out.println((long) resultObj.getResult().size());
-        print(resultObj.getResult().get(0));
+//        print(resultObj.getResult().get(0));
 
         return resultObj.getResult();
     }
 
     public static void print(WeaviateObject obj) {
-        System.out.println(toString(obj));
+//        System.out.println(toString(obj));
+        System.out.println(toJsonString(obj));
     }
 
     public static String toString(WeaviateObject obj) {
@@ -65,6 +66,11 @@ public class Weaviate {
             str[0] = str[0] + "  " + k + ": " + v.toString() + "\n";
         });
         return str[0];
+    }
+
+    public static String toJsonString(WeaviateObject obj) {
+        return new GsonBuilder().create().toJson(obj);
+//        return new GsonBuilder().setPrettyPrinting().create().toJson(obj);
     }
 
     public String getUriForNotNegotiated(){

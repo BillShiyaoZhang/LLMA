@@ -24,30 +24,45 @@ import org.xml.sax.SAXException;
 
 public class Main {
     public static void main(String[] args) throws IOException, SAXException {
-//        CalculateEmbeddings("http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-
-        storeEmbeddingsToFile("Source");
+        run();
 
 //        initDatabase();
 //         runMatcherWithLocalData();
-//         testMatcherOnline();
+         testMatcherOnline();
 //         calculateStaticsManually();
     }
 
-    private static void CalculateEmbeddings(String propertyUri) {
+    /***
+     * Run the whole process
+     */
+    private static void run(){
+        calculateEmbeddings("LLMAMatcher/src/main/java/DataSet/",
+                new String[]{"human.owl", "mouse.owl"},
+                "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+
+        File directory = new File("results/result_"
+                + new java.text.SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new java.util.Date())
+                + "/");
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+        storeEmbeddings(directory);
+
+        // TODO: align. logs need to be saved.
+        runMatcherWithLocalData();
+
+    }
+
+    private static void calculateEmbeddings(String base, String[] ontologyFiles, String propertyUri) {
         // read the ontology from local files
         OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-        source.read("LLMAMatcher/src/main/java/DataSet/human.owl");
+        source.read(base + ontologyFiles[0]);
         OntModel target = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-        target.read("LLMAMatcher/src/main/java/DataSet/mouse.owl");
+        target.read(base + ontologyFiles[1]);
 
         // init db
         calculateEmbedding(source, propertyUri, "Source");
         calculateEmbedding(target, propertyUri, "Target");
-
-        // save all embeddings to files
-        storeEmbeddingsToFile("Source");
-        storeEmbeddingsToFile("Target");
     }
 
     private static void calculateEmbedding(OntModel source, String propertyUri, String collection) {
@@ -83,13 +98,33 @@ public class Main {
         System.out.println("Collection " + collection + ": " + count);
     }
 
-    private static void storeEmbeddingsToFile(String collection) {
-        // TODO: open file
+    private static void storeEmbeddings(File directory){
+        storeEmbeddingsToFile("Source", directory);
+        storeEmbeddingsToFile("Target", directory);
+    }
 
-        var objs = Weaviate.getAllEntry(collection);
-        for (var obj : objs) {
-            var str = Weaviate.toString(obj);
-            // TODO: write to file
+    private static void storeEmbeddingsToFile(String collection, File directory) {
+        File embeddingFolder = new File(directory.getPath() + "/embeddings/");
+        if (!embeddingFolder.exists()) {
+            embeddingFolder.mkdirs();
+        }
+        System.out.println(embeddingFolder.getPath());
+        try (FileWriter file = new FileWriter(embeddingFolder.getPath() + "/" + collection.toLowerCase() + ".json", true)) {
+            file.write("[");
+            boolean first = true;
+            var objs = Weaviate.getAllEntry(collection);
+            for (var obj : objs) {
+                if (!first) {
+                    file.write(",");
+                }
+                file.write(Weaviate.toJsonString(obj));
+                first = false;
+            }
+            file.write("]");
+            file.flush();
+            file.close();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -226,10 +261,10 @@ public class Main {
     }
 
     private static void runMatcherWithLocalData(){
-        File sourceFile = new File("simpleSealsMatcher/src/main/java/DataSet/human.owl");
-        File targetFile = new File("simpleSealsMatcher/src/main/java/DataSet/mouse.owl");
-        File referenceFile = new File("simpleSealsMatcher/src/main/java/DataSet/reference.rdf");
         // let's execute our matcher on the OAEI Anatomy test case
+        File sourceFile = new File("LLMAMatcher/src/main/java/DataSet/human.owl");
+        File targetFile = new File("LLMAMatcher/src/main/java/DataSet/mouse.owl");
+        File referenceFile = new File("LLMAMatcher/src/main/java/DataSet/reference.rdf");
         ExecutionResultSet ers = Executor.run(
                 new TestCase("localtest", sourceFile.toURI(), targetFile.toURI(), referenceFile.toURI(),
                         new Track(null, null, null, false) {
