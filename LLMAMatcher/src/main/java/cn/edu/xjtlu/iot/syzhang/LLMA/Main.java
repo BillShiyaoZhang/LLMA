@@ -24,11 +24,11 @@ import org.xml.sax.SAXException;
 
 public class Main {
     public static void main(String[] args) throws IOException, SAXException {
-        run();
+//        run();
 
 //        initDatabase();
-//         runMatcherWithLocalData();
-         testMatcherOnline();
+         runMatcherWithLocalData();
+//         testMatcherOnline();
 //         calculateStaticsManually();
     }
 
@@ -75,16 +75,7 @@ public class Main {
                 continue;
             }
             String output = OntClassHelper.verbalize(entity, propertyUri);
-            List<Double> embedding = new ArrayList<>();
-            try {
-                embedding = Ollama.embed(output);
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-            } catch (OllamaBaseException e) {
-                System.out.println(e.getMessage());
-            } catch (InterruptedException e) {
-                System.out.println(e.getMessage());
-            }
+            List<Double> embedding = Ollama.embed(output);
             Weaviate.client.data().creator()
                     .withClassName(collection)
                     .withVector(embedding.stream().map(Double::floatValue).toArray(Float[]::new))

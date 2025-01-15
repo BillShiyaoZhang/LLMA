@@ -16,7 +16,8 @@ import java.util.Set;
 public class OntologyAgent {
     private OntModel ontology;
     private Weaviate db;
-    private OpenAI ai;
+//    private OpenAI ai;
+    private Ollama ai;
     private boolean isFinished = false;
     private String collectionName;
     private static final double SIMILARITY_THRESHOLD = 0.95;
@@ -24,7 +25,8 @@ public class OntologyAgent {
     public OntologyAgent(OntModel ontology, String collectionName, boolean conductEmbedding) {
         this.ontology = ontology;
         this.collectionName = collectionName;
-        this.ai = new OpenAI();
+//        this.ai = new OpenAI();
+        this.ai = new Ollama();
 //        this.db.initCollection();
         this.db = new Weaviate(collectionName);
     }

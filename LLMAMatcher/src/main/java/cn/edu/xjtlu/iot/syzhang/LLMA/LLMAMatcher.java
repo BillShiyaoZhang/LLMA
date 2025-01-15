@@ -116,8 +116,8 @@ public class LLMAMatcher extends MatcherYAAAJena {
      * @param target target ontology
      */
     public void setup(OntModel source, OntModel target, boolean isOnline){
-        this.targetAgent = new OntologyAgent(target, "Target", isOnline);
         this.sourceAgent = new OntologyAgent(source, "Source", isOnline);
+        this.targetAgent = new OntologyAgent(target, "Target", isOnline);
     }
 
     /***
