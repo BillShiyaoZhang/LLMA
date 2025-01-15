@@ -28,7 +28,7 @@ public class Weaviate {
 
     public static void main(String[] args) throws IOException {
 //        getAllDefinition();
-        getAllEntry("Source");
+//        getAllEntry("Source");
 //        getAllEntry("Target");
     }
 
@@ -47,7 +47,7 @@ public class Weaviate {
                 .withLimit(10000)   // should be greater than the actual size
                 .run();
 
-//        System.out.println((long) resultObj.getResult().size());
+        System.out.println((long) resultObj.getResult().size());
 //        print(resultObj.getResult().get(0));
 
         return resultObj.getResult();
@@ -128,7 +128,7 @@ public class Weaviate {
     }
 
     public ArrayList<String> getUrisNotNegotiated(ArrayList<Double> embedding, double threshold, boolean all) {
-        Float[] embeddingFloat = new Float[1536];
+        Float[] embeddingFloat = new Float[embedding.size()];
         for (int i = 0; i < embedding.size(); i++) {
             embeddingFloat[i] = embedding.get(i).floatValue();
         }

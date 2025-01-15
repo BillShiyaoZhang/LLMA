@@ -40,16 +40,10 @@ public class Main {
                 new String[]{"human.owl", "mouse.owl"},
                 "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
 
-        File directory = new File("results/result_"
-                + new java.text.SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new java.util.Date())
-                + "/");
-        if (!directory.exists()) {
-            directory.mkdirs();
-        }
-        storeEmbeddings(directory);
+        storeEmbeddings();
 
         // TODO: align. logs need to be saved.
-        runMatcherWithLocalData();
+//        runMatcherWithLocalData();
 
     }
 
@@ -75,10 +69,9 @@ public class Main {
                 continue;
             }
             String output = OntClassHelper.verbalize(entity, propertyUri);
-            List<Double> embedding = Ollama.embed(output);
             Weaviate.client.data().creator()
                     .withClassName(collection)
-                    .withVector(embedding.stream().map(Double::floatValue).toArray(Float[]::new))
+                    .withVector(new Ollama().getEmbeddings(output).toArray(Float[]::new))
                     .withProperties(new HashMap<String, Object>() {{
                         put("uri", entity.getURI());
                         put("isNegotiated", false); // will be automatically added as a number property
@@ -89,18 +82,24 @@ public class Main {
         System.out.println("Collection " + collection + ": " + count);
     }
 
-    private static void storeEmbeddings(File directory){
+    private static void storeEmbeddings(){
+        File directory = new File("embeddings/"
+                + new java.text.SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new java.util.Date())
+                + "/");
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
         storeEmbeddingsToFile("Source", directory);
         storeEmbeddingsToFile("Target", directory);
     }
 
     private static void storeEmbeddingsToFile(String collection, File directory) {
-        File embeddingFolder = new File(directory.getPath() + "/embeddings/");
-        if (!embeddingFolder.exists()) {
-            embeddingFolder.mkdirs();
-        }
-        System.out.println(embeddingFolder.getPath());
-        try (FileWriter file = new FileWriter(embeddingFolder.getPath() + "/" + collection.toLowerCase() + ".json", true)) {
+//        File embeddingFolder = new File(directory.getPath() + "/embeddings/");
+//        if (!embeddingFolder.exists()) {
+//            embeddingFolder.mkdirs();
+//        }
+//        System.out.println(embeddingFolder.getPath());
+        try (FileWriter file = new FileWriter(directory.getPath() + "/" + collection.toLowerCase() + ".json", true)) {
             file.write("[");
             boolean first = true;
             var objs = Weaviate.getAllEntry(collection);

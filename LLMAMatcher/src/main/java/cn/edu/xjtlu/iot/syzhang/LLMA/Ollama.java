@@ -15,12 +15,16 @@ public class Ollama extends LLM {
 //    private static final String host = "http://localhost:11434/";
     private static final OllamaAPI ollamaAPI = new OllamaAPI("http://localhost:11434/");
 
-    public static List<Double> embed(String query) {
-//        String host = "http://localhost:11434/";
-//        OllamaAPI ollamaAPI = new OllamaAPI(host);
+    @Override
+    public List<Float> getEmbeddings(String prompt) {
         try {
-            OllamaEmbedResponseModel embeddings = ollamaAPI.embed("nomic-embed-text", Arrays.asList(query));
-            return embeddings.getEmbeddings().get(0);
+            OllamaEmbedResponseModel embeddings = ollamaAPI.embed("nomic-embed-text", Arrays.asList(prompt));
+            List<Double> doubleList = embeddings.getEmbeddings().get(0);
+            List<Float> floatList = new ArrayList<>();
+            for (Double d : doubleList) {
+                floatList.add(d.floatValue());
+            }
+            return floatList;
         }catch (IOException e){
             System.out.println(e.getMessage());
         }catch (OllamaBaseException e) {
@@ -29,16 +33,6 @@ public class Ollama extends LLM {
             System.out.println(e.getMessage());
         }
         return new ArrayList<>();
-    }
-
-    @Override
-    public List<Float> getEmbeddings(String prompt) {
-        List<Double> doubleList = embed(prompt);
-        List<Float> floatList = new ArrayList<>();
-        for (Double d : doubleList) {
-            floatList.add(d.floatValue());
-        }
-        return floatList;
     }
 
     @Override
