@@ -266,8 +266,8 @@ public class Main {
 
         // let's evaluate our matcher (you can find the results in the `results` folder (will be created if it
         // does not exist).
-        EvaluatorCSV evaluatorCSV = new EvaluatorCSV(ers);
-        evaluatorCSV.writeToDirectory();
+//        EvaluatorCSV evaluatorCSV = new EvaluatorCSV(ers);
+//        evaluatorCSV.writeToDirectory();
     }
 
     private static void uploadEmbeddingsFromFileToWeaviate(String fileName, String collectionName) throws IOException {
