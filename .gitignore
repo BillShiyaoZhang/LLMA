@@ -2,3 +2,4 @@
 LLMAMatcher/target
 .idea/
 .vscode/
+.env

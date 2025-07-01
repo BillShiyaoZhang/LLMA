@@ -10,7 +10,7 @@ public class Main {
         OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         source.read("src/main/java/DataSet/human.owl");
 
-        QwenApiCaller llm = new QwenApiCaller();
+        QwenApiCaller llm = new QwenApiCaller("qwen-plus");
 
         // Create the agent with the ontology model, LLM API caller, and initial state
         Agent agent = new Agent(source, llm);

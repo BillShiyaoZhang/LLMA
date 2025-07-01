@@ -11,25 +11,15 @@ public class QwenApiCaller {
     private static String endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions";
 
     private String apiKey;
-//        apiKey = "sk-6a0b60e02a8847fe8b15cbfae9b4fa4f";
     private String modelName;
 
     /**
-     * Default constructor that initializes the QwenApiCaller with the API key from environment variables
-     * and the default model name "qwen-plus".
-     */
-    public QwenApiCaller() {
-        this(System.getenv("DASHSCOPE_API_KEY"), "qwen-plus");
-    }
-
-    /**
-     * Constructor that initializes the QwenApiCaller with a specific API key and model name.
+     * Constructor that initializes the QwenApiCaller with a specific model name.
      *
-     * @param apiKey    The API key for accessing the Qwen API.
      * @param modelName The name of the model to use for the API calls.
      */
-    public QwenApiCaller(String apiKey, String modelName) {
-        this.apiKey = apiKey;
+    public QwenApiCaller(String modelName) {
+        this.apiKey = System.getenv("DASHSCOPE_API_KEY");
         this.modelName = modelName;
     }
 

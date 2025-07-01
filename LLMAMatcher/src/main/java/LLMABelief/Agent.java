@@ -13,13 +13,18 @@ public class Agent {
     public Agent(OntModel ontModel, QwenApiCaller llm) {
         this.llm = llm;
         this.ontModel = ontModel;
-        this.initState = new AgentState("init") {
+        this.initState = initStateGraph();
+    }
+
+    private AgentState initStateGraph() {
+        AgentState initState = new AgentState("init") {
             @Override
             public StateMessage task(StateMessage input) {
                 // Implement the task logic here
                 System.out.println("Processing input: " + input);
+
                 StateMessage output = new StateMessage();
-                output.simpleMessage = "It is processed successfully by init.";
+                output.simpleMessage = llm.prompt("hi");;
                 return output;
             }
 
@@ -35,7 +40,7 @@ public class Agent {
                 return null; // For now, return null to indicate no further state transition
             }
         };
-        AgentState end = new AgentState("end") {
+        AgentState endState = new AgentState("end") {
 
             @Override
             public StateMessage task(StateMessage input) {
@@ -47,10 +52,13 @@ public class Agent {
                 return null;
             }
         };
-        initState.connect(end);
+        initState.connect(endState);
+
+        return initState;
     }
 
     public void start(StateMessage input) {
+        System.out.println("Starting agent with input: " + input);
         initState.run(input);
     }
 
