@@ -1,6 +1,13 @@
 package LLMABelief;
 
 public class StateMessage {
+    public String sender;
+    public String receiver;
+    public String message;
+
+
+
+
     public String simpleMessage;
 
     @Override

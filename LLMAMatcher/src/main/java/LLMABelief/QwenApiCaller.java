@@ -32,6 +32,7 @@ public class QwenApiCaller {
     public String prompt(String message) {
         String requestBody = "{\n" +
                 "    \"model\": \""+ modelName +"\",\n" +
+                "    \"enable_thinking\": "+ false +",\n" +
                 "    \"messages\": [\n" +
                 "        {\n" +
                 "            \"role\": \"system\",\n" +

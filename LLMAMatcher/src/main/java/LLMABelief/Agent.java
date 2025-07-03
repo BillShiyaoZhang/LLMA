@@ -1,19 +1,23 @@
 package LLMABelief;
 
+import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 public class Agent {
     private QwenApiCaller llm;
     private OntModel ontModel;
     private AgentState initState;
 
-    public Agent(OntModel ontModel, QwenApiCaller llm) {
-        this.llm = llm;
+    public Agent(OntModel ontModel, String modelName) {
+        this.llm = new QwenApiCaller(modelName);
         this.ontModel = ontModel;
         this.initState = initStateGraph();
+    }
+
+    public boolean hasEntityLeft(){
+        return true;
     }
 
     private AgentState initStateGraph() {
@@ -40,6 +44,7 @@ public class Agent {
                 return null; // For now, return null to indicate no further state transition
             }
         };
+
         AgentState endState = new AgentState("end") {
 
             @Override
@@ -62,5 +67,25 @@ public class Agent {
         initState.run(input);
     }
 
+
+    public OntClass selectEntityForPairing() {
+        return null;
+    }
+
+    /**
+     * Pairs the given entity with entities from the agent's ontology model.
+     * Threshold.
+     * Updates the private correspondences.
+     *
+     * @param entity The entity to pair with.
+     * @return A set of paired entities.
+     */
+    public Set<OntClass> pair(OntClass entity) {
+        return null;
+    }
+
+    public Set<OntClass> pair(Set<OntClass> entities) {
+        return null;
+    }
 
 }
