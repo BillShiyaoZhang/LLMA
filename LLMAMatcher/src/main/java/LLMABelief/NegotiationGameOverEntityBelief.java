@@ -1,43 +1,22 @@
 package LLMABelief;
 
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
-import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 
 import java.util.Set;
 
-public class Game {
-    private Agent source;
-    private Agent target;
-    private Agent nextProposer;
+/***
+ * This class defines the game, in which two agents negotiate over entities' beliefs, which are calculated by LLMs.
+ * The game amends the calculation of entity beliefs and correspondences process to Terry's model as the means of
+ * obtaining correspondences apriori to the encounter defined in Terry's model.
+ */
+public class NegotiationGameOverEntityBelief extends NegotiationGameOverCorrespondence {
 
-    public Game(OntModel source, OntModel target, String modelName) {
-        this.source = new Agent(source, modelName);
-        this.target = new Agent(target, modelName);
-    }
+    protected Agent nextProposer;
 
-    public Alignment play() {
-        selectFirstProposer();
-
-        correspondencesSelection();
-
-        Set<Belief> beliefs = correspondencesNegotiation();
-
-        Alignment alignment = resolveConflicts(beliefs);
-
-        return alignment;
-    }
-
-    private void selectFirstProposer() {
-        // Randomly select the first proposer
-        if (Math.random() < 0.5) {
-            nextProposer = source;
-            System.out.println("Agent 1 is selected as the first proposer.");
-        } else {
-            nextProposer = target;
-            System.out.println("Agent 2 is selected as the first proposer.");
-        }
+    public NegotiationGameOverEntityBelief(OntModel source, String entityURIPrefixS, OntModel target, String entityURIPrefixT, String modelName) {
+        super(source, entityURIPrefixS, target, entityURIPrefixT, modelName);
     }
 
     /***
@@ -55,13 +34,15 @@ public class Game {
      *
      * In the end, each of the two agents stores their correspondences privately.
      */
-    private void correspondencesSelection(){
+    @Override
+    protected void retrieveCorrespondences(){
+        selectFirstProposer();
 
-        while (source.hasEntityLeft() || target.hasEntityLeft()) {
-            if (nextProposer.hasEntityLeft()) {
+        while (source.hasUnrevealedEntity() || target.hasUnrevealedEntity()) {
+            if (nextProposer.hasUnrevealedEntity()) {
                 Agent proposer = nextProposer;
                 Agent receiver = (proposer == source) ? target : source;
-                OntClass entity = proposer.selectEntityForPairing();
+                OntClass entity = proposer.nextUnrevealedEntity();
                 Set<OntClass> entities = receiver.pair(entity);
 
                 // Each agent examines received entities and updates private correspondences.
@@ -91,6 +72,16 @@ public class Game {
         System.out.println("Game over: both agents have no entities left to propose.");
     }
 
+    private void selectFirstProposer() {
+        if (Math.random() < 0.5) {
+            nextProposer = source;
+            System.out.println("Agent 1 is selected as the first proposer.");
+        } else {
+            nextProposer = target;
+            System.out.println("Agent 2 is selected as the first proposer.");
+        }
+    }
+
     private void switchProposer() {
         if (nextProposer == source) {
             nextProposer = target; // Switch to the other agent
@@ -101,15 +92,5 @@ public class Game {
         }
     }
 
-    /***
-     * Terry's approach.
-     * @return The set of beliefs that both agents can agree on.
-     */
-    private Set<Belief> correspondencesNegotiation() {
-        return null;
-    }
 
-    private Alignment resolveConflicts(Set<Belief> beliefs) {
-        return null;
-    }
 }

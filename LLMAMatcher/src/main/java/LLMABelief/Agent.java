@@ -1,22 +1,71 @@
 package LLMABelief;
 
+import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.rdf.model.ModelFactory;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Agent {
+    private String name;
     private QwenApiCaller llm;
-    private OntModel ontModel;
+    private OntModel ontology;
+
     private AgentState initState;
 
-    public Agent(OntModel ontModel, String modelName) {
+    private List<OntClass> entities;
+    private List<Belief<OntClass>> entityBeliefs;
+    private List<Belief<OntClass>> unrevealedEntitiesWithDescendingBelief;
+
+    private Set<Belief<Correspondence>> correspondenceBeliefs;
+
+    public Agent(String agentName, OntModel ontology, String entityURIPrefix, String modelName) {
+        this.name = agentName;
         this.llm = new QwenApiCaller(modelName);
-        this.ontModel = ontModel;
+        this.ontology = ontology;
+
+        entities = extractEntities(ontology, entityURIPrefix);
+        entityBeliefs = initConfidence(entities);
+        unrevealedEntitiesWithDescendingBelief = descending(entityBeliefs);
+
+        correspondenceBeliefs = new HashSet<>();
+
         this.initState = initStateGraph();
     }
 
-    public boolean hasEntityLeft(){
+    private List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
+        // get all OntClass from ontology.listClasses()
+        List<OntClass> entities = new ArrayList<>();
+//        ontology.listClasses().forEachRemaining(entities::add);
+        for (OntClass ontClass : ontology.listClasses().toList()) {
+            if (ontClass.isURIResource()
+                    && !ontClass.getURI().isEmpty()
+                    && ontClass.getURI().startsWith(entityURIPrefix)) {
+                entities.add(ontClass);
+            }
+        }
+
+        System.out.println("Agent " +  "finds " + entities.size() + " entities.");
+        return entities;
+    }
+
+    private List<Belief<OntClass>> initConfidence(List<OntClass> entities) {
+        return null;
+    }
+
+    private List<Belief<OntClass>> descending(List<Belief<OntClass>> entityConfidences) {
+        return null;
+    }
+
+    public boolean hasUnrevealedEntity(){
+        if (unrevealedEntitiesWithDescendingBelief.isEmpty()){
+            return false;
+        }
         return true;
     }
 
@@ -68,8 +117,12 @@ public class Agent {
     }
 
 
-    public OntClass selectEntityForPairing() {
-        return null;
+    public OntClass nextUnrevealedEntity() {
+        if (unrevealedEntitiesWithDescendingBelief.isEmpty()) {
+            System.out.println("No unrevealed entities left.");
+            return null;
+        }
+        return unrevealedEntitiesWithDescendingBelief.get(0).obj;
     }
 
     /**
