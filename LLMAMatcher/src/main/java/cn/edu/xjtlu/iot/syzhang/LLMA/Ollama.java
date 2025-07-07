@@ -33,7 +33,7 @@ public class Ollama extends LLM {
     @Override
     public List<Float> getEmbeddings(String prompt) {
         try {
-            OllamaEmbedResponseModel embeddings = ollamaAPI.embed("nomic-embed-text", Arrays.asList(prompt));
+            OllamaEmbedResponseModel embeddings = ollamaAPI.embed("bge-m3", Arrays.asList(prompt));
             List<Double> doubleList = embeddings.getEmbeddings().get(0);
             List<Float> floatList = new ArrayList<>();
             for (Double d : doubleList) {

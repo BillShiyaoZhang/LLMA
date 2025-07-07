@@ -1,5 +1,8 @@
 package LLMABelief;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonParser;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -8,7 +11,7 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 
 public class QwenApiCaller {
-    private static String endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions";
+    private static String endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1/";
 
     private String apiKey;
     private String modelName;
@@ -51,7 +54,7 @@ public class QwenApiCaller {
                 .build();
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(endpoint))
+                .uri(URI.create(endpoint + "chat/completions"))
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + apiKey)
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
@@ -70,5 +73,53 @@ public class QwenApiCaller {
             e.printStackTrace();
         }
         return "";
+    }
+
+    public Float[] embed(String text) {
+        text = text.replaceAll("\n", "\\n");
+        String requestBody = "{\n" +
+                "  \"model\": \"text-embedding-v4\",\n" +
+                "  \"input\": \"" + text + "\",\n" +
+                "  \"dimension\": \"2048\",\n" +
+                "  \"encoding_format\": \"float\"\n" +
+                "}";
+
+        HttpClient client = HttpClient.newBuilder()
+                .connectTimeout(Duration.ofSeconds(20))
+                .build();
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(endpoint + "embeddings"))
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer " + apiKey)
+                .POST(HttpRequest.BodyPublishers.ofString(requestBody))
+                .build();
+
+        try {
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            if (response.statusCode() != 200) {
+                System.err.println("Error: " + response.statusCode() + " - " + response.body());
+                return null;
+            }
+            return extractEmbedding(response.body());
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Float[] extractEmbedding(String jsonResponse) {
+        JsonArray embeddingArray = JsonParser.parseString(jsonResponse)
+                .getAsJsonObject()
+                .getAsJsonArray("data")
+                .get(0)
+                .getAsJsonObject()
+                .getAsJsonArray("embedding");
+
+        Float[] result = new Float[embeddingArray.size()];
+        for (int i = 0; i < embeddingArray.size(); i++) {
+            result[i] = embeddingArray.get(i).getAsFloat();
+        }
+        return result;
     }
 }
