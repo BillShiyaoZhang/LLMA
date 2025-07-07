@@ -3,7 +3,6 @@
 // remove ^.*- http://human.owl#NCI.*\r?\n
 // remove ^.*- URI: http://human.owl#genid.*\r?\n
 // remove Properties ^.*- Properties.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n.*\r?\n\r?\n
-
 URI: http://human.owl#NCI_C12499
   - Label: Internal_Ear
   - Super classes: 

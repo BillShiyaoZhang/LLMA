@@ -13,7 +13,7 @@ import java.time.Duration;
 public class QwenApiCaller {
     private static String endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1/";
 
-    private String apiKey;
+    private static String apiKey= System.getenv("DASHSCOPE_API_KEY");
     private String modelName;
 
     /**
@@ -22,7 +22,6 @@ public class QwenApiCaller {
      * @param modelName The name of the model to use for the API calls.
      */
     public QwenApiCaller(String modelName) {
-        this.apiKey = System.getenv("DASHSCOPE_API_KEY");
         this.modelName = modelName;
     }
 
@@ -75,7 +74,7 @@ public class QwenApiCaller {
         return "";
     }
 
-    public Float[] embed(String text) {
+    public static Float[] embed(String text) {
         text = text.replaceAll("\n", "\\n");
         String requestBody = "{\n" +
                 "  \"model\": \"text-embedding-v4\",\n" +
@@ -108,7 +107,7 @@ public class QwenApiCaller {
         return null;
     }
 
-    private Float[] extractEmbedding(String jsonResponse) {
+    private static Float[] extractEmbedding(String jsonResponse) {
         JsonArray embeddingArray = JsonParser.parseString(jsonResponse)
                 .getAsJsonObject()
                 .getAsJsonArray("data")
