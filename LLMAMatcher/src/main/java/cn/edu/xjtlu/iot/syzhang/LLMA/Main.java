@@ -26,7 +26,7 @@ public class Main {
     public static void main(String[] args) throws IOException, SAXException {
 //        run();
 
-//        initDatabase();
+        initDatabase();
          runMatcherWithLocalData();
 //         testMatcherOnline();
 //         calculateStaticsManually();

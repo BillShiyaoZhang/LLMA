@@ -241,4 +241,15 @@ public class Weaviate {
         }
         return result;
     }
+
+    public void add(String collectionName, Float[] vector, String uri) {
+        client.data().creator()
+                .withClassName(collectionName)
+                .withVector(vector)
+                .withProperties(new HashMap<String, Object>() {{
+                    put("uri", uri);
+//                    put("isNegotiated", var.get("isNegotiated")); // will be automatically added as a number property
+                }})
+                .run();
+    }
 }

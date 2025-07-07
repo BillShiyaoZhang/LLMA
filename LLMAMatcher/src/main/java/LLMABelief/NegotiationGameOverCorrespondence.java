@@ -13,10 +13,11 @@ public class NegotiationGameOverCorrespondence {
     protected Agent source;
     protected Agent target;
 
-    public NegotiationGameOverCorrespondence(OntModel source, String entityURIPrefixS,
-                                             OntModel target, String entityURIPrefixT, String modelName) {
-        this.source = new Agent("Source", source, entityURIPrefixS, modelName);
-        this.target = new Agent("Target", target, entityURIPrefixT, modelName);
+    public NegotiationGameOverCorrespondence(OntModel source, String sourceEntityURIPrefix, String sourceCollectionName,
+                                             OntModel target, String targetEntityURIPrefix, String targetCollectionName,
+                                             String modelName) {
+        this.source = new Agent(sourceCollectionName, source, sourceEntityURIPrefix, modelName);
+        this.target = new Agent(targetCollectionName, target, targetEntityURIPrefix, modelName);
     }
 
     public Alignment play() {

@@ -10,28 +10,48 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
-        // prepare data
-//        verbalizeEntities();
-        embedEntities();
+    private static String[] humanStrings = new String[]{
+            "src/main/java/DataSet/Anatomy/human.owl",                                          // ontology path
+            "result/Anatomy/human_verbo.txt",                                                   // verbo file path
+            "http://human.owl#NCI",                                                             // entity URI prefix
+            "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",                   // property URI
+            "result/Anatomy/human_embeddings-remove_null-remove_non_nl-remove_properties.txt",  // embedding file path
+            "Human"                                                                             // collection name
+    };
+    private static String[] mouseStrings = new String[]{
+            "src/main/java/DataSet/Anatomy/mouse.owl",                                          // ontology path
+            "result/Anatomy/mouse_verbo.txt",                                                   // verbo file path
+            "http://mouse.owl#MA",                                                              // entity URI prefix
+            "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",                   // property URI
+            "result/Anatomy/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt",  // embedding file path
+            "Mouse"                                                                             // collection name
+    };
 
-        // run the game
-//        LLMA();
+    private static String modelName = "qwen3-235b-a22b";
+
+    public static void main(String[] args) {
+        // prepare verboes and embeddings for entities
+//        computeVerboes();
+//        computeEmbeddings();
+
+        // init database
+        // NOTE: The below embedding loading loads the embeddings from the "result/" folder.
+        // Use the above two lines to generate the embeddings first.
+//        loadEmbeddings();
+
+        // run the game.
+        // NOTE: The below game is dependent on the embeddings loaded to the db above.
+        LLMA();
     }
 
     private static void LLMA() {
-        play(NegotiationGameWithLLM.class,
-                "src/main/java/DataSet/Anatomy/human.owl",
-                "src/main/java/DataSet/Anatomy/mouse.owl",
-                "http://human.owl#NCI",
-                "http://mouse.owl#MA",
-                "qwen3-235b-a22b");
+        play(NegotiationGameOverLLMGeneratedCorrespondence.class, modelName, humanStrings[0], humanStrings[2], humanStrings[5],
+                mouseStrings[0], mouseStrings[2], mouseStrings[5]);
     }
 
-    private static void play(Class type,
-                             String sourcePath, String targetPath,
-                             String entityURIPrefixS, String entityURIPrefixT,
-                             String modelName) {
+    private static void play(Class type, String modelName,
+                             String sourcePath, String sourceEntityURIPrefix, String sourceCollectionName,
+                             String targetPath, String targetEntityURIPrefix, String targetCollectionName) {
         OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         source.read(sourcePath);
         OntModel target = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
@@ -39,8 +59,10 @@ public class Main {
 
         try {
             NegotiationGameOverCorrespondence game = (NegotiationGameOverCorrespondence) type
-                    .getConstructor(OntModel.class, String.class, OntModel.class, String.class, String.class)
-                    .newInstance(source, entityURIPrefixS, target, entityURIPrefixT, modelName);
+                    .getConstructor(OntModel.class, String.class, String.class,
+                            OntModel.class, String.class, String.class, String.class)
+                    .newInstance(source, sourceEntityURIPrefix, sourceCollectionName,
+                            target, targetEntityURIPrefix, targetCollectionName, modelName);
             game.play();
         } catch (InstantiationException e) {
             throw new RuntimeException(e);
@@ -53,16 +75,10 @@ public class Main {
         }
     }
 
-    private static void verbalizeEntities() {
+    private static void computeVerboes() {
         // Anatomy
-        verbalize("src/main/java/DataSet/Anatomy/human.owl",
-                "result/Anatomy/human_verbo.txt",
-                "http://human.owl#NCI",
-                "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-        verbalize("src/main/java/DataSet/Anatomy/mouse.owl",
-                "result/Anatomy/mouse_verbo.txt",
-                "http://mouse.owl#MA",
-                "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+        verbalize(humanStrings[0], humanStrings[1], humanStrings[2], humanStrings[3]);
+        verbalize(mouseStrings[0], mouseStrings[1], mouseStrings[2], mouseStrings[3]);
     }
 
     private static void verbalize(String ontologyPath, String verbosePath, String entityURIPrefix, String propertyUri) {
@@ -99,12 +115,10 @@ public class Main {
         }
     }
 
-    private static void embedEntities() {
+    private static void computeEmbeddings() {
         // Anatomy
-        embed("result/Anatomy/human_verbo-remove_null-remove_non_nl-remove_properties.txt",
-                "result/Anatomy/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
-        embed("result/Anatomy/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt",
-                "result/Anatomy/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+        embed(humanStrings[1], humanStrings[4]);
+        embed(mouseStrings[1], mouseStrings[4]);
     }
 
     private static void embed(String verboPath, String embeddingPath) {
@@ -160,6 +174,37 @@ public class Main {
                 e.printStackTrace();
             }
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void loadEmbeddings() {
+        loadEmbedding(humanStrings[4], humanStrings[5]);
+        loadEmbedding(mouseStrings[4], mouseStrings[5]);
+    }
+
+    private static void loadEmbedding(String embeddingPath, String collectionName) {
+        Weaviate db = new Weaviate(collectionName);
+        try (BufferedReader reader = new BufferedReader(new FileReader(embeddingPath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.trim().isEmpty()) {
+                    continue; // skip empty lines
+                }
+                String uri = line.trim();
+                line = reader.readLine();
+                String[] embedding = line.trim().split(",");
+                if (embedding.length > 0 && !embedding[0].equals("null")) {
+                    Float[] floatEmbedding = new Float[embedding.length];
+                    for (int i = 0; i < embedding.length; i++) {
+                        floatEmbedding[i] = Float.parseFloat(embedding[i]);
+                    }
+                    db.add(collectionName, floatEmbedding, uri);
+                } else {
+                    System.out.println("Null embedding for URI: " + uri);
+                }
+            }
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

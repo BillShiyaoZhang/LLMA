@@ -1,6 +1,5 @@
 package LLMABelief;
 
-import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 
@@ -15,8 +14,11 @@ public class NegotiationGameOverEntityBelief extends NegotiationGameOverCorrespo
 
     protected Agent nextProposer;
 
-    public NegotiationGameOverEntityBelief(OntModel source, String entityURIPrefixS, OntModel target, String entityURIPrefixT, String modelName) {
-        super(source, entityURIPrefixS, target, entityURIPrefixT, modelName);
+    public NegotiationGameOverEntityBelief(OntModel source, String sourceEntityURIPrefix, String sourceCollectionName,
+                                           OntModel target, String targetEntityURIPrefix, String targetCollectionName,
+                                           String modelName) {
+        super(source, sourceEntityURIPrefix, sourceCollectionName,
+                target, targetEntityURIPrefix, targetCollectionName, modelName);
     }
 
     /***
