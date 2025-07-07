@@ -10,14 +10,12 @@ import io.weaviate.client.v1.filters.Operator;
 import io.weaviate.client.v1.filters.WhereFilter;
 import io.weaviate.client.v1.graphql.model.GraphQLResponse;
 import io.weaviate.client.v1.graphql.query.argument.NearVectorArgument;
+import io.weaviate.client.v1.graphql.query.builder.GetBuilder;
 import io.weaviate.client.v1.graphql.query.fields.Field;
-import io.weaviate.client.v1.schema.model.Schema;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 /***
  * @See https://weaviate.io/developers/weaviate/api/graphql for more information.
@@ -29,27 +27,6 @@ public class Weaviate {
     public Weaviate(){}
     public Weaviate(String collectionName){
         this.collectionName = collectionName;
-    }
-
-    private static void getAllDefinition() {
-        Result<Schema> result = client.schema().getter()
-                .run();
-
-        String json = new GsonBuilder().setPrettyPrinting().create().toJson(result.getResult());
-        System.out.println(json);
-    }
-
-    public static List<WeaviateObject> getAllEntry(String className) {
-        var resultObj = client.data().objectsGetter()
-                .withClassName(className)
-                .withVector()
-                .withLimit(10000)   // should be greater than the actual size
-                .run();
-
-        System.out.println((long) resultObj.getResult().size());
-//        print(resultObj.getResult().get(0));
-
-        return resultObj.getResult();
     }
 
     public static void print(WeaviateObject obj) {
@@ -72,36 +49,7 @@ public class Weaviate {
 //        return new GsonBuilder().setPrettyPrinting().create().toJson(obj);
     }
 
-    public String getUriForNotNegotiated(){
-        Field uri = Field.builder().name("uri").build();
-        Field _additional = Field.builder()
-                .name("_additional")
-                .fields(new Field[]{
-                        Field.builder().name("vector").build(),
-                }).build();
-        WhereFilter where = WhereFilter.builder()
-                .path(new String[]{ "isNegotiated" })
-                .operator(Operator.Equal)
-                .valueBoolean(false)
-                .build();
-
-        Result<GraphQLResponse> result = client.graphQL().get()
-                .withClassName(collectionName)
-                .withFields(uri, _additional)
-                .withWhere(where)
-                .run();
-        if (result.hasErrors()) {
-            System.out.println(result.getError());
-            return null;
-        }
-        try{
-            return (String) ((ArrayList<LinkedTreeMap>) ((LinkedTreeMap) ((LinkedTreeMap) result.getResult().getData()).get("Get")).get(collectionName)).get(0).get("uri");
-        }catch (IndexOutOfBoundsException e){
-            return null;
-        }
-    }
-
-    public ArrayList<Double> getEmbedding(String uri){
+    public Float[] getEmbedding(String uri){
         Field uriField = Field.builder().name("uri").build();
         Field _additional = Field.builder()
                 .name("_additional")
@@ -123,126 +71,14 @@ public class Weaviate {
             System.out.println(result.getError());
             return null;
         }
-        return (ArrayList<Double>) ((LinkedTreeMap) ((ArrayList<LinkedTreeMap>) ((LinkedTreeMap) ((LinkedTreeMap) result.getResult().getData()).get("Get")).get(collectionName)).get(0).get("_additional")).get("vector");
+        var data = (ArrayList<Double>) ((LinkedTreeMap) ((ArrayList<LinkedTreeMap>) ((LinkedTreeMap) ((LinkedTreeMap) result.getResult().getData()).get("Get")).get(collectionName)).get(0).get("_additional")).get("vector");
+        return data.stream()
+                .map(Double::floatValue)
+                .toArray(Float[]::new);
+
     }
 
-    public ArrayList<String> getUrisNotNegotiated(ArrayList<Double> embedding, double threshold, boolean all) {
-        Float[] embeddingFloat = new Float[embedding.size()];
-        for (int i = 0; i < embedding.size(); i++) {
-            embeddingFloat[i] = embedding.get(i).floatValue();
-        }
-
-        Field uri = Field.builder().name("uri").build();
-        Field _additional = Field.builder()
-                .name("_additional")
-                .fields(new Field[]{
-                        Field.builder().name("certainty").build(),  // only supported if distance==cosine
-                        Field.builder().name("distance").build()   // always supported
-                }).build();
-        WhereFilter where = WhereFilter.builder()
-                .path(new String[]{ "isNegotiated" })
-                .operator(Operator.Equal)
-                .valueBoolean(false)
-                .build();
-        NearVectorArgument nearVector = NearVectorArgument.builder()
-                .vector(embeddingFloat)
-                .build();
-
-        Result<GraphQLResponse> result = null;
-        if (all){
-            result = client.graphQL().get()
-                    .withClassName(collectionName)
-                    .withFields(uri, _additional)
-                    .withNearVector(nearVector)
-                    .run();
-        } else {
-            result = client.graphQL().get()
-                    .withClassName(collectionName)
-                    .withFields(uri, _additional)
-                    .withNearVector(nearVector)
-                    .withWhere(where)
-                    .run();
-        }
-
-        if (result.hasErrors()) {
-            System.out.println(result.getError());
-            return null;
-        }
-        ArrayList<String> uris = new ArrayList<>();
-        ArrayList<LinkedTreeMap> results = (ArrayList<LinkedTreeMap>) ((LinkedTreeMap) ((LinkedTreeMap) result.getResult().getData()).get("Get")).get(collectionName);
-        if (results == null || results.isEmpty()){
-            return null;
-        }
-        for (LinkedTreeMap resutl : (ArrayList<LinkedTreeMap>) ((LinkedTreeMap) ((LinkedTreeMap) result.getResult().getData()).get("Get")).get(collectionName)) {
-            LinkedTreeMap additional = (LinkedTreeMap) resutl.get("_additional");
-            if ((double) additional.get("certainty") >= threshold) {
-//                System.out.println(resutl.get("uri"));
-                uris.add((String) resutl.get("uri"));
-            }
-        }
-        if (uris.isEmpty()){
-            return null;
-        }
-        return uris;
-    }
-
-    public void markNegotiated(String sourceUri) {
-        boolean result = updateNegotiated(sourceUri, true);
-        if (!result){
-            System.out.println("Error: Failed to mark negotiated.");
-        }
-    }
-
-    private boolean updateNegotiated(String uri, boolean isNegotiated){
-        String id = getId(uri);
-        if (id == null){
-            return false;
-        }
-        Result<Boolean> result = client.data().updater()
-                .withMerge()
-                .withID(id)
-                .withClassName(collectionName)
-                .withProperties(new HashMap<String, Object>(){{
-                    put("isNegotiated", isNegotiated);
-                }})
-                .run();
-        if (result.hasErrors()) {
-            System.out.println(result.getError());
-        }
-        return result.getResult();
-    }
-
-    private String getId(String uri){
-        Result<GraphQLResponse> result = get(uri);
-        return (String) ((LinkedTreeMap) ((ArrayList<LinkedTreeMap>) ((LinkedTreeMap) ((LinkedTreeMap) result.getResult().getData()).get("Get")).get(collectionName)).get(0).get("_additional")).get("id");
-    }
-
-    private Result<GraphQLResponse> get(String uri){
-        Field _additional = Field.builder()
-                .name("_additional")
-                .fields(new Field[]{
-                        Field.builder().name("id").build(),
-                        Field.builder().name("vector").build(),
-                }).build();
-        WhereFilter where = WhereFilter.builder()
-                .path(new String[]{ "uri" })
-                .operator(Operator.Equal)
-                .valueString(uri)
-                .build();
-
-        Result<GraphQLResponse> result = client.graphQL().get()
-                .withClassName(collectionName)
-                .withFields(_additional)
-                .withWhere(where)
-                .run();
-        if (result.hasErrors()) {
-            System.out.println(result.getError());
-            return null;
-        }
-        return result;
-    }
-
-    public void add(String collectionName, Float[] vector, String uri) {
+    public void add(String collectionName, String uri, Float[] vector) {
         client.data().creator()
                 .withClassName(collectionName)
                 .withVector(vector)
@@ -251,5 +87,22 @@ public class Weaviate {
 //                    put("isNegotiated", var.get("isNegotiated")); // will be automatically added as a number property
                 }})
                 .run();
+    }
+
+    public void search(Float[] vector, String className, float threshold){
+        NearVectorArgument nearVector = NearVectorArgument.builder()
+                .vector(vector)
+                .build();
+
+        String query = GetBuilder.builder()
+                .className(className)
+                .withNearVectorFilter(nearVector)
+                .build()
+                .buildQuery();
+
+        query = query.replace("{}", ""); // add distance to the query
+
+        Result<GraphQLResponse> result = client.graphQL().raw().withQuery(query).run();
+        System.out.println();
     }
 }

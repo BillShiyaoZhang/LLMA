@@ -1,5 +1,6 @@
 package LLMABelief;
 
+import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
@@ -8,6 +9,8 @@ import org.apache.jena.rdf.model.ModelFactory;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     private static String[] humanStrings = new String[]{
@@ -33,23 +36,21 @@ public class Main {
         // prepare verboes and embeddings for entities
 //        computeVerboes();
 //        computeEmbeddings();
+//        cosineDistance(humanStrings[4], mouseStrings[4], "result/Anatomy/init_correspondences.txt", 0.6);
 
         // init database
         // NOTE: The below embedding loading loads the embeddings from the "result/" folder.
-        // Use the above two lines to generate the embeddings first.
+        // Use the above lines to generate the embeddings first.
 //        loadEmbeddings();
 
         // run the game.
         // NOTE: The below game is dependent on the embeddings loaded to the db above.
-        LLMA();
+//        play(NegotiationGameOverLLMGeneratedCorrespondence.class, modelName, 0.8f,
+//                humanStrings[0], humanStrings[2], humanStrings[5],
+//                mouseStrings[0], mouseStrings[2], mouseStrings[5]);
     }
 
-    private static void LLMA() {
-        play(NegotiationGameOverLLMGeneratedCorrespondence.class, modelName, humanStrings[0], humanStrings[2], humanStrings[5],
-                mouseStrings[0], mouseStrings[2], mouseStrings[5]);
-    }
-
-    private static void play(Class type, String modelName,
+    private static void play(Class type, String modelName, float cosineSimilarityThreshold,
                              String sourcePath, String sourceEntityURIPrefix, String sourceCollectionName,
                              String targetPath, String targetEntityURIPrefix, String targetCollectionName) {
         OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
@@ -60,9 +61,9 @@ public class Main {
         try {
             NegotiationGameOverCorrespondence game = (NegotiationGameOverCorrespondence) type
                     .getConstructor(OntModel.class, String.class, String.class,
-                            OntModel.class, String.class, String.class, String.class)
+                            OntModel.class, String.class, String.class, String.class, float.class)
                     .newInstance(source, sourceEntityURIPrefix, sourceCollectionName,
-                            target, targetEntityURIPrefix, targetCollectionName, modelName);
+                            target, targetEntityURIPrefix, targetCollectionName, modelName, cosineSimilarityThreshold);
             game.play();
         } catch (InstantiationException e) {
             throw new RuntimeException(e);
@@ -85,19 +86,6 @@ public class Main {
         OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         ontology.read(ontologyPath);
 
-        // open the result file for writing
-        File verboF = new File(verbosePath);
-        if (!verboF.getParentFile().exists()) {
-            verboF.getParentFile().mkdirs();
-        }
-        if (!verboF.exists()) {
-            try {
-                verboF.createNewFile();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
         ArrayList<String> verbos = new ArrayList<>();
         for (OntClass entity: Agent.extractEntities(ontology, entityURIPrefix)) {
             String verbo = Agent.verbalize(entity, propertyUri);
@@ -106,7 +94,7 @@ public class Main {
         }
 
         // write the verbos to the file
-        try (FileWriter writer = new FileWriter(verboF)) {
+        try (FileWriter writer = createFileWriter(verbosePath)) {
             for (String verbo : verbos) {
                 writer.write(verbo + "\n");
             }
@@ -122,20 +110,7 @@ public class Main {
     }
 
     private static void embed(String verboPath, String embeddingPath) {
-        // open the result file for writing
-        File embeddingF = new File(embeddingPath);
-        if (!embeddingF.getParentFile().exists()) {
-            embeddingF.getParentFile().mkdirs();
-        }
-        if (!embeddingF.exists()) {
-            try {
-                embeddingF.createNewFile();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        try (FileWriter writer = new FileWriter(embeddingF)) {
+        try (FileWriter writer = createFileWriter(embeddingPath)) {
             try (BufferedReader reader = new BufferedReader(new FileReader(verboPath))) {
                 String line;
                 String verbo = "";
@@ -184,7 +159,15 @@ public class Main {
     }
 
     private static void loadEmbedding(String embeddingPath, String collectionName) {
+        Map<String, Float[]> map = readEmbeddings(embeddingPath);
         Weaviate db = new Weaviate(collectionName);
+        for (Map.Entry<String, Float[]> entry : map.entrySet()) {
+            db.add(collectionName, entry.getKey(), entry.getValue());
+        }
+    }
+
+    private static Map<String, Float[]>  readEmbeddings(String embeddingPath) {
+        Map<String, Float[]> map = new HashMap<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(embeddingPath))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -199,13 +182,73 @@ public class Main {
                     for (int i = 0; i < embedding.length; i++) {
                         floatEmbedding[i] = Float.parseFloat(embedding[i]);
                     }
-                    db.add(collectionName, floatEmbedding, uri);
+                    map.put(uri, floatEmbedding);
                 } else {
                     System.out.println("Null embedding for URI: " + uri);
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        return map;
+    }
+
+
+    private static void cosineDistance(String embeddingPathS, String embeddingPathT,
+                                       String initCorrespondencesPath, double threshold) {
+        Map<String, Float[]> mapS = readEmbeddings(embeddingPathS);
+        Map<String, Float[]> mapT = readEmbeddings(embeddingPathT);
+
+        try (FileWriter writer = createFileWriter(initCorrespondencesPath + "-" + threshold+".txt")) {
+            for (Map.Entry<String, Float[]> entryS : mapS.entrySet()) {
+                for (Map.Entry<String, Float[]> entryT : mapT.entrySet()) {
+                    Float[] embeddingS = entryS.getValue();
+                    Float[] embeddingT = entryT.getValue();
+
+                    if (embeddingS != null && embeddingT != null) {
+                        double similarity = cosineSimilarity(embeddingS, embeddingT);
+                        if (similarity > threshold) {
+                            Correspondence correspondence = new Correspondence(
+                                    entryS.getKey(), entryT.getKey(), similarity);
+                            writer.write(entryS.getKey() + ", " + entryT.getKey() + ", " + similarity + "\n");
+                        }
+                    } else {
+                        System.err.println("Embedding not found for: " + entryS.getKey() + " or " + entryT.getKey());
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static double cosineSimilarity(Float[] vecA, Float[] vecB) {
+        double dotProduct = 0.0;
+        double normA = 0.0;
+        double normB = 0.0;
+
+        for (int i = 0; i < vecA.length; i++) {
+            dotProduct += vecA[i] * vecB[i];
+            normA += Math.pow(vecA[i], 2);
+            normB += Math.pow(vecB[i], 2);
+        }
+
+        return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+    }
+
+    public static FileWriter createFileWriter(String filePath) {
+        File file = new File(filePath);
+        if (!file.getParentFile().exists()) {
+            file.getParentFile().mkdirs();
+        }
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            return new FileWriter(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
         }
     }
 }

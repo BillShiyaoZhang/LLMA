@@ -20,14 +20,12 @@ public class Agent {
     public QwenApiCaller llm;
     private OntModel ontology;
 
-    private AgentState initState;
-
     public List<OntClass> entities;
     private List<Belief<OntClass>> entityBeliefs;
     private List<Belief<OntClass>> unrevealedEntitiesWithDescendingBelief;
-    private Weaviate db;
+    public Weaviate db;
 
-    private Set<Belief<Correspondence>> correspondenceBeliefs;
+    public Set<Correspondence> correspondences;
 
     public Agent(String agentName, OntModel ontology, String entityURIPrefix, String modelName) {
         this.name = agentName;
@@ -40,7 +38,7 @@ public class Agent {
 
         this.db = new Weaviate(agentName);
 
-        correspondenceBeliefs = new HashSet<>();
+        correspondences = new HashSet<>();
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
