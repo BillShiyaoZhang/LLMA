@@ -16,9 +16,9 @@ public class NegotiationGameOverCorrespondence {
     protected Agent source;
     protected Agent target;
 
-    public NegotiationGameOverCorrespondence(Dictionary sourceStringDict, Dictionary targetStringDict, String modelName) {
-        this.source = new Agent(sourceStringDict, modelName);
-        this.target = new Agent(targetStringDict, modelName);
+    public NegotiationGameOverCorrespondence(Dictionary sourceStringDict, Dictionary targetStringDict, String modelName, double threshold) {
+        this.source = new Agent(sourceStringDict, modelName, threshold);
+        this.target = new Agent(targetStringDict, modelName, threshold);
     }
 
     public Alignment play() {

@@ -19,7 +19,7 @@ public class Main {
             put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
             put("embeddingPath", "result/Anatomy/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
             put("collectionName", "Human");
-            put("potentialEntityPairsPath", "result/Anatomy/human_mouse_potential_pairs.txt");
+            put("potentialEntityPairsPath", "result/Anatomy/human_mouse_potential_pairs-");
             put("llmSelectedCorrespondencesPath", "result/Anatomy/human_mouse_llm_selected_correspondences.txt");
         }
     };
@@ -32,12 +32,13 @@ public class Main {
             put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
             put("embeddingPath", "result/Anatomy/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
             put("collectionName", "Mouse");
-            put("potentialEntityPairsPath", "result/Anatomy/mouse_human_potential_pairs.txt");
+            put("potentialEntityPairsPath", "result/Anatomy/mouse_human_potential_pairs-");
             put("llmSelectedCorrespondencesPath", "result/Anatomy/mouse_human_llm_selected_correspondences.txt");
         }
     };
 
     private static String modelName = "qwen3-235b-a22b";
+    private static double threshold = 0.6;
 
     public static void main(String[] args) {
         // prepare verboes and embeddings for entities
@@ -45,7 +46,7 @@ public class Main {
 //        computeEmbeddings();
 //        cosineDistance(humanStringsDict.get("embeddingPath").toString(),
 //                mouseStringsDict.get("embeddingPath").toString(),
-//                "result/Anatomy/init_correspondences.txt", 0.6);
+//                "result/Anatomy/init_correspondences", 0.6);
 
         // init database
         // NOTE: The below embedding loading loads the embeddings from the "result/" folder.
@@ -55,15 +56,15 @@ public class Main {
         // run the game.
         // NOTE: The below game is dependent on the embeddings loaded to the db above.
         play(NegotiationGameOverLLMGeneratedCorrespondence.class, modelName, humanStringsDict, mouseStringsDict,
-                "result/Anatomy/init_correspondences.txt-0.9.txt");
+                "result/Anatomy/init_correspondences-");
     }
 
     private static void play(Class type, String modelName, Dictionary sourceStringDict, Dictionary targetStringDict,
                              String initCorrespondencesPath) {
         try {
             NegotiationGameOverCorrespondence game = (NegotiationGameOverCorrespondence) type
-                    .getConstructor(Dictionary.class, Dictionary.class, String.class, String.class)
-                    .newInstance(sourceStringDict, targetStringDict, modelName, initCorrespondencesPath);
+                    .getConstructor(Dictionary.class, Dictionary.class, String.class, String.class, double.class)
+                    .newInstance(sourceStringDict, targetStringDict, modelName, initCorrespondencesPath + threshold + ".txt", threshold);
             game.play();
         } catch (InstantiationException e) {
             throw new RuntimeException(e);

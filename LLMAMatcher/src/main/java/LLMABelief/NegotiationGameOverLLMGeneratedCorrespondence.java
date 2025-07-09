@@ -13,8 +13,9 @@ public class NegotiationGameOverLLMGeneratedCorrespondence extends NegotiationGa
     private String initCorrespondencesPath;
 
     public NegotiationGameOverLLMGeneratedCorrespondence(
-            Dictionary sourceStringDict, Dictionary targetStringDict, String modelName, String initCorrespondencesPath) {
-        super(sourceStringDict, targetStringDict, modelName);
+            Dictionary sourceStringDict, Dictionary targetStringDict, String modelName, String initCorrespondencesPath,
+            double threshold) {
+        super(sourceStringDict, targetStringDict, modelName, threshold);
         this.initCorrespondencesPath = initCorrespondencesPath;
     }
 

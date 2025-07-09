@@ -9,6 +9,8 @@ import org.apache.jena.ontology.OntProperty;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDFS;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
@@ -18,6 +20,7 @@ public class Agent {
     public QwenApiCaller llm;
     private OntModel ontology;
     private Dictionary stringDict;
+    private double threshold;
 
     public List<OntClass> entities;
     public Dictionary<String, String> entityVerbos;
@@ -27,10 +30,11 @@ public class Agent {
 
     public Alignment privateCorrespondences;
 
-    public Agent(Dictionary stringDict, String modelName) {
+    public Agent(Dictionary stringDict, String modelName, double threshold) {
         this.stringDict = stringDict;
         this.name = stringDict.get("collectionName").toString();
         this.llm = new QwenApiCaller(modelName);
+        this.threshold = threshold;
 
         OntModel s = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         s.read(stringDict.get("ontologyPath").toString());
@@ -42,20 +46,6 @@ public class Agent {
         unrevealedEntitiesWithDescendingBelief = descending(entityBeliefs);
 
         this.db = new Weaviate(this.name);
-
-        privateCorrespondences = new Alignment();
-    }
-
-    public Agent(String agentName, OntModel ontology, String entityURIPrefix, String modelName) {
-        this.name = agentName;
-        this.llm = new QwenApiCaller(modelName);
-        this.ontology = ontology;
-
-        entities = extractEntities(ontology, entityURIPrefix);
-        entityBeliefs = initConfidence(entities);
-        unrevealedEntitiesWithDescendingBelief = descending(entityBeliefs);
-
-        this.db = new Weaviate(agentName);
 
         privateCorrespondences = new Alignment();
     }
@@ -203,7 +193,7 @@ public class Agent {
     }
 
     public void selectCorrespondences(Alignment alignment, boolean isSource, Dictionary<String, String> entityVerbosOtherAgent) {
-        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = extractPotentialEntityPairs(alignment, isSource, entityVerbosOtherAgent);
+        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = extractPotentialEntityPairs(alignment, isSource);
 
         writePotentialEntityPairsToFile(potentialEntityPairsDict);
 
@@ -251,7 +241,7 @@ public class Agent {
     }
 
     private void writePotentialEntityPairsToFile(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict) {
-        FileWriter fw = Main.createFileWriter(stringDict.get("potentialEntityPairsPath").toString());
+        FileWriter fw = Main.createFileWriter(stringDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
         try {
             for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
                 Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
@@ -272,7 +262,7 @@ public class Agent {
     }
 
     private Dictionary<String, Set<Belief<String>>> extractPotentialEntityPairs(
-            Alignment alignment, boolean isSource, Dictionary<String, String> entityVerbosOtherAgent) {
+            Alignment alignment, boolean isSource) {
         Set<String> selfURIs = new HashSet<>();
         if (isSource) {
             selfURIs = alignment.getDistinctSourcesAsSet();
