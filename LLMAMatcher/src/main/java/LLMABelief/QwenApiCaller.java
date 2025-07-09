@@ -32,6 +32,8 @@ public class QwenApiCaller {
      * @return The response from the Qwen API.
      */
     public String prompt(String message) {
+        message = message.replaceAll("\n", "");
+
         String requestBody = "{\n" +
                 "    \"model\": \""+ modelName +"\",\n" +
                 "    \"enable_thinking\": "+ false +",\n" +

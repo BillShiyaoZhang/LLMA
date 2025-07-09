@@ -2,7 +2,10 @@ package LLMABelief;
 
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.rdf.model.ModelFactory;
 
+import java.util.Dictionary;
 import java.util.Set;
 
 /***
@@ -13,11 +16,9 @@ public class NegotiationGameOverCorrespondence {
     protected Agent source;
     protected Agent target;
 
-    public NegotiationGameOverCorrespondence(OntModel source, String sourceEntityURIPrefix, String sourceCollectionName,
-                                             OntModel target, String targetEntityURIPrefix, String targetCollectionName,
-                                             String modelName) {
-        this.source = new Agent(sourceCollectionName, source, sourceEntityURIPrefix, modelName);
-        this.target = new Agent(targetCollectionName, target, targetEntityURIPrefix, modelName);
+    public NegotiationGameOverCorrespondence(Dictionary sourceStringDict, Dictionary targetStringDict, String modelName) {
+        this.source = new Agent(sourceStringDict, modelName);
+        this.target = new Agent(targetStringDict, modelName);
     }
 
     public Alignment play() {

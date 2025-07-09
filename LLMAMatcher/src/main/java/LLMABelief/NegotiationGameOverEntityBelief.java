@@ -3,6 +3,7 @@ package LLMABelief;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 
+import java.util.Dictionary;
 import java.util.Set;
 
 /***
@@ -14,11 +15,8 @@ public class NegotiationGameOverEntityBelief extends NegotiationGameOverCorrespo
 
     protected Agent nextProposer;
 
-    public NegotiationGameOverEntityBelief(OntModel source, String sourceEntityURIPrefix, String sourceCollectionName,
-                                           OntModel target, String targetEntityURIPrefix, String targetCollectionName,
-                                           String modelName) {
-        super(source, sourceEntityURIPrefix, sourceCollectionName,
-                target, targetEntityURIPrefix, targetCollectionName, modelName);
+    public NegotiationGameOverEntityBelief(Dictionary sourceStringDict, Dictionary targetStringDict, String modelName) {
+        super(sourceStringDict, targetStringDict, modelName);
     }
 
     /***

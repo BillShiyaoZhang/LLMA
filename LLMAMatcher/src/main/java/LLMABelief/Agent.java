@@ -1,31 +1,50 @@
 package LLMABelief;
 
+import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.ontology.OntProperty;
-import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.rdf.model.Statement;
-import org.apache.jena.rdf.model.StmtIterator;
+import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDFS;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 
 public class Agent {
     public String name;
     public QwenApiCaller llm;
     private OntModel ontology;
+    private Dictionary stringDict;
 
     public List<OntClass> entities;
+    public Dictionary<String, String> entityVerbos;
     private List<Belief<OntClass>> entityBeliefs;
     private List<Belief<OntClass>> unrevealedEntitiesWithDescendingBelief;
     public Weaviate db;
 
-    public Set<Correspondence> correspondences;
+    public Alignment privateCorrespondences;
+
+    public Agent(Dictionary stringDict, String modelName) {
+        this.stringDict = stringDict;
+        this.name = stringDict.get("collectionName").toString();
+        this.llm = new QwenApiCaller(modelName);
+
+        OntModel s = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+        s.read(stringDict.get("ontologyPath").toString());
+        this.ontology = s;
+
+        entities = extractEntities(ontology, stringDict.get("entityURIPrefix").toString());
+        entityVerbos = Main.loadEntityVerbos(stringDict.get("verbosePath").toString());
+        entityBeliefs = initConfidence(entities);
+        unrevealedEntitiesWithDescendingBelief = descending(entityBeliefs);
+
+        this.db = new Weaviate(this.name);
+
+        privateCorrespondences = new Alignment();
+    }
 
     public Agent(String agentName, OntModel ontology, String entityURIPrefix, String modelName) {
         this.name = agentName;
@@ -38,7 +57,7 @@ public class Agent {
 
         this.db = new Weaviate(agentName);
 
-        correspondences = new HashSet<>();
+        privateCorrespondences = new Alignment();
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
@@ -51,11 +70,11 @@ public class Agent {
             }
         }
 
-        System.out.println("Agent " +  "finds " + entities.size() + " entities.");
+        System.out.println("Agent " + "finds " + entities.size() + " entities.");
         return entities;
     }
 
-//    propertyURI = "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"
+    //    propertyURI = "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"
     public static String verbalize(OntClass ontClass, String propertyUri) {
         if (ontClass.asNode().isBlank()) {
             return "";
@@ -79,14 +98,14 @@ public class Agent {
             }
             output += "    - " + superClass.getURI() + "\n";
             output += "      - Label: " + superClass.getLabel(null) + "\n";
-            if (superClass.getComment(null) != null){
+            if (superClass.getComment(null) != null) {
                 output += "      - Comment: " + superClass.getComment(null) + "\n";
             }
             output += "      - Local name: " + superClass.getLocalName() + "\n";
         }
 
         if (ontClass.hasSubClass()) {
-                output += "  - Sub classes: \n";
+            output += "  - Sub classes: \n";
         }
         for (OntClass subClass : ontClass.listSubClasses().toList()) {
             output += "    - " + subClass.getURI() + "\n";
@@ -152,8 +171,8 @@ public class Agent {
         return null;
     }
 
-    public boolean hasUnrevealedEntity(){
-        if (unrevealedEntitiesWithDescendingBelief.isEmpty()){
+    public boolean hasUnrevealedEntity() {
+        if (unrevealedEntitiesWithDescendingBelief.isEmpty()) {
             return false;
         }
         return true;
@@ -183,4 +202,98 @@ public class Agent {
         return null;
     }
 
+    public void selectCorrespondences(Alignment alignment, boolean isSource, Dictionary<String, String> entityVerbosOtherAgent) {
+        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = extractPotentialEntityPairs(alignment, isSource, entityVerbosOtherAgent);
+
+        writePotentialEntityPairsToFile(potentialEntityPairsDict);
+
+//        askLLMToSelectCorrespondences(potentialEntityPairsDict, entityVerbosOtherAgent);
+    }
+
+    private void askLLMToSelectCorrespondences(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict,
+                                               Dictionary<String, String> entityVerbosOtherAgent) {
+        FileWriter fw = Main.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString());
+        for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
+            Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
+            if (beliefs.isEmpty()) {
+                continue;
+            }
+
+            String message =
+                    "You are an assistant helping to select relevant entity pairs for alignment.\n" +
+                    "You have been provided with an entity from one ontology, and a set of entity from another ontology.\n" +
+                    "Your task is to prioritize the relevance of entities of another ontology from high to low " +
+                            "based on the provided contents.\n\n" +
+                    "<Entity to align>:\n" +
+                    entityVerbos.get(selfURI).toString() + "\n\n" +
+                    "<Set of Entities>:\n";
+            for (Belief<String> belief : beliefs) {
+                message = message +
+                        "<Entity from another agent>\n" +
+                        "URI: " + belief.obj + "\n" +
+                        entityVerbosOtherAgent.get(belief.obj).toString() + "\n";
+            }
+            message = message +
+                    "Please select the entities, from the given set, you find likely to be aligned to the given entity.\n" +
+                    "Provide your response in the following format:\n" +
+                    "<Selected Entities>\n" +
+                    "<Selected Entity URI> is the URI of the entity you believe is relevant to the given entity.\n" +
+                    "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
+
+            // Call the LLM API to get the selected correspondences
+            String response = llm.prompt(message);
+            try {
+                fw.write(selfURI + ", " + response + "\n");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    private void writePotentialEntityPairsToFile(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict) {
+        FileWriter fw = Main.createFileWriter(stringDict.get("potentialEntityPairsPath").toString());
+        try {
+            for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
+                Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
+                if (beliefs.isEmpty()) {
+                    continue;
+                }
+                fw.write("Self URI: " + selfURI + "\n");
+                for (Belief<String> belief : beliefs) {
+                    String otherEntityURI = belief.obj;
+                    double confidence = belief.value;
+                    fw.write("  - Other Entity URI: " + otherEntityURI + ", Confidence: " + confidence + "\n");
+                }
+            }
+            fw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private Dictionary<String, Set<Belief<String>>> extractPotentialEntityPairs(
+            Alignment alignment, boolean isSource, Dictionary<String, String> entityVerbosOtherAgent) {
+        Set<String> selfURIs = new HashSet<>();
+        if (isSource) {
+            selfURIs = alignment.getDistinctSourcesAsSet();
+        } else {
+            selfURIs = alignment.getDistinctTargetsAsSet();
+        }
+
+        // Dict: selfURI -> Set of Belief<otherEntityURI>
+        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = new Hashtable<>();
+        for (String selfURI : selfURIs) {
+            potentialEntityPairsDict.put(selfURI, new HashSet<>());
+        }
+
+        // Populate the potentialEntityPairsDict with beliefs based on the alignment
+        for (Correspondence c : alignment) {
+            if (isSource) {
+                potentialEntityPairsDict.get(c.getEntityOne()).add(new Belief<>(c.getEntityTwo(), c.getConfidence()));
+            } else {
+                potentialEntityPairsDict.get(c.getEntityTwo()).add(new Belief<>(c.getEntityOne(), c.getConfidence()));
+            }
+        }
+        return potentialEntityPairsDict;
+    }
 }

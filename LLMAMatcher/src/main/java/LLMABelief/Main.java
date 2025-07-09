@@ -8,26 +8,33 @@ import org.apache.jena.rdf.model.ModelFactory;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
-    private static String[] humanStrings = new String[]{
-            "src/main/java/DataSet/Anatomy/human.owl",                                          // ontology path
-            "result/Anatomy/human_verbo.txt",                                                   // verbo file path
-            "http://human.owl#NCI",                                                             // entity URI prefix
-            "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",                   // property URI
-            "result/Anatomy/human_embeddings-remove_null-remove_non_nl-remove_properties.txt",  // embedding file path
-            "Human"                                                                             // collection name
+    private static Dictionary humanStringsDict = new java.util.Hashtable(){
+        {
+            put("ontologyPath", "src/main/java/DataSet/Anatomy/human.owl");
+            put("verbosePath", "result/Anatomy/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
+            put("entityURIPrefix", "http://human.owl#NCI");
+            put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+            put("embeddingPath", "result/Anatomy/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+            put("collectionName", "Human");
+            put("potentialEntityPairsPath", "result/Anatomy/human_mouse_potential_pairs.txt");
+            put("llmSelectedCorrespondencesPath", "result/Anatomy/human_mouse_llm_selected_correspondences.txt");
+        }
     };
-    private static String[] mouseStrings = new String[]{
-            "src/main/java/DataSet/Anatomy/mouse.owl",                                          // ontology path
-            "result/Anatomy/mouse_verbo.txt",                                                   // verbo file path
-            "http://mouse.owl#MA",                                                              // entity URI prefix
-            "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",                   // property URI
-            "result/Anatomy/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt",  // embedding file path
-            "Mouse"                                                                             // collection name
+
+    private static Dictionary mouseStringsDict = new java.util.Hashtable(){
+        {
+            put("ontologyPath", "src/main/java/DataSet/Anatomy/mouse.owl");
+            put("verbosePath", "result/Anatomy/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
+            put("entityURIPrefix", "http://mouse.owl#MA");
+            put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+            put("embeddingPath", "result/Anatomy/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+            put("collectionName", "Mouse");
+            put("potentialEntityPairsPath", "result/Anatomy/mouse_human_potential_pairs.txt");
+            put("llmSelectedCorrespondencesPath", "result/Anatomy/mouse_human_llm_selected_correspondences.txt");
+        }
     };
 
     private static String modelName = "qwen3-235b-a22b";
@@ -36,7 +43,9 @@ public class Main {
         // prepare verboes and embeddings for entities
 //        computeVerboes();
 //        computeEmbeddings();
-//        cosineDistance(humanStrings[4], mouseStrings[4], "result/Anatomy/init_correspondences.txt", 0.6);
+//        cosineDistance(humanStringsDict.get("embeddingPath").toString(),
+//                mouseStringsDict.get("embeddingPath").toString(),
+//                "result/Anatomy/init_correspondences.txt", 0.6);
 
         // init database
         // NOTE: The below embedding loading loads the embeddings from the "result/" folder.
@@ -45,25 +54,16 @@ public class Main {
 
         // run the game.
         // NOTE: The below game is dependent on the embeddings loaded to the db above.
-//        play(NegotiationGameOverLLMGeneratedCorrespondence.class, modelName, 0.8f,
-//                humanStrings[0], humanStrings[2], humanStrings[5],
-//                mouseStrings[0], mouseStrings[2], mouseStrings[5]);
+        play(NegotiationGameOverLLMGeneratedCorrespondence.class, modelName, humanStringsDict, mouseStringsDict,
+                "result/Anatomy/init_correspondences.txt-0.9.txt");
     }
 
-    private static void play(Class type, String modelName, float cosineSimilarityThreshold,
-                             String sourcePath, String sourceEntityURIPrefix, String sourceCollectionName,
-                             String targetPath, String targetEntityURIPrefix, String targetCollectionName) {
-        OntModel source = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-        source.read(sourcePath);
-        OntModel target = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-        target.read(targetPath);
-
+    private static void play(Class type, String modelName, Dictionary sourceStringDict, Dictionary targetStringDict,
+                             String initCorrespondencesPath) {
         try {
             NegotiationGameOverCorrespondence game = (NegotiationGameOverCorrespondence) type
-                    .getConstructor(OntModel.class, String.class, String.class,
-                            OntModel.class, String.class, String.class, String.class, float.class)
-                    .newInstance(source, sourceEntityURIPrefix, sourceCollectionName,
-                            target, targetEntityURIPrefix, targetCollectionName, modelName, cosineSimilarityThreshold);
+                    .getConstructor(Dictionary.class, Dictionary.class, String.class, String.class)
+                    .newInstance(sourceStringDict, targetStringDict, modelName, initCorrespondencesPath);
             game.play();
         } catch (InstantiationException e) {
             throw new RuntimeException(e);
@@ -78,8 +78,14 @@ public class Main {
 
     private static void computeVerboes() {
         // Anatomy
-        verbalize(humanStrings[0], humanStrings[1], humanStrings[2], humanStrings[3]);
-        verbalize(mouseStrings[0], mouseStrings[1], mouseStrings[2], mouseStrings[3]);
+        verbalize(humanStringsDict.get("ontologyPaht").toString(),
+                humanStringsDict.get("verbosePath").toString(),
+                humanStringsDict.get("entityURIPrefix").toString(),
+                humanStringsDict.get("propertyUri").toString());
+        verbalize(mouseStringsDict.get("ontologyPath").toString(),
+                mouseStringsDict.get("verbosePath").toString(),
+                mouseStringsDict.get("entityURIPrefix").toString(),
+                mouseStringsDict.get("propertyUri").toString());
     }
 
     private static void verbalize(String ontologyPath, String verbosePath, String entityURIPrefix, String propertyUri) {
@@ -105,57 +111,78 @@ public class Main {
 
     private static void computeEmbeddings() {
         // Anatomy
-        embed(humanStrings[1], humanStrings[4]);
-        embed(mouseStrings[1], mouseStrings[4]);
+        embed(humanStringsDict.get("verbosePath").toString(), humanStringsDict.get("embeddingPath").toString());
+        embed(mouseStringsDict.get("verbosePath").toString(), mouseStringsDict.get("embeddingPath").toString());
     }
 
     private static void embed(String verboPath, String embeddingPath) {
-        try (FileWriter writer = createFileWriter(embeddingPath)) {
-            try (BufferedReader reader = new BufferedReader(new FileReader(verboPath))) {
-                String line;
-                String verbo = "";
-                String uri = "";
-                while ((line = reader.readLine()) != null) {
-                    if (line.startsWith("//")) {
-                        continue; // skip comments
-                    }
-                    if (line.trim().isEmpty()) {
-                        Float[] embedding = QwenApiCaller.embed(verbo);
-                        writer.write(uri + "\n");
-                        if (embedding != null) {
-                            StringBuilder sb = new StringBuilder();
-                            for (Float value : embedding) {
-                                sb.append(value).append(",");
-                            }
-                            sb.deleteCharAt(sb.length() - 1); // remove the last comma
-                            writer.write(sb.toString() + "\n");
-                        } else {
-                            writer.write("null\n");
-                        }
-                        System.out.println(uri + "\n");
+        Dictionary<String, String> entitiesVerbos = loadEntityVerbos(verboPath);
+        if (entitiesVerbos.isEmpty()) {
+            System.err.println("No verbos found in the file: " + verboPath);
+            return;
+        }
 
-                        verbo = ""; // reset verbo for the next entity
-                        uri = ""; // reset uri for the next entity
-                        continue;
-                    }
-                    if (line.startsWith("URI: ")) {
-                        line = line.substring("URI: ".length());
-                        uri = line;
-                        continue;
-                    }
-                    verbo += line + "\n"; // accumulate the verbos
+        try (FileWriter writer = createFileWriter(embeddingPath)) {
+            var it = entitiesVerbos.keys().asIterator();
+            while (it.hasNext()) {
+                String uri = it.next();
+                String verbo = entitiesVerbos.get(uri);
+                if (verbo == null || verbo.trim().isEmpty()) {
+                    System.err.println("Skipping empty verbo for URI: " + uri);
+                    continue;
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
+                Float[] embedding = QwenApiCaller.embed(verbo);
+                writer.write(uri + "\n");
+                if (embedding != null) {
+                    StringBuilder sb = new StringBuilder();
+                    for (Float value : embedding) {
+                        sb.append(value).append(",");
+                    }
+                    sb.deleteCharAt(sb.length() - 1); // remove the last comma
+                    writer.write(sb.toString() + "\n");
+                } else {
+                    writer.write("null\n");
+                }
+                System.out.println(uri + "\n");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    public static Dictionary<String, String> loadEntityVerbos(String verboPath) {
+        Dictionary<String, String> entitiesVerbos = new Hashtable<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(verboPath))) {
+            String line;
+            String verbo = "";
+            String uri = "";
+            while ((line = reader.readLine()) != null) {
+                if (line.startsWith("//")) {
+                    continue; // skip comments
+                }
+                if (line.trim().isEmpty()) {
+                    entitiesVerbos.put(uri, verbo);
+
+                    verbo = ""; // reset verbo for the next entity
+                    uri = ""; // reset uri for the next entity
+                    continue;
+                }
+                if (line.startsWith("URI: ")) {
+                    line = line.substring("URI: ".length());
+                    uri = line;
+                    continue;
+                }
+                verbo += line + "\n"; // accumulate the verbos
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return entitiesVerbos;
+    }
+
     private static void loadEmbeddings() {
-        loadEmbedding(humanStrings[4], humanStrings[5]);
-        loadEmbedding(mouseStrings[4], mouseStrings[5]);
+        loadEmbedding(humanStringsDict.get("embeddingPath").toString(), humanStringsDict.get("collectionName").toString());
+        loadEmbedding(mouseStringsDict.get("embeddingPath").toString(), mouseStringsDict.get("collectionName").toString());
     }
 
     private static void loadEmbedding(String embeddingPath, String collectionName) {
@@ -208,8 +235,8 @@ public class Main {
                     if (embeddingS != null && embeddingT != null) {
                         double similarity = cosineSimilarity(embeddingS, embeddingT);
                         if (similarity > threshold) {
-                            Correspondence correspondence = new Correspondence(
-                                    entryS.getKey(), entryT.getKey(), similarity);
+//                            Correspondence correspondence = new Correspondence(
+//                                    entryS.getKey(), entryT.getKey(), similarity);
                             writer.write(entryS.getKey() + ", " + entryT.getKey() + ", " + similarity + "\n");
                         }
                     } else {
