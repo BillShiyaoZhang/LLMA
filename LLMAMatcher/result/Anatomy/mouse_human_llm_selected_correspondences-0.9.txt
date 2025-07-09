@@ -1,0 +1,285 @@
+http://mouse.owl#MA_0002411
+ <Selected Entity URI> http://human.owl#NCI_C12957
+http://mouse.owl#MA_0001746
+ <http://human.owl#NCI_C49323> is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002378
+ <Selected Entity URI> http://human.owl#NCI_C53014 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002377
+ <Selected Entity URI> http://human.owl#NCI_C53012
+http://mouse.owl#MA_0002376
+ <Selected Entity URI> http://human.owl#NCI_C53007
+http://mouse.owl#MA_0002213
+ <Selected Entity URI>: http://human.owl#NCI_C53063
+http://mouse.owl#MA_0000088
+ <Selected Entity URI>: http://human.owl#NCI_C12753
+http://mouse.owl#MA_0002017
+ <Selected Entity URI>: http://human.owl#NCI_C52994
+http://mouse.owl#MA_0000879
+ <Selected Entity URI>: http://human.owl#NCI_C49782 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002015
+ <Selected Entity URI>: http://human.owl#NCI_C52742 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002177
+ <Selected Entity URI>: http://human.owl#NCI_C53055
+http://mouse.owl#MA_0000085
+ <Selected Entity URI>: http://human.owl#NCI_C32874
+http://mouse.owl#MA_0001349
+ <Selected Entity URI>: http://human.owl#NCI_C33162
+http://mouse.owl#MA_0000084
+ <http://human.owl#NCI_C32818> is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001348
+ http://human.owl#NCI_C32250 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001930
+ <Selected Entity URI> http://human.owl#NCI_C32836 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002208
+ <Selected Entity URI> http://human.owl#NCI_C48947 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002207
+ <Selected Entity URI> http://human.owl#NCI_C48946 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002400
+ <http://human.owl#NCI_C33812>
+http://mouse.owl#MA_0002206
+ <Selected Entity URI>: http://human.owl#NCI_C12776
+http://mouse.owl#MA_0001928
+ http://human.owl#NCI_C32352 is the URI of the entity that is relevant to the given entity. 
+
+The provided entity "right common carotid artery" is a specific side (right) of the "common carotid artery". The entity from the other ontology labeled "Common_Carotid_Artery" has subclasses including "Right_Common_Carotid_Artery", which directly corresponds to the given entity.
+http://mouse.owl#MA_0001133
+ <Selected Entity URI> http://human.owl#NCI_C49800 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001926
+ <Selected Entity URI> http://human.owl#NCI_C32352 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0000306
+ <http://human.owl#NCI_C52771> is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001925
+ <http://human.owl#NCI_C12687>
+http://mouse.owl#MA_0001921
+ <Selected Entity URI> http://human.owl#NCI_C12681
+http://mouse.owl#MA_0000104
+ <http://human.owl#NCI_C32268>
+http://mouse.owl#MA_0002355
+ http://human.owl#NCI_C33286 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001688
+ <http://human.owl#NCI_C49311> is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002157
+ <Selected Entity URI>: http://human.owl#NCI_C32849
+http://mouse.owl#MA_0002156
+ <Selected Entity URI> is http://human.owl#NCI_C32562
+http://mouse.owl#MA_0001326
+ <Selected Entity URI>: http://human.owl#NCI_C49261
+http://mouse.owl#MA_0001324
+ <Selected Entity URI> http://human.owl#NCI_C49261
+http://mouse.owl#MA_0001286
+ <Selected Entity URI> http://human.owl#NCI_C13323 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001914
+ <http://human.owl#NCI_C52736>  
+<http://human.owl#NCI_C52737>
+http://mouse.owl#MA_0002544
+ <Selected Entity URI>: http://human.owl#NCI_C33718
+http://mouse.owl#MA_0002147
+ <Selected Entity URI> http://human.owl#NCI_C53049 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002143
+ <Selected Entity URI>: http://human.owl#NCI_C32359
+http://mouse.owl#MA_0002142
+ <http://human.owl#NCI_C12734>
+http://mouse.owl#MA_0001278
+ <http://human.owl#NCI_C33199>
+http://mouse.owl#MA_0002539
+ http://human.owl#NCI_C13280 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002538
+ <Selected Entity URI>: http://human.owl#NCI_C13276
+http://mouse.owl#MA_0002537
+ <Selected Entity URI> http://human.owl#NCI_C13409 is the URI of the entity that aligns with the given entity.
+http://mouse.owl#MA_0001272
+ <Selected Entity URI>: http://human.owl#NCI_C52802 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002534
+ <Selected Entity URI>: http://human.owl#NCI_C13273
+http://mouse.owl#MA_0001867
+ <Selected Entity URI> http://human.owl#NCI_C12513 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002299
+ <Selected Entity URI>: http://human.owl#NCI_C52921 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001665
+ <Selected Entity URI>: http://human.owl#NCI_C49479
+http://mouse.owl#MA_0001308
+ <Selected Entity URI>: http://human.owl#NCI_C32954
+http://mouse.owl#MA_0002295
+ <Selected Entity URI> http://human.owl#NCI_C52918 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002294
+ <Selected Entity URI>: http://human.owl#NCI_C52917
+http://mouse.owl#MA_0002293
+ <Selected Entity URI> http://human.owl#NCI_C52916 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002098
+ <Selected Entity URI>: http://human.owl#NCI_C53041
+http://mouse.owl#MA_0000438
+ <Selected Entity URI> is http://human.owl#NCI_C12284
+http://mouse.owl#MA_0002527
+ <Selected Entity URI>: http://human.owl#NCI_C33231
+http://mouse.owl#MA_0002329
+ <Selected Entity URI>: http://human.owl#NCI_C52708 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002328
+ <Selected Entity URI> http://human.owl#NCI_C52706 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0000235
+ <http://human.owl#NCI_C49601>
+http://mouse.owl#MA_0002326
+ <Selected Entity URI>: http://human.owl#NCI_C32848 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002325
+ <Selected Entity URI>: http://human.owl#NCI_C32561
+http://mouse.owl#MA_0002324
+ <Selected Entity URI>: http://human.owl#NCI_C32848
+http://mouse.owl#MA_0000196
+ <Selected Entity URI>: http://human.owl#NCI_C12828
+http://mouse.owl#MA_0000986
+ <Selected Entity URI> http://human.owl#NCI_C49232 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0000983
+ <Selected Entity URI> http://human.owl#NCI_C32308 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0000820
+ <Selected Entity URI>: http://human.owl#NCI_C49334
+http://mouse.owl#MA_0001258
+ <Selected Entity URI> http://human.owl#NCI_C52724 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001254
+ <Selected Entity URI> http://human.owl#NCI_C52886 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002080
+ <Selected Entity URI> http://human.owl#NCI_C52686
+http://mouse.owl#MA_0001252
+ <Selected Entity URI>: http://human.owl#NCI_C49226 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001849
+ <Selected Entity URI>: http://human.owl#NCI_C33486
+http://mouse.owl#MA_0002478
+ <Selected Entity URI> http://human.owl#NCI_C12999 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002315
+ <Selected Entity URI>: http://human.owl#NCI_C52704
+http://mouse.owl#MA_0002314
+ <http://human.owl#NCI_C52703> is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002313
+ <Selected Entity URI>: http://human.owl#NCI_C53173
+http://mouse.owl#MA_0002114
+ <Selected Entity URI> http://human.owl#NCI_C53045 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0000182
+ <Selected Entity URI>: http://human.owl#NCI_C12827
+http://mouse.owl#MA_0002079
+ <Selected Entity URI> http://human.owl#NCI_C52685 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002078
+ <http://human.owl#NCI_C52685>
+http://mouse.owl#MA_0002508
+ <Selected Entity URI>: http://human.owl#NCI_C33739 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0000574
+ <Selected Entity URI> http://human.owl#NCI_C52756 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002503
+ <Selected Entity URI>: http://human.owl#NCI_C12692
+http://mouse.owl#MA_0002309
+ <Selected Entity URI> http://human.owl#NCI_C52560
+http://mouse.owl#MA_0001998
+ <Selected Entity URI> http://human.owl#NCI_C52969 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001997
+ <Selected Entity URI> http://human.owl#NCI_C52968 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002467
+ <Selected Entity URI>: http://human.owl#NCI_C33304 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002304
+ <Selected Entity URI>: http://human.owl#NCI_C52702 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002302
+ <Selected Entity URI>: http://human.owl#NCI_C53172
+http://mouse.owl#MA_0000176
+ <Selected Entity URI>: http://human.owl#NCI_C12399
+http://mouse.owl#MA_0001795
+ <Selected Entity URI>: http://human.owl#NCI_C12278
+http://mouse.owl#MA_0001793
+ <Selected Entity URI>: http://human.owl#NCI_C12277 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001792
+ <Selected Entity URI> http://human.owl#NCI_C12276 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002068
+ <Selected Entity URI> http://human.owl#NCI_C53025 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001395
+ <Selected Entity URI> http://human.owl#NCI_C52786 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001393
+ <Selected Entity URI>: http://human.owl#NCI_C52773
+http://mouse.owl#MA_0001392
+ <Selected Entity URI>: http://human.owl#NCI_C52774 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001391
+ <Selected Entity URI>: http://human.owl#NCI_C52775
+http://mouse.owl#MA_0001390
+ <Selected Entity URI> http://human.owl#NCI_C52776 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001789
+ <Selected Entity URI>: http://human.owl#NCI_C49294
+http://mouse.owl#MA_0001788
+ <Selected Entity URI>: http://human.owl#NCI_C49285 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001589
+ <http://human.owl#NCI_C12233> is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001780
+ <Selected Entity URI>: http://human.owl#NCI_C49255
+http://mouse.owl#MA_0002057
+ <Selected Entity URI> http://human.owl#NCI_C52736 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002056
+ <Selected Entity URI> http://human.owl#NCI_C52737 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001584
+ <Selected Entity URI>: http://human.owl#NCI_C33249
+http://mouse.owl#MA_0001389
+ <Selected Entity URI>: http://human.owl#NCI_C52777 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001420
+ <Selected Entity URI>: http://human.owl#NCI_C32334
+http://mouse.owl#MA_0001582
+ <Selected Entity URI>: http://human.owl#NCI_C32509
+http://mouse.owl#MA_0001388
+ <Selected Entity URI>: http://human.owl#NCI_C52784 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001387
+ <Selected Entity URI>: http://human.owl#NCI_C52785 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0000752
+ <Selected Entity URI> http://human.owl#NCI_C49596 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001385
+ <Selected Entity URI>: http://human.owl#NCI_C52782 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001384
+ <Selected Entity URI>: http://human.owl#NCI_C52781 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001383
+ <Selected Entity URI> http://human.owl#NCI_C52780 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001382
+ <Selected Entity URI> http://human.owl#NCI_C52779 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001381
+ <Selected Entity URI>: http://human.owl#NCI_C52778 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001380
+ <Selected Entity URI>: http://human.owl#NCI_C52783
+http://mouse.owl#MA_0001977
+ <Selected Entity URI> http://human.owl#NCI_C52940 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002640
+ <Selected Entity URI>: http://human.owl#NCI_C33050
+http://mouse.owl#MA_0001181
+ <Selected Entity URI> http://human.owl#NCI_C52805 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001779
+ <Selected Entity URI>: http://human.owl#NCI_C49254 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002243
+ <Selected Entity URI>: http://human.owl#NCI_C33787
+http://mouse.owl#MA_0002240
+ <Selected Entity URI> http://human.owl#NCI_C52699
+http://mouse.owl#MA_0002045
+ <Selected Entity URI>: http://human.owl#NCI_C33643
+http://mouse.owl#MA_0001373
+ <Selected Entity URI> http://human.owl#NCI_C52787 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002637
+ <Selected Entity URI>: http://human.owl#NCI_C32591
+http://mouse.owl#MA_0001372
+ <Selected Entity URI> http://human.owl#NCI_C52788 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001371
+ <Selected Entity URI> http://human.owl#NCI_C52789 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001370
+ <Selected Entity URI>: http://human.owl#NCI_C52790
+http://mouse.owl#MA_0000349
+ <http://human.owl#NCI_C32769>
+http://mouse.owl#MA_0001962
+ <Selected Entity URI> http://human.owl#NCI_C52857 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002434
+ <http://human.owl#NCI_C12909> is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002239
+ <Selected Entity URI> http://human.owl#NCI_C53140 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001603
+ <Selected Entity URI>: http://human.owl#NCI_C49795
+http://mouse.owl#MA_0001602
+ <Selected Entity URI>: http://human.owl#NCI_C49584
+http://mouse.owl#MA_0002235
+ <http://human.owl#NCI_C53142> is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001601
+ <Selected Entity URI>: http://human.owl#NCI_C49794
+http://mouse.owl#MA_0001600
+ <Selected Entity URI> http://human.owl#NCI_C49583 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002394
+ <Selected Entity URI> http://human.owl#NCI_C53078 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001567
+ <Selected Entity URI>: http://human.owl#NCI_C49222 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0002038
+ <Selected Entity URI> http://human.owl#NCI_C52997 is the URI of the entity you believe is relevant to the given entity.
+http://mouse.owl#MA_0001369
+ <Selected Entity URI> http://human.owl#NCI_C52791 is the URI of the entity you believe is relevant to t

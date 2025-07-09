@@ -197,12 +197,12 @@ public class Agent {
 
         writePotentialEntityPairsToFile(potentialEntityPairsDict);
 
-//        askLLMToSelectCorrespondences(potentialEntityPairsDict, entityVerbosOtherAgent);
+        askLLMToSelectCorrespondences(potentialEntityPairsDict, entityVerbosOtherAgent);
     }
 
     private void askLLMToSelectCorrespondences(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict,
                                                Dictionary<String, String> entityVerbosOtherAgent) {
-        FileWriter fw = Main.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString());
+        FileWriter fw = Main.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt");
         for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
             Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
             if (beliefs.isEmpty()) {
@@ -226,14 +226,13 @@ public class Agent {
             message = message +
                     "Please select the entities, from the given set, you find likely to be aligned to the given entity.\n" +
                     "Provide your response in the following format:\n" +
-                    "<Selected Entities>\n" +
                     "<Selected Entity URI> is the URI of the entity you believe is relevant to the given entity.\n" +
                     "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
 
             // Call the LLM API to get the selected correspondences
             String response = llm.prompt(message);
             try {
-                fw.write(selfURI + ", " + response + "\n");
+                fw.write(selfURI + "\n " + response + "\n");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

@@ -20,7 +20,7 @@ public class Main {
             put("embeddingPath", "result/Anatomy/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
             put("collectionName", "Human");
             put("potentialEntityPairsPath", "result/Anatomy/human_mouse_potential_pairs-");
-            put("llmSelectedCorrespondencesPath", "result/Anatomy/human_mouse_llm_selected_correspondences.txt");
+            put("llmSelectedCorrespondencesPath", "result/Anatomy/human_mouse_llm_selected_correspondences-");
         }
     };
 
@@ -33,12 +33,12 @@ public class Main {
             put("embeddingPath", "result/Anatomy/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
             put("collectionName", "Mouse");
             put("potentialEntityPairsPath", "result/Anatomy/mouse_human_potential_pairs-");
-            put("llmSelectedCorrespondencesPath", "result/Anatomy/mouse_human_llm_selected_correspondences.txt");
+            put("llmSelectedCorrespondencesPath", "result/Anatomy/mouse_human_llm_selected_correspondences-");
         }
     };
 
     private static String modelName = "qwen3-235b-a22b";
-    private static double threshold = 0.6;
+    private static double threshold = 0.9;
 
     public static void main(String[] args) {
         // prepare verboes and embeddings for entities

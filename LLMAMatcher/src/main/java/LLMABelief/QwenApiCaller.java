@@ -67,7 +67,23 @@ public class QwenApiCaller {
             System.out.println("Status Code: " + response.statusCode());
             System.out.println("Response Body: " + response.body());
 
-            return response.body();
+            if (response.statusCode() != 200) {
+                System.err.println("Error: " + response.statusCode() + " - " + response.body());
+                return "ERROR";
+            }
+
+            var content = JsonParser.parseString(response.body())
+                    .getAsJsonObject()
+                    .getAsJsonArray("choices")
+                    .get(0)
+                    .getAsJsonObject()
+                    .getAsJsonObject("message")
+                    .get("content")
+                    .getAsString();
+
+            System.out.println(content);
+
+            return content;
 
         } catch (IOException | InterruptedException e) {
             System.err.println("Error: " + e.getMessage());
