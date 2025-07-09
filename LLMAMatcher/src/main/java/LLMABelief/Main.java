@@ -38,7 +38,7 @@ public class Main {
     };
 
     private static String modelName = "qwen3-235b-a22b";
-    private static double threshold = 0.9;
+    private static double threshold = 0.8;
 
     public static void main(String[] args) {
         // prepare verboes and embeddings for entities

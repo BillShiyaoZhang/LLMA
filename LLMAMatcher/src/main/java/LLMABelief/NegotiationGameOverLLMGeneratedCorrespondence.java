@@ -28,8 +28,8 @@ public class NegotiationGameOverLLMGeneratedCorrespondence extends NegotiationGa
     @Override
     protected void retrieveCorrespondences() {
         Alignment alignment = loadCorrespondences(initCorrespondencesPath);
-//        source.selectCorrespondences(alignment, true, target.entityVerbos);
-        target.selectCorrespondences(alignment, false, source.entityVerbos);
+        source.selectCorrespondences(alignment, true, target.entityVerbos);
+//        target.selectCorrespondences(alignment, false, source.entityVerbos);
     }
 
     private Alignment loadCorrespondences(String initCorrespondencesPath) {

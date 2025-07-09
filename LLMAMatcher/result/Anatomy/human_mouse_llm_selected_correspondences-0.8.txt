@@ -1,0 +1,2496 @@
+http://human.owl#NCI_C53123
+ <Possible Entity URI>: http://mouse.owl#MA_0002222
+http://human.owl#NCI_C52839
+ <http://mouse.owl#MA_0000465>
+http://human.owl#NCI_C53121
+ <http://mouse.owl#MA_0002222>
+http://human.owl#NCI_C52838
+ <http://mouse.owl#MA_0000458>
+http://human.owl#NCI_C32259
+ <Possible Entity URI> http://mouse.owl#MA_0001757
+http://human.owl#NCI_C52837
+ <http://mouse.owl#MA_0000457>
+http://human.owl#NCI_C52836
+ <http://mouse.owl#MA_0000456>
+http://human.owl#NCI_C52835
+ <Possible Entity URI> http://mouse.owl#MA_0000455
+http://human.owl#NCI_C52834
+ <http://mouse.owl#MA_0000454> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52833
+ <Possible Entity URI> http://mouse.owl#MA_0001138
+http://human.owl#NCI_C12909
+ <http://mouse.owl#MA_0002434> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52831
+ <http://mouse.owl#MA_0001140>
+http://human.owl#NCI_C52830
+ <Possible Entity URI>: http://mouse.owl#MA_0001158
+http://human.owl#NCI_C12906
+ <Possible Entity URI>: http://mouse.owl#MA_0002485
+http://human.owl#NCI_C32251
+ No relevant entity found.
+http://human.owl#NCI_C32250
+ <http://mouse.owl#MA_0001348> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12904
+ <Possible Entity URI>: http://mouse.owl#MA_0000735
+http://human.owl#NCI_C33339
+ <http://mouse.owl#MA_0002197>
+http://human.owl#NCI_C33338
+ <http://mouse.owl#MA_0002021>
+http://human.owl#NCI_C33337
+ <http://mouse.owl#MA_0002021> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12901
+ <http://mouse.owl#MA_0001265>
+http://human.owl#NCI_C12900
+ <http://mouse.owl#MA_0002460>
+http://human.owl#NCI_C33695
+ No relevant entity found.
+http://human.owl#NCI_C33694
+ <http://mouse.owl#MA_0001282> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33693
+ <http://mouse.owl#MA_0002026> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12468
+ <http://mouse.owl#MA_0000415>  
+<http://mouse.owl#MA_0000425>  
+<http://mouse.owl#MA_0000426>
+http://human.owl#NCI_C12467
+ <http://mouse.owl#MA_0000226> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C38671
+ <http://mouse.owl#MA_0002667> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C38670
+ <http://mouse.owl#MA_0002666> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12462
+ <http://mouse.owl#MA_0000232> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52829
+ <http://mouse.owl#MA_0001159> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52828
+ <http://mouse.owl#MA_0001163>
+http://human.owl#NCI_C52827
+ <http://mouse.owl#MA_0001165>
+http://human.owl#NCI_C32245
+ No relevant entity found.
+http://human.owl#NCI_C32244
+ No relevant entity found.
+http://human.owl#NCI_C32243
+ No relevant entity found.
+http://human.owl#NCI_C32242
+ No relevant entity found.
+http://human.owl#NCI_C32241
+ No relevant entity found.
+http://human.owl#NCI_C32240
+ <http://mouse.owl#MA_0001422> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33688
+ <Possible Entity URI> http://mouse.owl#MA_0001277 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33687
+ <http://mouse.owl#MA_0002179> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C38669
+ <http://mouse.owl#MA_0002664> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33686
+ <http://mouse.owl#MA_0002014> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C38668
+ <http://mouse.owl#MA_0002663> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33685
+ <http://mouse.owl#MA_0002005>
+http://human.owl#NCI_C33323
+ No relevant entity found.
+http://human.owl#NCI_C33321
+ <http://mouse.owl#MA_0001116>  
+<http://mouse.owl#MA_0001133>
+http://human.owl#NCI_C33320
+ <Possible Entity URI>: http://mouse.owl#MA_0002019
+http://human.owl#NCI_C33680
+ <Possible Entity URI>: http://mouse.owl#MA_0002226
+http://human.owl#NCI_C38662
+ <http://mouse.owl#MA_0000053>
+http://human.owl#NCI_C32239
+ <http://mouse.owl#MA_0001421> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32599
+ <http://mouse.owl#MA_0000108>  
+<http://mouse.owl#MA_0000486>
+http://human.owl#NCI_C52817
+ <Possible Entity URI> http://mouse.owl#MA_0001166  
+<Possible Entity URI> http://mouse.owl#MA_0001175
+http://human.owl#NCI_C52816
+ <http://mouse.owl#MA_0001167>
+http://human.owl#NCI_C32237
+ <http://mouse.owl#MA_0002700> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52815
+ <Possible Entity URI>: http://mouse.owl#MA_0001168
+http://human.owl#NCI_C52814
+ <Possible Entity URI> http://mouse.owl#MA_0001169 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52813
+ <Possible Entity URI>: http://mouse.owl#MA_0001170
+http://human.owl#NCI_C32234
+ <http://mouse.owl#MA_0000135> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52812
+ <Possible Entity URI>: http://mouse.owl#MA_0001171
+http://human.owl#NCI_C32592
+ <http://mouse.owl#MA_0001951> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52810
+ <Possible Entity URI>http://mouse.owl#MA_0001172</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001178</Possible Entity URI>
+http://human.owl#NCI_C32591
+ <http://mouse.owl#MA_0002637>
+http://human.owl#NCI_C32230
+ <Possible Entity URI> http://mouse.owl#MA_0001923
+http://human.owl#NCI_C33318
+ <http://mouse.owl#MA_0000774> is the URI of the entity you believe is relevant to the given entity. 
+
+Explanation:  
+- The given entity "Pharyngeal_Tonsil" has a synonym "Pharyngeal Tonsil" and falls under the superclass "Tonsil".  
+- Among the provided entities, "nasopharyngeal tonsil" (URI: http://mouse.owl#MA_0000774) is more anatomically similar to the pharyngeal tonsil compared to the palatine tonsil, which is a different type of tonsil located in the oropharynx.  
+- Therefore, "nasopharyngeal tonsil" is considered the most relevant for alignment.  
+
+No other entities are considered relevant for alignment.
+http://human.owl#NCI_C33317
+ <http://mouse.owl#MA_0000304> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33677
+ <http://mouse.owl#MA_0002003> is the URI of the entity you believe is relevant to the given entity.
+
+The given entity, Superior_Hemorrhoidal_Artery, is a branch of the Inferior_Mesenteric_Artery. The entity "mesenteric artery" in the provided set includes both superior and inferior mesenteric arteries as subclasses, making it closely related to the origin of the Superior_Hemorrhoidal_Artery.
+http://human.owl#NCI_C28401
+ <http://mouse.owl#MA_0000194>
+http://human.owl#NCI_C33314
+ <http://mouse.owl#MA_0002575> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49195
+ <Possible Entity URI> http://mouse.owl#MA_0000708
+http://human.owl#NCI_C33673
+ No relevant entity found.
+http://human.owl#NCI_C49194
+ <http://mouse.owl#MA_0000707> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33672
+ <Possible Entity URI> http://mouse.owl#MA_0002280  
+<Possible Entity URI> http://mouse.owl#MA_0002278
+http://human.owl#NCI_C13093
+ <http://mouse.owl#MA_0000402>
+http://human.owl#NCI_C49193
+ <http://mouse.owl#MA_0000706>
+http://human.owl#NCI_C41834
+ <Possible Entity URI>: http://mouse.owl#MA_0000175
+http://human.owl#NCI_C49192
+ <http://mouse.owl#MA_0000705> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49191
+ <http://mouse.owl#MA_0000702>
+http://human.owl#NCI_C49190
+ <http://mouse.owl#MA_0000701>
+http://human.owl#NCI_C12441
+ <http://mouse.owl#MA_0000169>
+http://human.owl#NCI_C52809
+ <http://mouse.owl#MA_0001173>
+http://human.owl#NCI_C32589
+ <http://mouse.owl#MA_0002510> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52807
+ <Possible Entity URI>: http://mouse.owl#MA_0001174
+http://human.owl#NCI_C32227
+ <http://mouse.owl#MA_0001921>  
+<http://mouse.owl#MA_0002026>
+http://human.owl#NCI_C52805
+ <http://mouse.owl#MA_0001181>
+http://human.owl#NCI_C52803
+ <Possible Entity URI> http://mouse.owl#MA_0000269  
+<Possible Entity URI> http://mouse.owl#MA_0001274  
+<Possible Entity URI> http://mouse.owl#MA_0001272  
+<Possible Entity URI> http://mouse.owl#MA_0001254
+http://human.owl#NCI_C52802
+ <Possible Entity URI>: http://mouse.owl#MA_0001272
+http://human.owl#NCI_C32582
+ <Possible Entity URI>: http://mouse.owl#MA_0001622
+http://human.owl#NCI_C52800
+ <Possible Entity URI> http://mouse.owl#MA_0001274  
+<Possible Entity URI> http://mouse.owl#MA_0000269  
+<Possible Entity URI> http://mouse.owl#MA_0001254  
+
+**Explanation:**  
+- **http://mouse.owl#MA_0001274 (orbitalis muscle)** is the most relevant as it directly matches the label of the entity to align.  
+- **http://mouse.owl#MA_0000269 (eyelid muscle)** is relevant because "Orbitalis Muscle" is a subclass of "Eyelid Muscle" in this ontology, making it a broader category match.  
+- **http://mouse.owl#MA_0001254 (orbicularis oculi)** is less relevant but still related, as it is another eyelid muscle and part of the same superclass hierarchy.
+http://human.owl#NCI_C33665
+ <http://mouse.owl#MA_0002070> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33304
+ <http://mouse.owl#MA_0002467>
+http://human.owl#NCI_C33300
+ <Possible Entity URI>: http://mouse.owl#MA_0000538
+http://human.owl#NCI_C12436
+ <http://mouse.owl#MA_0002438> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12796
+ <Possible Entity URI>http://mouse.owl#MA_0001348</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001351</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000297</Possible Entity URI>
+http://human.owl#NCI_C12435
+ <http://mouse.owl#MA_0002437>
+http://human.owl#NCI_C12794
+ <http://mouse.owl#MA_0002221>
+http://human.owl#NCI_C12792
+ <http://mouse.owl#MA_0000235>
+http://human.owl#NCI_C12790
+ <Possible Entity URI>: http://mouse.owl#MA_0001472
+http://human.owl#NCI_C32579
+ <http://mouse.owl#MA_0002115> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32218
+ <Possible Entity URI>: http://mouse.owl#MA_0000192
+http://human.owl#NCI_C32578
+ No relevant entity found.
+http://human.owl#NCI_C32212
+ <http://mouse.owl#MA_0000065>
+http://human.owl#NCI_C32211
+ <http://mouse.owl#MA_0001693>
+http://human.owl#NCI_C32210
+ <Possible Entity URI>: http://mouse.owl#MA_0001693
+http://human.owl#NCI_C33659
+ <Possible Entity URI>: http://mouse.owl#MA_0000736
+http://human.owl#NCI_C13078
+ <http://mouse.owl#MA_0000986>
+http://human.owl#NCI_C13075
+ <http://mouse.owl#MA_0002278>  
+<http://mouse.owl#MA_0002280>
+http://human.owl#NCI_C13073
+ <http://mouse.owl#MA_0000579> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12429
+ <http://mouse.owl#MA_0000007>
+http://human.owl#NCI_C33650
+ <http://mouse.owl#MA_0002050>
+http://human.owl#NCI_C12789
+ <http://mouse.owl#MA_0000316>
+http://human.owl#NCI_C12427
+ <http://mouse.owl#MA_0001585>
+http://human.owl#NCI_C12426
+ <Possible Entity URI>http://mouse.owl#MA_0000346</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001589</Possible Entity URI>
+http://human.owl#NCI_C12786
+ <http://mouse.owl#MA_0002556>
+http://human.owl#NCI_C12425
+ <http://mouse.owl#MA_0000432>
+http://human.owl#NCI_C12424
+ <http://mouse.owl#MA_0001326>
+http://human.owl#NCI_C12422
+ <http://mouse.owl#MA_0000347> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12782
+ <Possible Entity URI> http://mouse.owl#MA_0000315
+http://human.owl#NCI_C32569
+ <http://mouse.owl#MA_0001997>
+http://human.owl#NCI_C32567
+ <http://mouse.owl#MA_0002345>
+http://human.owl#NCI_C32565
+ No relevant entity found.
+http://human.owl#NCI_C49601
+ <http://mouse.owl#MA_0000235> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32562
+ <http://mouse.owl#MA_0002156> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32561
+ <Possible Entity URI> http://mouse.owl#MA_0002325 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32200
+ <http://mouse.owl#MA_0002270>
+http://human.owl#NCI_C32560
+ <http://mouse.owl#MA_0002144> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33649
+ <http://mouse.owl#MA_0002698>
+http://human.owl#NCI_C13067
+ <http://mouse.owl#MA_0001052> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33643
+ <http://mouse.owl#MA_0002045> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13063
+ <http://mouse.owl#MA_0000006> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12419
+ <Possible Entity URI>: http://mouse.owl#MA_0000006
+http://human.owl#NCI_C12418
+ <http://mouse.owl#MA_0000006> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12778
+ <http://mouse.owl#MA_0002037>  
+<http://mouse.owl#MA_0002036>
+http://human.owl#NCI_C13060
+ <http://mouse.owl#MA_0001076>
+http://human.owl#NCI_C12417
+ <Possible Entity URI> http://mouse.owl#MA_0000379  
+<Possible Entity URI> http://mouse.owl#MA_0002637  
+<Possible Entity URI> http://mouse.owl#MA_0002640
+http://human.owl#NCI_C12416
+ <Possible Entity URI> http://mouse.owl#MA_0000378  
+<Possible Entity URI> http://mouse.owl#MA_0001684  
+<Possible Entity URI> http://mouse.owl#MA_0001685
+http://human.owl#NCI_C12776
+ <http://mouse.owl#MA_0002206> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12415
+ <http://mouse.owl#MA_0000368>
+http://human.owl#NCI_C12775
+ <http://mouse.owl#MA_0000089>
+http://human.owl#NCI_C12774
+ <http://mouse.owl#MA_0002031> is the URI of the entity "pulmonary artery", which aligns directly with the given entity "Pulmonary_Artery".
+
+<http://mouse.owl#MA_0002033> is the URI of the entity "pulmonary trunk", which is a synonym of "Pulmonary_Artery" and could also be considered for alignment.
+
+<http://mouse.owl#MA_0002032> is the URI of the subclass "left pulmonary artery", which aligns with the "Left_Pulmonary_Artery" subclass of the given entity.
+
+<http://mouse.owl#MA_0002500> is the URI of the subclass "right pulmonary artery", which aligns with the "Right_Pulmonary_Artery" subclass of the given entity. 
+
+Therefore, all four entities are relevant and can be aligned to the given entity "Pulmonary_Artery".
+http://human.owl#NCI_C12413
+ <http://mouse.owl#MA_0000325>
+http://human.owl#NCI_C12773
+ <http://mouse.owl#MA_0000176>
+http://human.owl#NCI_C12412
+ <http://mouse.owl#MA_0000411>
+http://human.owl#NCI_C12771
+ <http://mouse.owl#MA_0000137>
+http://human.owl#NCI_C12410
+ <http://mouse.owl#MA_0000404>
+http://human.owl#NCI_C32559
+ <Possible Entity URI>http://mouse.owl#MA_0001973</Possible Entity URI>
+http://human.owl#NCI_C32558
+ <Possible Entity URI> http://mouse.owl#MA_0001973
+http://human.owl#NCI_C32557
+ <http://mouse.owl#MA_0000898> is the URI of the entity you believe is relevant to the given entity.
+
+**Rationale:**  
+The entity "External_Granular_Layer" has synonyms such as "External Granular Layer of the Cerebral Cortex" and is part of cortical cell layers. The entity from the other ontology labeled "cortical layer II" has a synonym "external granular layer," which directly matches one of the synonyms of the source entity, making it a strong candidate for alignment. 
+
+In contrast, "cortical layer IV" (internal granular layer) does not align with the external designation and thus is less relevant.
+http://human.owl#NCI_C32552
+ <Possible Entity URI>: http://mouse.owl#MA_0001929 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32551
+ <http://mouse.owl#MA_0001929> is the URI of the entity that is most relevant to the given entity "External_Carotid_Artery". 
+
+The label "external carotid artery" matches exactly with the synonym "External Carotid Artery" (case-insensitive), and its superclass "carotid artery" aligns with the broader category in the provided hierarchy. Additionally, it is a direct counterpart to the source entity based on both label and semantic context.
+
+Other entities such as "internal carotid artery", "common carotid artery", "left common carotid artery", and "right common carotid artery" are related but not specifically aligned to "External_Carotid_Artery".
+
+Thus, the best alignment is:
+- <http://mouse.owl#MA_0001929>
+http://human.owl#NCI_C13058
+ <http://mouse.owl#MA_0002443>
+http://human.owl#NCI_C52699
+ <http://mouse.owl#MA_0002240> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13056
+ <http://mouse.owl#MA_0000165> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52698
+ <http://mouse.owl#MA_0002237> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52697
+ <http://mouse.owl#MA_0002220> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52696
+ <http://mouse.owl#MA_0002150> is the URI of the entity you believe is relevant to the given entity.  
+<http://mouse.owl#MA_0002219> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13053
+ <http://mouse.owl#MA_0000709>  
+<http://mouse.owl#MA_0000703>  
+<http://mouse.owl#MA_0000705>  
+<http://mouse.owl#MA_0000707>  
+<http://mouse.owl#MA_0000714>
+http://human.owl#NCI_C52695
+ <http://mouse.owl#MA_0002212>
+http://human.owl#NCI_C12769
+ <http://mouse.owl#MA_0000054> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13051
+ <Possible Entity URI>: http://mouse.owl#MA_0002434
+http://human.owl#NCI_C52693
+ <http://mouse.owl#MA_0002211> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12768
+ <http://mouse.owl#MA_0000228> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13050
+ <http://mouse.owl#MA_0002439>
+http://human.owl#NCI_C52692
+ <http://mouse.owl#MA_0002191> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12765
+ <http://mouse.owl#MA_0000128>
+http://human.owl#NCI_C12404
+ <http://mouse.owl#MA_0000384>
+http://human.owl#NCI_C33199
+ <http://mouse.owl#MA_0002432> is the URI of the entity "oculomotor muscle" which aligns with the given entity "Oculomotor_Muscle" as they are both general terms referring to the same category of muscles responsible for eye movement.
+http://human.owl#NCI_C12403
+ <http://mouse.owl#MA_0000385>
+http://human.owl#NCI_C12763
+ <http://mouse.owl#MA_0000431>
+http://human.owl#NCI_C33198
+ <http://mouse.owl#MA_0000578> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12761
+ <Possible Entity URI> http://mouse.owl#MA_0001097
+http://human.owl#NCI_C12400
+ <http://mouse.owl#MA_0000129>
+http://human.owl#NCI_C33194
+ No relevant entity found.
+http://human.owl#NCI_C33193
+ <http://mouse.owl#MA_0002347>
+http://human.owl#NCI_C32548
+ <http://mouse.owl#MA_0001531>
+http://human.owl#NCI_C33191
+ <Possible Entity URI>: http://mouse.owl#MA_0002347
+http://human.owl#NCI_C33190
+ <http://mouse.owl#MA_0001974>
+http://human.owl#NCI_C32546
+ <http://mouse.owl#MA_0002415> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32542
+ <http://mouse.owl#MA_0001567>
+http://human.owl#NCI_C32540
+ <http://mouse.owl#MA_0002681>
+http://human.owl#NCI_C13048
+ <Possible Entity URI>: http://mouse.owl#MA_0001674
+http://human.owl#NCI_C52689
+ <Possible Entity URI>: http://mouse.owl#MA_0002105
+http://human.owl#NCI_C13046
+ <http://mouse.owl#MA_0000113> is the URI of the entity you believe is relevant to the given entity.
+
+Additionally, the following sub-entities from the given set are likely to be aligned with specific subclasses of "Ligament" in the provided ontology:
+
+- **Periodontal_Ligament** corresponds to **Periodontium**.
+- **Larynx_Ligament** corresponds to **Laryngeal_Ligament**.
+- **Medial_Palpebral_Ligament** matches directly with **Medial_Palpebral_Ligament**.
+
+Other listed ligaments (e.g., falciform ligament, lieno-renal ligament, gastro-splenic ligament, auricular ligament, spiral ligament) do not have exact counterparts in the original set but may still be considered for alignment depending on domain-specific nuances.
+http://human.owl#NCI_C52688
+ <http://mouse.owl#MA_0002119> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52687
+ <Possible Entity URI> http://mouse.owl#MA_0002116 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52686
+ <http://mouse.owl#MA_0002080> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52685
+ <Possible Entity URI> http://mouse.owl#MA_0002079
+http://human.owl#NCI_C12759
+ <http://mouse.owl#MA_0001096> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49141
+ <Possible Entity URI>http://mouse.owl#MA_0000995</Possible Entity URI>
+http://human.owl#NCI_C12758
+ <Possible Entity URI>: http://mouse.owl#MA_0001095
+http://human.owl#NCI_C49140
+ <http://mouse.owl#MA_0000997>
+http://human.owl#NCI_C12756
+ <http://mouse.owl#MA_0000281>
+http://human.owl#NCI_C12755
+ <http://mouse.owl#MA_0000016>
+http://human.owl#NCI_C12754
+ <http://mouse.owl#MA_0002418>
+http://human.owl#NCI_C33189
+ <Possible Entity URI> http://mouse.owl#MA_0002026  
+<Possible Entity URI> http://mouse.owl#MA_0001921  
+
+**Explanation:**  
+- **MA_0002026 (profunda brachii artery)** is a branch of the brachial artery and is known to supply blood to the muscles of the arm. It can be considered a *nutrient artery* for those muscles, making it a strong candidate for alignment with "Nutrient_Artery."
+- **MA_0001921 (brachial artery)** is directly related as the parent artery from which the nutrient artery (profunda brachii) branches. Given its close anatomical and hierarchical relationship, it is also relevant to the concept of "Nutrient_Artery."
+
+Other entities like **bronchial artery** (MA_0001923) and **brachiocephalic trunk** (MA_0001922) are less relevant because they do not directly relate to the brachial region or nutrient supply to muscles in that context.
+http://human.owl#NCI_C12753
+ <http://mouse.owl#MA_0000088>
+http://human.owl#NCI_C33188
+ <http://mouse.owl#MA_0001053> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12752
+ <http://mouse.owl#MA_0000303> is the URI of the entity you believe is relevant to the given entity.  
+
+Additionally, the following entities are also relevant as they represent specific digits of the Metatarsal Bone:  
+<http://mouse.owl#MA_0001369>  
+<http://mouse.owl#MA_0001370>  
+<http://mouse.owl#MA_0001371>  
+<http://mouse.owl#MA_0001372>  
+<http://mouse.owl#MA_0001373>
+http://human.owl#NCI_C33187
+ <Possible Entity URI>: http://mouse.owl#MA_0001052
+http://human.owl#NCI_C12751
+ <http://mouse.owl#MA_0000302> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32539
+ <Possible Entity URI>: http://mouse.owl#MA_0001573
+http://human.owl#NCI_C32899
+ <http://mouse.owl#MA_0001428> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32538
+ <http://mouse.owl#MA_0001568>
+http://human.owl#NCI_C32891
+ <http://mouse.owl#MA_0002546>
+http://human.owl#NCI_C49139
+ <http://mouse.owl#MA_0000996>
+http://human.owl#NCI_C49138
+ <http://mouse.owl#MA_0000993> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49137
+ <http://mouse.owl#MA_0000201>  
+<http://mouse.owl#MA_0000997>  
+<http://mouse.owl#MA_0000996>
+http://human.owl#NCI_C49136
+ <Possible Entity URI> http://mouse.owl#MA_0000898
+http://human.owl#NCI_C33612
+ <http://mouse.owl#MA_0001217> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33611
+ <Possible Entity URI>: http://mouse.owl#MA_0001220
+http://human.owl#NCI_C32094
+ <http://mouse.owl#MA_0002155> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12744
+ <http://mouse.owl#MA_0000312> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12742
+ <http://mouse.owl#MA_0000007>
+http://human.owl#NCI_C32526
+ <Possible Entity URI> http://mouse.owl#MA_0001763 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32884
+ <http://mouse.owl#MA_0001337>
+http://human.owl#NCI_C32522
+ <http://mouse.owl#MA_0002587>
+http://human.owl#NCI_C49485
+ <http://mouse.owl#MA_0000085>  
+<http://mouse.owl#MA_0000084>
+http://human.owl#NCI_C49483
+ <http://mouse.owl#MA_0001635>
+http://human.owl#NCI_C49482
+ <Possible Entity URI>http://mouse.owl#MA_0001251</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001252</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001253</Possible Entity URI>  
+
+All three entities are closely related to "Eyelid_Connective_Tissue." MA_0001251 is an exact match in label and likely represents the broader category, while MA_0001252 and MA_0001253 are specific subtypes that fall under eyelid connective tissue.
+http://human.owl#NCI_C12738
+ <http://mouse.owl#MA_0002154> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49481
+ <http://mouse.owl#MA_0001233> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12735
+ <Possible Entity URI>: http://mouse.owl#MA_0002711
+http://human.owl#NCI_C32080
+ <http://mouse.owl#MA_0002070> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12734
+ <Possible Entity URI> http://mouse.owl#MA_0002142 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12733
+ <http://mouse.owl#MA_0001971> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12732
+ <Possible Entity URI>: http://mouse.owl#MA_0001094
+http://human.owl#NCI_C33166
+ <Possible Entity URI> http://mouse.owl#MA_0001308
+http://human.owl#NCI_C12730
+ <http://mouse.owl#MA_0000093>  
+<http://mouse.owl#MA_0000092>
+http://human.owl#NCI_C33163
+ <http://mouse.owl#MA_0000571>
+http://human.owl#NCI_C33162
+ <http://mouse.owl#MA_0001349>
+http://human.owl#NCI_C33161
+ <http://mouse.owl#MA_0001299> is the URI of the entity that is most relevant to the given entity "Nasolacrimal_Duct", as it directly matches the label and meaning of the provided entity. 
+
+The second entity, <http://mouse.owl#MA_0001295>, refers to a related but distinct structure (lacrimal duct or tear duct), which is not the same as the nasolacrimal duct, so it is not considered a direct match.
+
+Final response:
+<http://mouse.owl#MA_0001299>
+http://human.owl#NCI_C12297
+ <Possible Entity URI> http://mouse.owl#MA_0000665
+http://human.owl#NCI_C32874
+ <http://mouse.owl#MA_0000085> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32513
+ <http://mouse.owl#MA_0002528> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12295
+ <Possible Entity URI> http://mouse.owl#MA_0000517
+http://human.owl#NCI_C12294
+ <Possible Entity URI>http://mouse.owl#MA_0000590</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000574</Possible Entity URI>
+http://human.owl#NCI_C49479
+ <http://mouse.owl#MA_0001665> is the URI of the entity "renal convoluted tubule", which directly matches the given entity "Convoluted_Tubule" based on its label and subclass structure (proximal and distal convoluted tubules). 
+
+<http://mouse.owl#MA_0001669> (proximal convoluted tubule) and <http://mouse.owl#MA_0001666> (distal convoluted tubule) are also relevant as they correspond to the direct subclasses of the given entity.
+
+Final alignment suggestions:
+
+<http://mouse.owl#MA_0001665>  
+<http://mouse.owl#MA_0001669>  
+<http://mouse.owl#MA_0001666>
+http://human.owl#NCI_C32076
+ No relevant entity found.
+http://human.owl#NCI_C49473
+ <http://mouse.owl#MA_0001782>
+http://human.owl#NCI_C12729
+ <http://mouse.owl#MA_0000088>
+http://human.owl#NCI_C32074
+ <http://mouse.owl#MA_0002026> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12728
+ <http://mouse.owl#MA_0000074> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13010
+ <Possible Entity URI> http://mouse.owl#MA_0001551
+http://human.owl#NCI_C12723
+ <http://mouse.owl#MA_0001093> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33158
+ <http://mouse.owl#MA_0000571>
+http://human.owl#NCI_C12721
+ <http://mouse.owl#MA_0001076>
+http://human.owl#NCI_C12720
+ <http://mouse.owl#MA_0000220> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32509
+ <http://mouse.owl#MA_0001582> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33150
+ <http://mouse.owl#MA_0002331>
+http://human.owl#NCI_C32505
+ <http://mouse.owl#MA_0002543>
+http://human.owl#NCI_C12287
+ <Possible Entity URI>http://mouse.owl#MA_0000428</Possible Entity URI>
+http://human.owl#NCI_C12286
+ <http://mouse.owl#MA_0000430> is the URI of the entity you believe is relevant to the given entity.
+
+The given entity "Middle_Lobe_of_the_Right_Lung" matches most closely with the entity "right lung middle lobe" from the provided set. The label "right lung middle lobe" directly corresponds to the human anatomy term "Middle Lobe of the Right Lung," making it the most relevant alignment.
+http://human.owl#NCI_C32864
+ <http://mouse.owl#MA_0002070>
+http://human.owl#NCI_C12285
+ <Possible Entity URI>http://mouse.owl#MA_0000429</Possible Entity URI>
+http://human.owl#NCI_C12284
+ <http://mouse.owl#MA_0000438> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32862
+ <Possible Entity URI> http://mouse.owl#MA_0001974 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32860
+ <Possible Entity URI>: http://mouse.owl#MA_0001997
+http://human.owl#NCI_C12281
+ <http://mouse.owl#MA_0001758> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32069
+ <Possible Entity URI>: http://mouse.owl#MA_0000329
+http://human.owl#NCI_C13004
+ <http://mouse.owl#MA_0000076> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12718
+ <http://mouse.owl#MA_0001360> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12717
+ <http://mouse.owl#MA_0001359>
+http://human.owl#NCI_C12716
+ <http://mouse.owl#MA_0002118>  
+<http://mouse.owl#MA_0002119>
+http://human.owl#NCI_C12715
+ <http://mouse.owl#MA_0001951> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12714
+ <Possible Entity URI>http://mouse.owl#MA_0001091</Possible Entity URI>
+http://human.owl#NCI_C12713
+ <http://mouse.owl#MA_0000268>  
+<http://mouse.owl#MA_0001267>
+http://human.owl#NCI_C33148
+ <http://mouse.owl#MA_0001221> is the URI of the entity "tensor tympani", which corresponds to the subclass "Tensor_Tympani" of the given entity "Muscle_of_the_Tympanum".
+
+<http://mouse.owl#MA_0001220> is the URI of the entity "stapedius", which corresponds to the subclass "Stapedius_Muscle" of the given entity "Muscle_of_the_Tympanum".
+http://human.owl#NCI_C12712
+ <http://mouse.owl#MA_0002564> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12711
+ <http://mouse.owl#MA_0001483>
+http://human.owl#NCI_C33142
+ <Possible Entity URI> http://mouse.owl#MA_0000902
+http://human.owl#NCI_C33141
+ No relevant entity found.
+http://human.owl#NCI_C12278
+ <http://mouse.owl#MA_0001795> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12277
+ <Possible Entity URI>: http://mouse.owl#MA_0001793
+http://human.owl#NCI_C32855
+ <Possible Entity URI>: http://mouse.owl#MA_0002169
+http://human.owl#NCI_C12276
+ <http://mouse.owl#MA_0001792> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32854
+ <Possible Entity URI>: http://mouse.owl#MA_0002148
+http://human.owl#NCI_C32852
+ No relevant entity found.
+http://human.owl#NCI_C52997
+ <http://mouse.owl#MA_0002038> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32056
+ <http://mouse.owl#MA_0001776>  
+<http://mouse.owl#MA_0001785>
+http://human.owl#NCI_C52994
+ <http://mouse.owl#MA_0002017> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52992
+ <Possible Entity URI> http://mouse.owl#MA_0002013  
+<Possible Entity URI> http://mouse.owl#MA_0002015  
+<Possible Entity URI> http://mouse.owl#MA_0002014
+http://human.owl#NCI_C52991
+ <http://mouse.owl#MA_0002373> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12705
+ <http://mouse.owl#MA_0000012>
+http://human.owl#NCI_C32050
+ <Possible Entity URI>: http://mouse.owl#MA_0000117
+http://human.owl#NCI_C12704
+ <http://mouse.owl#MA_0002563> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33499
+ <http://mouse.owl#MA_0001435> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33498
+ <http://mouse.owl#MA_0001434>
+http://human.owl#NCI_C33137
+ <Possible Entity URI>: http://mouse.owl#MA_0000897
+http://human.owl#NCI_C33136
+ <http://mouse.owl#MA_0000350> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12700
+ <http://mouse.owl#MA_0000215> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33494
+ <Possible Entity URI>: http://mouse.owl#MA_0000196
+http://human.owl#NCI_C32849
+ <http://mouse.owl#MA_0002157>
+http://human.owl#NCI_C33491
+ <http://mouse.owl#MA_0000729>
+http://human.owl#NCI_C32848
+ <Possible Entity URI> http://mouse.owl#MA_0002326
+http://human.owl#NCI_C33490
+ <http://mouse.owl#MA_0002047> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32847
+ <Possible Entity URI>http://mouse.owl#MA_0002145</Possible Entity URI>
+http://human.owl#NCI_C32846
+ <Possible Entity URI> http://mouse.owl#MA_0001974
+http://human.owl#NCI_C32845
+ <http://mouse.owl#MA_0001974>
+http://human.owl#NCI_C32844
+ <http://mouse.owl#MA_0000900> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53276
+ <Possible Entity URI> http://mouse.owl#MA_0000617
+http://human.owl#NCI_C52989
+ <Possible Entity URI> http://mouse.owl#MA_0002372 is the URI of the entity you believe is relevant to the given entity.
+
+The entity "Semispinalis_Capitis" matches closely with the label "semispinalis capitis" in the provided set, and both are subclasses of "skeletal muscle". The other entity, "semispinalis cervicis", refers to a different muscle and is not relevant for alignment.
+http://human.owl#NCI_C52987
+ <Possible Entity URI>: http://mouse.owl#MA_0002371
+http://human.owl#NCI_C32046
+ <http://mouse.owl#MA_0002064>
+http://human.owl#NCI_C52986
+ <http://mouse.owl#MA_0002370>
+http://human.owl#NCI_C32045
+ No relevant entity found.
+http://human.owl#NCI_C52985
+ <Possible Entity URI> http://mouse.owl#MA_0002369 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52983
+ <Possible Entity URI> http://mouse.owl#MA_0001945 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32042
+ <Possible Entity URI>: http://mouse.owl#MA_0001335
+http://human.owl#NCI_C32041
+ <Possible Entity URI>: http://mouse.owl#MA_0001088
+http://human.owl#NCI_C52981
+ <Possible Entity URI>: http://mouse.owl#MA_0002007
+http://human.owl#NCI_C32040
+ <http://mouse.owl#MA_0002268> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52980
+ <Possible Entity URI>: http://mouse.owl#MA_0001944
+http://human.owl#NCI_C33129
+ <http://mouse.owl#MA_0002479> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33489
+ <http://mouse.owl#MA_0002500>
+http://human.owl#NCI_C33487
+ <http://mouse.owl#MA_0001705> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33486
+ <http://mouse.owl#MA_0001849> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33483
+ <http://mouse.owl#MA_0000426> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32838
+ <http://mouse.owl#MA_0002096>
+http://human.owl#NCI_C33120
+ No relevant entity found.
+http://human.owl#NCI_C12259
+ <http://mouse.owl#MA_0001624>
+http://human.owl#NCI_C12258
+ <Possible Entity URI>http://mouse.owl#MA_0002559</Possible Entity URI>
+http://human.owl#NCI_C32836
+ <Possible Entity URI> http://mouse.owl#MA_0001930 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12257
+ <http://mouse.owl#MA_0001612>
+http://human.owl#NCI_C32835
+ <http://mouse.owl#MA_0002575> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12251
+ <http://mouse.owl#MA_0000352>
+http://human.owl#NCI_C49799
+ <http://mouse.owl#MA_0001132>
+http://human.owl#NCI_C49798
+ <http://mouse.owl#MA_0001131>
+http://human.owl#NCI_C52978
+ <Possible Entity URI>: http://mouse.owl#MA_0002353
+http://human.owl#NCI_C32398
+ <Possible Entity URI>http://mouse.owl#MA_0002283</Possible Entity URI>
+http://human.owl#NCI_C49795
+ <http://mouse.owl#MA_0001603> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52976
+ <http://mouse.owl#MA_0002352>
+http://human.owl#NCI_C49794
+ <http://mouse.owl#MA_0001601> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52975
+ <Possible Entity URI> http://mouse.owl#MA_0002003  
+<Possible Entity URI> http://mouse.owl#MA_0002004  
+<Possible Entity URI> http://mouse.owl#MA_0002005
+http://human.owl#NCI_C32395
+ <http://mouse.owl#MA_0001688> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32394
+ <http://mouse.owl#MA_0001510>
+http://human.owl#NCI_C49792
+ <Possible Entity URI> http://mouse.owl#MA_0001909  
+<Possible Entity URI> http://mouse.owl#MA_0001601  
+<Possible Entity URI> http://mouse.owl#MA_0001603
+http://human.owl#NCI_C52973
+ <Possible Entity URI>: http://mouse.owl#MA_0002002
+http://human.owl#NCI_C52972
+ <Possible Entity URI>: http://mouse.owl#MA_0002349
+http://human.owl#NCI_C52971
+ <http://mouse.owl#MA_0002348>
+http://human.owl#NCI_C32391
+ <http://mouse.owl#MA_0001884>
+http://human.owl#NCI_C33116
+ <http://mouse.owl#MA_0001353> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33476
+ <http://mouse.owl#MA_0001639> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33115
+ <Possible Entity URI>http://mouse.owl#MA_0002278</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002279</Possible Entity URI>
+http://human.owl#NCI_C33475
+ <Possible Entity URI>: http://mouse.owl#MA_0000385
+http://human.owl#NCI_C33474
+ <http://mouse.owl#MA_0001972>
+http://human.owl#NCI_C33473
+ <Possible Entity URI> http://mouse.owl#MA_0001928 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32826
+ <http://mouse.owl#MA_0002584> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32825
+ <Possible Entity URI>: http://mouse.owl#MA_0001176
+http://human.owl#NCI_C32824
+ <http://mouse.owl#MA_0002324> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32823
+ No relevant entity found.
+http://human.owl#NCI_C32822
+ <Possible Entity URI>http://mouse.owl#MA_0001981</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002073</Possible Entity URI>  
+
+Both entities are related to "intercostal artery" and fall under the superclass "artery," aligning with the provided entity "Intercostal_Artery_Branch." While "upper intercostal artery" is a more specific subclass, it is still relevant in the context of alignment.
+http://human.owl#NCI_C52969
+ <http://mouse.owl#MA_0001998> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52968
+ <http://mouse.owl#MA_0001997> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32386
+ <http://mouse.owl#MA_0000993> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13323
+ <http://mouse.owl#MA_0001286>
+http://human.owl#NCI_C52965
+ <http://mouse.owl#MA_0001996>
+http://human.owl#NCI_C49782
+ <Possible Entity URI> http://mouse.owl#MA_0000879 is the most relevant entity to align with "Choroid_Plexus_of_the_Third_Ventricle". 
+
+The label "third ventricle choroid plexus" directly corresponds to the given entity, and it shares the same superclass "choroid plexus". Additionally, it includes a synonym ("3rd ventricle choroid plexus") that closely matches the naming convention of the given entity.
+
+Other entities like "third ventricle choroid plexus stroma" (MA_0000881) and "third ventricle choroid plexus epithelium" (MA_0000880) may be related but are more specific to certain tissues or components of the choroid plexus, making them less suitable for direct alignment.
+http://human.owl#NCI_C13321
+ <http://mouse.owl#MA_0002515>  
+<http://mouse.owl#MA_0002512>
+http://human.owl#NCI_C52962
+ <http://mouse.owl#MA_0002344>
+http://human.owl#NCI_C52961
+ No relevant entity found.
+http://human.owl#NCI_C33106
+ <http://mouse.owl#MA_0000453>
+http://human.owl#NCI_C33465
+ <http://mouse.owl#MA_0000423> is the URI of the entity "respiratory bronchiole" from the other ontology, which directly matches the label and general concept of the given entity "Respiratory_Bronchiole". 
+
+<http://mouse.owl#MA_0001788> and <http://mouse.owl#MA_0001779> are also relevant as they represent specialized subclasses ("right lung respiratory bronchiole" and "left lung respiratory bronchiole", respectively), corresponding to the subclasses of the given entity.
+
+Thus, the relevant entities are:
+
+- <http://mouse.owl#MA_0000423>
+- <http://mouse.owl#MA_0001788>
+- <http://mouse.owl#MA_0001779>
+http://human.owl#NCI_C33462
+ <Possible Entity URI>http://mouse.owl#MA_0002210</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002212</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002211</Possible Entity URI>
+http://human.owl#NCI_C32818
+ <http://mouse.owl#MA_0000084> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32815
+ <http://mouse.owl#MA_0001926> is the URI of the entity "common carotid artery," which aligns with the subclass "Right_Common_Carotid_Artery" of the given entity "Innominate_Artery_Branch."
+
+<http://mouse.owl#MA_0002047> is the URI of the entity "right subclavian artery," which aligns with the subclass "Right_Subclavian_Artery" of the given entity "Innominate_Artery_Branch."
+http://human.owl#NCI_C32814
+ <Possible Entity URI>: http://mouse.owl#MA_0001922
+http://human.owl#NCI_C12234
+ <http://mouse.owl#MA_0001588>
+http://human.owl#NCI_C12233
+ <Possible Entity URI>http://mouse.owl#MA_0001589</Possible Entity URI>
+http://human.owl#NCI_C49779
+ <http://mouse.owl#MA_0000760> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52959
+ <Possible Entity URI>: http://mouse.owl#MA_0002341
+http://human.owl#NCI_C32379
+ No relevant entity found.
+http://human.owl#NCI_C49775
+ <http://mouse.owl#MA_0000759> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52956
+ <Possible Entity URI> http://mouse.owl#MA_0002340 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52954
+ <http://mouse.owl#MA_0002338>
+http://human.owl#NCI_C32373
+ <http://mouse.owl#MA_0001759>
+http://human.owl#NCI_C52951
+ <Possible Entity URI>: http://mouse.owl#MA_0001989
+http://human.owl#NCI_C52950
+ <http://mouse.owl#MA_0002334> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32809
+ <Possible Entity URI> http://mouse.owl#MA_0001312 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32808
+ <Possible Entity URI>http://mouse.owl#MA_0001311</Possible Entity URI>
+http://human.owl#NCI_C32801
+ <http://mouse.owl#MA_0000737> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12222
+ <http://mouse.owl#MA_0000921>
+http://human.owl#NCI_C12221
+ <http://mouse.owl#MA_0000919> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49769
+ <http://mouse.owl#MA_0000755>
+http://human.owl#NCI_C52948
+ <http://mouse.owl#MA_0001988> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52947
+ <http://mouse.owl#MA_0001987> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52946
+ <Possible Entity URI>: http://mouse.owl#MA_0002330
+http://human.owl#NCI_C52944
+ <http://mouse.owl#MA_0002322>
+http://human.owl#NCI_C49760
+ <http://mouse.owl#MA_0000764> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52941
+ <http://mouse.owl#MA_0001982>  
+<http://mouse.owl#MA_0001984>
+http://human.owl#NCI_C32361
+ <Possible Entity URI>: http://mouse.owl#MA_0002248
+http://human.owl#NCI_C52940
+ <http://mouse.owl#MA_0001977> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33449
+ <Possible Entity URI>: http://mouse.owl#MA_0002364
+http://human.owl#NCI_C33441
+ <Possible Entity URI>: http://mouse.owl#MA_0002363
+http://human.owl#NCI_C33440
+ <Possible Entity URI>: http://mouse.owl#MA_0002362
+http://human.owl#NCI_C41166
+ <Possible Entity URI> http://mouse.owl#MA_0002434
+
+The entity "Hematopoietic_and_Lymphatic_System_Part" in the source ontology encompasses both the hematopoietic and lymphatic systems as its subclasses. Among the provided entities from another ontology, only "hematopoietic system" (URI: http://mouse.owl#MA_0002434) directly matches one of the subclasses. While the exact composite term "Hematopoietic and Lymphatic System Part" does not have a direct counterpart, the closest relevant and alignable entity based on the given information is "hematopoietic system".
+
+No other entity in the provided set corresponds to the "Lymphatic_System" or the combined concept of "Hematopoietic and Lymphatic System Part". Therefore, only one entity is selected for alignment.
+http://human.owl#NCI_C32359
+ <http://mouse.owl#MA_0002143> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52938
+ <http://mouse.owl#MA_0001979>
+http://human.owl#NCI_C41165
+ <Possible Entity URI>http://mouse.owl#MA_0002435</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000013</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002434</Possible Entity URI>
+http://human.owl#NCI_C49757
+ <Possible Entity URI>: http://mouse.owl#MA_0000744
+http://human.owl#NCI_C32358
+ <http://mouse.owl#MA_0001972> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32357
+ <http://mouse.owl#MA_0001972> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52935
+ <Possible Entity URI>: http://mouse.owl#MA_0002311
+http://human.owl#NCI_C32355
+ <http://mouse.owl#MA_0001951>
+http://human.owl#NCI_C52933
+ <Possible Entity URI> http://mouse.owl#MA_0002310 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32353
+ <http://mouse.owl#MA_0001926> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32352
+ <Possible Entity URI> http://mouse.owl#MA_0001926  
+<Possible Entity URI> http://mouse.owl#MA_0001927  
+<Possible Entity URI> http://mouse.owl#MA_0001928
+http://human.owl#NCI_C52930
+ <http://mouse.owl#MA_0002308>
+http://human.owl#NCI_C34082
+ <http://mouse.owl#MA_0000323>
+http://human.owl#NCI_C33794
+ <http://mouse.owl#MA_0002540>
+http://human.owl#NCI_C52928
+ <http://mouse.owl#MA_0002307> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52925
+ <Possible Entity URI> http://mouse.owl#MA_0002301 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32344
+ <http://mouse.owl#MA_0002614> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52923
+ <Possible Entity URI> http://mouse.owl#MA_0002300 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52921
+ <http://mouse.owl#MA_0002299> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33427
+ <http://mouse.owl#MA_0002031> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33788
+ <http://mouse.owl#MA_0000048> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33787
+ <http://mouse.owl#MA_0002243> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33423
+ <http://mouse.owl#MA_0001338>
+http://human.owl#NCI_C33784
+ <http://mouse.owl#MA_0000728>  
+<http://mouse.owl#MA_0000729>
+http://human.owl#NCI_C33422
+ <http://mouse.owl#MA_0002553>  
+<http://mouse.owl#MA_0002359>  
+<http://mouse.owl#MA_0002358>
+http://human.owl#NCI_C33421
+ <http://mouse.owl#MA_0002359> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33420
+ <http://mouse.owl#MA_0002358> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33781
+ <Possible Entity URI> http://mouse.owl#MA_0002675
+http://human.owl#NCI_C33780
+ <Possible Entity URI>http://mouse.owl#MA_0001764</Possible Entity URI>
+http://human.owl#NCI_C52918
+ <http://mouse.owl#MA_0002295> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52917
+ <http://mouse.owl#MA_0002294> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52916
+ <http://mouse.owl#MA_0002293> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52914
+ <Possible Entity URI> http://mouse.owl#MA_0002292 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32334
+ <Possible Entity URI> http://mouse.owl#MA_0001420  
+<Possible Entity URI> http://mouse.owl#MA_0000310  
+
+**Explanation:**  
+- **http://mouse.owl#MA_0001420 (coccygeal vertebra)** has an exact label match with the entity to align and is a subclass of "caudal vertebra", making it highly relevant.  
+- **http://mouse.owl#MA_0000310 (caudal vertebra)** includes "coccygeal vertebra" as a subclass and has a synonym "tail vertebra". Since "Coccygeal_Vertebra" is a specific type of caudal vertebra, this entity is also relevant but less specific.
+http://human.owl#NCI_C52913
+ <http://mouse.owl#MA_0002291> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32695
+ <http://mouse.owl#MA_0000002>
+http://human.owl#NCI_C32333
+ No relevant entity found.
+http://human.owl#NCI_C52911
+ <http://mouse.owl#MA_0002290>
+http://human.owl#NCI_C32692
+ <http://mouse.owl#MA_0001709> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C34062
+ <http://mouse.owl#MA_0002504> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33417
+ <http://mouse.owl#MA_0001669> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49299
+ <Possible Entity URI>http://mouse.owl#MA_0001899</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001554</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001568</Possible Entity URI>  
+
+### Explanation:
+- **http://mouse.owl#MA_0001899 (gastrointestinal system lamina propria)** matches the label and structure of the main entity **Gastrointestinal_Tract_Lamina_Propria**, including shared synonyms.
+- **http://mouse.owl#MA_0001554 (small intestine lamina propria)** corresponds to a subclass of the main entity: **Small_Intestinal_Lamina_Propria**.
+- **http://mouse.owl#MA_0001568 (esophagus lamina propria)** also aligns with a subclass of the main entity: **Esophageal_Lamina_Propria**, with synonym support ("oesophagus" variant).
+http://human.owl#NCI_C34060
+ <http://mouse.owl#MA_0000227> is the URI of the entity "sympathetic nerve trunk", which corresponds to the superclass of the sub-classes like "Thoracic_Sympathetic_Nerve_Trunk" and "Lumbar_Sympathetic_Nerve_Trunk" under the given entity "Autonomic_Nervous_System_Part". It aligns well with the Sympathetic_Nervous_System related structures.
+
+<http://mouse.owl#MA_0001163> is the URI of the entity "lumbar sympathetic nerve trunk", which directly matches one of the subclasses provided under the given entity.
+
+<http://mouse.owl#MA_0001165> is the URI of the entity "thoracic sympathetic nerve trunk", which also directly matches another subclass provided under the given entity.
+http://human.owl#NCI_C33777
+ <Possible Entity URI>: http://mouse.owl#MA_0001757
+http://human.owl#NCI_C49297
+ <http://mouse.owl#MA_0001554>
+http://human.owl#NCI_C33776
+ <http://mouse.owl#MA_0001770>
+http://human.owl#NCI_C33774
+ <http://mouse.owl#MA_0000767>
+http://human.owl#NCI_C49294
+ <http://mouse.owl#MA_0001789> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33773
+ <http://mouse.owl#MA_0002674> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13190
+ <http://mouse.owl#MA_0001236> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32688
+ <http://mouse.owl#MA_0002054>
+http://human.owl#NCI_C52902
+ <http://mouse.owl#MA_0002289>
+http://human.owl#NCI_C32684
+ <http://mouse.owl#MA_0002587>
+http://human.owl#NCI_C32322
+ <Possible Entity URI>: http://mouse.owl#MA_0001594
+http://human.owl#NCI_C52901
+ <http://mouse.owl#MA_0002285>
+http://human.owl#NCI_C32320
+ <http://mouse.owl#MA_0002467>
+http://human.owl#NCI_C33766
+ <http://mouse.owl#MA_0002569>
+http://human.owl#NCI_C49285
+ <Possible Entity URI>http://mouse.owl#MA_0001788</Possible Entity URI>
+http://human.owl#NCI_C33402
+ <http://mouse.owl#MA_0002740>
+http://human.owl#NCI_C33400
+ <Possible Entity URI>: http://mouse.owl#MA_0001710
+http://human.owl#NCI_C12899
+ No relevant entity found.
+http://human.owl#NCI_C33760
+ No relevant entity found.
+http://human.owl#NCI_C12898
+ <http://mouse.owl#MA_0001014> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32315
+ <Possible Entity URI>: http://mouse.owl#MA_0001269
+http://human.owl#NCI_C32670
+ No relevant entity found.
+http://human.owl#NCI_C49279
+ <http://mouse.owl#MA_0001787> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49278
+ <http://mouse.owl#MA_0001786> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13178
+ No relevant entity found.
+http://human.owl#NCI_C49277
+ <http://mouse.owl#MA_0001785> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33754
+ <Possible Entity URI>http://mouse.owl#MA_0000424</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001780</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001789</Possible Entity URI>
+http://human.owl#NCI_C49274
+ <http://mouse.owl#MA_0000377> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49273
+ <http://mouse.owl#MA_0001680> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12889
+ <http://mouse.owl#MA_0002443> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33750
+ <Possible Entity URI>: http://mouse.owl#MA_0002392
+http://human.owl#NCI_C12888
+ <http://mouse.owl#MA_0002444>
+http://human.owl#NCI_C12887
+ <http://mouse.owl#MA_0000374>
+http://human.owl#NCI_C12885
+ <http://mouse.owl#MA_0000370>
+http://human.owl#NCI_C12884
+ <Possible Entity URI>http://mouse.owl#MA_0002655</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001693</Possible Entity URI>  
+
+Both entities are related to "Urothelium" as they refer to transitional epithelium in parts of the urinary tract — one specifically in the ureter and the other in the urinary bladder. This aligns well with the subclasses and synonyms provided for the given entity.
+http://human.owl#NCI_C12883
+ <http://mouse.owl#MA_0002087>
+http://human.owl#NCI_C32309
+ <http://mouse.owl#MA_0000961>
+http://human.owl#NCI_C32308
+ <http://mouse.owl#MA_0000983> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32667
+ No relevant entity found.
+http://human.owl#NCI_C32666
+ <Possible Entity URI>: http://mouse.owl#MA_0002306
+http://human.owl#NCI_C32665
+ <Possible Entity URI>: http://mouse.owl#MA_0002128
+http://human.owl#NCI_C32301
+ <http://mouse.owl#MA_0002459> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32662
+ <http://mouse.owl#MA_0001626>
+http://human.owl#NCI_C32661
+ <http://mouse.owl#MA_0002519>
+http://human.owl#NCI_C49269
+ <Possible Entity URI> http://mouse.owl#MA_0001743
+http://human.owl#NCI_C33748
+ <http://mouse.owl#MA_0001221>
+http://human.owl#NCI_C49264
+ <Possible Entity URI> http://mouse.owl#MA_0001605 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33743
+ <Possible Entity URI>: http://mouse.owl#MA_0002390
+http://human.owl#NCI_C49263
+ <Possible Entity URI> http://mouse.owl#MA_0001865 is the most relevant entity to align with "Nasopharynx_Epithelium". 
+
+The label "nasopharynx epithelium" directly matches the given entity's label and it shares a superclass "upper respiratory tract epithelium", which supports the anatomical and categorical alignment. Additionally, there are no conflicting or divergent sub-class relationships that would suggest a misalignment.
+
+No other entities in the provided set are as closely aligned with "Nasopharynx_Epithelium" as http://mouse.owl#MA_0001865.
+http://human.owl#NCI_C49262
+ <http://mouse.owl#MA_0001326> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33741
+ No relevant entity found.
+http://human.owl#NCI_C49261
+ <http://mouse.owl#MA_0001324>  
+<http://mouse.owl#MA_0001326>  
+<http://mouse.owl#MA_0001912>  
+<http://mouse.owl#MA_0001325>
+http://human.owl#NCI_C13161
+ <http://mouse.owl#MA_0002546>
+http://human.owl#NCI_C12877
+ <http://mouse.owl#MA_0000070>  
+<http://mouse.owl#MA_0001867>  
+<http://mouse.owl#MA_0001868>
+http://human.owl#NCI_C12875
+ <Possible Entity URI>: http://mouse.owl#MA_0002455
+http://human.owl#NCI_C12513
+ http://mouse.owl#MA_0001867 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12872
+ <Possible Entity URI> http://mouse.owl#MA_0002454
+http://human.owl#NCI_C12510
+ <http://mouse.owl#MA_0000207>
+http://human.owl#NCI_C12871
+ <http://mouse.owl#MA_0000092> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12870
+ <http://mouse.owl#MA_0000093>
+http://human.owl#NCI_C32658
+ <http://mouse.owl#MA_0001627>
+http://human.owl#NCI_C32657
+ <http://mouse.owl#MA_0001627>
+http://human.owl#NCI_C32652
+ <http://mouse.owl#MA_0001310>
+http://human.owl#NCI_C33739
+ <http://mouse.owl#MA_0002508>
+http://human.owl#NCI_C34021
+ <Possible Entity URI>http://mouse.owl#MA_0000428</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000429</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000430</Possible Entity URI>
+http://human.owl#NCI_C52799
+ <Possible Entity URI> http://mouse.owl#MA_0001351 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49256
+ <http://mouse.owl#MA_0001819>
+http://human.owl#NCI_C49255
+ <http://mouse.owl#MA_0001780> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49254
+ <http://mouse.owl#MA_0001779> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52796
+ <http://mouse.owl#MA_0001364> is the URI of the entity you believe is relevant to the given entity. 
+
+**Explanation**:  
+The given entity is **Metacarpal_Bone_Digit_1**, which refers to the first digit's metacarpal bone. Among the provided entities, only **http://mouse.owl#MA_0001364** has the label **metacarpal bone digit 1**, which directly matches both the class (metacarpal bone) and the digit (digit 1).  
+
+No other entity in the list aligns as closely with the given entity.
+http://human.owl#NCI_C52795
+ <http://mouse.owl#MA_0001365> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33731
+ <http://mouse.owl#MA_0001446> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49252
+ <http://mouse.owl#MA_0001778> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52794
+ http://mouse.owl#MA_0001366 is the URI of the entity that is most relevant to the given entity "Metacarpal_Bone_Digit_3". 
+
+The label "metacarpal bone digit 3" directly matches the given entity's label and its associated synonym "Metacarpal Bone Digit 3". Additionally, it inherits from the superclass "metacarpal bone", which aligns with the given entity's superclass hierarchy.
+
+Other entities such as "metacarpal bone digit 2" or any of the "metatarsal bone digit" variants are not as relevant because they either refer to different digits or belong to a different anatomical region (metatarsals vs. metacarpals).
+
+Final response:
+<http://mouse.owl#MA_0001366>
+http://human.owl#NCI_C49251
+ <http://mouse.owl#MA_0001777>
+http://human.owl#NCI_C12869
+ <Possible Entity URI>: http://mouse.owl#MA_0000074
+http://human.owl#NCI_C52793
+ <http://mouse.owl#MA_0001367> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49250
+ <http://mouse.owl#MA_0001776> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12868
+ <Possible Entity URI>: http://mouse.owl#MA_0000075
+http://human.owl#NCI_C52792
+ <http://mouse.owl#MA_0001368> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12867
+ <http://mouse.owl#MA_0001771>
+http://human.owl#NCI_C52791
+ <http://mouse.owl#MA_0001369> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52790
+ <http://mouse.owl#MA_0001370> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12864
+ <http://mouse.owl#MA_0001388> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12863
+ <http://mouse.owl#MA_0001394> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33297
+ <http://mouse.owl#MA_0002529> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12862
+ <http://mouse.owl#MA_0001395> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12500
+ <http://mouse.owl#MA_0000255>
+http://human.owl#NCI_C12861
+ <http://mouse.owl#MA_0000306> is the URI of the entity that is relevant to the given entity. 
+
+The label "hand phalanx" matches well with "Phalanx of the Hand" and its synonyms. Additionally, its superclasses ("hand digit bone", "phalanx") and subclasses (e.g., "proximal phalanx of hand", "middle phalanx of hand", "distal phalanx of hand") align closely with the structure and hierarchy of the provided entity "Phalanx_of_the_Hand".
+
+No other entities are provided in the set, and this one appears to be a strong match.
+http://human.owl#NCI_C33295
+ No relevant entity found.
+http://human.owl#NCI_C12860
+ <http://mouse.owl#MA_0001343> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33292
+ <Possible Entity URI>: http://mouse.owl#MA_0002027
+
+The entity "Perforating_Artery" with its superclass "Deep_Femoral_Artery_Branch" corresponds closely to the entity labeled "profunda femoris artery" in the given set, as both refer to a major branch of the femoral artery supplying deep structures of the thigh. Therefore, this is the most relevant entity for alignment.
+http://human.owl#NCI_C53079
+ <Possible Entity URI> http://mouse.owl#MA_0002395
+http://human.owl#NCI_C32644
+ <Possible Entity URI>http://mouse.owl#MA_0001595</Possible Entity URI>
+http://human.owl#NCI_C53078
+ <http://mouse.owl#MA_0002394> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53076
+ <http://mouse.owl#MA_0002425>  
+<http://mouse.owl#MA_0002394>  
+<http://mouse.owl#MA_0002395>
+http://human.owl#NCI_C53075
+ <Possible Entity URI>: http://mouse.owl#MA_0002424
+http://human.owl#NCI_C53073
+ <http://mouse.owl#MA_0002402>
+http://human.owl#NCI_C49249
+ <http://mouse.owl#MA_0000964>
+http://human.owl#NCI_C53072
+ <http://mouse.owl#MA_0002391>
+http://human.owl#NCI_C49248
+ <Possible Entity URI> http://mouse.owl#MA_0000962  
+<Possible Entity URI> http://mouse.owl#MA_0000984  
+<Possible Entity URI> http://mouse.owl#MA_0000880  
+
+**Explanation:**  
+The entity to align is *"Choroid_Plexus_Epithelium_of_the_Lateral_Ventricle"*, which is a specific regional part of the choroid plexus epithelium. From the provided set, we are looking for entities that combine both the anatomical location (lateral ventricle) and the tissue type (epithelium). 
+
+- **http://mouse.owl#MA_0000962 (lateral ventricle choroid plexus epithelium)** — This label exactly matches the anatomical specificity and tissue type.
+- **http://mouse.owl#MA_0000984 (fourth ventricle choroid plexus epithelium)** — While not matching "lateral ventricle", it shares the same tissue type and structure, making it relevant but less specific.
+- **http://mouse.owl#MA_0000880 (third ventricle choroid plexus epithelium)** — Also shares the tissue type and is part of the same broader category, though not specific to the lateral ventricle.
+
+These entities are prioritized based on their anatomical relevance and shared tissue classification.
+http://human.owl#NCI_C49247
+ <Possible Entity URI>http://mouse.owl#MA_0001765</Possible Entity URI>
+http://human.owl#NCI_C52789
+ <http://mouse.owl#MA_0001371> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53070
+ <Possible Entity URI>: http://mouse.owl#MA_0002386
+http://human.owl#NCI_C49246
+ <Possible Entity URI>: http://mouse.owl#MA_0001766
+http://human.owl#NCI_C52788
+ <http://mouse.owl#MA_0001372> is the URI of the entity you believe is relevant to the given entity. 
+
+**Reasoning**:  
+The provided entity is *"Metatarsal_Bone_Digit_4"*, and it belongs to the superclass *"Metatarsal_Bone"*. Among the entities from the other ontology, several are labeled as *metatarsal bone digit X*, which aligns with the structure and meaning of the provided entity. Out of these, **"metatarsal bone digit 4"** (URI: `http://mouse.owl#MA_0001372`) directly matches both the digit and the type, making it the most relevant entity for alignment.
+
+Other *metatarsal bone digit* entries (e.g., digits 1–5) may be structurally similar but are not specific to digit 4 and thus less relevant in this context.
+http://human.owl#NCI_C49245
+ <Possible Entity URI>http://mouse.owl#MA_0001754</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001755</Possible Entity URI>
+http://human.owl#NCI_C52787
+ <http://mouse.owl#MA_0001373> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49244
+ No relevant entity found.
+http://human.owl#NCI_C52786
+ <http://mouse.owl#MA_0001395> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49243
+ <http://mouse.owl#MA_0001539> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52785
+ <http://mouse.owl#MA_0001387> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52784
+ <http://mouse.owl#MA_0001388> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49241
+ <http://mouse.owl#MA_0001537>
+http://human.owl#NCI_C12859
+ <http://mouse.owl#MA_0001341>
+http://human.owl#NCI_C52783
+ <http://mouse.owl#MA_0001380> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49240
+ <http://mouse.owl#MA_0001536> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12858
+ <Possible Entity URI> http://mouse.owl#MA_0001347 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52782
+ <http://mouse.owl#MA_0001385> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12857
+ <Possible Entity URI> http://mouse.owl#MA_0001340 is the URI of the entity you believe is relevant to the given entity. 
+
+The human "Trapezial_Bone" (also known as "Trapezium" or "Greater Multiangular Bone") corresponds to the mouse "trapezium", which has the same synonyms listed ("greater multiangular", "hand distal carpal bone 1"). Both entities belong to the class "distal carpal bone" in their respective ontologies, indicating a likely alignment.
+http://human.owl#NCI_C52781
+ <http://mouse.owl#MA_0001384> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12856
+ <http://mouse.owl#MA_0001342> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52780
+ <Possible Entity URI>http://mouse.owl#MA_0001383</Possible Entity URI>
+http://human.owl#NCI_C12855
+ <http://mouse.owl#MA_0001339> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C43612
+ <http://mouse.owl#MA_0000324>
+http://human.owl#NCI_C12854
+ <Possible Entity URI> http://mouse.owl#MA_0002555 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12853
+ <http://mouse.owl#MA_0000313>
+http://human.owl#NCI_C33287
+ <Possible Entity URI>http://mouse.owl#MA_0000655</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000293</Possible Entity URI>
+http://human.owl#NCI_C33286
+ <http://mouse.owl#MA_0002423> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33285
+ <Possible Entity URI> http://mouse.owl#MA_0002355 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33284
+ <http://mouse.owl#MA_0002354> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33282
+ <http://mouse.owl#MA_0001374>
+http://human.owl#NCI_C32999
+ <http://mouse.owl#MA_0002468> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32998
+ <Possible Entity URI>: http://mouse.owl#MA_0000437
+http://human.owl#NCI_C53069
+ <http://mouse.owl#MA_0002385>
+http://human.owl#NCI_C34006
+ <http://mouse.owl#MA_0001655> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C34005
+ <http://mouse.owl#MA_0001683> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53063
+ <Possible Entity URI>: http://mouse.owl#MA_0002213
+http://human.owl#NCI_C49239
+ No relevant entity found.
+http://human.owl#NCI_C33718
+ <http://mouse.owl#MA_0002544> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53062
+ <Possible Entity URI>: http://mouse.owl#MA_0002194
+http://human.owl#NCI_C53061
+ <Possible Entity URI>: http://mouse.owl#MA_0002187
+http://human.owl#NCI_C33716
+ <Possible Entity URI>http://mouse.owl#MA_0000321</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001500</Possible Entity URI>
+http://human.owl#NCI_C52779
+ <http://mouse.owl#MA_0001382> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53060
+ <Possible Entity URI> http://mouse.owl#MA_0002190  
+<Possible Entity URI> http://mouse.owl#MA_0002191
+http://human.owl#NCI_C52778
+ <http://mouse.owl#MA_0001381> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52777
+ <http://mouse.owl#MA_0001389> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49596
+ <http://mouse.owl#MA_0000752> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32197
+ <Possible Entity URI>: http://mouse.owl#MA_0002086
+http://human.owl#NCI_C52776
+ <http://mouse.owl#MA_0001390> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49595
+ No relevant entity found.
+http://human.owl#NCI_C33712
+ <http://mouse.owl#MA_0000150> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52775
+ <http://mouse.owl#MA_0001391>
+http://human.owl#NCI_C49232
+ <Possible Entity URI> http://mouse.owl#MA_0000986 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52774
+ <http://mouse.owl#MA_0001392> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49593
+ <http://mouse.owl#MA_0001883>
+http://human.owl#NCI_C52773
+ <http://mouse.owl#MA_0001393> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49230
+ <http://mouse.owl#MA_0000984> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12848
+ <http://mouse.owl#MA_0001567>
+http://human.owl#NCI_C52772
+ <http://mouse.owl#MA_0000305> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C48947
+ <Possible Entity URI> http://mouse.owl#MA_0002208 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52771
+ <http://mouse.owl#MA_0000306> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C48946
+ <http://mouse.owl#MA_0002207>
+http://human.owl#NCI_C52770
+ <http://mouse.owl#MA_0001401>
+http://human.owl#NCI_C12845
+ <Possible Entity URI> http://mouse.owl#MA_0001181  
+<Possible Entity URI> http://mouse.owl#MA_0000235
+http://human.owl#NCI_C48944
+ <Possible Entity URI>http://mouse.owl#MA_0000429</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000430</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000428</Possible Entity URI>  
+
+**Explanation:**  
+The entity **Lobe_of_the_Right_Lung** is a general term referring to any lobe of the right lung. The provided entities from the other ontology include different specific lobes of the right lung:  
+- **MA_0000429 (right lung cranial lobe / right lung superior lobe)** – corresponds to the upper/anterior part, which may align with "Upper Lobe of the Right Lung".  
+- **MA_0000430 (right lung middle lobe)** – directly aligns with "Middle Lobe of the Right Lung".  
+- **MA_0000428 (right lung caudal lobe / right lung inferior lobe)** – corresponds to the lower/posterior part, which may align with "Lower Lobe of the Right Lung".  
+
+**MA_0000427 (right lung accessory lobe / right lung postcaval lobe)** appears to be a variant or additional lobe found in some species (e.g., mice), and thus does not have a direct equivalent in the human-based ontology provided.
+
+Therefore, the three main lobes are considered relevant for alignment.
+http://human.owl#NCI_C48943
+ <http://mouse.owl#MA_0001772> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12843
+ <http://mouse.owl#MA_0002454> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C48942
+ <http://mouse.owl#MA_0001783>
+http://human.owl#NCI_C33277
+ <http://mouse.owl#MA_0002697>
+http://human.owl#NCI_C12841
+ <http://mouse.owl#MA_0000396> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12840
+ <http://mouse.owl#MA_0000055> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33274
+ http://mouse.owl#MA_0002022 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32988
+ <http://mouse.owl#MA_0000773> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32987
+ <Possible Entity URI>http://mouse.owl#MA_0002701</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002479</Possible Entity URI>
+http://human.owl#NCI_C53059
+ <Possible Entity URI>http://mouse.owl#MA_0002189</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002165</Possible Entity URI>
+http://human.owl#NCI_C53058
+ <Possible Entity URI>: http://mouse.owl#MA_0002186
+http://human.owl#NCI_C53057
+ <Possible Entity URI>: http://mouse.owl#MA_0002185
+http://human.owl#NCI_C53056
+ <Possible Entity URI>: http://mouse.owl#MA_0002183
+http://human.owl#NCI_C53055
+ <Possible Entity URI> http://mouse.owl#MA_0002177 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33708
+ <http://mouse.owl#MA_0001914>  
+<http://mouse.owl#MA_0002057>  
+<http://mouse.owl#MA_0002056>
+http://human.owl#NCI_C53052
+ <Possible Entity URI> http://mouse.owl#MA_0001919
+http://human.owl#NCI_C33707
+ <http://mouse.owl#MA_0002228>
+http://human.owl#NCI_C53051
+ <http://mouse.owl#MA_0002167>
+http://human.owl#NCI_C49227
+ <http://mouse.owl#MA_0001632>
+http://human.owl#NCI_C52769
+ <http://mouse.owl#MA_0001410> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53050
+ <Possible Entity URI>http://mouse.owl#MA_0002218</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002220</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002219</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002149</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002151</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002150</Possible Entity URI>
+http://human.owl#NCI_C49226
+ <Possible Entity URI> http://mouse.owl#MA_0001252 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52768
+ <http://mouse.owl#MA_0001411> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49225
+ <http://mouse.owl#MA_0001886>
+http://human.owl#NCI_C52767
+ <http://mouse.owl#MA_0001412> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49586
+ <Possible Entity URI>http://mouse.owl#MA_0000742</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000743</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000744</Possible Entity URI>
+http://human.owl#NCI_C49224
+ <http://mouse.owl#MA_0001571>
+http://human.owl#NCI_C52766
+ <http://mouse.owl#MA_0001402> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49223
+ <http://mouse.owl#MA_0001568> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52765
+ <http://mouse.owl#MA_0001403> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49584
+ <Possible Entity URI> http://mouse.owl#MA_0001602 is the most relevant entity, as its label "lower jaw molar" directly matches the label and meaning of the given entity "Lower_Jaw_Molar". Additionally, its superclass hierarchy (lower jaw tooth, molar) aligns precisely with the given entity's superclasses.
+
+<Possible Entity URI> http://mouse.owl#MA_0000350 also contains "lower jaw molar" as a subclass, making it a more general but still relevant entity due to its broader classification as a "molar".
+
+<Possible Entity URI> http://mouse.owl#MA_0001907 refers to "lower jaw tooth", which is a superclass of the given entity. It is relevant but less specific than the others.
+
+Other entities such as "lower jaw incisor" and "upper jaw molar" are not considered aligned because they refer to different types of teeth and are more specific to other categories.
+
+Final list of relevant entities in order of relevance:
+1. http://mouse.owl#MA_0001602
+2. http://mouse.owl#MA_0000350
+3. http://mouse.owl#MA_0001907
+http://human.owl#NCI_C49222
+ <http://mouse.owl#MA_0001567>
+http://human.owl#NCI_C52764
+ <Possible Entity URI> http://mouse.owl#MA_0001404 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49583
+ <Possible Entity URI> http://mouse.owl#MA_0001600 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49221
+ <http://mouse.owl#MA_0001565>  
+<http://mouse.owl#MA_0001567>
+http://human.owl#NCI_C12839
+ <http://mouse.owl#MA_0002069>
+http://human.owl#NCI_C52763
+ <http://mouse.owl#MA_0001405> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49582
+ <Possible Entity URI>http://mouse.owl#MA_0001907</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001602</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001600</Possible Entity URI>
+http://human.owl#NCI_C52762
+ <http://mouse.owl#MA_0001406> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C42079
+ <http://mouse.owl#MA_0000824> is the URI of the entity "choroid plexus epithelium", which directly corresponds to the given entity "Choroid_Plexus_Epithelium". It has subclasses specifying epithelium of different ventricles, which aligns with the sub-class structure of the given entity.
+
+<http://mouse.owl#MA_0000962> is the URI of the entity "lateral ventricle choroid plexus epithelium", which aligns with the subclass "Choroid_Plexus_Epithelium_of_the_Lateral_Ventricle" of the given entity.
+
+<http://mouse.owl#MA_0000984> is the URI of the entity "fourth ventricle choroid plexus epithelium", which aligns with the subclass "Choroid_Plexus_Epithelium_of_the_Fourth_Ventricle" of the given entity.
+
+<http://mouse.owl#MA_0000880> is the URI of the entity "third ventricle choroid plexus epithelium", which could also be relevant as a specific subclass of "choroid plexus epithelium".
+
+Therefore, the possible aligned entities are:
+
+<http://mouse.owl#MA_0000824>  
+<http://mouse.owl#MA_0000962>  
+<http://mouse.owl#MA_0000984>  
+<http://mouse.owl#MA_0000880>
+http://human.owl#NCI_C49581
+ <http://mouse.owl#MA_0001267>
+http://human.owl#NCI_C52761
+ <http://mouse.owl#MA_0001407> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49580
+ <http://mouse.owl#MA_0001263>
+http://human.owl#NCI_C12836
+ <Possible Entity URI> http://mouse.owl#MA_0001010
+http://human.owl#NCI_C52760
+ <http://mouse.owl#MA_0001408> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12834
+ <http://mouse.owl#MA_0000192> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33265
+ <Possible Entity URI>: http://mouse.owl#MA_0002676
+http://human.owl#NCI_C32619
+ <http://mouse.owl#MA_0002679> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12399
+ <Possible Entity URI> http://mouse.owl#MA_0000176 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32617
+ <Possible Entity URI> http://mouse.owl#MA_0000196
+http://human.owl#NCI_C12398
+ <http://mouse.owl#MA_0000175>
+http://human.owl#NCI_C53049
+ <Possible Entity URI>: http://mouse.owl#MA_0002147
+http://human.owl#NCI_C53048
+ <Possible Entity URI> http://mouse.owl#MA_0002146
+http://human.owl#NCI_C53047
+ <Possible Entity URI>http://mouse.owl#MA_0002141</Possible Entity URI>
+http://human.owl#NCI_C32973
+ <http://mouse.owl#MA_0000728> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53046
+ <Possible Entity URI> http://mouse.owl#MA_0002140 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32972
+ <http://mouse.owl#MA_0002046> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53045
+ <http://mouse.owl#MA_0002114> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32971
+ <http://mouse.owl#MA_0002032> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53044
+ <Possible Entity URI>: http://mouse.owl#MA_0002383
+http://human.owl#NCI_C53043
+ <Possible Entity URI>: http://mouse.owl#MA_0002101
+http://human.owl#NCI_C49219
+ <Possible Entity URI> http://mouse.owl#MA_0001725 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53042
+ <http://mouse.owl#MA_0002312> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49218
+ <http://mouse.owl#MA_0001724>  
+<http://mouse.owl#MA_0001725>
+http://human.owl#NCI_C49579
+ <http://mouse.owl#MA_0001641> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53041
+ <Possible Entity URI>: http://mouse.owl#MA_0002098
+http://human.owl#NCI_C49217
+ <Possible Entity URI> http://mouse.owl#MA_0002430
+http://human.owl#NCI_C52759
+ <http://mouse.owl#MA_0001409> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52758
+ <http://mouse.owl#MA_0000523>  
+<http://mouse.owl#MA_0000530>
+http://human.owl#NCI_C49215
+ <http://mouse.owl#MA_0000711>
+http://human.owl#NCI_C52757
+ <http://mouse.owl#MA_0000582> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49214
+ <http://mouse.owl#MA_0001837>
+http://human.owl#NCI_C52756
+ <http://mouse.owl#MA_0000590> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49213
+ <http://mouse.owl#MA_0001840> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52755
+ <http://mouse.owl#MA_0000610> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49212
+ <http://mouse.owl#MA_0001836> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52754
+ <Possible Entity URI> http://mouse.owl#MA_0000596  
+<Possible Entity URI> http://mouse.owl#MA_0000602  
+<Possible Entity URI> http://mouse.owl#MA_0000608  
+<Possible Entity URI> http://mouse.owl#MA_0000610
+http://human.owl#NCI_C49211
+ No relevant entity found.
+http://human.owl#NCI_C49210
+ <http://mouse.owl#MA_0001831> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12828
+ <http://mouse.owl#MA_0000196>
+http://human.owl#NCI_C12827
+ <Possible Entity URI>http://mouse.owl#MA_0000182</Possible Entity URI>
+http://human.owl#NCI_C52751
+ <http://mouse.owl#MA_0000641> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32171
+ <http://mouse.owl#MA_0002084>
+http://human.owl#NCI_C12826
+ <http://mouse.owl#MA_0002575> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12825
+ <http://mouse.owl#MA_0002574> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12824
+ <http://mouse.owl#MA_0002067>  
+<http://mouse.owl#MA_0002575>  
+<http://mouse.owl#MA_0002574>
+http://human.owl#NCI_C33258
+ <http://mouse.owl#MA_0001593> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33256
+ <Possible Entity URI> http://mouse.owl#MA_0002516 is relevant because its label "pancreas secretion" matches the superclass of the entity to align, and it includes "exocrine pancreas secretion" as a subclass, which directly relates to "Pancreatic_Exocrine_Secretion".
+
+<Possible Entity URI> http://mouse.owl#MA_0002518 is highly relevant because its label "exocrine pancreas secretion" exactly matches one of the synonyms of the entity to align. It also inherits from "pancreas secretion", establishing a clear hierarchical relationship.
+
+<Possible Entity URI> http://mouse.owl#MA_0002517 may have some relevance due to its label "endocrine pancreas secretion" and its superclass "pancreas secretion". Although it refers specifically to endocrine secretion rather than exocrine, it still belongs to the broader category of pancreatic secretions.
+http://human.owl#NCI_C33255
+ <Possible Entity URI: http://mouse.owl#MA_0002517>
+http://human.owl#NCI_C12820
+ <http://mouse.owl#MA_0001109>
+http://human.owl#NCI_C32608
+ <http://mouse.owl#MA_0000041>
+http://human.owl#NCI_C32969
+ <Possible Entity URI> http://mouse.owl#MA_0001704 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33250
+ <Possible Entity URI>: http://mouse.owl#MA_0000775
+http://human.owl#NCI_C12389
+ <http://mouse.owl#MA_0000352>
+http://human.owl#NCI_C32968
+ <http://mouse.owl#MA_0001843> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32967
+ <Possible Entity URI>: http://mouse.owl#MA_0000425
+http://human.owl#NCI_C53039
+ <http://mouse.owl#MA_0002267>
+http://human.owl#NCI_C32604
+ <http://mouse.owl#MA_0002678> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32965
+ <Possible Entity URI> http://mouse.owl#MA_0001641
+http://human.owl#NCI_C53038
+ <Possible Entity URI> http://mouse.owl#MA_0002381 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12385
+ <http://mouse.owl#MA_0001543> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32960
+ <http://mouse.owl#MA_0001638> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49209
+ <Possible Entity URI> http://mouse.owl#MA_0001835
+http://human.owl#NCI_C53032
+ <Possible Entity URI> http://mouse.owl#MA_0002093 </Possible Entity URI>  
+<Possible Entity URI> http://mouse.owl#MA_0002102 </Possible Entity URI>  
+<Possible Entity URI> http://mouse.owl#MA_0002095 </Possible Entity URI>  
+<Possible Entity URI> http://mouse.owl#MA_0002094 </Possible Entity URI>
+http://human.owl#NCI_C49208
+ <Possible Entity URI>: http://mouse.owl#MA_0001832
+http://human.owl#NCI_C53031
+ <Possible Entity URI> http://mouse.owl#MA_0002088
+http://human.owl#NCI_C49207
+ <http://mouse.owl#MA_0001833> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52749
+ <Possible Entity URI>http://mouse.owl#MA_0000674</Possible Entity URI>
+http://human.owl#NCI_C32169
+ <Possible Entity URI>: http://mouse.owl#MA_0002573
+http://human.owl#NCI_C52748
+ <http://mouse.owl#MA_0001148>
+http://human.owl#NCI_C52747
+ <Possible Entity URI> http://mouse.owl#MA_0001149 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52746
+ <http://mouse.owl#MA_0001162>
+http://human.owl#NCI_C32164
+ <http://mouse.owl#MA_0000254>
+http://human.owl#NCI_C12818
+ <Possible Entity URI>: http://mouse.owl#MA_0000071
+http://human.owl#NCI_C52742
+ <http://mouse.owl#MA_0002015> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52741
+ <http://mouse.owl#MA_0002036>
+http://human.owl#NCI_C32161
+ <Possible Entity URI>: http://mouse.owl#MA_0000095
+http://human.owl#NCI_C52740
+ <http://mouse.owl#MA_0002037> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32160
+ <Possible Entity URI> http://mouse.owl#MA_0002576
+http://human.owl#NCI_C33249
+ <http://mouse.owl#MA_0001584> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12814
+ <http://mouse.owl#MA_0000067> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12813
+ <Possible Entity URI> http://mouse.owl#MA_0000413
+http://human.owl#NCI_C33247
+ <http://mouse.owl#MA_0000578> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12812
+ <http://mouse.owl#MA_0001106>
+http://human.owl#NCI_C33244
+ <http://mouse.owl#MA_0001710> is the URI of the entity you believe is relevant to the given entity.  
+<http://mouse.owl#MA_0001708> is the URI of the entity you believe is relevant to the given entity.  
+<http://mouse.owl#MA_0001709> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33242
+ <Possible Entity URI>: http://mouse.owl#MA_0002012
+http://human.owl#NCI_C32959
+ <http://mouse.owl#MA_0000385> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12378
+ <Possible Entity URI> http://mouse.owl#MA_0000323
+http://human.owl#NCI_C32957
+ <http://mouse.owl#MA_0001972> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32956
+ <Possible Entity URI> http://mouse.owl#MA_0001927 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53029
+ <Possible Entity URI>: http://mouse.owl#MA_0002085
+http://human.owl#NCI_C32954
+ <http://mouse.owl#MA_0001308>
+http://human.owl#NCI_C53027
+ <Possible Entity URI>: http://mouse.owl#MA_0002083
+http://human.owl#NCI_C32953
+ <Possible Entity URI>: http://mouse.owl#MA_0001314
+http://human.owl#NCI_C53025
+ <http://mouse.owl#MA_0002068> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12372
+ <http://mouse.owl#MA_0000064> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12371
+ <http://mouse.owl#MA_0000164>
+http://human.owl#NCI_C53022
+ <Possible Entity URI> http://mouse.owl#MA_0002066 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53021
+ No relevant entity found.
+http://human.owl#NCI_C52739
+ <http://mouse.owl#MA_0002041> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53020
+ <http://mouse.owl#MA_0002066> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52738
+ <Possible Entity URI>http://mouse.owl#MA_0002042</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001983</Possible Entity URI>
+http://human.owl#NCI_C52737
+ <http://mouse.owl#MA_0002056> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52736
+ <Possible Entity URI> http://mouse.owl#MA_0002057 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32156
+ <http://mouse.owl#MA_0001351> is the URI of the entity you believe is relevant to the given entity.
+
+The reason is that the given entity "Astragalus" has a related synonym "astragalus," which matches the synonym of the entity with URI `http://mouse.owl#MA_0001351` labeled as "talus." This indicates a likely alignment.
+http://human.owl#NCI_C52734
+ <http://mouse.owl#MA_0002058>
+http://human.owl#NCI_C32154
+ <Possible Entity URI>: http://mouse.owl#MA_0001677
+http://human.owl#NCI_C52733
+ <Possible Entity URI>: http://mouse.owl#MA_0000892
+http://human.owl#NCI_C12808
+ <http://mouse.owl#MA_0001105>
+http://human.owl#NCI_C52731
+ <Possible Entity URI> http://mouse.owl#MA_0000181
+http://human.owl#NCI_C12806
+ <http://mouse.owl#MA_0001100>
+http://human.owl#NCI_C12805
+ <http://mouse.owl#MA_0000090> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33237
+ <Possible Entity URI> http://mouse.owl#MA_0001316 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12802
+ <http://mouse.owl#MA_0000143>  
+<http://mouse.owl#MA_0000775>  
+<http://mouse.owl#MA_0000773>
+http://human.owl#NCI_C33236
+ <Possible Entity URI> http://mouse.owl#MA_0001315 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12800
+ <Possible Entity URI>: http://mouse.owl#MA_0001361
+http://human.owl#NCI_C33231
+ <http://mouse.owl#MA_0002527> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33591
+ <http://mouse.owl#MA_0001054> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32945
+ <http://mouse.owl#MA_0001280>
+http://human.owl#NCI_C53018
+ <Possible Entity URI> http://mouse.owl#MA_0002065 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53016
+ <http://mouse.owl#MA_0002380>
+http://human.owl#NCI_C53014
+ <Possible Entity URI> http://mouse.owl#MA_0002378 is the most relevant entity to align with the given entity "Serratus_Ventralis". 
+
+Reason: The label "serratus ventralis" matches directly with the given entity's label (ignoring capitalization and spacing), and it belongs to the superclass "skeletal muscle", which is consistent with the class "Muscle" from the original entity. The synonym "serratus anterior" also closely relates anatomically and is commonly used interchangeably depending on context.
+
+Other entities:
+- http://mouse.owl#MA_0002377 and 
+- http://mouse.owl#MA_0002376  
+are related to "serratus dorsalis" and not "ventralis", making them less relevant for alignment.
+
+Final selection:  
+http://mouse.owl#MA_0002378
+http://human.owl#NCI_C53012
+ <Possible Entity URI>http://mouse.owl#MA_0002377</Possible Entity URI>
+http://human.owl#NCI_C32149
+ <http://mouse.owl#MA_0001770>  
+<http://mouse.owl#MA_0002283>
+http://human.owl#NCI_C32148
+ <Possible Entity URI> http://mouse.owl#MA_0001759 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52726
+ <http://mouse.owl#MA_0002422>
+http://human.owl#NCI_C32146
+ <http://mouse.owl#MA_0001770> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52724
+ <Possible Entity URI>: http://mouse.owl#MA_0001258
+http://human.owl#NCI_C32144
+ <http://mouse.owl#MA_0000487> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52722
+ <Possible Entity URI> http://mouse.owl#MA_0001362
+http://human.owl#NCI_C52721
+ <http://mouse.owl#MA_0001140>
+http://human.owl#NCI_C52720
+ <http://mouse.owl#MA_0000626> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33227
+ <Possible Entity URI>: http://mouse.owl#MA_0000238
+http://human.owl#NCI_C33586
+ <http://mouse.owl#MA_0001289> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33224
+ <http://mouse.owl#MA_0000017>
+http://human.owl#NCI_C33223
+ <http://mouse.owl#MA_0001193> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33581
+ <http://mouse.owl#MA_0002040>  
+<http://mouse.owl#MA_0001983>  
+<http://mouse.owl#MA_0002041>  
+<http://mouse.owl#MA_0002042>
+http://human.owl#NCI_C12356
+ <http://mouse.owl#MA_0000196>  
+<http://mouse.owl#MA_0000182>
+http://human.owl#NCI_C53007
+ <Possible Entity URI> http://mouse.owl#MA_0002376 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53006
+ <http://mouse.owl#MA_0002374> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12353
+ <http://mouse.owl#MA_0000941>
+http://human.owl#NCI_C53005
+ <http://mouse.owl#MA_0002052> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12350
+ <http://mouse.owl#MA_0001130> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53002
+ <http://mouse.owl#MA_0002049>
+http://human.owl#NCI_C52719
+ <http://mouse.owl#MA_0000650>
+http://human.owl#NCI_C53000
+ <Possible Entity URI>: http://mouse.owl#MA_0002048
+http://human.owl#NCI_C52716
+ <Possible Entity URI>: http://mouse.owl#MA_0001035
+http://human.owl#NCI_C32494
+ <Possible Entity URI> http://mouse.owl#MA_0000107
+http://human.owl#NCI_C52710
+ <http://mouse.owl#MA_0000968>
+http://human.owl#NCI_C32492
+ No relevant entity found.
+http://human.owl#NCI_C32490
+ <Possible Entity URI>: http://mouse.owl#MA_0000150
+http://human.owl#NCI_C33216
+ No relevant entity found.
+http://human.owl#NCI_C32928
+ <http://mouse.owl#MA_0002689> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33570
+ <http://mouse.owl#MA_0002687> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12346
+ <http://mouse.owl#MA_0001296>
+http://human.owl#NCI_C32924
+ <http://mouse.owl#MA_0001544> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52709
+ <Possible Entity URI>http://mouse.owl#MA_0001144</Possible Entity URI>
+http://human.owl#NCI_C52708
+ <http://mouse.owl#MA_0002329>
+http://human.owl#NCI_C52707
+ <http://mouse.owl#MA_0002327> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32488
+ <http://mouse.owl#MA_0001115>  
+<http://mouse.owl#MA_0001132>
+http://human.owl#NCI_C52706
+ <http://mouse.owl#MA_0002328> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32486
+ <http://mouse.owl#MA_0002699>  
+<http://mouse.owl#MA_0002697>  
+<http://mouse.owl#MA_0002698>  
+
+All three entities are relevant because they are subclasses of "salivary duct," which aligns with the broader concept of "Duct_Salivary_Gland_System."
+http://human.owl#NCI_C52704
+ <http://mouse.owl#MA_0002315> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52703
+ <http://mouse.owl#MA_0002314>
+http://human.owl#NCI_C32484
+ <http://mouse.owl#MA_0001735> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52702
+ <http://mouse.owl#MA_0002304> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52701
+ <http://mouse.owl#MA_0002303>
+http://human.owl#NCI_C52700
+ <Possible Entity URI> http://mouse.owl#MA_0002242 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33205
+ <http://mouse.owl#MA_0001326>
+http://human.owl#NCI_C33204
+ <http://mouse.owl#MA_0000193>
+http://human.owl#NCI_C33565
+ <http://mouse.owl#MA_0001552> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33203
+ <http://mouse.owl#MA_0001325>
+http://human.owl#NCI_C12339
+ <http://mouse.owl#MA_0001688>
+http://human.owl#NCI_C12694
+ <http://mouse.owl#MA_0000823>  
+<http://mouse.owl#MA_0000961>  
+<http://mouse.owl#MA_0000879>  
+<http://mouse.owl#MA_0000983>
+http://human.owl#NCI_C12693
+ <http://mouse.owl#MA_0000311>  
+<http://mouse.owl#MA_0001421>
+http://human.owl#NCI_C12692
+ <http://mouse.owl#MA_0002503>
+http://human.owl#NCI_C12690
+ No relevant entity found.
+http://human.owl#NCI_C32116
+ <Possible Entity URI>: http://mouse.owl#MA_0002248
+http://human.owl#NCI_C32115
+ <http://mouse.owl#MA_0002244>
+http://human.owl#NCI_C32114
+ <http://mouse.owl#MA_0002574> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32475
+ <Possible Entity URI>: http://mouse.owl#MA_0001036
+http://human.owl#NCI_C33555
+ <http://mouse.owl#MA_0000097>
+http://human.owl#NCI_C12328
+ <Possible Entity URI>: http://mouse.owl#MA_0000397
+http://human.owl#NCI_C32906
+ <Possible Entity URI>: http://mouse.owl#MA_0001486
+http://human.owl#NCI_C12688
+ <http://mouse.owl#MA_0002558> is the URI of the entity you believe is relevant to the given entity.  
+<http://mouse.owl#MA_0002557> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12687
+ <Possible Entity URI>http://mouse.owl#MA_0001925</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001926</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001928</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001929</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001930</Possible Entity URI>
+http://human.owl#NCI_C32904
+ <http://mouse.owl#MA_0002479> is the URI of the entity "minor salivary gland", which matches the superclass "Minor_Salivary_Gland" of the given entity "Labial_Salivary_Gland".
+
+<http://mouse.owl#MA_0000346> is the URI of the entity "salivary gland", which is a broader category that includes "Labial_Salivary_Gland".
+
+<http://mouse.owl#MA_0002701> is the URI of the entity "anterior lingual gland", which is a subclass of "minor salivary gland" and could be structurally similar to the labial salivary gland.
+
+<http://mouse.owl#MA_0001584> is the URI of the entity "palatine gland", another type of minor salivary gland, indicating a close relationship.
+http://human.owl#NCI_C12686
+ <Possible Entity URI> http://mouse.owl#MA_0000010
+http://human.owl#NCI_C32903
+ <http://mouse.owl#MA_0001432> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32902
+ <http://mouse.owl#MA_0001431> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12684
+ <Possible Entity URI>http://mouse.owl#MA_0001787</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001789</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001788</Possible Entity URI>
+http://human.owl#NCI_C32901
+ <http://mouse.owl#MA_0001430>
+http://human.owl#NCI_C12321
+ <http://mouse.owl#MA_0000385>
+http://human.owl#NCI_C32900
+ <http://mouse.owl#MA_0001429>
+http://human.owl#NCI_C12682
+ <http://mouse.owl#MA_0001180>
+http://human.owl#NCI_C12681
+ <http://mouse.owl#MA_0001921> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13409
+ <http://mouse.owl#MA_0002537> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32469
+ <Possible Entity URI>http://mouse.owl#MA_0001666</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001665</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0001667</Possible Entity URI>  
+
+**Explanation:**  
+- **http://mouse.owl#MA_0001666 (distal convoluted tubule):** This entity has an exact label match with the given entity and shares relevant superclasses such as "renal convoluted tubule". It also includes a synonym that aligns with the target, making it the most relevant.
+- **http://mouse.owl#MA_0001665 (renal convoluted tubule):** While this is a broader category, it explicitly lists "distal convoluted tubule" as a subclass, indicating relevance to the given entity.
+- **http://mouse.owl#MA_0001667 (distal convoluted tubule convoluted part):** Although more specific in labeling, it still relates directly to the given entity's structure and is likely a segment or subpart of the distal convoluted tubule.
+http://human.owl#NCI_C13401
+ <http://mouse.owl#MA_0002505>  
+<http://mouse.owl#MA_0002552>  
+
+**Explanation:**  
+- The entity **Breast_Fluid_or_Secretion** has the superclass **Exocrine_Gland_Fluid_or_Secretion**, and one of its subclasses is **Breast_Milk**.  
+- The entity **mammary gland milk** (URI: http://mouse.owl#MA_0002552) is a direct match for **Breast_Milk**, which is a subclass of the given entity.  
+- The entity **mammary gland fluid/secretion** (URI: http://mouse.owl#MA_0002505) corresponds to the broader category, matching the superclass **Exocrine_Gland_Fluid_or_Secretion** and includes **mammary gland milk** as a subclass, aligning well with the given entity and its hierarchy.  
+
+Thus, both entities are relevant, with **MA_0002505** being more general and **MA_0002552** being more specific.
+http://human.owl#NCI_C32101
+ No relevant entity found.
+http://human.owl#NCI_C32462
+ <http://mouse.owl#MA_0002288>
+http://human.owl#NCI_C32461
+ <Possible Entity URI>: http://mouse.owl#MA_0000322
+http://human.owl#NCI_C33546
+ <Possible Entity URI>http://mouse.owl#MA_0002217</Possible Entity URI>
+http://human.owl#NCI_C33540
+ <Possible Entity URI> http://mouse.owl#MA_0002378 is the URI of the entity you believe is relevant to the given entity.
+
+The reasoning is based on the comparison between labels and synonyms:
+- The given entity "Serratus_Magnus" has a synonym "Serratus Magnus."
+- The entity labeled "serratus ventralis" has a synonym "serratus anterior," which appears to be more closely related in terminology to "Serratus Magnus" compared to "serratus posterior superior." 
+- Additionally, "serratus ventralis" (or serratus anterior) aligns better with the general anatomical naming conventions for this muscle group.
+
+Therefore, http://mouse.owl#MA_0002378 is selected as the most likely aligned entity.
+http://human.owl#NCI_C12679
+ <http://mouse.owl#MA_0000061> is the URI of the entity you believe is relevant to the given entity.
+
+The entity "arterial blood vessel" from the other ontology is a specific type of "blood vessel," which aligns with the provided entity "Blood_Vessel." Additionally, it shares common subclasses such as "aorta" and "artery," further supporting the alignment.
+http://human.owl#NCI_C12314
+ <http://mouse.owl#MA_0000391>
+http://human.owl#NCI_C12675
+ <Possible Entity URI>: http://mouse.owl#MA_0001688
+http://human.owl#NCI_C12672
+ <http://mouse.owl#MA_0000063> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12671
+ <http://mouse.owl#MA_0000007>
+http://human.owl#NCI_C41268
+ No relevant entity found.
+http://human.owl#NCI_C12670
+ <http://mouse.owl#MA_0000087>
+http://human.owl#NCI_C41266
+ No relevant entity found.
+http://human.owl#NCI_C32456
+ No relevant entity found.
+http://human.owl#NCI_C32455
+ <http://mouse.owl#MA_0002571>
+http://human.owl#NCI_C32453
+ <http://mouse.owl#MA_0002542>
+http://human.owl#NCI_C33539
+ <Possible Entity URI> http://mouse.owl#MA_0001585 is the URI of the entity you believe is relevant to the given entity.
+
+The given entity "Serous_Salivary_Gland" has a subclass "Parotid_Gland," and in the set of entities provided, "parotid gland" (URI: http://mouse.owl#MA_0001585) is directly aligned with this subclass. Therefore, it is the most relevant entity.
+http://human.owl#NCI_C33537
+ <http://mouse.owl#MA_0001589> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C38518
+ http://mouse.owl#MA_0000143  
+http://mouse.owl#MA_0000752  
+http://mouse.owl#MA_0000773
+http://human.owl#NCI_C38516
+ http://mouse.owl#MA_0000773 is relevant because its label "lingual tonsillar tissue" matches the synonym "Tonsillar Tissue" of the entity to align. Additionally, it is a subclass of "tonsil," which is closely related to the given entity's superclass "Tonsil_Part."
+
+http://mouse.owl#MA_0000143 is also relevant because its label is "tonsil," which corresponds to the "Tonsil_Part" superclass of the entity to align, indicating a potential alignment at a higher level.
+
+Thus, both entities are relevant for alignment.
+http://human.owl#NCI_C33894
+ <http://mouse.owl#MA_0000461>
+http://human.owl#NCI_C38515
+ <Possible Entity URI> http://mouse.owl#MA_0002673
+http://human.owl#NCI_C33893
+ <http://mouse.owl#MA_0000910> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33892
+ <http://mouse.owl#MA_0001135> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12669
+ <Possible Entity URI> http://mouse.owl#MA_0000061
+http://human.owl#NCI_C12668
+ <http://mouse.owl#MA_0002484> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12667
+ <http://mouse.owl#MA_0000262> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12666
+ <http://mouse.owl#MA_0000116>  
+<http://mouse.owl#MA_0000719>
+http://human.owl#NCI_C12665
+ <http://mouse.owl#MA_0001087>
+http://human.owl#NCI_C32446
+ <Possible Entity URI>: http://mouse.owl#MA_0002286
+http://human.owl#NCI_C32441
+ <http://mouse.owl#MA_0002070> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33529
+ <http://mouse.owl#MA_0002522> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33528
+ <http://mouse.owl#MA_0001213>
+http://human.owl#NCI_C33527
+ <http://mouse.owl#MA_0001209>
+http://human.owl#NCI_C33526
+ <http://mouse.owl#MA_0000439> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33886
+ No relevant entity found.
+http://human.owl#NCI_C33525
+ <http://mouse.owl#MA_0002485> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33885
+ <Possible Entity URI>: http://mouse.owl#MA_0002461
+http://human.owl#NCI_C33523
+ <http://mouse.owl#MA_0000388>
+http://human.owl#NCI_C33521
+ <http://mouse.owl#MA_0001249>
+http://human.owl#NCI_C33083
+ <Possible Entity URI>: http://mouse.owl#MA_0001200
+http://human.owl#NCI_C32437
+ <Possible Entity URI> http://mouse.owl#MA_0001996
+http://human.owl#NCI_C32436
+ <http://mouse.owl#MA_0002027> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32434
+ <http://mouse.owl#MA_0002114>
+http://human.owl#NCI_C32432
+ <http://mouse.owl#MA_0001973> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32431
+ <Possible Entity URI>: http://mouse.owl#MA_0000736
+http://human.owl#NCI_C32790
+ <http://mouse.owl#MA_0001279> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33519
+ <http://mouse.owl#MA_0000149>  
+<http://mouse.owl#MA_0002452>  
+<http://mouse.owl#MA_0001249>
+http://human.owl#NCI_C33518
+ <Possible Entity URI> http://mouse.owl#MA_0001974
+http://human.owl#NCI_C33517
+ <Possible Entity URI>: http://mouse.owl#MA_0000571
+http://human.owl#NCI_C33511
+ <Possible Entity URI>http://mouse.owl#MA_0002215</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002173</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002217</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0002216</Possible Entity URI>
+http://human.owl#NCI_C33075
+ <Possible Entity URI>: http://mouse.owl#MA_0001249
+http://human.owl#NCI_C33074
+ No relevant entity found.
+http://human.owl#NCI_C33072
+ <Possible Entity URI> http://mouse.owl#MA_0002175 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32789
+ <http://mouse.owl#MA_0002026> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33071
+ <Possible Entity URI>: http://mouse.owl#MA_0002176
+http://human.owl#NCI_C32786
+ <Possible Entity URI> http://mouse.owl#MA_0002014 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13722
+ <http://mouse.owl#MA_0002533>  
+<http://mouse.owl#MA_0002534>
+http://human.owl#NCI_C32783
+ <Possible Entity URI> http://mouse.owl#MA_0001276 is the URI of the entity "inferior oblique extraocular muscle", which directly corresponds to the given entity "Inferior_Oblique_Muscle" and shares the same anatomical and functional context.
+http://human.owl#NCI_C32782
+ <http://mouse.owl#MA_0002178> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32780
+ <Possible Entity URI> http://mouse.owl#MA_0002004 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33507
+ <Possible Entity URI>: http://mouse.owl#MA_0001506
+http://human.owl#NCI_C13283
+ <http://mouse.owl#MA_0002545>
+http://human.owl#NCI_C33501
+ <http://mouse.owl#MA_0001437> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33862
+ No relevant entity found.
+http://human.owl#NCI_C33500
+ <http://mouse.owl#MA_0001436> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12999
+ <http://mouse.owl#MA_0002478> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13280
+ <http://mouse.owl#MA_0002539> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52561
+ <Possible Entity URI> http://mouse.owl#MA_0002401 is the URI of the entity you believe is relevant to the given entity.
+
+The given entity "Urethralis" is a muscle, and among the provided entities, only "urethralis" (URI: http://mouse.owl#MA_0002401) matches both the label and the superclass "skeletal muscle", making it the most relevant entity for alignment.
+http://human.owl#NCI_C52560
+ <Possible Entity URI> http://mouse.owl#MA_0002309
+http://human.owl#NCI_C12996
+ <http://mouse.owl#MA_0001109>
+http://human.owl#NCI_C33069
+ <Possible Entity URI>: http://mouse.owl#MA_0001048
+http://human.owl#NCI_C33068
+ <http://mouse.owl#MA_0001281> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33066
+ No relevant entity found.
+http://human.owl#NCI_C32417
+ <http://mouse.owl#MA_0001759>
+http://human.owl#NCI_C32416
+ <http://mouse.owl#MA_0001352> is the URI of the entity "medial cuneiform," which corresponds to the "Internal_Cuneiform_Bone_of_the_Foot" in the given entity's subclass list.
+
+<http://mouse.owl#MA_0001353> is the URI of the entity "intermediate cuneiform," which corresponds to the "Middle_Cuneiform_Bone_of_the_Foot" in the given entity's subclass list.
+
+Therefore, both entities are relevant and should be aligned.
+http://human.owl#NCI_C13713
+ <http://mouse.owl#MA_0002521>
+http://human.owl#NCI_C32414
+ <Possible Entity URI>http://mouse.owl#MA_0001355</Possible Entity URI>
+http://human.owl#NCI_C32411
+ <Possible Entity URI> http://mouse.owl#MA_0001535 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32770
+ <http://mouse.owl#MA_0001215>
+http://human.owl#NCI_C33858
+ <http://mouse.owl#MA_0002718>
+http://human.owl#NCI_C13277
+ <http://mouse.owl#MA_0002522> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52558
+ <http://mouse.owl#MA_0002470>
+http://human.owl#NCI_C13276
+ <http://mouse.owl#MA_0002538> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52557
+ <http://mouse.owl#MA_0002469>  
+<http://mouse.owl#MA_0000220>  
+<http://mouse.owl#MA_0001136>
+http://human.owl#NCI_C13275
+ <Possible Entity URI>: http://mouse.owl#MA_0002507
+http://human.owl#NCI_C33854
+ <Possible Entity URI> http://mouse.owl#MA_0002718  
+<Possible Entity URI> http://mouse.owl#MA_0000010  
+<Possible Entity URI> http://mouse.owl#MA_0002719
+http://human.owl#NCI_C52556
+ <http://mouse.owl#MA_0002511>
+http://human.owl#NCI_C52555
+ <Possible Entity URI>: http://mouse.owl#MA_0002514
+http://human.owl#NCI_C13273
+ <http://mouse.owl#MA_0002534> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52554
+ <http://mouse.owl#MA_0000401>
+http://human.owl#NCI_C52552
+ <Possible Entity URI>: http://mouse.owl#MA_0002522
+http://human.owl#NCI_C13270
+ <Possible Entity URI> http://mouse.owl#MA_0002516  
+<Possible Entity URI> http://mouse.owl#MA_0002517  
+<Possible Entity URI> http://mouse.owl#MA_0002518
+http://human.owl#NCI_C52551
+ No relevant entity found.
+http://human.owl#NCI_C33051
+ <http://mouse.owl#MA_0001216>
+http://human.owl#NCI_C32769
+ <http://mouse.owl#MA_0000349> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33050
+ <http://mouse.owl#MA_0002640> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32405
+ <Possible Entity URI>: http://mouse.owl#MA_0001757
+http://human.owl#NCI_C32404
+ <http://mouse.owl#MA_0002284> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32765
+ <http://mouse.owl#MA_0001336>
+http://human.owl#NCI_C32403
+ <Possible Entity URI>: http://mouse.owl#MA_0001757
+http://human.owl#NCI_C49800
+ <http://mouse.owl#MA_0001133> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32763
+ <http://mouse.owl#MA_0002319>  
+<http://mouse.owl#MA_0002320>
+http://human.owl#NCI_C32401
+ <http://mouse.owl#MA_0002279>
+http://human.owl#NCI_C32400
+ <http://mouse.owl#MA_0001762> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32760
+ <http://mouse.owl#MA_0001970>
+http://human.owl#NCI_C33842
+ <http://mouse.owl#MA_0000389>
+http://human.owl#NCI_C33841
+ <http://mouse.owl#MA_0001693>
+http://human.owl#NCI_C33840
+ <http://mouse.owl#MA_0001664>
+http://human.owl#NCI_C53184
+ <Possible Entity URI>: http://mouse.owl#MA_0002404
+http://human.owl#NCI_C13259
+ <Possible Entity URI>: http://mouse.owl#MA_0002535
+http://human.owl#NCI_C53183
+ <http://mouse.owl#MA_0002404> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53182
+ <http://mouse.owl#MA_0002404>
+http://human.owl#NCI_C13257
+ <http://mouse.owl#MA_0002552>
+http://human.owl#NCI_C53181
+ <Possible Entity URI>: http://mouse.owl#MA_0002400
+http://human.owl#NCI_C52898
+ <Possible Entity URI>: http://mouse.owl#MA_0002281
+http://human.owl#NCI_C53180
+ <Possible Entity URI>: http://mouse.owl#MA_0002397
+http://human.owl#NCI_C52895
+ <http://mouse.owl#MA_0002276> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C13252
+ <Possible Entity URI>: http://mouse.owl#MA_0002520
+http://human.owl#NCI_C52893
+ <Possible Entity URI>: http://mouse.owl#MA_0002275
+http://human.owl#NCI_C52892
+ <Possible Entity URI>: http://mouse.owl#MA_0002274
+http://human.owl#NCI_C52891
+ <Possible Entity URI>: http://mouse.owl#MA_0002273
+http://human.owl#NCI_C52890
+ <http://mouse.owl#MA_0002268> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12963
+ <Possible Entity URI>http://mouse.owl#MA_0001565</Possible Entity URI>
+http://human.owl#NCI_C33035
+ <http://mouse.owl#MA_0000746> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33392
+ No relevant entity found.
+http://human.owl#NCI_C33030
+ <Possible Entity URI>: http://mouse.owl#MA_0000749
+http://human.owl#NCI_C32746
+ <http://mouse.owl#MA_0000104> is the URI of the entity "cartilage," which is relevant as it represents a broader category that includes "Hyaline Cartilage."
+
+<http://mouse.owl#MA_0000487> is the URI of the entity "articular cartilage," which is relevant because it is a specific type of hyaline cartilage.
+http://human.owl#NCI_C53179
+ <http://mouse.owl#MA_0002396>
+http://human.owl#NCI_C53178
+ <http://mouse.owl#MA_0002393>
+http://human.owl#NCI_C53177
+ <Possible Entity URI> http://mouse.owl#MA_0002382  
+<Possible Entity URI> http://mouse.owl#MA_0000571
+http://human.owl#NCI_C53176
+ <Possible Entity URI>: http://mouse.owl#MA_0002375
+http://human.owl#NCI_C53175
+ <http://mouse.owl#MA_0002365> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53174
+ <http://mouse.owl#MA_0002357> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53173
+ <http://mouse.owl#MA_0002313>  
+<http://mouse.owl#MA_0002314>  
+<http://mouse.owl#MA_0002315>
+http://human.owl#NCI_C53172
+ <Possible Entity URI> http://mouse.owl#MA_0002302 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33826
+ <http://mouse.owl#MA_0002070>
+http://human.owl#NCI_C53171
+ <Possible Entity URI>: http://mouse.owl#MA_0002356
+http://human.owl#NCI_C49347
+ <http://mouse.owl#MA_0000945>
+http://human.owl#NCI_C52888
+ <Possible Entity URI>: http://mouse.owl#MA_0002266
+http://human.owl#NCI_C53170
+ <http://mouse.owl#MA_0002351>
+http://human.owl#NCI_C52886
+ <http://mouse.owl#MA_0001254>
+http://human.owl#NCI_C33821
+ <http://mouse.owl#MA_0000704> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C12957
+ <Possible Entity URI>: http://mouse.owl#MA_0002411
+http://human.owl#NCI_C33028
+ <http://mouse.owl#MA_0000739> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33026
+ <Possible Entity URI>: http://mouse.owl#MA_0000748
+http://human.owl#NCI_C33387
+ <Possible Entity URI>: http://mouse.owl#MA_0002248
+http://human.owl#NCI_C33386
+ <http://mouse.owl#MA_0002245> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33385
+ <http://mouse.owl#MA_0002575>
+http://human.owl#NCI_C33023
+ <Possible Entity URI> http://mouse.owl#MA_0000429 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33022
+ <Possible Entity URI>http://mouse.owl#MA_0000428</Possible Entity URI>
+http://human.owl#NCI_C32737
+ No relevant entity found.
+http://human.owl#NCI_C53169
+ <http://mouse.owl#MA_0002339>
+http://human.owl#NCI_C32733
+ <http://mouse.owl#MA_0000367>
+http://human.owl#NCI_C53167
+ <http://mouse.owl#MA_0002337>
+http://human.owl#NCI_C53166
+ <Possible Entity URI> http://mouse.owl#MA_0002336
+http://human.owl#NCI_C53164
+ <http://mouse.owl#MA_0002333>
+http://human.owl#NCI_C53161
+ <Possible Entity URI>: http://mouse.owl#MA_0002317
+http://human.owl#NCI_C33816
+ <Possible Entity URI>: http://mouse.owl#MA_0000004
+http://human.owl#NCI_C13236
+ <http://mouse.owl#MA_0002450> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49335
+ <http://mouse.owl#MA_0000816> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32298
+ <http://mouse.owl#MA_0000736>
+http://human.owl#NCI_C49334
+ <http://mouse.owl#MA_0000820>  
+<http://mouse.owl#MA_0001135>  
+<http://mouse.owl#MA_0000945>  
+<http://mouse.owl#MA_0002430>
+http://human.owl#NCI_C49333
+ <http://mouse.owl#MA_0000944>
+http://human.owl#NCI_C33812
+ <http://mouse.owl#MA_0002400>
+http://human.owl#NCI_C49332
+ <Possible Entity URI>http://mouse.owl#MA_0001060</Possible Entity URI>  
+<Possible Entity URI>http://mouse.owl#MA_0000989</Possible Entity URI>  
+
+Both entities are subclasses of "brain dura mater", which matches a synonym of the given entity "Cerebral_Dura_Mater". Therefore, both are considered relevant for alignment.
+http://human.owl#NCI_C49330
+ <http://mouse.owl#MA_0000708> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32293
+ <Possible Entity URI>: http://mouse.owl#MA_0002506
+http://human.owl#NCI_C33378
+ <http://mouse.owl#MA_0001209> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33015
+ <Possible Entity URI> http://mouse.owl#MA_0001181  
+<Possible Entity URI> http://mouse.owl#MA_0000235
+http://human.owl#NCI_C53156
+ <Possible Entity URI> http://mouse.owl#MA_0002298 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53155
+ <Possible Entity URI> http://mouse.owl#MA_0002297
+http://human.owl#NCI_C33809
+ <Possible Entity URI>http://mouse.owl#MA_0002398</Possible Entity URI>
+http://human.owl#NCI_C49329
+ <http://mouse.owl#MA_0000703> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53152
+ <Possible Entity URI>: http://mouse.owl#MA_0002287
+http://human.owl#NCI_C49328
+ <http://mouse.owl#MA_0001319> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53151
+ <http://mouse.owl#MA_0002282> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49327
+ <http://mouse.owl#MA_0001685> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53150
+ <http://mouse.owl#MA_0002272>
+http://human.owl#NCI_C49326
+ <Possible Entity URI> http://mouse.owl#MA_0001747 is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33805
+ <Possible Entity URI>: http://mouse.owl#MA_0002396
+http://human.owl#NCI_C49325
+ <http://mouse.owl#MA_0000719> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49324
+ <http://mouse.owl#MA_0001684> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49323
+ <http://mouse.owl#MA_0001746> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C32286
+ <Possible Entity URI>http://mouse.owl#MA_0002092</Possible Entity URI>
+http://human.owl#NCI_C52864
+ <http://mouse.owl#MA_0001975> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49322
+ <http://mouse.owl#MA_0000718> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52863
+ <http://mouse.owl#MA_0001975> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C49320
+ <http://mouse.owl#MA_0000714> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52861
+ <http://mouse.owl#MA_0001978> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C52860
+ <http://mouse.owl#MA_0001978>
+http://human.owl#NCI_C12936
+ <Possible Entity URI>http://mouse.owl#MA_0000136</Possible Entity URI>
+http://human.owl#NCI_C12933
+ <http://mouse.owl#MA_0000313> is the URI of an entity that aligns with the given entity "Sacral_Vertebra".
+
+<http://mouse.owl#MA_0000310> is the URI of an entity that aligns with the given entity "Coccygeal_Vertebra".
+
+<http://mouse.owl#MA_0001420> is the URI of an entity that aligns with the given entity "Coccygeal_Vertebra".
+http://human.owl#NCI_C33006
+ <Possible Entity URI>: http://mouse.owl#MA_0001675
+http://human.owl#NCI_C33004
+ <http://mouse.owl#MA_0002216> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C33003
+ <Possible Entity URI> http://mouse.owl#MA_0000299
+http://human.owl#NCI_C33360
+ <http://mouse.owl#MA_0002156>
+http://human.owl#NCI_C12498
+ <http://mouse.owl#MA_0000260>
+http://human.owl#NCI_C53149
+ <http://mouse.owl#MA_0002271> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53147
+ <http://mouse.owl#MA_0002270> is the URI of the entity you believe is relevant to the given entity.
+http://human.owl#NCI_C53146
+ <Possible Entity URI>: http://mouse.owl#MA_0000738
+http://human.owl#NCI_C53145
+ <Possible Entity URI> http://mouse.owl#MA_0002262
+http://human.owl#NCI_C53143
+ <http://mouse.owl#MA_0002246> is the URI of the entity you believe is relevant
