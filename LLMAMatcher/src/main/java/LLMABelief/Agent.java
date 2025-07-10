@@ -17,7 +17,7 @@ import java.util.*;
 
 public class Agent {
     public String name;
-    public QwenApiCaller llm;
+    public LLMApiCaller llm;
     private OntModel ontology;
     private Dictionary stringDict;
     private double threshold;
@@ -26,8 +26,9 @@ public class Agent {
     public Dictionary<String, String> entityVerbos;
 
     private Alignment embeddingCorrespondences;
-    public Alignment privateCorrespondences;
-
+    private Alignment privateCorrespondences;
+    public Queue<Correspondence> correspondencesQueueHighestConfidenceFirst = new PriorityQueue<>(
+            (c1, c2) -> Double.compare(c2.getConfidence(), c1.getConfidence()));
 //    private List<Belief<OntClass>> entityBeliefs;
 //    private List<Belief<OntClass>> unrevealedEntitiesWithDescendingBelief;
 //    public Weaviate db;
@@ -53,7 +54,7 @@ public class Agent {
                 Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
         privateCorrespondences = loadSelectedCorrespondencesFromFile(
                 stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
-        System.out.println(privateCorrespondences);
+        correspondencesQueueHighestConfidenceFirst.addAll(privateCorrespondences);
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {

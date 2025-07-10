@@ -10,7 +10,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-public class QwenApiCaller {
+public class QwenApiCaller implements LLMApiCaller {
     private static String endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1/";
 
     private static String apiKey= System.getenv("DASHSCOPE_API_KEY");
@@ -31,6 +31,7 @@ public class QwenApiCaller {
      * @param message The message to send to the Qwen API.
      * @return The response from the Qwen API.
      */
+    @Override
     public String prompt(String message) {
         message = message.replaceAll("\n", "");
 
@@ -92,7 +93,8 @@ public class QwenApiCaller {
         return "";
     }
 
-    public static Float[] embed(String text) {
+    @Override
+    public Float[] embed(String text) {
         text = text.replaceAll("\n", "\\n");
         String requestBody = "{\n" +
                 "  \"model\": \"text-embedding-v4\",\n" +
@@ -125,7 +127,7 @@ public class QwenApiCaller {
         return null;
     }
 
-    private static Float[] extractEmbedding(String jsonResponse) {
+    private Float[] extractEmbedding(String jsonResponse) {
         JsonArray embeddingArray = JsonParser.parseString(jsonResponse)
                 .getAsJsonObject()
                 .getAsJsonArray("data")

@@ -32,6 +32,9 @@ public class Statistics {
     private static void statistics(Alignment reference) {
         calculateStatistics(reference, 0.9);
         calculateStatistics(reference, 0.8);
+        calculateStatistics(reference, 0.7);
+        calculateStatistics(reference, 0.6);
+        calculateStatistics(reference, 0.5);
     }
 
     private static void calculateStatistics(Alignment reference, double threshold) {

@@ -13,33 +13,34 @@ import java.util.*;
 public class Main {
     public static Dictionary humanStringsDict = new java.util.Hashtable(){
         {
-            put("ontologyPath", "src/main/java/DataSet/Anatomy/human.owl");
-            put("verbosePath", "result/Anatomy/verbos/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
+            put("ontologyPath", "src/main/java/DataSet/" + commonStringsDict.get("dataSet").toString() + "/human.owl");
+            put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
             put("entityURIPrefix", "http://human.owl#NCI");
             put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-            put("embeddingPath", "result/Anatomy/embeddings/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+            put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
             put("collectionName", "Human");
-            put("potentialEntityPairsPath", "result/Anatomy/Human/potential_pairs/human_mouse_potential_pairs-");
-            put("llmSelectedCorrespondencesPath", "result/Anatomy/Human/llm_selected_correspondences/human_mouse_llm_selected_correspondences-");
+            put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + commonStringsDict.get("modelName").toString() + "/Human/potential_pairs/human_mouse_potential_pairs-");
+            put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + commonStringsDict.get("modelName").toString() + "/Human/llm_selected_correspondences/human_mouse_llm_selected_correspondences-");
         }
     };
 
     public static Dictionary mouseStringsDict = new java.util.Hashtable(){
         {
-            put("ontologyPath", "src/main/java/DataSet/Anatomy/mouse.owl");
-            put("verbosePath", "result/Anatomy/verbos/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
+            put("ontologyPath", "src/main/java/DataSet/" + commonStringsDict.get("dataSet").toString() + "/mouse.owl");
+            put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
             put("entityURIPrefix", "http://mouse.owl#MA");
             put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-            put("embeddingPath", "result/Anatomy/embeddings/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+            put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
             put("collectionName", "Mouse");
-            put("potentialEntityPairsPath", "result/Anatomy/Mouse/potential_pairs/mouse_human_potential_pairs-");
-            put("llmSelectedCorrespondencesPath", "result/Anatomy/Mouse/llm_selected_correspondences/mouse_human_llm_selected_correspondences-");
+            put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + commonStringsDict.get("modelName").toString() + "/Mouse/potential_pairs/mouse_human_potential_pairs-");
+            put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + commonStringsDict.get("modelName").toString() + "/Mouse/llm_selected_correspondences/mouse_human_llm_selected_correspondences-");
         }
     };
 
     public static Dictionary commonStringsDict = new java.util.Hashtable() {
         {
             put("modelName", "qwen3-235b-a22b");
+            put("dataSet", "Anatomy");
             put("threshold", 0.8);
             put("initCorrespondencesPath", "result/Anatomy/init_correspondences/init_correspondences-");
         }
@@ -138,7 +139,8 @@ public class Main {
                     System.err.println("Skipping empty verbo for URI: " + uri);
                     continue;
                 }
-                Float[] embedding = QwenApiCaller.embed(verbo);
+                LLMApiCaller apiCaller = new QwenApiCaller(commonStringsDict.get("modelName").toString());
+                Float[] embedding = apiCaller.embed(verbo);
                 writer.write(uri + "\n");
                 if (embedding != null) {
                     StringBuilder sb = new StringBuilder();
