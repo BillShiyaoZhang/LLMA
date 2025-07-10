@@ -1,6 +1,5 @@
 package LLMABelief;
 
-import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
@@ -11,42 +10,15 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 public class Main {
-    public static Dictionary humanStringsDict = new java.util.Hashtable(){
-        {
-            put("ontologyPath", "src/main/java/DataSet/" + commonStringsDict.get("dataSet").toString() + "/human.owl");
-            put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
-            put("entityURIPrefix", "http://human.owl#NCI");
-            put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-            put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
-            put("collectionName", "Human");
-            put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + commonStringsDict.get("modelName").toString() + "/Human/potential_pairs/human_mouse_potential_pairs-");
-            put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + commonStringsDict.get("modelName").toString() + "/Human/llm_selected_correspondences/human_mouse_llm_selected_correspondences-");
-        }
-    };
+    public static Dictionary humanStringsDict = new Hashtable();
 
-    public static Dictionary mouseStringsDict = new java.util.Hashtable(){
-        {
-            put("ontologyPath", "src/main/java/DataSet/" + commonStringsDict.get("dataSet").toString() + "/mouse.owl");
-            put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
-            put("entityURIPrefix", "http://mouse.owl#MA");
-            put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-            put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
-            put("collectionName", "Mouse");
-            put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + commonStringsDict.get("modelName").toString() + "/Mouse/potential_pairs/mouse_human_potential_pairs-");
-            put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + commonStringsDict.get("modelName").toString() + "/Mouse/llm_selected_correspondences/mouse_human_llm_selected_correspondences-");
-        }
-    };
+    public static Dictionary mouseStringsDict = new Hashtable();
 
-    public static Dictionary commonStringsDict = new java.util.Hashtable() {
-        {
-            put("modelName", "qwen3-235b-a22b");
-            put("dataSet", "Anatomy");
-            put("threshold", 0.8);
-            put("initCorrespondencesPath", "result/Anatomy/init_correspondences/init_correspondences-");
-        }
-    };
+    public static Dictionary commonStringsDict = new Hashtable();
 
     public static void main(String[] args) {
+        initStringDictionaries();
+
         // prepare verboes and embeddings for entities
 //        computeVerboes();
 //        computeEmbeddings();
@@ -64,11 +36,49 @@ public class Main {
         play(NegotiationGameOverLLMGeneratedCorrespondence.class, commonStringsDict, humanStringsDict, mouseStringsDict);
     }
 
+    private static void initStringDictionaries() {
+        commonStringsDict.put("llmApiCaller", LLMApiCallers.Ollama);
+        commonStringsDict.put("modelName", "qwen3:8b");
+        commonStringsDict.put("dataSet", "Anatomy");
+        commonStringsDict.put("threshold", 0.9);
+        commonStringsDict.put("initCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/init_correspondences/init_correspondences-");
+        commonStringsDict.put("DataSetRoot", "src/main/java/DataSet/");
+
+        humanStringsDict.put("ontologyPath", commonStringsDict.get("DataSetRoot").toString() + "/" + commonStringsDict.get("dataSet").toString() + "/human.owl");
+        humanStringsDict.put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
+        humanStringsDict.put("entityURIPrefix", "http://human.owl#NCI");
+        humanStringsDict.put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+        humanStringsDict.put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+        humanStringsDict.put("collectionName", "Human");
+        humanStringsDict.put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/" + humanStringsDict.get("collectionName").toString() + "/potential_pairs/human_mouse_potential_pairs-");
+        humanStringsDict.put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/" + humanStringsDict.get("collectionName").toString() + "/llm_selected_correspondences/human_mouse_llm_selected_correspondences-");
+
+        mouseStringsDict.put("ontologyPath", commonStringsDict.get("DataSetRoot").toString() + "/" + commonStringsDict.get("dataSet").toString() + "/mouse.owl");
+        mouseStringsDict.put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
+        mouseStringsDict.put("entityURIPrefix", "http://mouse.owl#MA");
+        mouseStringsDict.put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+        mouseStringsDict.put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+        mouseStringsDict.put("collectionName", "Mouse");
+        mouseStringsDict.put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/"+ mouseStringsDict.get("collectionName").toString() + "/potential_pairs/mouse_human_potential_pairs-");
+        mouseStringsDict.put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/"+ mouseStringsDict.get("collectionName").toString() + "/llm_selected_correspondences/mouse_human_llm_selected_correspondences-");
+    }
+
     private static void play(Class type, Dictionary commonStringsDict, Dictionary sourceStringDict, Dictionary targetStringDict) {
         try {
+            LLMApiCaller apiCaller;
+            switch ((LLMApiCallers) commonStringsDict.get("llmApiCaller")) {
+                case Ollama:
+                    apiCaller = new OllamaApiCaller(commonStringsDict.get("modelName").toString());
+                    break;
+                case Qwen:
+                    apiCaller = new QwenApiCaller(commonStringsDict.get("modelName").toString());
+                    break;
+                default:
+                    throw new IllegalArgumentException("Unsupported LLM API caller: " + commonStringsDict.get("llmApiCaller"));
+            }
             NegotiationGameOverCorrespondence game = (NegotiationGameOverCorrespondence) type
-                    .getConstructor(Dictionary.class, Dictionary.class, String.class, String.class, double.class)
-                    .newInstance(sourceStringDict, targetStringDict, commonStringsDict.get("modelName").toString(),
+                    .getConstructor(Dictionary.class, Dictionary.class, LLMApiCaller.class, String.class, double.class)
+                    .newInstance(sourceStringDict, targetStringDict, apiCaller,
                             commonStringsDict.get("initCorrespondencesPath").toString()
                                     + commonStringsDict.get("threshold").toString() + ".txt",
                             commonStringsDict.get("threshold"));

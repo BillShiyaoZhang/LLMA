@@ -13,9 +13,9 @@ public class NegotiationGameOverLLMGeneratedCorrespondence extends NegotiationGa
     private String initCorrespondencesPath;
 
     public NegotiationGameOverLLMGeneratedCorrespondence(
-            Dictionary sourceStringDict, Dictionary targetStringDict, String modelName, String initCorrespondencesPath,
+            Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, String initCorrespondencesPath,
             double threshold) {
-        super(sourceStringDict, targetStringDict, modelName, threshold);
+        super(sourceStringDict, targetStringDict, apiCaller, threshold);
         this.initCorrespondencesPath = initCorrespondencesPath;
     }
 
@@ -29,9 +29,9 @@ public class NegotiationGameOverLLMGeneratedCorrespondence extends NegotiationGa
     protected void retrieveCorrespondences() {
         // NOTE: the results of the below codes are stored in the "result/" folder.
         // Only use the below codes if you want to generate the initial correspondences for each agent.
-//        Alignment alignment = loadCorrespondences(initCorrespondencesPath);
-//        source.selectCorrespondences(alignment, true, target.entityVerbos);
-//        target.selectCorrespondences(alignment, false, source.entityVerbos);
+        Alignment alignment = loadCorrespondences(initCorrespondencesPath);
+        source.selectCorrespondences(alignment, true, target.entityVerbos);
+        target.selectCorrespondences(alignment, false, source.entityVerbos);
     }
 
     public static Alignment loadCorrespondences(String initCorrespondencesPath) {

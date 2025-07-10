@@ -33,10 +33,10 @@ public class Agent {
 //    private List<Belief<OntClass>> unrevealedEntitiesWithDescendingBelief;
 //    public Weaviate db;
 
-    public Agent(Dictionary stringDict, String modelName, double threshold) {
+    public Agent(Dictionary stringDict, LLMApiCaller apiCaller, double threshold) {
         this.stringDict = stringDict;
         this.name = stringDict.get("collectionName").toString();
-        this.llm = new QwenApiCaller(modelName);
+        this.llm = apiCaller;
         this.threshold = threshold;
 
         OntModel s = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
@@ -52,9 +52,9 @@ public class Agent {
 
         embeddingCorrespondences = NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences(
                 Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
-        privateCorrespondences = loadSelectedCorrespondencesFromFile(
-                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
-        correspondencesQueueHighestConfidenceFirst.addAll(privateCorrespondences);
+//        privateCorrespondences = loadSelectedCorrespondencesFromFile(
+//                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+//        correspondencesQueueHighestConfidenceFirst.addAll(privateCorrespondences);
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
@@ -268,7 +268,10 @@ public class Agent {
             message = message +
                     "Please select all possible entities, from the given set, you find likely to be aligned to the given entity.\n" +
                     "Provide your response in the following format:\n" +
-                    "<Possible Entity URI> is the URI of the entity you believe is relevant to the given entity.\n" +
+                    "<Possible Entity URI>\n" +
+                    "<Possible Entity URI>\n" +
+                    "<Possible Entity URI>\n" +
+                    "...\n\n" +
                     "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
 
             // Call the LLM API to get the selected correspondences

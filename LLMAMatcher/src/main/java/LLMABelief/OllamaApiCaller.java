@@ -16,21 +16,7 @@ public class OllamaApiCaller implements LLMApiCaller{
 
     public OllamaApiCaller(String modelName) {
         this.modelName = modelName;
-    }
-
-    public String think(String prompt) {
-        try {
-            OllamaResult result = ollamaAPI.generate(modelName,
-                    prompt, false, new OptionsBuilder().setNumCtx(8000).build());
-            return result.getResponse();
-        } catch (OllamaBaseException e) {
-            System.out.println("OllamaBaseException: " + e.getMessage());
-        } catch (IOException e) {
-            System.out.println("IOException: " + e.getMessage());
-        } catch (InterruptedException e) {
-            System.out.println("InterruptedException: " + e.getMessage());
-        }
-        return "";
+        ollamaAPI.setRequestTimeoutSeconds(1000000); // Set default timeout to 1000 seconds
     }
 
     @Override

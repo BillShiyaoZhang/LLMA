@@ -15,8 +15,8 @@ public class NegotiationGameOverEntityBelief extends NegotiationGameOverCorrespo
 
     protected Agent nextProposer;
 
-    public NegotiationGameOverEntityBelief(Dictionary sourceStringDict, Dictionary targetStringDict, String modelName, double threashold) {
-        super(sourceStringDict, targetStringDict, modelName, threashold);
+    public NegotiationGameOverEntityBelief(Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, double threashold) {
+        super(sourceStringDict, targetStringDict, apiCaller, threashold);
     }
 
     /***
