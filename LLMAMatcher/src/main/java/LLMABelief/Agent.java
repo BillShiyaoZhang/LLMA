@@ -24,11 +24,12 @@ public class Agent {
 
     public List<OntClass> entities;
     public Dictionary<String, String> entityVerbos;
-    private List<Belief<OntClass>> entityBeliefs;
-    private List<Belief<OntClass>> unrevealedEntitiesWithDescendingBelief;
-    public Weaviate db;
 
     public Alignment privateCorrespondences;
+
+//    private List<Belief<OntClass>> entityBeliefs;
+//    private List<Belief<OntClass>> unrevealedEntitiesWithDescendingBelief;
+//    public Weaviate db;
 
     public Agent(Dictionary stringDict, String modelName, double threshold) {
         this.stringDict = stringDict;
@@ -42,12 +43,13 @@ public class Agent {
 
         entities = extractEntities(ontology, stringDict.get("entityURIPrefix").toString());
         entityVerbos = Main.loadEntityVerbos(stringDict.get("verbosePath").toString());
-        entityBeliefs = initConfidence(entities);
-        unrevealedEntitiesWithDescendingBelief = descending(entityBeliefs);
+//        entityBeliefs = initConfidence(entities);
+//        unrevealedEntitiesWithDescendingBelief = descending(entityBeliefs);
 
-        this.db = new Weaviate(this.name);
+//        this.db = new Weaviate(this.name);
 
-        privateCorrespondences = new Alignment();
+        privateCorrespondences = loadSelectedCorrespondencesFromFile(
+                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
@@ -161,20 +163,20 @@ public class Agent {
         return null;
     }
 
-    public boolean hasUnrevealedEntity() {
-        if (unrevealedEntitiesWithDescendingBelief.isEmpty()) {
-            return false;
-        }
-        return true;
-    }
+//    public boolean hasUnrevealedEntity() {
+//        if (unrevealedEntitiesWithDescendingBelief.isEmpty()) {
+//            return false;
+//        }
+//        return true;
+//    }
 
-    public OntClass nextUnrevealedEntity() {
-        if (unrevealedEntitiesWithDescendingBelief.isEmpty()) {
-            System.out.println("No unrevealed entities left.");
-            return null;
-        }
-        return unrevealedEntitiesWithDescendingBelief.get(0).obj;
-    }
+//    public OntClass nextUnrevealedEntity() {
+//        if (unrevealedEntitiesWithDescendingBelief.isEmpty()) {
+//            System.out.println("No unrevealed entities left.");
+//            return null;
+//        }
+//        return unrevealedEntitiesWithDescendingBelief.get(0).obj;
+//    }
 
     /**
      * Pairs the given entity with entities from the agent's ontology model.
@@ -194,10 +196,37 @@ public class Agent {
 
     public void selectCorrespondences(Alignment alignment, boolean isSource, Dictionary<String, String> entityVerbosOtherAgent) {
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = extractPotentialEntityPairs(alignment, isSource);
-
         writePotentialEntityPairsToFile(potentialEntityPairsDict);
-
         askLLMToSelectCorrespondences(potentialEntityPairsDict, entityVerbosOtherAgent);
+    }
+
+    public static Alignment loadSelectedCorrespondencesFromFile(String filePath) {
+        Alignment llmSelectedPairs = new Alignment();
+        try (BufferedReader reader = new BufferedReader(
+                new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.trim().isEmpty()) {
+                    continue; // skip empty lines
+                }
+                if (line.startsWith("//")) {
+                    continue; // skip comment lines
+                }
+
+                String[] lines = line.split(", ");
+                if (lines.length < 2) {
+                    System.out.println("Skipping line due to insufficient information: " + line);
+                    continue; // skip lines that do not have enough information
+                }
+                Set<String> entities = new HashSet<>();
+                for (int i = 1; i < lines.length; i++) {
+                    llmSelectedPairs.add(lines[0], lines[i].trim(), 1.0); // Assuming confidence is 1.0 for selected pairs
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return llmSelectedPairs;
     }
 
     private void askLLMToSelectCorrespondences(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict,

@@ -37,8 +37,13 @@ public class Main {
         }
     };
 
-    private static String modelName = "qwen3-235b-a22b";
-    private static double threshold = 0.5;
+    private static Dictionary commonStringsDict = new java.util.Hashtable() {
+        {
+            put("modelName", "qwen3-235b-a22b");
+            put("threshold", 0.8);
+            put("initCorrespondencesPath", "result/Anatomy/init_correspondences/init_correspondences-");
+        }
+    };
 
     public static void main(String[] args) {
         // prepare verboes and embeddings for entities
@@ -46,7 +51,7 @@ public class Main {
 //        computeEmbeddings();
 //        cosineDistance(humanStringsDict.get("embeddingPath").toString(),
 //                mouseStringsDict.get("embeddingPath").toString(),
-//                "result/Anatomy/init_correspondences", 0.5);
+//                commonStringsDict.get("initCorrespondencesPath").toString(), 0.5);
 
         // init database
         // NOTE: The below embedding loading loads the embeddings from the "result/" folder.
@@ -55,16 +60,17 @@ public class Main {
 
         // run the game.
         // NOTE: The below game is dependent on the embeddings loaded to the db above.
-//        play(NegotiationGameOverLLMGeneratedCorrespondence.class, modelName, humanStringsDict, mouseStringsDict,
-//                "result/Anatomy/init_correspondences-");
+        play(NegotiationGameOverLLMGeneratedCorrespondence.class, commonStringsDict, humanStringsDict, mouseStringsDict);
     }
 
-    private static void play(Class type, String modelName, Dictionary sourceStringDict, Dictionary targetStringDict,
-                             String initCorrespondencesPath) {
+    private static void play(Class type, Dictionary commonStringsDict, Dictionary sourceStringDict, Dictionary targetStringDict) {
         try {
             NegotiationGameOverCorrespondence game = (NegotiationGameOverCorrespondence) type
                     .getConstructor(Dictionary.class, Dictionary.class, String.class, String.class, double.class)
-                    .newInstance(sourceStringDict, targetStringDict, modelName, initCorrespondencesPath + threshold + ".txt", threshold);
+                    .newInstance(sourceStringDict, targetStringDict, commonStringsDict.get("modelName").toString(),
+                            commonStringsDict.get("initCorrespondencesPath").toString()
+                                    + commonStringsDict.get("threshold").toString() + ".txt",
+                            commonStringsDict.get("threshold"));
             game.play();
         } catch (InstantiationException e) {
             throw new RuntimeException(e);

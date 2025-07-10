@@ -36,40 +36,40 @@ public class NegotiationGameOverEntityBelief extends NegotiationGameOverCorrespo
      */
     @Override
     protected void retrieveCorrespondences(){
-        selectFirstProposer();
-
-        while (source.hasUnrevealedEntity() || target.hasUnrevealedEntity()) {
-            if (nextProposer.hasUnrevealedEntity()) {
-                Agent proposer = nextProposer;
-                Agent receiver = (proposer == source) ? target : source;
-                OntClass entity = proposer.nextUnrevealedEntity();
-                Set<OntClass> entities = receiver.pair(entity);
-
-                // Each agent examines received entities and updates private correspondences.
-                // If correspondences with self-confidence above the threshold are found, the corresponding entities
-                // are shared to the other agent.
-                while(true) {
-                    if (entities == null) {
-                        System.out.println("No entities found for pairing by the receiver.");
-                        break;
-                    }
-
-                    // The Proposer receives entities from the receiver, and updates its correspondences.
-                    entities = proposer.pair(entities);
-                    if (entities == null) {
-                        System.out.println("No entities found for pairing by the proposer.");
-                        break;
-                    }
-                    // The Receiver receives entities from the proposer, and updates its correspondences.
-                    entities = receiver.pair(entities);
-                }
-
-                switchProposer();
-            } else {
-                switchProposer();
-            }
-        }
-        System.out.println("Game over: both agents have no entities left to propose.");
+//        selectFirstProposer();
+//
+//        while (source.hasUnrevealedEntity() || target.hasUnrevealedEntity()) {
+//            if (nextProposer.hasUnrevealedEntity()) {
+//                Agent proposer = nextProposer;
+//                Agent receiver = (proposer == source) ? target : source;
+//                OntClass entity = proposer.nextUnrevealedEntity();
+//                Set<OntClass> entities = receiver.pair(entity);
+//
+//                // Each agent examines received entities and updates private correspondences.
+//                // If correspondences with self-confidence above the threshold are found, the corresponding entities
+//                // are shared to the other agent.
+//                while(true) {
+//                    if (entities == null) {
+//                        System.out.println("No entities found for pairing by the receiver.");
+//                        break;
+//                    }
+//
+//                    // The Proposer receives entities from the receiver, and updates its correspondences.
+//                    entities = proposer.pair(entities);
+//                    if (entities == null) {
+//                        System.out.println("No entities found for pairing by the proposer.");
+//                        break;
+//                    }
+//                    // The Receiver receives entities from the proposer, and updates its correspondences.
+//                    entities = receiver.pair(entities);
+//                }
+//
+//                switchProposer();
+//            } else {
+//                switchProposer();
+//            }
+//        }
+//        System.out.println("Game over: both agents have no entities left to propose.");
     }
 
     private void selectFirstProposer() {

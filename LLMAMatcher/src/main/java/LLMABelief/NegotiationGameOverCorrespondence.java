@@ -35,6 +35,8 @@ public class NegotiationGameOverCorrespondence {
      * Retrieve correspondences for each agent.
      */
     protected void retrieveCorrespondences() {
+        // Leave this empty, as Terry's approach assumes that both agents know their private correspondences
+        // prior to the encounter.
     }
 
     /***

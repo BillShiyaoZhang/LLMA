@@ -1,5 +1,6 @@
 package cn.edu.xjtlu.iot.syzhang.LLMABelief;
 
+import LLMABelief.Agent;
 import LLMABelief.Main;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
@@ -54,6 +55,7 @@ public class Statistics {
     }
 
     private static Map<String, Set<String>> loadLLMSelectedPairs(String filePath) {
+//        Alignment llmSelectedPairs = Agent.loadSelectedCorrespondencesFromFile(filePath);
         Map<String, Set<String>> llmSelectedPairs = new HashMap<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
