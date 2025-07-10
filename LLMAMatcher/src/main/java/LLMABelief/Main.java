@@ -11,7 +11,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 public class Main {
-    private static Dictionary humanStringsDict = new java.util.Hashtable(){
+    public static Dictionary humanStringsDict = new java.util.Hashtable(){
         {
             put("ontologyPath", "src/main/java/DataSet/Anatomy/human.owl");
             put("verbosePath", "result/Anatomy/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
@@ -24,7 +24,7 @@ public class Main {
         }
     };
 
-    private static Dictionary mouseStringsDict = new java.util.Hashtable(){
+    public static Dictionary mouseStringsDict = new java.util.Hashtable(){
         {
             put("ontologyPath", "src/main/java/DataSet/Anatomy/mouse.owl");
             put("verbosePath", "result/Anatomy/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
@@ -38,7 +38,7 @@ public class Main {
     };
 
     private static String modelName = "qwen3-235b-a22b";
-    private static double threshold = 0.8;
+    private static double threshold = 0.5;
 
     public static void main(String[] args) {
         // prepare verboes and embeddings for entities
@@ -46,7 +46,7 @@ public class Main {
 //        computeEmbeddings();
 //        cosineDistance(humanStringsDict.get("embeddingPath").toString(),
 //                mouseStringsDict.get("embeddingPath").toString(),
-//                "result/Anatomy/init_correspondences", 0.6);
+//                "result/Anatomy/init_correspondences", 0.5);
 
         // init database
         // NOTE: The below embedding loading loads the embeddings from the "result/" folder.
@@ -55,8 +55,8 @@ public class Main {
 
         // run the game.
         // NOTE: The below game is dependent on the embeddings loaded to the db above.
-        play(NegotiationGameOverLLMGeneratedCorrespondence.class, modelName, humanStringsDict, mouseStringsDict,
-                "result/Anatomy/init_correspondences-");
+//        play(NegotiationGameOverLLMGeneratedCorrespondence.class, modelName, humanStringsDict, mouseStringsDict,
+//                "result/Anatomy/init_correspondences-");
     }
 
     private static void play(Class type, String modelName, Dictionary sourceStringDict, Dictionary targetStringDict,
