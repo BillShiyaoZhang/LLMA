@@ -14,26 +14,26 @@ public class Main {
     public static Dictionary humanStringsDict = new java.util.Hashtable(){
         {
             put("ontologyPath", "src/main/java/DataSet/Anatomy/human.owl");
-            put("verbosePath", "result/Anatomy/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
+            put("verbosePath", "result/Anatomy/verbos/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
             put("entityURIPrefix", "http://human.owl#NCI");
             put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-            put("embeddingPath", "result/Anatomy/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+            put("embeddingPath", "result/Anatomy/embeddings/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
             put("collectionName", "Human");
-            put("potentialEntityPairsPath", "result/Anatomy/human_mouse_potential_pairs-");
-            put("llmSelectedCorrespondencesPath", "result/Anatomy/human_mouse_llm_selected_correspondences-");
+            put("potentialEntityPairsPath", "result/Anatomy/Human/potential_pairs/human_mouse_potential_pairs-");
+            put("llmSelectedCorrespondencesPath", "result/Anatomy/Human/llm_selected_correspondences/human_mouse_llm_selected_correspondences-");
         }
     };
 
     public static Dictionary mouseStringsDict = new java.util.Hashtable(){
         {
             put("ontologyPath", "src/main/java/DataSet/Anatomy/mouse.owl");
-            put("verbosePath", "result/Anatomy/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
+            put("verbosePath", "result/Anatomy/verbos/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
             put("entityURIPrefix", "http://mouse.owl#MA");
             put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-            put("embeddingPath", "result/Anatomy/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+            put("embeddingPath", "result/Anatomy/embeddings/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
             put("collectionName", "Mouse");
-            put("potentialEntityPairsPath", "result/Anatomy/mouse_human_potential_pairs-");
-            put("llmSelectedCorrespondencesPath", "result/Anatomy/mouse_human_llm_selected_correspondences-");
+            put("potentialEntityPairsPath", "result/Anatomy/Mouse/potential_pairs/mouse_human_potential_pairs-");
+            put("llmSelectedCorrespondencesPath", "result/Anatomy/Mouse/llm_selected_correspondences/mouse_human_llm_selected_correspondences-");
         }
     };
 
