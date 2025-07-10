@@ -37,7 +37,7 @@ public class Main {
         }
     };
 
-    private static Dictionary commonStringsDict = new java.util.Hashtable() {
+    public static Dictionary commonStringsDict = new java.util.Hashtable() {
         {
             put("modelName", "qwen3-235b-a22b");
             put("threshold", 0.8);

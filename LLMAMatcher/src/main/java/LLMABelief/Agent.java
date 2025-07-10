@@ -25,6 +25,7 @@ public class Agent {
     public List<OntClass> entities;
     public Dictionary<String, String> entityVerbos;
 
+    private Alignment embeddingCorrespondences;
     public Alignment privateCorrespondences;
 
 //    private List<Belief<OntClass>> entityBeliefs;
@@ -48,8 +49,11 @@ public class Agent {
 
 //        this.db = new Weaviate(this.name);
 
+        embeddingCorrespondences = NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences(
+                Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
         privateCorrespondences = loadSelectedCorrespondencesFromFile(
                 stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+        System.out.println(privateCorrespondences);
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
@@ -200,7 +204,7 @@ public class Agent {
         askLLMToSelectCorrespondences(potentialEntityPairsDict, entityVerbosOtherAgent);
     }
 
-    public static Alignment loadSelectedCorrespondencesFromFile(String filePath) {
+    private Alignment loadSelectedCorrespondencesFromFile(String filePath) {
         Alignment llmSelectedPairs = new Alignment();
         try (BufferedReader reader = new BufferedReader(
                 new FileReader(filePath))) {
@@ -218,9 +222,17 @@ public class Agent {
                     System.out.println("Skipping line due to insufficient information: " + line);
                     continue; // skip lines that do not have enough information
                 }
-                Set<String> entities = new HashSet<>();
                 for (int i = 1; i < lines.length; i++) {
-                    llmSelectedPairs.add(lines[0], lines[i].trim(), 1.0); // Assuming confidence is 1.0 for selected pairs
+                    for (var c : this.embeddingCorrespondences.getCorrespondencesSource(lines[0])) {
+                        if (c.getEntityTwo().equals(lines[i].trim())) {
+                            llmSelectedPairs.add(c);
+                        }
+                    }
+                    for (var c : this.embeddingCorrespondences.getCorrespondencesTarget(lines[0])) {
+                        if (c.getEntityOne().equals(lines[i].trim())) {
+                            llmSelectedPairs.add(c);
+                        }
+                    }
                 }
             }
         } catch (IOException e) {

@@ -34,7 +34,7 @@ public class NegotiationGameOverLLMGeneratedCorrespondence extends NegotiationGa
 //        target.selectCorrespondences(alignment, false, source.entityVerbos);
     }
 
-    private Alignment loadCorrespondences(String initCorrespondencesPath) {
+    public static Alignment loadCorrespondences(String initCorrespondencesPath) {
         if (initCorrespondencesPath == null || initCorrespondencesPath.isEmpty()) {
             System.err.println("No initial correspondences path provided.");
             return null;
