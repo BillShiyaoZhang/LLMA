@@ -1,9 +1,13 @@
 package LLMABelief;
 
+import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
+import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
+import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.CorrespondenceRelation;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.xml.sax.SAXException;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -36,13 +40,14 @@ public class Main {
         play(NegotiationGameOverLLMGeneratedCorrespondence.class, commonStringsDict, humanStringsDict, mouseStringsDict);
     }
 
-    private static void initStringDictionaries() {
-        commonStringsDict.put("llmApiCaller", LLMApiCallers.Ollama);
-        commonStringsDict.put("modelName", "qwen3:8b");
+    public static void initStringDictionaries() {
+        commonStringsDict.put("llmApiCaller", LLMApiCallers.Qwen);
+        commonStringsDict.put("modelName", "qwen3-235b-a22b");
         commonStringsDict.put("dataSet", "Anatomy");
-        commonStringsDict.put("threshold", 0.9);
+        commonStringsDict.put("threshold", 0.8);
         commonStringsDict.put("initCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/init_correspondences/init_correspondences-");
         commonStringsDict.put("DataSetRoot", "src/main/java/DataSet/");
+        commonStringsDict.put("reference", "reference.rdf");
 
         humanStringsDict.put("ontologyPath", commonStringsDict.get("DataSetRoot").toString() + "/" + commonStringsDict.get("dataSet").toString() + "/human.owl");
         humanStringsDict.put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
@@ -82,7 +87,18 @@ public class Main {
                             commonStringsDict.get("initCorrespondencesPath").toString()
                                     + commonStringsDict.get("threshold").toString() + ".txt",
                             commonStringsDict.get("threshold"));
-            game.play();
+            Alignment alignment = game.play();
+
+            String path = "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/";
+            String alignmentPath = path + "alignment-" + commonStringsDict.get("threshold").toString() + ".txt";
+            FileWriter fw = createFileWriter(alignmentPath);
+            for (Correspondence c : alignment) {
+                fw.write(c.getEntityOne() + ", " + c.getEntityTwo() + ", " + c.getConfidence() + "\n");
+            }
+            fw.flush();
+            fw.close();
+            String staticsPath = path + "alignment_statistics-" + commonStringsDict.get("threshold").toString() + ".txt";
+            compareWithReference(alignment, staticsPath);
         } catch (InstantiationException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
@@ -91,7 +107,43 @@ public class Main {
             throw new RuntimeException(e);
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+    }
+
+    private static void compareWithReference(Alignment alignment, String statisticsPath) {
+        try {
+            Alignment reference = new Alignment(new File(
+                    commonStringsDict.get("DataSetRoot").toString() + commonStringsDict.get("dataSet").toString() + "/" +  commonStringsDict.get("reference").toString()));
+            System.out.println("=========================================");
+            System.out.println("Reference size: " + reference.size());
+            System.out.println("Alignment size: " + alignment.size());
+
+            int alignmentInReference = 0;
+            int referenceInAlignment = 0;
+            for (var c : alignment) {
+                if (reference.getCorrespondence(c.getEntityTwo(), c.getEntityOne(), CorrespondenceRelation.EQUIVALENCE) != null) {
+                    alignmentInReference++;
+                }
+            }
+            for (var c : reference) {
+                if (alignment.getCorrespondence(c.getEntityTwo(), c.getEntityOne(), CorrespondenceRelation.EQUIVALENCE) != null) {
+                    referenceInAlignment++;
+                }
+            }
+
+            FileWriter fw = createFileWriter(statisticsPath);
+            fw.write("Alignment in reference: " + alignmentInReference);
+            fw.write("\nAlignment not in reference: " + (alignment.size() - alignmentInReference));
+            fw.write("\nReference in alignment: " + referenceInAlignment);
+            fw.write("\nReference not in alignment: " + (reference.size() - referenceInAlignment));
+            fw.flush();
+            fw.close();
+        } catch (SAXException | IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private static void computeVerboes() {

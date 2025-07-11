@@ -30,11 +30,11 @@ public class Statistics {
     }
 
     private static void statistics(Alignment reference) {
-        calculateStatistics(reference, 0.9);
+//        calculateStatistics(reference, 0.9);
         calculateStatistics(reference, 0.8);
-        calculateStatistics(reference, 0.7);
-        calculateStatistics(reference, 0.6);
-        calculateStatistics(reference, 0.5);
+//        calculateStatistics(reference, 0.7);
+//        calculateStatistics(reference, 0.6);
+//        calculateStatistics(reference, 0.5);
     }
 
     private static void calculateStatistics(Alignment reference, double threshold) {
@@ -88,6 +88,7 @@ public class Statistics {
     }
 
     private static void potentialPairsToAlignment(Alignment reference, double threshold) {
+        Main.initStringDictionaries();
         Map<String, Set<String>> potentialPairsH = loadPotentialPairs(
                 Main.humanStringsDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
         Map<String, Set<String>> potentialPairsM = loadPotentialPairs(

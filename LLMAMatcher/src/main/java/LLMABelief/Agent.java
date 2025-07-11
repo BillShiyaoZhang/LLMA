@@ -25,10 +25,9 @@ public class Agent {
     public List<OntClass> entities;
     public Dictionary<String, String> entityVerbos;
 
-    private Alignment embeddingCorrespondences;
-    private Alignment privateCorrespondences;
-    public Queue<Correspondence> correspondencesQueueHighestConfidenceFirst = new PriorityQueue<>(
-            (c1, c2) -> Double.compare(c2.getConfidence(), c1.getConfidence()));
+    public Alignment initialCorrespondences;
+    public Alignment privateCorrespondences;
+
 //    private List<Belief<OntClass>> entityBeliefs;
 //    private List<Belief<OntClass>> unrevealedEntitiesWithDescendingBelief;
 //    public Weaviate db;
@@ -50,11 +49,10 @@ public class Agent {
 
 //        this.db = new Weaviate(this.name);
 
-        embeddingCorrespondences = NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences(
+        initialCorrespondences = NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences(
                 Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
-//        privateCorrespondences = loadSelectedCorrespondencesFromFile(
-//                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
-//        correspondencesQueueHighestConfidenceFirst.addAll(privateCorrespondences);
+        privateCorrespondences = loadSelectedCorrespondencesFromFile(
+                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
@@ -224,12 +222,12 @@ public class Agent {
                     continue; // skip lines that do not have enough information
                 }
                 for (int i = 1; i < lines.length; i++) {
-                    for (var c : this.embeddingCorrespondences.getCorrespondencesSource(lines[0])) {
+                    for (var c : this.initialCorrespondences.getCorrespondencesSource(lines[0])) {
                         if (c.getEntityTwo().equals(lines[i].trim())) {
                             llmSelectedPairs.add(c);
                         }
                     }
-                    for (var c : this.embeddingCorrespondences.getCorrespondencesTarget(lines[0])) {
+                    for (var c : this.initialCorrespondences.getCorrespondencesTarget(lines[0])) {
                         if (c.getEntityOne().equals(lines[i].trim())) {
                             llmSelectedPairs.add(c);
                         }
