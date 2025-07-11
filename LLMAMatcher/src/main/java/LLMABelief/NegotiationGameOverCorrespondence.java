@@ -26,12 +26,12 @@ public class NegotiationGameOverCorrespondence {
 
     public Alignment play() {
         retrieveCorrespondences();
-
-        Alignment correspondencesJointBelief = correspondencesNegotiation();
-
-        Alignment alignment = resolveConflicts(correspondencesJointBelief);
-
-        return alignment;
+        return null;
+//        Alignment correspondencesJointBelief = correspondencesNegotiation();
+//
+//        Alignment alignment = resolveConflicts(correspondencesJointBelief);
+//
+//        return alignment;
     }
 
     /***

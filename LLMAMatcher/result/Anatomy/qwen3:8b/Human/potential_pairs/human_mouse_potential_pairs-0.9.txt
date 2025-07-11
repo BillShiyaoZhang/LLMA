@@ -216,8 +216,8 @@ Self URI: http://human.owl#NCI_C49326
 Self URI: http://human.owl#NCI_C52940
   - Other Entity URI: http://mouse.owl#MA_0001977, Confidence: 0.907160246849251
 Self URI: http://human.owl#NCI_C33286
-  - Other Entity URI: http://mouse.owl#MA_0002355, Confidence: 0.9009332330851553
   - Other Entity URI: http://mouse.owl#MA_0002423, Confidence: 0.9240634797699405
+  - Other Entity URI: http://mouse.owl#MA_0002355, Confidence: 0.9009332330851553
 Self URI: http://human.owl#NCI_C49323
   - Other Entity URI: http://mouse.owl#MA_0001746, Confidence: 0.915967910667236
 Self URI: http://human.owl#NCI_C52742
@@ -233,8 +233,8 @@ Self URI: http://human.owl#NCI_C53014
 Self URI: http://human.owl#NCI_C53012
   - Other Entity URI: http://mouse.owl#MA_0002377, Confidence: 0.9268866863508304
 Self URI: http://human.owl#NCI_C53173
-  - Other Entity URI: http://mouse.owl#MA_0002313, Confidence: 0.9079401915809878
   - Other Entity URI: http://mouse.owl#MA_0002314, Confidence: 0.9018472919925883
+  - Other Entity URI: http://mouse.owl#MA_0002313, Confidence: 0.9079401915809878
 Self URI: http://human.owl#NCI_C53172
   - Other Entity URI: http://mouse.owl#MA_0002302, Confidence: 0.916255203204393
 Self URI: http://human.owl#NCI_C32250
@@ -242,8 +242,8 @@ Self URI: http://human.owl#NCI_C32250
 Self URI: http://human.owl#NCI_C32849
   - Other Entity URI: http://mouse.owl#MA_0002157, Confidence: 0.9033648329733409
 Self URI: http://human.owl#NCI_C32848
-  - Other Entity URI: http://mouse.owl#MA_0002324, Confidence: 0.9009173021504162
   - Other Entity URI: http://mouse.owl#MA_0002326, Confidence: 0.9277889495583667
+  - Other Entity URI: http://mouse.owl#MA_0002324, Confidence: 0.9009173021504162
 Self URI: http://human.owl#NCI_C12753
   - Other Entity URI: http://mouse.owl#MA_0000088, Confidence: 0.916112236972004
 Self URI: http://human.owl#NCI_C49479
@@ -280,8 +280,8 @@ Self URI: http://human.owl#NCI_C52685
 Self URI: http://human.owl#NCI_C32591
   - Other Entity URI: http://mouse.owl#MA_0002637, Confidence: 0.9239766888262069
 Self URI: http://human.owl#NCI_C49261
-  - Other Entity URI: http://mouse.owl#MA_0001324, Confidence: 0.9120700919277474
   - Other Entity URI: http://mouse.owl#MA_0001326, Confidence: 0.9231296867743993
+  - Other Entity URI: http://mouse.owl#MA_0001324, Confidence: 0.9120700919277474
 Self URI: http://human.owl#NCI_C12734
   - Other Entity URI: http://mouse.owl#MA_0002142, Confidence: 0.9077324612108549
 Self URI: http://human.owl#NCI_C52918

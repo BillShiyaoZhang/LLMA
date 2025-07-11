@@ -51,8 +51,11 @@ public class Agent {
 
         initialCorrespondences = NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences(
                 Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
-        privateCorrespondences = loadSelectedCorrespondencesFromFile(
-                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+
+        // NOTE: the below line is used to load the selected correspondences from the LLM.
+        // Only use it if you have already run the LLM to select correspondences.
+//        privateCorrespondences = loadSelectedCorrespondencesFromFile(
+//                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
@@ -276,9 +279,15 @@ public class Agent {
             String response = llm.prompt(message);
             try {
                 fw.write(selfURI + "\n " + response + "\n");
+                fw.flush();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        }
+        try {
+            fw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -297,6 +306,7 @@ public class Agent {
                     fw.write("  - Other Entity URI: " + otherEntityURI + ", Confidence: " + confidence + "\n");
                 }
             }
+            fw.flush();
             fw.close();
         } catch (Exception e) {
             e.printStackTrace();

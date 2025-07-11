@@ -41,10 +41,10 @@ public class Main {
     }
 
     public static void initStringDictionaries() {
-        commonStringsDict.put("llmApiCaller", LLMApiCallers.Qwen);
-        commonStringsDict.put("modelName", "qwen3-235b-a22b");
+        commonStringsDict.put("llmApiCaller", LLMApiCallers.Ollama);
+        commonStringsDict.put("modelName", "qwen3:8b");
         commonStringsDict.put("dataSet", "Anatomy");
-        commonStringsDict.put("threshold", 0.8);
+        commonStringsDict.put("threshold", 0.9);
         commonStringsDict.put("initCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/init_correspondences/init_correspondences-");
         commonStringsDict.put("DataSetRoot", "src/main/java/DataSet/");
         commonStringsDict.put("reference", "reference.rdf");
