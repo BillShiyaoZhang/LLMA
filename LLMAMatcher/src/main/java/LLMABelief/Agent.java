@@ -267,12 +267,12 @@ public class Agent {
                     continue; // skip lines that do not have enough information
                 }
                 for (int i = 1; i < lines.length; i++) {
-                    for (var c : this.initialCorrespondences.getCorrespondencesSource(lines[0])) {
+                    for (var c : this.initialCorrespondences.getCorrespondencesSource(lines[0].trim())) {
                         if (c.getEntityTwo().equals(lines[i].trim())) {
                             llmSelectedPairs.add(c);
                         }
                     }
-                    for (var c : this.initialCorrespondences.getCorrespondencesTarget(lines[0])) {
+                    for (var c : this.initialCorrespondences.getCorrespondencesTarget(lines[0].trim())) {
                         if (c.getEntityOne().equals(lines[i].trim())) {
                             llmSelectedPairs.add(c);
                         }
