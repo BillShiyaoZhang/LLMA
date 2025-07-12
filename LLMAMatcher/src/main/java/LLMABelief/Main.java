@@ -41,10 +41,10 @@ public class Main {
     }
 
     public static void initStringDictionaries() {
-        commonStringsDict.put("llmApiCaller", LLMApiCallers.Ollama);
-        commonStringsDict.put("modelName", "qwen3:8b");
+        commonStringsDict.put("llmApiCaller", LLMApiCallers.LMStudio);
+        commonStringsDict.put("modelName", "qwen3-4b-mlx@4bit");
         commonStringsDict.put("dataSet", "Anatomy");
-        commonStringsDict.put("threshold", 0.9);
+        commonStringsDict.put("threshold", 0.7);
         commonStringsDict.put("initCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/init_correspondences/init_correspondences-");
         commonStringsDict.put("DataSetRoot", "src/main/java/DataSet/");
         commonStringsDict.put("reference", "reference.rdf");
@@ -77,6 +77,9 @@ public class Main {
                     break;
                 case Qwen:
                     apiCaller = new QwenApiCaller(commonStringsDict.get("modelName").toString());
+                    break;
+                case LMStudio:
+                    apiCaller = new LMStudioApiCaller(commonStringsDict.get("modelName").toString());
                     break;
                 default:
                     throw new IllegalArgumentException("Unsupported LLM API caller: " + commonStringsDict.get("llmApiCaller"));
@@ -335,6 +338,10 @@ public class Main {
     }
 
     public static FileWriter createFileWriter(String filePath) {
+        return createFileWriter(filePath, false);
+    }
+
+    public static FileWriter createFileWriter(String filePath, boolean append) {
         File file = new File(filePath);
         if (!file.getParentFile().exists()) {
             file.getParentFile().mkdirs();
@@ -343,7 +350,7 @@ public class Main {
             if (!file.exists()) {
                 file.createNewFile();
             }
-            return new FileWriter(file);
+            return new FileWriter(file, append);
         } catch (IOException e) {
             e.printStackTrace();
             return null;

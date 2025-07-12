@@ -21,6 +21,7 @@ public class OllamaApiCaller implements LLMApiCaller{
 
     @Override
     public String prompt(String message) {
+        message = message + "/no_think";
         try {
             OllamaResult result = ollamaAPI.generate(modelName,
                     message, false, new OptionsBuilder().setNumCtx(8000).build());

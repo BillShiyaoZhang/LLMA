@@ -1,5 +1,5 @@
 package LLMABelief;
 
 public enum LLMApiCallers {
-    Qwen, Ollama
+    Qwen, Ollama, LMStudio
 }

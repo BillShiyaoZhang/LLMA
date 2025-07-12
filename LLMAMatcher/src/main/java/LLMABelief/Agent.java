@@ -54,8 +54,7 @@ public class Agent {
 
         // NOTE: the below line is used to load the selected correspondences from the LLM.
         // Only use it if you have already run the LLM to select correspondences.
-//        privateCorrespondences = loadSelectedCorrespondencesFromFile(
-//                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+//        privateCorrespondences = loadSelectedCorrespondencesFromFile();
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
@@ -203,7 +202,50 @@ public class Agent {
     public void selectCorrespondences(Alignment alignment, boolean isSource, Dictionary<String, String> entityVerbosOtherAgent) {
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = extractPotentialEntityPairs(alignment, isSource);
         writePotentialEntityPairsToFile(potentialEntityPairsDict);
-        askLLMToSelectCorrespondences(potentialEntityPairsDict, entityVerbosOtherAgent);
+
+        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictReload = loadPotentialEntityPairsFromFile(
+                stringDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
+        askLLMToSelectCorrespondences(potentialEntityPairsDictReload, entityVerbosOtherAgent);
+        privateCorrespondences = loadSelectedCorrespondencesFromFile();
+    }
+
+    private Alignment loadSelectedCorrespondencesFromFile() {
+        return loadSelectedCorrespondencesFromFile(
+                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+    }
+
+    private Dictionary<String, Set<Belief<String>>> loadPotentialEntityPairsFromFile(String filePath) {
+        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = new Hashtable<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            String selfURI = null;
+            Set<Belief<String>> beliefs = new HashSet<>();
+            while ((line = reader.readLine()) != null) {
+                if (line.trim().isEmpty()) {
+                    continue; // skip empty lines
+                }
+                if (line.startsWith("Self URI: ")) {
+                    if (selfURI != null && !beliefs.isEmpty()) {
+                        // Store the previous selfURI and its beliefs before moving to the next one
+                        potentialEntityPairsDict.put(selfURI, beliefs);
+                        beliefs = new HashSet<>(); // Reset beliefs for the next selfURI
+                    }
+                    selfURI = line.substring("Self URI: ".length());
+                    continue;
+                }
+                String entityAndBelief = line.substring("  - Other Entity URI: ".length());
+                String[] parts = entityAndBelief.split(", Confidence: ");
+                if (parts.length != 2) {
+                    System.out.println("Skipping line due to insufficient information: " + line);
+                    continue; // skip lines that do not have enough information
+                }
+                Belief<String> belief = new Belief<>(parts[0].trim(), Double.parseDouble(parts[1].trim()));
+                beliefs.add(belief);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return potentialEntityPairsDict;
     }
 
     private Alignment loadSelectedCorrespondencesFromFile(String filePath) {
@@ -245,7 +287,7 @@ public class Agent {
 
     private void askLLMToSelectCorrespondences(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict,
                                                Dictionary<String, String> entityVerbosOtherAgent) {
-        FileWriter fw = Main.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt");
+        FileWriter fw = Main.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt", true);
         for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
             Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
             if (beliefs.isEmpty()) {
