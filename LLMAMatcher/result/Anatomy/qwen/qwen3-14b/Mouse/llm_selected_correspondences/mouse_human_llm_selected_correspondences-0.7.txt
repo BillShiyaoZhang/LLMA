@@ -1,0 +1,5351 @@
+http://mouse.owl#MA_0002299
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52921
+http://mouse.owl#MA_0002298
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53156  
+http://human.owl#NCI_C52923  
+http://human.owl#NCI_C52914  
+http://human.owl#NCI_C52921  
+http://human.owl#NCI_C52925  
+http://human.owl#NCI_C52916  
+http://human.owl#NCI_C52917  
+http://human.owl#NCI_C53155  
+http://human.owl#NCI_C52911  
+http://human.owl#NCI_C52913  
+http://human.owl#NCI_C52704  
+http://human.owl#NCI_C52912  
+http://humanowl#NCI_C13056
+http://mouse.owl#MA_0002297
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53155  
+http://human.owl#NCI_C53156
+http://mouse.owl#MA_0002296
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49301  
+http://humanowl#NCI_C52707  
+http://human.owl#NCI_C13050
+http://mouse.owl#MA_0002295
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52918  
+http://human.owl#NCI_C52921  
+http://human.owl#NCI_C52916
+http://mouse.owl#MA_0002294
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52917  
+http://human.owl#NCI_C52916
+http://mouse.owl#MA_0002293
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52916  
+http://human.owl#NCI_C52918  
+http://human.owl#NCI_C52917
+http://mouse.owl#MA_0002292
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52914  
+http://human.owl#NCI_C52911  
+http://human.owl#NCI_C53156  
+http://human.owl#NCI_C52913  
+http://human.owl#NCI_C53155
+http://mouse.owl#MA_0002291
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52913  
+http://human.owl#NCI_C52918  
+http://human.owl#NCI_C53155  
+http://human.owl#NCI_C52911  
+http://human.owl#NCI_C53156  
+http://human.owl#NCI_C52914  
+http://human.owl#NCI_C52916  
+http://human.owl#NCI_C52921  
+http://human.owl#NCI_C52917  
+http://human.owl#NCI_C53171  
+http://human.owl#NCI_C52925  
+http://human.owl#NCI_C52916  
+http://human.owl#NCI_C52888
+http://mouse.owl#MA_0002290
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52911
+http://mouse.owl#MA_0002289
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52902  
+http://human.owl#NCI_C53038  
+http://human.owl#NCI_C53177  
+http://human.owl#NCI_C52991
+http://mouse.owl#MA_0002288
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32462  
+http://human.owl#NCI_C13050
+http://mouse.owl#MA_0002287
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53152
+http://mouse.owl#MA_0002286
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32446  
+http://humanowl#NCI_C13050  
+http://human.owl#NCI_C33517
+http://mouse.owl#MA_0002285
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52901  
+http://human.owl#NCI_C32419
+http://mouse.owl#MA_0002284
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32404  
+http://human.owl#NCI_C32403  
+http://human.owl#NCI_C33247  
+http://human.owl#NCI_C53012  
+http://human.owl#NCI_C53178  
+http://humanowl#NCI_C32934  
+http://human.owl#NCI_C52971  
+http://human.owl#NCI_C33778  
+http://humanowl#NCI_C13050
+http://mouse.owl#MA_0002283
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32934  
+http://human.owl#NCI_C32398  
+http://human.owl#NCI_C32404  
+http://human.owl#NCI_C32148  
+http://humanowl#NCI_C32145  
+http://human.owl#NCI_C33776  
+http://human.owl#NCI_C32149  
+http://human.owl#NCI_C33886
+http://mouse.owl#MA_0002282
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53151
+http://mouse.owl#MA_0002281
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52898  
+http://human.owl#NCI_C33115
+http://mouse.owl#MA_0002280
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33672  
+http://human.owl#NCI_C32401  
+http://human.owl#NCI_C33115
+http://mouse.owl#MA_0001199
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33740
+http://mouse.owl#MA_0001193
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33223  
+http://human.owl#NCI_C33593
+http://mouse.owl#MA_0001192
+ <think>
+
+</think>
+
+http://human.owl#NCI_C34008  
+http://human.owl#NCI_C34009  
+http://human.owl#NCI_C12318  
+http://human.owl#NCI_C12319
+http://mouse.owl#MA_0001190
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32196  
+http://human.owl#NCI_C13179  
+http://human.owl#NCI_C49302
+http://mouse.owl#MA_0002279
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32401  
+http://human.owl#NCI_C33510  
+http://human.owl#NCI_C33115  
+http://human.owl#NCI_C33672  
+http://human owl#NCI_C33639
+http://mouse.owl#MA_0002278
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13075  
+http://humanowl#NCI_C33672  
+http://human.owl#NCI_C33639  
+http://human.owl#NCI_C33115  
+http://humanowl#NCI_C33672  
+http://human.owl#NCI_C33510  
+http://humanowl#NCI_C32401
+http://mouse.owl#MA_0002277
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32332  
+http://human.owl#NCI_C33146  
+http://human.owl#NCI_C33290
+http://mouse.owl#MA_0002276
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52895  
+http://human.owl#NCI_C53069  
+http://human.owl#NCI_C52893  
+http://human.owl#NCI_C52892  
+http://human.owl#NCI_C52898
+http://mouse.owl#MA_0002275
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52893
+http://mouse.owl#MA_0002274
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52892  
+http://human.owl#NCI_C33644  
+http://human.owl#NCI_C53149  
+http://human.owl#NCI_C53151
+http://mouse.owl#MA_0002273
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52891  
+http://human.owl#NCI_C33259  
+http://human.owl#NCI_C32145
+http://mouse.owl#MA_0002272
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53150  
+http://human.owl#NCI_C13050  
+http://human.owl#NCI_C49301
+http://mouse.owl#MA_0002271
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53149  
+http://human.owl#NCI_C32145  
+http://human.owl#NCI_C52892  
+http://human.owl#NCI_C32200
+http://mouse.owl#MA_0002270
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32200  
+http://human.owl#NCI_C53147  
+http://human.owl#NCI_C53176  
+http://human.owl#NCI_C33441
+http://mouse.owl#MA_0001189
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32804
+http://mouse.owl#MA_0001188
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0001187
+ <think>
+
+</think>
+
+No relevant entity found.
+http://mouse.owl#MA_0001181
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12845  
+http://human.owl#NCI_C52747  
+http://human.owl#NCI_C12929  
+http://human.owl#NCI_C49601  
+http://human.owl#NCI_C52805
+http://mouse.owl#MA_0001180
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12792  
+http://human.owl#NCI_C12682  
+http://human.owl#NCI_C49601
+http://mouse.owl#MA_0000099
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13005  
+http://human.owl#NCI_C38662
+http://mouse.owl#MA_0000097
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33555
+http://mouse.owl#MA_0000096
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33430
+http://mouse.owl#MA_0000095
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32161  
+http://human.owl#NCI_C32160
+http://mouse.owl#MA_0000093
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12870  
+http://human.owl#NCI_C12730  
+http://human.owl#NCI_C12868  
+http://human.owl#NCI_C13023
+http://mouse.owl#MA_0000092
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12871  
+http://human.owl#NCI_C12730  
+http://human.owl#NCI_C13023
+http://mouse.owl#MA_0000091
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12871  
+http://human.owl#NCI_C12730  
+http://human.owl#NCI_C12870
+http://mouse.owl#MA_0000090
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12775  
+http://human.owl#NCI_C12753  
+http://human.owl#NCI_C12670  
+http://human.owl#NCI_C33849  
+http://humanowl#NCI_C12729  
+http://human.owl#NCI_C12805
+http://mouse.owl#MA_0002269
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53147  
+http://human.owl#NCI_C32200
+http://mouse.owl#MA_0002268
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52890  
+http://human.owl#NCI_C32040  
+http://human.owl#NCI_C33658
+http://mouse.owl#MA_0002267
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53039
+http://mouse.owl#MA_0002266
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52888
+http://mouse.owl#MA_0002264
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32771  
+http://human.owl#NCI_C53055  
+http://human.owl#NCI_C32782
+http://mouse.owl#MA_0002263
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32422  
+http://human.owl#NCI_C53055  
+http://human.owl#NCI_C33687  
+http://human.owl#NCI_C32771  
+http://humanowl#NCI_C53138  
+http://human.owl#NCI_C33462  
+http://human.owl#NCI_C53131  
+http://human.owl#NCI_C32816  
+http://humanowl#NCI_C53047  
+http://human.owl#NCI_C53062  
+http://humanowl#NCI_C53031  
+http://human.owl#NCI_C32579  
+http://humanowl#NCI_C33535  
+http://human.owl#NCI_C33680  
+http://humanowl#NCI_C53145  
+http://human.owl#NCI_C32361  
+http://humanowl#NCI_C32197  
+http://human.owl#NCI_C53129  
+http://humanowl#NCI_C53063  
+http://human.owl#NCI_C12814  
+http://humanowl#NCI_C52686  
+http://human.owl#NCI_C52685
+http://mouse.owl#MA_0002262
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53145
+http://mouse.owl#MA_0002261
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32855  
+http://human.owl#NCI_C53051  
+http://human.owl#NCI_C32858  
+http://human.owl#NCI_C32197  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C53049  
+http://human.owl#NCI_C33719  
+http://human.owl#NCI_C33535  
+http://human.owl#NCI_C32361  
+http://human.owl#NCI_C33707  
+http://human.owl#NCI_C53062  
+http://human.owl#NCI_C53128  
+http://human.owl#NCI_C32286  
+http://human.owl#NCI_C53063  
+http://human.owl#NCI_C32281  
+http://human.owl#NCI_C32579  
+http://human.owl#NCI_C33072  
+http://human.owl#NCI_C53031
+http://mouse.owl#MA_0002260
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32286  
+http://human.owl#NCI_C33707  
+http://human.owl#NCI_C33071  
+http://human.owl#NCI_C32361  
+http://human.owl#NCI_C33072  
+http://human.owl#NCI_C32858  
+http://human.owl#NCI_C12814  
+http://human.owl#NCI_C53128  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C53049  
+http://human.owl#NCI_C32197  
+http://humanowl#NCI_C53062  
+http://human.owl#NCI_C32281  
+http://humanowl#NCI_C33760  
+http://human.owl#NCI_C32579  
+http://humanowl#NCI_C33535
+http://mouse.owl#MA_0001179
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52827  
+http://human.owl#NCI_C52828
+http://mouse.owl#MA_0001178
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52810
+http://mouse.owl#MA_0001177
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52813  
+http://human.owl#NCI_C52816  
+http://human.owl#NCI_C52814  
+http://human.owl#NCI_C32779  
+http://human.owl#NCI_C52827  
+http://human.owl#NCI_C52828  
+http://human.owl#NCI_C12972  
+http://human.owl#NCI_C34060  
+http://humanowl#NCI_C52813
+http://mouse.owl#MA_0001176
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32825  
+http://human.owl#NCI_C34060  
+http://human.owl#NCI_C52827  
+http://human.owl#NCI_C52828
+http://mouse.owl#MA_0001175
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52817  
+http://human.owl#NCI_C12682  
+http://human.owl#NCI_C52813  
+http://human.owl#NCI_C12768
+http://mouse.owl#MA_0001174
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52807  
+http://human.owl#NCI_C12768
+http://mouse.owl#MA_0001173
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52809  
+http://human.owl#NCI_C12768  
+http://human.owl#NCI_C52810  
+http://humanowl#NCI_C52816  
+http://human.owl#NCI_C52814  
+http://human.owl#NCI_C52807
+http://mouse.owl#MA_0001172
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52810  
+http://human owl#NCI_C12768  
+http://human.owl#NCI_C52814  
+http://human.owl#NCI_C52809  
+http://human.owl#NCI_C52816
+http://mouse.owl#MA_0001171
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52812  
+http://human.owl#Radial_Nerve
+http://mouse.owl#MA_0001170
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52813
+http://mouse.owl#MA_0000089
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12775  
+http://human.owl#NCI_C32544  
+http://human.owl#NCI_C12729
+http://mouse.owl#MA_0000088
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12753  
+http://human.owl#NCI_C32818  
+http://human owl#NCI_C32799  
+http://human.owl#NCI_C12729
+http://mouse.owl#MA_0000087
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12670  
+http://human.owl#NCI_C12729
+http://mouse.owl#MA_0000086
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12670  
+http://human.owl#NCI_C12753  
+http://human.owl#NCI_C12729  
+http://human.owl#NCI_C12775  
+http://human.owl#NCI_C12805
+http://mouse.owl#MA_0000085
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32874  
+http://human.owl#NCI_C49485  
+http://human.owl#NCI_C13023
+http://mouse.owl#MA_0000084
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32818  
+http://human.owl#NCI_C49485  
+http://human.owl#NCI_C12868  
+http://human.owl#NCI_C12869  
+http://human.owl#NCI_C13023
+http://mouse.owl#MA_0000083
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32818  
+http://human.owl#NCI_C32874  
+http://human.owl#NCI_C49485
+http://mouse.owl#MA_0000082
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12870  
+http://human.owl#NCI_C12871  
+http://human.owl#NCI_C12730  
+http://human.owl#NCI_C12371
+http://mouse.owl#MA_0000081
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12728  
+http://human.owl#NCI_C12868  
+http://human.owl#NCI_C12869  
+http://human.owl#NCI_C12371
+http://mouse.owl#MA_0000080
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12371  
+http://human.owl#NCI_C13023  
+http://human owl#NCI_C12730
+http://mouse.owl#MA_0002259
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53121  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C53123  
+http://human.owl#NCI_C53125  
+http://human.owl#NCI_C33680
+http://mouse.owl#MA_0002258
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53062  
+http://humanowl#NCI_C33707  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C53027  
+http://human.owl#NCI_C33535  
+http://human.owl#NCI_C33071  
+http://human.owl#NCI_C32855  
+http://human.owl#NCI_C33349  
+http://human.owl#NCI_C32579  
+http://humanowl#NCI_C32171  
+http://human.owl#NCI_C32858  
+http://human.owl#NCI_C32286  
+http://humanowl#NCI_C32361  
+http://human.owl#NCI_C32579  
+http://humanowl#NCI_C12814
+http://mouse.owl#MA_0002257
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33511  
+http://human.owl#NCI_C33071  
+http://human.owl#NCI_C12817  
+http://human.owl#NCI_C12776  
+http://human.owl#NCI_C12814  
+http://human.owl#NCI_C32728  
+http://human.owl#NCI_C12716  
+http://human.owl#NCI_C33667  
+http://human.owl#NCI_C33535
+http://mouse.owl#MA_0002255
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32579  
+http://human.owl#NCI_C53041  
+http://human.owl#NCI_C32286
+http://mouse.owl#MA_0002254
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49779
+http://human.owl#NCI_C12716
+http://humanowl#NCI_C53145
+http://human.owl#NCI_C33707
+http://human.owl#NCI_C33667
+http://mouse.owl#MA_0002253
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12222  
+http://humanowl#NCI_C33707  
+http://human.owl#NCI_C53049  
+http://human.owl#NCI_C53128  
+http://humanowl#NCI_C32579
+http://mouse.owl#MA_0002252
+ <think>
+
+</think>
+
+No relevant entity found.
+http://mouse.owl#MA_0002251
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12407
+http://mouse.owl#MA_0002250
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12814  
+http://human.owl#NCI_C53055  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C32591  
+http://human.owl#NCI_C33050  
+http://human.owl#NCI_C49324  
+http://human.owl#NCI_C49327
+http://mouse.owl#MA_0001169
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52814  
+http://human.owl#NCI_C32779  
+http://human.owl#NCI_C52810  
+http://human.owl#NCI_C52809  
+http://humanowl#NCI_C12768  
+http://human.owl#NCI_C52817  
+http://humanowl#NCI_C33094  
+http://human.owl#NCI_C33215  
+http://humanowl#NCI_C33683  
+http://human.owl#NCI_C52816  
+http://humanowl#NCI_C52813  
+http://human.owl#NCI_C52812  
+http://humanowl#NCI_C52807  
+http://human.owl#NCI_C52815  
+http://humanowl#NCI_C32825  
+http://human.owl#NCI_C12972  
+http://humanowl#NCI_C12466
+http://mouse.owl#MA_0001168
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52815
+http://mouse.owl#MA_0001167
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52816  
+http://human.owl#NCI_C12768  
+http://human.owl#NCI_C52814  
+http://human.owl#NCI_C52809  
+http://human.owl#NCI_C33683  
+http://human.owl#NCI_C33215  
+http://human.owl#NCI_C33094  
+http://human.owl#NCI_C52813  
+http://human.owl#NCI_C52812  
+http://human.owl#NCI_C52815  
+http://human.owl#NCI_C52810  
+http://human.owl#NCI_C52811  
+http://human.owl#NCI_C52807  
+http://humanowl#NCI_C52817
+http://mouse.owl#MA_0001166
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12768  
+http://human.owl#NCI_C52817
+http://mouse.owl#MA_0001165
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52827  
+http://human.owl#NCI_C52829  
+http://human.owl#NCI_C12467  
+http://human.owl#NCI_C52828  
+http://human.owl#NCI_C34060  
+http://human.owl#NCI_C12926
+http://mouse.owl#MA_0001164
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52827  
+http://human.owl#NCI_C34060  
+http://human.owl#NCI_C52831  
+http://human.owl#NCI_C52721  
+http://human.owl#NCI_C49601
+http://mouse.owl#MA_0001163
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52828  
+http://human.owl#NCI_C52805  
+http://human.owl#NCI_C12792  
+http://human.owl#NCI_C33015  
+http://human.owl#NCI_C49601  
+http://human.owl#NCI_C12845  
+http://human.owl#NCI_C34060
+http://mouse.owl#MA_0001162
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52746  
+http://humanowl#NCI_C12929  
+http://human.owl#NCI_C52833  
+http://human.owl#NCI_C52748
+http://mouse.owl#MA_0001161
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12719  
+http://human.owl#NCI_C12720  
+http://human.owl#NCI_C12467
+http://mouse.owl#MA_0001160
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52746  
+http://human.owl#NCI_C12929  
+http://human.owl#NCI_C52748  
+http://human.owl#NCI_C52833  
+http://human.owl#NCI_C53057  
+http://human.owl#NCI_C52747
+http://mouse.owl#MA_0000079
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13004  
+http://human.owl#NCI_C12871  
+http://human.owl#NCI_C33646
+http://mouse.owl#MA_0000077
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12728  
+http://human.owl#NCI_C12868  
+http://human.owl#NCI_C12869  
+http://human.owl#NCI_C13004
+http://mouse.owl#MA_0000076
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13004  
+http://human.owl#NCI_C13023  
+http://human.owl#NCI_C33646
+http://mouse.owl#MA_0000075
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12868  
+http://humanowl#NCI_C12869  
+http://human.owl#NCI_C12728
+http://mouse.owl#MA_0000074
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12869  
+http://human.owl#NCI_C12728  
+http://human.owl#NCI_C12868
+http://mouse.owl#MA_0000073
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12868  
+http://human.owl#NCI_C12728  
+http://human.owl#NCI_C12869
+http://mouse.owl#MA_0000072
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12727
+http://mouse.owl#MA_0000071
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12818  
+http://human.owl#NCI_C33852  
+http://human.owl#NCI_C33818  
+http://human.owl#NCI_C49320  
+http://human.owl#NCI_C49319  
+http://human.owl#NCI_C49317  
+http://human.owl#NCI_C32739  
+http://human.owl#NCI_C33345  
+http://human.owl#NCI_C12679
+http://mouse.owl#MA_0000070
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12513  
+http://human.owl#NCI_C12515  
+http://human.owl#NCI_C12514  
+http://human.owl#NCI_C12690  
+http://human.owl#NCI_C12877
+http://mouse.owl#MA_0002249
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53143  
+http://human.owl#NCI_C53063  
+http://human.owl#NCI_C53046  
+http://human.owl#NCI_C32389  
+http://human owl#NCI_C53041  
+http://human.owl#NCI_C32858  
+http://human.owl#NCI_C33387  
+http://human owl#NCI_C33719  
+http://human.owl#NCI_C53047  
+http://human.owl#NCI_C33072  
+http://human.owl#NCI_C32171  
+http://human.owl#NCI_C32286  
+http://human.owl#NCI_C33760  
+http://human.owl#NCI_C33608  
+http://human.owl#NCI_C53058  
+http://human owl#NCI_C12817  
+http://human.owl#NCI_C53049  
+http://human owl#NCI_C53062  
+http://human.owl#NCI_C53145  
+http://human owl#NCI_C32281  
+http://human.owl#NCI_C33535  
+http://human owl#NCI_C32361  
+http://human.owl#NCI_C53043  
+http://human.owl#NCI_C32422  
+http://human owl#NCI_C53056  
+http://human.owl#NCI_C53029  
+http://human owl#NCI_C33071  
+http://human.owl#NCI_C53032  
+http://human owl#NCI_C53128  
+http://human.owl#NCI_C32197
+http://mouse.owl#MA_0002248
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33667  
+http://humanowl#NCI_C33387  
+http://human.owl#NCI_C32116  
+http://human.owl#NCI_C33666  
+http://human.owl#NCI_C32361
+http://mouse.owl#MA_0002247
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52687  
+http://human.owl#NCI_C32579  
+http://human.owl#NCI_C53140
+http://mouse.owl#MA_0002246
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53143  
+http://human.owl#NCI_C53063  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C53046  
+http://human.owl#NCI_C53142  
+http://humanowl#NCI_C53031  
+http://human.owl#NCI_C53049  
+http://human.owl#NCI_C53032  
+http://human.owl#NCI_C53041  
+http://humanowl#NCI_C53140
+http://mouse.owl#MA_0002245
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33386  
+http://human.owl#NCI_C33387  
+http://human.owl#NCI_C33385  
+http://human.owl#NCI_C32835  
+http://human.owl#NCI_C33314  
+http://human.owl#NCI_C33787
+http://mouse.owl#MA_0002244
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32115  
+http://human.owl#NCI_C33787  
+http://human.owl#NCI_C33386
+http://mouse.owl#MA_0002243
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33386  
+http://human.owl#NCI_C33387  
+http://human.owl#NCI_C33787  
+http://human.owl#NCI_C32115
+http://mouse.owl#MA_0002242
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53140  
+http://human.owl#NCI_C52700  
+http://human.owl#NCI_C52699  
+http://human.owl#NCI_C33746  
+http://human.owl#NCI_C32858  
+http://human.owl#NCI_C33663  
+http://human.owl#NCI_C33719  
+http://human.owl#NCI_C32877  
+http://human.owl#NCI_C33662  
+http://human.owl#NCI_C33856  
+http://humanowl#NCI_C12814
+http://mouse.owl#MA_0002241
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53140  
+http://human.owl#NCI_C52700  
+http://human.owl#NCI_C52699
+http://mouse.owl#MA_0002240
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52699  
+http://human.owl#NCI_C32171  
+http://human.owl#NCI_C32281  
+http://human.owl#NCI_C32443  
+http://human.owl#NCI_C52700  
+http://human.owl#NCI_C53140
+http://mouse.owl#MA_0001159
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12467  
+http://human.owl#NCI_C52829  
+http://humanowl#NCI_C52830
+http://mouse.owl#MA_0001158
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52830  
+http://human.owl#NCI_C12467  
+http://humanowl#NCI_C52829  
+http://human.owl#NCI_C13060  
+http://human.owl#NCI_C12720  
+http://human.owl#NCI_C12462  
+http://human.owl#NCI_C52709  
+http://human.owl#NCI_C12649  
+http://human.owl#NCI_C52557  
+http://humanowl#NCI_C12721  
+http://human.owl#NCI_C52558  
+http://humanowl#NCI_C12719  
+http://human.owl#NCI_C33870  
+http://human.owl#NCI_C52829  
+http://humanowl#NCI_C12650  
+http://humanowl#NCI_C12720
+http://mouse.owl#MA_0001157
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52829  
+http://human.owl#NCI_C12467  
+http://human.owl#NCI_C52830
+http://mouse.owl#MA_0001156
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52829  
+http://humanowl#NCI_C12467
+http://mouse.owl#MA_0001155
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12467  
+http://human.owl#NCI_C52558  
+http://human.owl#NCI_C52829
+http://mouse.owl#MA_0001154
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12467  
+http://human.owl#NCI_C52830  
+http://humanowl#NCI_C52829  
+http://human.owl#NCI_C12720  
+http://human.owl#NCI_C52558  
+http://humanowl#NCI_C12719  
+http://human.owl#NCI_C52709  
+http://humanowl#NCI_C12462
+http://mouse.owl#MA_0001153
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12719  
+http://humanowl#NCI_C52829  
+http://human.owl#NCI_C12467  
+http://humanowl#NCI_C12720
+http://mouse.owl#MA_0001152
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12812
+http://mouse.owl#MA_0001150
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12812  
+http://human.owl#NCI_C34060  
+http://human.owl#NCI_C12764
+http://mouse.owl#MA_0000069
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49319  
+http://human.owl#NCI_C49320  
+http://human.owl#NCI_C33858  
+http://human.owl#NCI_C12818  
+http://human.owl#NCI_C33345
+http://mouse.owl#MA_0000068
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12815  
+http://human.owl#NCI_C12816  
+http://human.owl#NCI_C53142
+http://mouse.owl#MA_0000067
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32579  
+http://human.owl#NCI_C32855  
+http://human.owl#NCI_C33071  
+http://human.owl#NCI_C33667  
+http://human.owl#NCI_C33707  
+http://human.owl#NCI_C12814  
+http://human.owl#NCI_C33856  
+http://human.owl#NCI_C53128
+http://mouse.owl#MA_0000066
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12818  
+http://human.owl#NCI_C12513  
+http://human.owl#NCI_C12690  
+http://human.owl#NCI_C12877  
+http://human.owl#NCI_C33858  
+http://human.owl#NCI_C33345  
+http://human.owl#NCI_C12679  
+http://human.owl#NCI_C33511
+http://mouse.owl#MA_0000065
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32370  
+http://human.owl#NCI_C32212  
+http://human.owl#NCI_C33037  
+http://human.owl#NCI_C12685  
+http://human.owl#NCI_C32595
+http://mouse.owl#MA_0000064
+ ERROR
+http://mouse.owl#MA_0000063
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12672  
+http://human.owl#NCI_C12679  
+http://human.owl#NCI_C32142  
+http://human.owl#NCI_C52686  
+http://human.owl#NCI_C52685  
+http://human.owl#NCI_C12372
+http://mouse.owl#MA_0000062
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12669  
+http://human.owl#NCI_C33767  
+http://human.owl#NCI_C12372  
+http://human.owl#NCI_C34027  
+http://human.owl#NCI_C33766
+http://mouse.owl#MA_0000061
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12669  
+http://human.owl#NCI_C52685  
+http://human.owl#NCI_C52850  
+http://human.owl#NCI_C13053  
+http://human.owl#NCI_C49329  
+http://human.owl#NCI_C12672  
+http://human.owl#NCI_C34027  
+http://human.owl#NCI_C12679  
+http://humanowl#NCI_C49190  
+http://human.owl#NCI_C49192  
+http://humanowl#NCI_C49194
+http://mouse.owl#MA_0000060
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33109  
+http://human.owl#NCI_C33663  
+http://human.owl#NCI_C12818  
+http://human.owl#NCI_C32212  
+http://human.owl#NCI_C33719  
+http://human.owl#NCI_C12679  
+http://human.owl#NCI_C33037
+http://mouse.owl#MA_0002239
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53140  
+http://human.owl#NCI_C52700  
+http://human.owl#NCI_C52699  
+http://human.owl#NCI_C33071  
+http://human.owl#NCI_C33070  
+http://human.owl#NCI_C33511  
+http://human.owl#NCI_C33746  
+http://human.owl#NCI_C32858  
+http://humanowl#NCI_C33667  
+http://human.owl#NCI_C12814
+http://mouse.owl#MA_0002238
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53142  
+http://human.owl#NCI_C52698  
+http://human.owl#NCI_C33760  
+http://human.owl#NCI_C53143  
+http://human.owl#NCI_C53062  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C52689  
+http://human.owl#NCI_C33680
+http://mouse.owl#MA_0002237
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52698  
+http://human.owl#NCI_C53142  
+http://human.owl#NCI_C32854  
+http://human.owl#NCI_C12776
+http://mouse.owl#MA_0002236
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52698  
+http://human.owl#NCI_C53142  
+http://human.owl#NCI_C32855
+http://mouse.owl#MA_0002598
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32828  
+http://human.owl#NCI_C32344  
+http://human.owl#NCI_C12887  
+http://human.owl#NCI_C32456
+http://mouse.owl#MA_0002235
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53142  
+http://human.owl#NCI_C52698  
+http://human.owl#NCI_C33719  
+http://human owl#NCI_C53125  
+http://human.owl#NCI_C53123  
+http://human.owl#NCI_C53145  
+http://human owl#NCI_C53055  
+http://human.owl#NCI_C53128  
+http://human.owl#NCI_C12734  
+http://human.owl#NCI_C32854  
+http://human owl#NCI_C12738  
+http://human.owl#NCI_C32855  
+http://human owl#NCI_C33071  
+http://human.owl#NCI_C32858  
+http://human owl#NCI_C32562  
+http://human.owl#NCI_C32849  
+http://human owl#NCI_C12776  
+http://human.owl#NCI_C32560  
+http://human owl#NCI_C12794  
+http://human.owl#NCI_C33680  
+http://human owl#NCI_C32838  
+http://human.owl#NCI_C53031  
+http://human owl#NCI_C33719  
+http://human.owl#NCI_C12814
+http://mouse.owl#MA_0002234
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52697  
+http://humanowl#NCI_C53050  
+http://human.owl#NCI_C52696
+http://mouse.owl#MA_0002233
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53128  
+http://humanowl#Systemic_Vein
+http://mouse.owl#MA_0002595
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0002232
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0002594
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32389
+http://mouse.owl#MA_0002231
+ <think>
+
+</think>
+
+No relevant entity found.
+http://mouse.owl#MA_0002593
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32389  
+http://human.owl#NCI_C33462  
+http://human.owl#NCI_C52695
+http://mouse.owl#MA_0002230
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53138  
+http://human.owl#NCI_C53129  
+http://human.owl#NCI_C53131  
+http://human.owl#NCI_C52695  
+http://human.owl#NCI_C52693
+http://mouse.owl#MA_0002592
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33462  
+http://human.owl#NCI_C52695  
+http://humanowl#NCI_C52693
+http://mouse.owl#MA_0002591
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33457  
+http://human.owl#NCI_C33454
+http://mouse.owl#MA_0001149
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12929  
+http://human.owl#NCI_C52747  
+http://human.owl#NCI_C52833  
+http://human.owl#NCI_C53057  
+http://human.owl#NCI_C52748
+http://mouse.owl#MA_0002590
+ <think>
+
+</think>
+
+No relevant entity found.
+http://mouse.owl#MA_0001148
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52748  
+http://human.owl#NCI_C52831  
+http://human.owl#NCI_C52721  
+http://human.owl#NCI_C12929  
+http://human.owl#NCI_C52747  
+http://human.owl#NCI_C52709
+http://mouse.owl#MA_0001147
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52748  
+http://humanowl#NCI_C52747  
+http://human.owl#NCI_C12929
+http://mouse.owl#MA_0001146
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52748
+http://mouse.owl#MA_0001145
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52748  
+http://human.owl#NCI_C52709
+http://mouse.owl#MA_0001144
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52709  
+http://human.owl#NCI_C12719  
+http://human.owl#NCI_C12720
+http://mouse.owl#MA_0001143
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52747  
+http://human.owl#NCI_C12929  
+http://human.owl#NCI_C52748  
+http://human.owl#NCI_C49601  
+http://human.owl#NCI_C52833  
+http://human.owl#NCI_C52831  
+http://human.owl#NCI_C52827
+http://mouse.owl#MA_0001142
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52831  
+http://human.owl#NCI_C52721
+http://mouse.owl#MA_0001141
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52831  
+http://human.owl#NCI_C52721
+http://mouse.owl#MA_0001140
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52721  
+http://human.owl#NCI_C52831  
+http://human.owl#NCI_C12929
+http://mouse.owl#MA_0000059
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12434
+http://mouse.owl#MA_0000057
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32235
+http://mouse.owl#MA_0000055
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12840  
+http://human.owl#NCI_C33273  
+http://human.owl#NCI_C33881  
+http://human.owl#NCI_C25444
+http://mouse.owl#MA_0000054
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12769  
+http://human.owl#NCI_C25444  
+http://human.owl#NCI_C12770  
+http://human.owl#NCI_C33272  
+http://human.owl#NCI_C33880
+http://mouse.owl#MA_0000053
+ <think>
+
+</think>
+
+http://human.owl#NCI_C25444  
+http://human.owl#NCI_C38662  
+http://human.owl#NCI_C12769  
+http://human.owl#NCI_C12840  
+http://human.owl#NCI_C12905
+http://mouse.owl#MA_0000051
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0002229
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53131  
+http://humanowl#NCI_C53138  
+http://human.owl#NCI_C53129
+http://mouse.owl#MA_0002228
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33719  
+http://human.owl#NCI_C33707  
+http://human.owl#NCI_C53140  
+http://human.owl#NCI_C33856  
+http://human.owl#NCI_C32361  
+http://human.owl#NCI_C32855  
+http://human.owl#NCI_C33680  
+http://human.owl#NCI_C53129  
+http://human.owl#NCI_C53062  
+http://humanowl#NCI_C32858  
+http://human.owl#NCI_C32197  
+http://humanowl#NCI_C33535  
+http://human.owl#NCI_C32286  
+http://humanowl#NCI_C53051  
+http://human.owl#NCI_C53056  
+http://humanowl#NCI_C32579  
+http://human.owl#NCI_C53145  
+http://humanowl#NCI_C32389  
+http://human.owl#NCI_C53032  
+http://humanowl#NCI_C33071  
+http://human.owl#NCI_C53063  
+http://humanowl#NCI_C32361  
+http://human.owl#NCI_C53128  
+http://humanowl#NCI_C33072  
+http://human.owl#NCI_C53131  
+http://humanowl#NCI_C32858  
+http://human.owl#NCI_C33535  
+http://humanowl#NCI_C32197  
+http://human.owl#NCI_C53049  
+http://humanowl#NCI_C32579  
+http://human.owl#NCI_C33071  
+http://humanowl#NCI_C32855  
+http://human.owl#NCI_C33719  
+http://humanowl#NCI_C53062  
+http://human.owl#NCI_C33856
+http://mouse.owl#MA_0002227
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52686  
+http://humanowl#NCI_C52685  
+http://human.owl#NCI_C53138  
+http://human.owl#NCI_C53129  
+http://human.owl#NCI_C53055  
+http://human.owl#NCI_C33687  
+http://human.owl#NCI_C32782
+http://mouse.owl#MA_0002226
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33680  
+http://human.owl#NCI_C53142  
+http://human.owl#NCI_C53061  
+http://human.owl#NCI_C32444  
+http://human.owl#NCI_C53123  
+http://human.owl#NCI_C53125  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C32865  
+http://human.owl#NCI_C12794  
+http://human.owl#NCI_C12815  
+http://human.owl#NCI_C33707  
+http://humanowl#NCI_C53031  
+http://human.owl#NCI_C32858  
+http://human.owl#NCI_C32771  
+http://humanowl#NCI_C53062  
+http://human.owl#NCI_C53055  
+http://human.owl#NCI_C32782  
+http://humanowl#NCI_C12776  
+http://human.owl#NCI_C32855  
+http://humanowl#NCI_C33719  
+http://human.owl#NCI_C53121  
+http://humanowl#NCI_C33668  
+http://human.owl#NCI_C12814  
+http://humanowl#NCI_C32825  
+http://human.owl#NCI_C32444  
+http://humanowl#NCI_C53061  
+http://human.owl#NCI_C32858  
+http://humanowl#NCI_C12794  
+http://human.owl#NCI_C33680
+http://mouse.owl#MA_0002225
+ ERROR
+http://mouse.owl#MA_0002587
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32684  
+http://human.owl#NCI_C49215  
+http://human.owl#NCI_C32522
+http://mouse.owl#MA_0002224
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53121  
+http://humanowl#NCI_C53123  
+http://human.owl#NCI_C53138  
+http://human.owl#NCI_C53131  
+http://human.owl#NCI_C53129
+http://mouse.owl#MA_0002586
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32684  
+http://human.owl#NCI_C49215  
+http://human.owl#NCI_C32522  
+http://human.owl#NCI_C12685
+http://mouse.owl#MA_0002223
+ ERROR
+http://mouse.owl#MA_0002585
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33457
+http://mouse.owl#MA_0002222
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53121  
+http://human.owl#NCI_C53125  
+http://human.owl#NCI_C53123  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C53128  
+http://human.owl#NCI_C33680  
+http://human.owl#NCI_C53055  
+http://human.owl#NCI_C12814  
+http://human.owl#NCI_C12794  
+http://human.owl#NCI_C32422  
+http://human.owl#NCI_C33535  
+http://human.owl#NCI_C32361  
+http://human.owl#NCI_C52698  
+http://human.owl#NCI_C53142
+http://mouse.owl#MA_0002584
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32826  
+http://human.owl#NCI_C52740  
+http://human.owl#NCI_C52741
+http://mouse.owl#MA_0002221
+ ERROR
+http://mouse.owl#MA_0002583
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52741  
+http://human.owl#NCI_C52737  
+http://human.owl#NCI_C33708  
+http://human.owl#NCI_C12715  
+http://human.owl#NCI_C52848  
+http://human.owl#NCI_C12778  
+http://human.owl#NCI_C52740  
+http://human.owl#NCI_C32826
+http://mouse.owl#MA_0002220
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52697  
+http://human.owl#NCI_C53050  
+http://human.owl#NCI_C52696  
+http://human.owl#NCI_C52738
+http://mouse.owl#MA_0002582
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32826  
+http://humanowl#NCI_C32385  
+http://human.owl#NCI_C33457  
+http://human.owl#NCI_C33454
+http://mouse.owl#MA_0001139
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52830  
+http://human.owl#NCI_C52831  
+http://human.owl#NCI_C12720  
+http://human.owl#NCI_C52748  
+http://human.owl#NCI_C12929  
+http://human.owl#NCI_C52746  
+http://human.owl#NCI_C52833  
+http://human.owl#NCI_C52747  
+http://human.owl#NCI_C12682  
+http://human.owl#NCI_C52721  
+http://human.owl#NCI_C53057  
+http://human.owl#NCI_C12846  
+http://human.owl#NCI_C52746
+http://mouse.owl#MA_0002580
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13161  
+http://human.owl#NCI_C32891
+http://mouse.owl#MA_0001138
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52833  
+http://human.owl#NCI_C12929  
+http://human.owl#NCI_C52831  
+http://human.owl#NCI_C49601  
+http://human.owl#NCI_C52746  
+http://human.owl#NCI_C52747  
+http://human.owl#NCI_C52748
+http://mouse.owl#MA_0001499
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32461  
+http://human.owl#NCI_C33716
+http://mouse.owl#MA_0001136
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52557  
+http://human.owl#NCI_C12720  
+http://human.owl#NCI_C52558  
+http://human.owl#NCI_C12719
+http://mouse.owl#MA_0001135
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49334  
+http://human.owl#NCI_C49333  
+http://human.owl#NCI_C49217  
+http://human.owl#NCI_C33892  
+http://human.owl#NCI_C33893  
+http://human.owl#NCI_C49347  
+http://human.owl#NCI_C32695  
+http://human.owl#NCI_C32696
+http://mouse.owl#MA_0001497
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33897  
+http://human.owl#NCI_C32881  
+http://human.owl#NCI_C33682
+http://mouse.owl#MA_0001134
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33859
+http://mouse.owl#MA_0001133
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49800  
+http://human.owl#NCI_C33321  
+http://human.owl#NCI_C49335
+http://mouse.owl#MA_0001495
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52745  
+http://human.owl#NCI_C33248  
+http://human.owl#NCI_C12766
+http://mouse.owl#MA_0001132
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33093  
+http://human.owl#NCI_C49332  
+http://human.owl#NCI_C32488  
+http://humanowl#NCI_C49799
+http://mouse.owl#MA_0001494
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33157  
+http://human.owl#NCI_C32616  
+http://human.owl#NCI_C12711  
+http://human.owl#NCI_C12789
+http://mouse.owl#MA_0001131
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49798  
+http://human.owl#NCI_C32136  
+http://human.owl#NCI_C49800  
+http://human.owl#NCI_C33077
+http://mouse.owl#MA_0001130
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12350  
+http://human.owl#NCI_C49800  
+http://human.owl#NCI_C49798  
+http://human.owl#NCI_C32136  
+http://human.owl#NCI_C12348
+http://mouse.owl#MA_0000049
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52791
+http://mouse.owl#MA_0000048
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52841  
+http://human.owl#NCI_C52842  
+http://human.owl#NCI_C52839  
+http://human.owl#NCI_C52843  
+http://human.owl#NCI_C52772  
+http://human.owl#NCI_C33788  
+http://human.owl#NCI_C40186
+http://mouse.owl#MA_0000044
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32622
+http://mouse.owl#MA_0000041
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52838  
+http://human.owl#NCI_C52836  
+http://human.owl#NCI_C52837  
+http://humanowl#NCI_C52834  
+http://human.owl#NCI_C52835  
+http://humanowl#NCI_C52771  
+http://human.owl#NCI_C52773  
+http://humanowl#NCI_C52775  
+http://human.owl#NCI_C52774  
+http://humanowl#NCI_C52777  
+http://human.owl#NCI_C32608
+http://mouse.owl#MA_0002219
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52696  
+http://human.owl#NCI_C52697  
+http://human.owl#NCI_C53050
+http://mouse.owl#MA_0002218
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52695  
+http://humanowl#NCI_C53138  
+http://human.owl#NCI_C52738  
+http://human.owl#NCI_C53129  
+http://human.owl#NCI_C52697  
+http://human.owl#NCI_C53123  
+http://human.owl#NCI_C52696  
+http://human.owl#NCI_C53121  
+http://human.owl#NCI_C53125  
+http://human.owl#NCI_C53050  
+http://humanowl#NCI_C33581  
+http://human.owl#NCI_C32816  
+http://humanowl#NCI_C33480  
+http://human.owl#NCI_C32964  
+http://humanowl#NCI_C12776  
+http://human.owl#NCI_C48947  
+http://humanowl#NCI_C49326  
+http://human.owl#NCI_C48946  
+http://humanowl#NCI_C49323  
+http://human.owl#NCI_C12329
+http://mouse.owl#MA_0002217
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33004  
+http://human.owl#NCI_C33511  
+http://human.owl#NCI_C33546
+http://mouse.owl#MA_0002579
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33454
+http://mouse.owl#MA_0002216
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33004  
+http://human.owl#NCI_C33511  
+http://human.owl#NCI_C33546
+http://mouse.owl#MA_0002578
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33457  
+http://human.owl#NCI_C33454  
+http://human.owl#NCI_C12672
+http://mouse.owl#MA_0002215
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33004  
+http://human.owl#NCI_C33546  
+http://human.owl#NCI_C33071  
+http://human.owl#NCI_C33072  
+http://humanowl#NCI_C33070  
+http://human.owl#NCI_C33511
+http://mouse.owl#MA_0002577
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0002214
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33535  
+http://human.owl#NCI_C33071  
+http://human.owl#NCI_C53027  
+http://human.owl#NCI_C33349
+http://mouse.owl#MA_0002576
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32160
+http://mouse.owl#MA_0002213
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53063  
+http://human.owl#NCI_C53140  
+http://human.owl#NCI_C53145  
+http://human.owl#NCI_C32422  
+http://human.owl#NCI_C53062  
+http://human.owl#NCI_C33462  
+http://human.owl#NCI_C32286  
+http://humanowl#NCI_C53041  
+http://human.owl#NCI_C53049  
+http://humanowl#NCI_C32389  
+http://human.owl#NCI_C32858  
+http://humanowl#NCI_C33071  
+http://human.owl#NCI_C33535  
+http://humanowl#NCI_C32579
+http://mouse.owl#MA_0002575
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12826  
+http://human.owl#NCI_C33337  
+http://human.owl#NCI_C32565  
+http://human.owl#NCI_C32114  
+http://human.owl#NCI_C33385  
+http://humanowl#NCI_C32835  
+http://human.owl#NCI_C33314
+http://mouse.owl#MA_0002212
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52695  
+http://human.owl#NCI_C33462  
+http://human.owl#NCI_C52693  
+http://human.owl#NCI_C53138  
+http://human.owl#NCI_C53129
+http://mouse.owl#MA_0002574
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12825  
+http://human.owl#NCI_C32114  
+http://human.owl#NCI_C12824
+http://mouse.owl#MA_0002211
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52693  
+http://human.owl#NCI_C34006  
+http://human.owl#NCI_C52741  
+http://human.owl#NCI_C33462  
+http://human.owl#NCI_C52695  
+http://human.owl#NCI_C33462  
+http://human.owl#NCI_C53129  
+http://human.owl#NCI_C53138  
+http://human.owl#NCI_C53125  
+http://human.owl#NCI_C32964  
+http://human.owl#NCI_C33462
+http://mouse.owl#MA_0002573
+ ERROR
+http://mouse.owl#MA_0002210
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52693  
+http://humanowl#NCI_C52695  
+http://human.owl#NCI_C33454  
+http://human.owl#NCI_C33457  
+http://human.owl#NCI_C32816  
+http://human.owl#NCI_C53129  
+http://human.owl#NCI_C53131  
+http://human.owl#NCI_C53138  
+http://human.owl#NCI_C34006  
+http://humanowl#NCI_C34005  
+http://human.owl#NCI_C12415  
+http://humanowl#NCI_C33462
+http://mouse.owl#MA_0002572
+ <think>
+
+</think>
+
+http://human.owl#NCI_C34027  
+http://human.owl#NCI_C33766  
+http://human.owl#NCI_C32455
+http://mouse.owl#MA_0002571
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32455  
+http://human.owl#NCI_C34027  
+http://human.owl#NCI_C33766  
+http://human.owl#NCI_C32038  
+http://human.owl#NCI_C32150
+http://mouse.owl#MA_0001129
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32119
+http://mouse.owl#MA_0002570
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32150  
+http://human.owl#NCI_C34027  
+http://human.owl#NCI_C32151
+http://mouse.owl#MA_0001488
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0001125
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13078  
+http://human.owl#NCI_C41448
+http://mouse.owl#MA_0001487
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12290
+http://mouse.owl#MA_0001486
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32906  
+http://human.owl#NCI_C32905  
+http://human.owl#NCI_C32678  
+http://human.owl#NCI_C32266  
+http://human.owl#NCI_C12789
+http://mouse.owl#MA_0001485
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12789
+http://mouse.owl#MA_0001484
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32752  
+http://human.owl#NCI_C32881
+http://mouse.owl#MA_0001121
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32473
+http://mouse.owl#MA_0001483
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12711  
+http://human.owl#NCI_C32881
+http://mouse.owl#MA_0001482
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32616  
+http://human.owl#NCI_C32881
+http://mouse.owl#MA_0001481
+ <think>
+
+</think>
+
+http://human.owl#NCI_C48942  
+http://human.owl#NCI_C48943  
+http://human.owl#NCI_C32186
+http://mouse.owl#MA_0001480
+ <think>
+
+</think>
+
+http://human.owl#NCI_C48943  
+http://human.owl#NCI_C48942  
+http://human.owl#NCI_C49261
+http://mouse.owl#MA_0000399
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13038  
+http://human.owl#NCI_C52553  
+http://human.owl#NCI_C52554  
+http://human.owl#NCI_C13713
+http://mouse.owl#MA_0000398
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32492  
+http://human.owl#NCI_C49220  
+http://human.owl#NCI_C32493
+http://mouse.owl#MA_0000035
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32141
+http://mouse.owl#MA_0000397
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12328  
+http://human.owl#NCI_C32717  
+http://human.owl#NCI_C33732  
+http://humanowl#NCI_C32217  
+http://human.owl#NCI_C32484
+http://mouse.owl#MA_0000034
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32628  
+http://human.owl#NCI_C38628  
+http://human.owl#NCI_C32141
+http://mouse.owl#MA_0000396
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12841  
+http://human.owl#NCI_C32384  
+http://human.owl#NCI_C32492  
+http://human.owl#NCI_C12324  
+http://human.owl#NCI_C33822  
+http://humanowl#NCI_C33823  
+http://human.owl#NCI_C32382  
+http://human.owl#NCI_C12325  
+http://human.owl#NCI_C32220  
+http://human.owl#NCI_C33733  
+http://human.owl#NCI_C33732  
+http://human.owl#NCI_C32217  
+http://humanowl#NCI_C33467  
+http://human.owl#NCI_C32717  
+http://human.owl#NCI_C32747  
+http://humanowl#NCI_C12603  
+http://human.owl#NCI_C33819  
+http://humanowl#NCI_C33050  
+http://human.owl#NCI_C12722
+http://mouse.owl#MA_0000395
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12408
+http://mouse.owl#MA_0000032
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12905
+http://mouse.owl#MA_0000394
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12407  
+http://human.owl#NCI_C33848  
+http://human.owl#NCI_C33842
+http://mouse.owl#MA_0000031
+ <think>
+
+</think>
+
+http://human.owl#NCI_C25389  
+http://human.owl#NCI_C12799
+http://mouse.owl#MA_0000392
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12311
+http://mouse.owl#MA_0002209
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32736  
+http://human.owl#NCI_C12880  
+http://human.owl#NCI_C53061  
+http://human.owl#NCI_C32444
+http://mouse.owl#MA_0000391
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12314
+http://mouse.owl#MA_0002208
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12776  
+http://humanowl#NCI_C48947  
+http://human.owl#NCI_C48946
+http://mouse.owl#MA_0000390
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12313
+http://mouse.owl#MA_0002207
+ <think>
+
+</think>
+
+http://human.owl#NCI_C48946  
+http://human.owl#NCI_C12776  
+http://human.owl#NCI_C53123  
+http://human.owl#NCI_C53125  
+http://human.owl#NCI_C53129  
+http://human.owl#NCI_C53142  
+http://human.owl#NCI_C52698  
+http://human.owl#NCI_C33462  
+http://human.owl#NCI_C52693  
+http://human.owl#NCI_C32964  
+http://human.owl#NCI_C32816
+http://mouse.owl#MA_0002569
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33766  
+http://human.owl#NCI_C34027  
+http://human.owl#NCI_C33296  
+http://human.owl#NCI_C53000  
+http://human.owl#NCI_C32821  
+http://human.owl#NCI_C32230
+http://mouse.owl#MA_0002206
+ <think>
+
+</think>
+
+http://human.owl#NCI_C48946  
+http://humanowl#NCI_C48947  
+http://human.owl#NCI_C12776  
+http://human.owl#NCI_C33427  
+http://human.owl#NCI_C33480  
+http://human.owl#NCI_C33483  
+http://humanowl#NCI_C12468
+http://mouse.owl#MA_0002568
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13085
+http://mouse.owl#MA_0002205
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32434  
+http://human.owl#NCI_C53045
+http://mouse.owl#MA_0002567
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12461
+http://mouse.owl#MA_0002204
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0002566
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13060  
+http://human.owl#NCI_C12719  
+http://human.owl#NCI_C33968  
+http://human.owl#NCI_C12467  
+http://human.owl#NCI_C52709  
+http://human.owl#NCI_C12465  
+http://human.owl#NCI_C33533
+http://mouse.owl#MA_0002203
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0002565
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33519  
+http://human.owl#NCI_C12712  
+http://human.owl#NCI_C33520
+http://mouse.owl#MA_0002202
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32858  
+http://human.owl#NCI_C32816  
+http://human.owl#NCI_C12734  
+http://human.owl#NCI_C32560
+http://mouse.owl#MA_0002564
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32395  
+http://human.owl#NCI_C49311  
+http://human.owl#NCI_C12712  
+http://human.owl#NCI_C13010  
+http://humanowl#NCI_C12339  
+http://human.owl#NCI_C33712
+http://mouse.owl#MA_0002201
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52688  
+http://human.owl#NCI_C32081  
+http://humanowl#NCI_C12716  
+http://human.owl#NCI_C32359  
+http://human.owl#NCI_C12814  
+http://humanowl#NCI_C33071
+http://mouse.owl#MA_0002563
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12765  
+http://human.owl#NCI_C12704  
+http://human.owl#NCI_C12400  
+http://human.owl#NCI_C32506
+http://mouse.owl#MA_0002562
+ ERROR
+http://mouse.owl#MA_0001119
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32473
+http://mouse.owl#MA_0002560
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12260  
+http://human.owl#NCI_C33433  
+http://human.owl#NCI_C12259  
+http://human.owl#NCI_C33431  
+http://human.owl#NCI_C33432
+http://mouse.owl#MA_0001117
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12891  
+http://human.owl#NCI_C12464
+http://mouse.owl#MA_0001116
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33321  
+http://human.owl#NCI_C49800  
+http://human.owl#NCI_C49335  
+http://human.owl#NCI_C33077
+http://mouse.owl#MA_0001478
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32616  
+http://human.owl#NCI_C32881
+http://mouse.owl#MA_0001115
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49799  
+http://human.owl#NCI_C49332  
+http://human.owl#NCI_C32488
+http://mouse.owl#MA_0001477
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33227
+http://mouse.owl#MA_0001114
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32136  
+http://human.owl#NCI_C49798  
+http://human.owl#NCI_C33321
+http://mouse.owl#MA_0001476
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12797  
+http://human.owl#NCI_C32881
+http://mouse.owl#MA_0001113
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12348  
+http://human.owl#NCI_C12350
+http://mouse.owl#MA_0001112
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32695  
+http://humanowl#NCI_C49333  
+http://human.owl#NCI_C12453  
+http://human.owl#NCI_C32696
+http://mouse.owl#MA_0001474
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12757
+http://mouse.owl#MA_0001111
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12996  
+http://human.owl#NCI_C12820
+http://mouse.owl#MA_0001110
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12996  
+http://human.owl#NCI_C12820  
+http://human.owl#NCI_C12697
+http://mouse.owl#MA_0001472
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12790  
+http://human.owl#NCI_C32881  
+http://human.owl#NCI_C12711
+http://mouse.owl#MA_0001471
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12790  
+http://human owl#NCI_C32881
+http://mouse.owl#MA_0001470
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12790  
+http://human.owl#NCI_C32881  
+http://human.owl#NCI_C12711
+http://mouse.owl#MA_0000028
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13062
+http://mouse.owl#MA_0000027
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13062
+http://mouse.owl#MA_0000389
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12405  
+http://humanowl#NCI_C12316  
+http://human.owl#NCI_C12406  
+http://human.owl#NCI_C12315  
+http://human.owl#NCI_C12312  
+http://human.owl#NCI_C41270  
+http://human.owl#NCI_C33842
+http://mouse.owl#MA_0000026
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12742  
+http://human.owl#NCI_C12671  
+http://human.owl#NCI_C12429
+http://mouse.owl#MA_0000388
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12598  
+http://humanowl#NCI_C12600  
+http://human.owl#NCI_C33523
+http://mouse.owl#MA_0000025
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12671  
+http://human.owl#NCI_C12429  
+http://human.owl#NCI_C12742
+http://mouse.owl#MA_0000387
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32681  
+http://human.owl#NCI_C12308
+http://mouse.owl#MA_0000024
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13063  
+http://human.owl#NCI_C52756
+http://mouse.owl#MA_0000385
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12403  
+http://human.owl#NCI_C12404  
+http://human.owl#NCI_C32959  
+http://human.owl#NCI_C32969  
+http://human.owl#NCI_C33487  
+http://human.owl#NCI_C33475  
+http://human.owl#NCI_C32873  
+http://human.owl#NCI_C32064  
+http://human.owl#NCI_C32886  
+http://human.owl#NCI_C32607  
+http://human.owl#NCI_C32800  
+http://human.owl#NCI_C12416  
+http://human.owl#NCI_C33842  
+http://human.owl#NCI_C12321
+http://mouse.owl#MA_0000022
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12799  
+http://human.owl#NCI_C38631  
+http://human.owl#NCI_C33838
+http://mouse.owl#MA_0000384
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12404  
+http://human.owl#NCI_C32969  
+http://human.owl#NCI_C33487  
+http://human.owl#NCI_C33244  
+http://human.owl#NCI_C32508  
+http://human.owl#NCI_C33842
+http://mouse.owl#MA_0000021
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33301
+http://mouse.owl#MA_0000383
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32681  
+http://human.owl#NCI_C32590  
+http://human.owl#NCI_C12308
+http://mouse.owl#MA_0000020
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13062
+http://mouse.owl#MA_0000382
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12308  
+http://human.owl#NCI_C32681
+http://mouse.owl#MA_0000381
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12402  
+http://human.owl#NCI_C12841  
+http://human.owl#NCI_C34061  
+http://human.owl#NCI_C52559  
+http://human.owl#NCI_C12407
+http://mouse.owl#MA_0000380
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12414  
+http://human.owl#NCI_C48939  
+http://human.owl#NCI_C48941  
+http://human.owl#NCI_C13035
+http://mouse.owl#MA_0002559
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12258  
+http://human.owl#NCI_C12391  
+http://human.owl#NCI_C13025
+http://mouse.owl#MA_0002558
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12856  
+http://human.owl#NCI_C12859  
+http://human.owl#NCI_C12858  
+http://human.owl#NCI_C12860  
+http://human.owl#NCI_C12857
+http://mouse.owl#MA_0002557
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12854  
+http://humanowl#NCI_C12855  
+http://human.owl#NCI_C12856  
+http://human.owl#NCI_C12857  
+http://humanowl#NCI_C12858  
+http://human.owl#NCI_C12859  
+http://human.owl#NCI_C12688
+http://mouse.owl#MA_0002556
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12786
+http://mouse.owl#MA_0002555
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12854
+http://mouse.owl#MA_0002554
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33340
+http://mouse.owl#MA_0002553
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33420  
+http://humanowl#NCI_C33422  
+http://human.owl#NCI_C33421  
+http://human.owl#NCI_C32430  
+http://humanowl#NCI_C32764
+http://mouse.owl#MA_0002552
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13257  
+http://human.owl#NCI_C13401  
+http://human.owl#NCI_C12370  
+http://human.owl#NCI_C34062
+http://mouse.owl#MA_0002551
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32348  
+http://human.owl#NCI_C13257  
+http://human.owl#NCI_C13401
+http://mouse.owl#MA_0001109
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12996  
+http://humanowl#NCI_C12697  
+http://human.owl#NCI_C12820
+http://mouse.owl#MA_0002550
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0001469
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12766  
+http://human.owl#NCI_C32881  
+http://human.owl#NCI_C12790  
+http://human.owl#NCI_C32616
+http://mouse.owl#MA_0001106
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12812  
+http://human.owl#NCI_C12700  
+http://human.owl#NCI_C12466
+http://mouse.owl#MA_0001468
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12757
+http://mouse.owl#MA_0001105
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12808  
+http://humanowl#Cranial_Nerve (assuming a typo and the correct URI is http://human.owl#NCI_C12700)  
+No relevant entity found
+http://mouse.owl#MA_0001467
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12766
+http://mouse.owl#MA_0001466
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32635  
+http://human.owl#NCI_C32616  
+http://human.owl#NCI_C12766
+http://mouse.owl#MA_0001464
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12757
+http://mouse.owl#MA_0001463
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12790
+http://mouse.owl#MA_0001100
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12806  
+http://human.owl#NCI_C12761  
+http://human.owl#NCI_C33683  
+http://human.owl#NCI_C32779  
+http://human.owl#NCI_C12700  
+http://human.owl#NCI_C12820  
+http://human.owl#NCI_C12758  
+http://humanowl#NCI_C12759  
+http://human.owl#NCI_C12714  
+http://humanowl#NCI_C12665  
+http://human.owl#NCI_C32299  
+http://humanowl#NCI_C12466
+http://mouse.owl#MA_0001462
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12757
+http://mouse.owl#MA_0001461
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52714
+http://mouse.owl#MA_0000019
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12919
+http://mouse.owl#MA_0000018
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12788
+http://mouse.owl#MA_0000017
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33224  
+http://human.owl#NCI_C12422  
+http://human.owl#NCI_C12228
+http://mouse.owl#MA_0000379
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12417  
+http://human.owl#NCI_C33050  
+http://human.owl#NCI_C32591  
+http://human.owl#NCI_C13101
+http://mouse.owl#MA_0000016
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12755  
+http://human.owl#NCI_C12439  
+http://human.owl#NCI_C12438  
+http://human.owl#NCI_C12465  
+http://human.owl#NCI_C12673
+http://mouse.owl#MA_0000378
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12416  
+http://human.owl#NCI_C49327  
+http://human.owl#NCI_C49324
+http://mouse.owl#MA_0000015
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33163
+http://mouse.owl#MA_0000377
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49274  
+http://human.owl#NCI_C32456  
+http://human.owl#NCI_C32154  
+http://human.owl#NCI_C32469  
+http://human.owl#NCI_C49479  
+http://human.owl#NCI_C32344  
+http://human.owl#NCI_C33417  
+http://human.owl#NCI_C33006
+http://mouse.owl#MA_0000014
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12907  
+http://human.owl#NCI_C33025  
+http://human.owl#NCI_C32219
+http://mouse.owl#MA_0000376
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33456  
+http://human.owl#NCI_C33113  
+http://human.owl#NCI_C32388  
+http://human.owl#NCI_C12740  
+http://human.owl#NCI_C33436  
+http://human.owl#NCI_C12739  
+http://human.owl#NCI_C12886
+http://mouse.owl#MA_0000013
+ <think>
+
+</think>
+
+http://human.owl#NCI_C41165  
+http://human.owl#NCI_C41166  
+http://human.owl#NCI_C41168  
+http://human.owl#NCI_C12909  
+http://human.owl#NCI_C13051  
+http://human.owl#NCI_C12746
+http://mouse.owl#MA_0000012
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12705  
+http://humanowl#NCI_C32509  
+http://human.owl#NCI_C32510  
+http://human.owl#NCI_C32511  
+http://human.owl#NCI_C32508  
+http://human.owl#NCI_C12704  
+http://human.owl#NCI_C32587  
+http://human.owl#NCI_C33469
+http://mouse.owl#MA_0000374
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12887  
+http://human.owl#NCI_C33456  
+http://human.owl#NCI_C12767  
+http://human.owl#NCI_C12415
+http://mouse.owl#MA_0000011
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32369  
+http://human.owl#NCI_C32268  
+http://human.owl#NCI_C12964
+http://mouse.owl#MA_0000373
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12740  
+http://human.owl#NCI_C33460  
+http://human.owl#NCI_C33043  
+http://human.owl#NCI_C12885  
+http://human.owl#NCI_C32892  
+http://human.owl#NCI_C33775
+http://mouse.owl#MA_0000010
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12686  
+http://human.owl#NCI_C49320  
+http://human.owl#NCI_C49319  
+http://human.owl#NCI_C49258  
+http://human.owl#NCI_C49190  
+http://humanowl#NCI_C49192  
+http://human.owl#NCI_C49329  
+http://human.owl#NCI_C49318  
+http://human.owl#NCI_C49317  
+http://human.owl#NCI_C12685  
+http://human.owl#NCI_C33854  
+http://human.owl#NCI_C12685  
+http://human.owl#NCI_C33858  
+http://human.owl#NCI_C33663  
+http://human.owl#NCI_C33585  
+http://human.owl#NCI_C33795  
+http://humanowl#NCI_C33854
+http://mouse.owl#MA_0000372
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12739  
+http://human.owl#NCI_C32387
+http://mouse.owl#MA_0000371
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32344
+http://mouse.owl#MA_0000370
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32225  
+http://human.owl#NCI_C12885  
+http://human.owl#NCI_C33271  
+http://human.owl#NCI_C33879
+http://mouse.owl#MA_0002549
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12298
+http://mouse.owl#MA_0002548
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0002547
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12369  
+http://human.owl#NCI_C12725
+http://mouse.owl#MA_0002546
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32891  
+http://human.owl#NCI_C13161
+http://mouse.owl#MA_0002545
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13283
+http://mouse.owl#MA_0002544
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33718  
+http://human.owl#NCI_C13325  
+http://human.owl#NCI_C13252  
+http://human.owl#NCI_C13452  
+http://human.owl#NCI_C13278  
+http://human.owl#NCI_C13409  
+http://human.owl#NCI_C12692  
+http://human.owl#NCI_C32598  
+http://human.owl#NCI_C13323  
+http://human.owl#NCI_C32345  
+http://human.owl#NCI_C13236  
+http://human.owl#NCI_C32348  
+http://human.owl#NCI_C13356
+http://mouse.owl#MA_0002543
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33794  
+http://human.owl#NCI_C32505
+http://mouse.owl#MA_0002542
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32453  
+http://human.owl#NCI_C33794  
+http://human.owl#NCI_C32451  
+http://human.owl#NCI_C32505  
+http://human.owl#NCI_C32257  
+http://human.owl#NCI_C32624  
+http://humanowl#NCI_C32258  
+http://human.owl#NCI_C32451  
+http://humanowl#NCI_C32276
+http://mouse.owl#MA_0002541
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32276
+http://human.owl#NCI_C32274
+http://human.owl#NCI_C32275
+http://mouse.owl#MA_0002540
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32505  
+http://human.owl#NCI_C33794
+http://mouse.owl#MA_0001457
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12852  
+http://human.owl#NCI_C12933  
+http://human.owl#NCI_C32899
+http://mouse.owl#MA_0001455
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0001454
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33869  
+http://human.owl#NCI_C12891  
+http://human.owl#NCI_C53145
+http://mouse.owl#MA_0000009
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12472  
+http://human.owl#NCI_C12471  
+http://human.owl#NCI_C12374  
+http://human.owl#NCI_C32991  
+http://human.owl#NCI_C32268  
+http://human.owl#NCI_C32495  
+http://human.owl#NCI_C32368  
+http://human.owl#NCI_C33468  
+http://human.owl#NCI_C32450  
+http://human.owl#NCI_C32882  
+http://human.owl#NCI_C32235  
+http://human.owl#NCI_C33889  
+http://human.owl#NCI_C33645  
+http://human.owl#NCI_C32338  
+http://human.owl#NCI_C32369  
+http://humanowl#NCI_C33007
+http://mouse.owl#MA_0001450
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33723  
+http://human.owl#NCI_C33722  
+http://human.owl#NCI_C33721  
+http://human.owl#NCI_C33724  
+http://human.owl#NCI_C33720  
+http://human.owl#NCI_C33725  
+http://human.owl#NCI_C33727  
+http://human.owl#NCI_C12798
+http://mouse.owl#MA_0000007
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12742  
+http://human.owl#NCI_C30140  
+http://human.owl#NCI_C12671  
+http://human.owl#NCI_C12429
+http://mouse.owl#MA_0000369
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12927
+http://mouse.owl#MA_0000006
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12418  
+http://human.owl#NCI_C13063  
+http://human.owl#NCI_C12419  
+http://human.owl#NCI_C12425  
+http://human.owl#NCI_C12709  
+http://human.owl#NCI_C12279  
+http://humanowl#NCI_C12423  
+http://human.owl#NCI_C12220  
+http://human.owl#NCI_C12229  
+http://humanowl#NCI_C32909  
+http://human.owl#NCI_C12420  
+http://humanowl#NCI_C33628  
+http://human.owl#NCI_C12724  
+http://human.owl#NCI_C32935  
+http://humanowl#NCI_C42300  
+http://humanowl#NCI_C12680
+http://mouse.owl#MA_0000368
+ <think>
+
+</think>
+
+http://human.owl#NCI_C34006  
+http://human.owl#NCI_C34005  
+http://human.owl#NCI_C12415
+http://mouse.owl#MA_0000367
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32733  
+http://human.owl#NCI_C33309  
+http://human.owl#NCI_C32735
+http://mouse.owl#MA_0000004
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33816  
+http://human.owl#NCI_C13041  
+http://human.owl#NCI_C33229  
+http://human.owl#NCI_C12799  
+http://human.owl#NCI_C34004  
+http://humanowl#NCI_C13062  
+http://human.owl#NCI_C25439  
+http://human.owl#NCI_C12419  
+http://humanowl#NCI_C33829  
+http://human.owl#NCI_C32069  
+http://humanowl#NCI_C32755  
+http://humanowl#NCI_C48824  
+http://humanowl#NCI_C13063  
+http://humanowl#NCI_C25389  
+http://humanowl#NCI_C32525  
+http://humanowl#NCI_C25767  
+http://humanowl#NCI_C33326  
+http://humanowl#NCI_C33508  
+http://humanowl#NCI_C33301  
+http://humanowl#NCI_C48584  
+http://humanowl#NCI_C29667
+http://mouse.owl#MA_0000366
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32735  
+http://human.owl#NCI_C33342  
+http://human.owl#NCI_C33309  
+http://human.owl#NCI_C32733  
+http://human.owl#NCI_C32992  
+http://human.owl#NCI_C32328  
+http://human.owl#NCI_C33341  
+http://human.owl#NCI_C12588
+http://mouse.owl#MA_0000003
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12919
+http://mouse.owl#MA_0000365
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33481  
+http://human.owl#NCI_C49579
+http://mouse.owl#MA_0000002
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32695  
+http://human.owl#NCI_C32696  
+http://human.owl#NCI_C32349  
+http://human.owl#NCI_C12617
+http://mouse.owl#MA_0000364
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32965  
+http://human.owl#NCI_C33481  
+http://human.owl#NCI_C49579
+http://mouse.owl#MA_0000363
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33481  
+http://human.owl#NCI_C49579  
+http://human.owl#NCI_C32965
+http://mouse.owl#MA_0000362
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33481  
+http://human.owl#NCI_C32965  
+http://human.owl#NCI_C49579
+http://mouse.owl#MA_0000361
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32965  
+http://human.owl#NCI_C49579  
+http://human.owl#NCI_C32992  
+http://human.owl#NCI_C32732
+http://mouse.owl#MA_0000360
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32965  
+http://human.owl#NCI_C33481  
+http://human.owl#NCI_C49579
+http://mouse.owl#MA_0002539
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13280  
+http://human.owl#NCI_C13409  
+http://human.owl#NCI_C13276
+http://mouse.owl#MA_0002538
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13276  
+http://human.owl#NCI_C13409  
+http://human.owl#NCI_C13280
+http://mouse.owl#MA_0002537
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13409  
+http://human.owl#NCI_C13276  
+http://human.owl#NCI_C13280  
+http://human.owl#NCI_C34062  
+http://humanowl#NCI_C13452
+http://mouse.owl#MA_0002536
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13278  
+http://human.owl#NCI_C13722  
+http://human.owl#NCI_C13465  
+http://humanowl#NCI_C13273
+http://mouse.owl#MA_0002535
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52551  
+http://human.owl#NCI_C13259  
+http://human.owl#NCI_C13465  
+http://human.owl#NCI_C13722
+http://mouse.owl#MA_0002534
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13722  
+http://human.owl#NCI_C13273
+http://mouse.owl#MA_0002533
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13273  
+http://human.owl#NCI_C13465  
+http://human.owl#NCI_C13236  
+http://human.owl#NCI_C13259
+http://mouse.owl#MA_0002532
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13356  
+http://human.owl#NCI_C32598  
+http://human.owl#NCI_C32345  
+http://human.owl#NCI_C13278  
+http://human.owl#NCI_C33718
+http://mouse.owl#MA_0002531
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33718
+http://mouse.owl#MA_0002530
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33231
+http://mouse.owl#MA_0001449
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33723
+http://mouse.owl#MA_0001448
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33722
+http://mouse.owl#MA_0001447
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33721  
+http://human.owl#NCI_C12798
+http://mouse.owl#MA_0001446
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33731  
+http://humanowl#NCI_C12798
+http://mouse.owl#MA_0001445
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33730
+http://mouse.owl#MA_0001444
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33729
+http://mouse.owl#MA_0001443
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33728  
+http://human.owl#NCI_C12798
+http://mouse.owl#MA_0001442
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33727
+http://mouse.owl#MA_0001441
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33726  
+http://human.owl#NCI_C12798
+http://mouse.owl#MA_0001440
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33725
+http://mouse.owl#MA_0000358
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12392
+http://mouse.owl#MA_0000357
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32730  
+http://humanowl#NCI_C32960  
+http://human.owl#NCI_C33476  
+http://human.owl#NCI_C32356
+http://mouse.owl#MA_0000356
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12377  
+http://human.owl#NCI_C32647  
+http://human.owl#NCI_C49228  
+http://human.owl#NCI_C49483
+http://mouse.owl#MA_0000355
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32421
+http://mouse.owl#MA_0000354
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12376  
+http://human.owl#NCI_C32730  
+http://human.owl#NCI_C32573  
+http://human.owl#NCI_C32827  
+http://human.owl#NCI_C32356  
+http://human.owl#NCI_C12698
+http://mouse.owl#MA_0000353
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12391  
+http://human.owl#NCI_C12258  
+http://human.owl#NCI_C13025
+http://mouse.owl#MA_0000352
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12389  
+http://human.owl#NCI_C49221  
+http://human.owl#NCI_C49222  
+http://human.owl#NCI_C49223  
+http://human.owl#NCI_C49224  
+http://human.owl#NCI_C32540  
+http://human.owl#NCI_C33836  
+http://human.owl#NCI_C12250  
+http://human.owl#NCI_C12251  
+http://human.owl#NCI_C12252  
+http://human.owl#NCI_C12253  
+http://human.owl#NCI_C12254  
+http://human.owl#NCI_C12255
+http://mouse.owl#MA_0000351
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12762  
+http://human.owl#NCI_C49264
+http://mouse.owl#MA_0000350
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49795  
+http://human.owl#NCI_C33136  
+http://human.owl#NCI_C49584
+http://mouse.owl#MA_0002529
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33297  
+http://human.owl#NCI_C33231  
+http://human.owl#NCI_C32513
+http://mouse.owl#MA_0002528
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33231  
+http://human.owl#NCI_C32513
+http://mouse.owl#MA_0002527
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33231  
+http://human.owl#NCI_C33297  
+http://human.owl#NCI_C32513  
+http://human.owl#NCI_C13236
+http://mouse.owl#MA_0002526
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52552
+http://mouse.owl#MA_0002525
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52553  
+http://human.owl#NCI_C13713
+http://mouse.owl#MA_0002524
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52554  
+http://human.owl#NCI_C13713
+http://mouse.owl#MA_0002523
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33529  
+http://human.owl#NCI_C13277  
+http://human.owl#NCI_C52552
+http://mouse.owl#MA_0002522
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13713  
+http://human.owl#NCI_C13277  
+http://human.owl#NCI_C52553  
+http://human.owl#NCI_C52552  
+http://human.owl#NCI_C33529
+http://mouse.owl#MA_0002521
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13277  
+http://human.owl#NCI_C52552  
+http://human.owl#NCI_C52553  
+http://human.owl#NCI_C13713  
+http://human.owl#NCI_C52554  
+http://human.owl#NCI_C13409
+http://mouse.owl#MA_0002520
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13236  
+http://human.owl#NCI_C13252  
+http://human.owl#NCI_C33718
+http://mouse.owl#MA_0001439
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33724  
+http://human.owl#NCI_C33729  
+http://human.owl#NCI_C12798
+http://mouse.owl#MA_0001438
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33720  
+http://human.owl#NCI_C12798  
+http://human.owl#NCI_C33721
+http://mouse.owl#MA_0001437
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33501  
+http://human.owl#NCI_C33502  
+http://humanowl#NCI_C12853
+http://mouse.owl#MA_0001799
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32212  
+http://human.owl#NCI_C12679
+http://mouse.owl#MA_0001436
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33498  
+http://human.owl#NCI_C33501  
+http://human.owl#NCI_C33500  
+http://human.owl#NCI_C33499  
+http://human.owl#NCI_C12853
+http://mouse.owl#MA_0001798
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32401  
+http://human.owl#NCI_C33639  
+http://human.owl#NCI_C33510  
+http://human.owl#NCI_C33672  
+http://human.owl#NCI_C33115  
+http://human.owl#NCI_C32404
+http://mouse.owl#MA_0001435
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33502  
+http://human.owl#NCI_C33499  
+http://human.owl#NCI_C33500  
+http://human.owl#NCI_C33501  
+http://human.owl#NCI_C33498
+http://mouse.owl#MA_0001797
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33115  
+http://human.owl#NCI_C33672  
+http://human.owl#NCI_C33639
+http://mouse.owl#MA_0001434
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33500  
+http://human.owl#NCI_C33498  
+http://human.owl#NCI_C33501  
+http://human.owl#NCI_C33499  
+http://human.owl#NCI_C33502  
+http://human.owl#NCI_C12853
+http://mouse.owl#MA_0001796
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12246
+http://mouse.owl#MA_0001433
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32902  
+http://humanowl#NCI_C32903  
+http://human.owl#NCI_C32901  
+http://humanowl#NCI_C32900  
+http://human.owl#NCI_C32899
+http://mouse.owl#MA_0001795
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12278  
+http://human.owl#NCI_C12763  
+http://human.owl#NCI_C12276  
+http://human.owl#NCI_C33556
+http://mouse.owl#MA_0001432
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32903  
+http://human.owl#NCI_C32902  
+http://human.owl#NCI_C32901  
+http://human.owl#NCI_C32900  
+http://human.owl#NCI_C32899  
+http://human.owl#NCI_C12744
+http://mouse.owl#MA_0001794
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12275  
+http://humanowl#NCI_C12763
+http://mouse.owl#MA_0001431
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32902  
+http://human.owl#NCI_C12744
+http://mouse.owl#MA_0001793
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12277  
+http://human.owl#NCI_C12763  
+http://human.owl#NCI_C12278  
+http://human.owl#NCI_C12276
+http://mouse.owl#MA_0001430
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32901  
+http://human.owl#NCI_C32902  
+http://human.owl#NCI_C32900  
+http://human.owl#NCI_C32903  
+http://human.owl#NCI_C12744
+http://mouse.owl#MA_0001792
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12276  
+http://human.owl#NCI_C12278  
+http://human.owl#NCI_C12277  
+http://humanowl#NCI_C12763
+http://mouse.owl#MA_0001791
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33023  
+http://human.owl#NCI_C12286  
+http://human.owl#NCI_C48944  
+http://human.owl#NCI_C34021
+http://mouse.owl#MA_0000349
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49794  
+http://human.owl#NCI_C32769  
+http://human.owl#NCI_C49583  
+http://human.owl#NCI_C12506
+http://mouse.owl#MA_0001790
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49281  
+http://human.owl#NCI_C49282  
+http://human.owl#NCI_C33483
+http://mouse.owl#MA_0000348
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32769  
+http://human.owl#NCI_C49794  
+http://human.owl#NCI_C33136  
+http://humanowl#NCI_C49792  
+http://human.owl#NCI_C33313  
+http://humanowl#NCI_C49582  
+http://humanowl#NCI_C49583  
+http://humanowl#NCI_C49584  
+http://humanowl#NCI_C49795  
+http://humanowl#NCI_C49792  
+http://humanowl#NCI_C52669
+http://mouse.owl#MA_0000347
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33224  
+http://human.owl#NCI_C12422  
+http://human.owl#NCI_C32130  
+http://human.owl#NCI_C32482  
+http://humanowl#NCI_C12228
+http://mouse.owl#MA_0000346
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32237  
+http://human.owl#NCI_C32045  
+http://human.owl#NCI_C32904  
+http://human.owl#NCI_C33129  
+http://human.owl#NCI_C12427  
+http://human.owl#NCI_C33539  
+http://human.owl#NCI_C12426  
+http://human.owl#NCI_C12233  
+http://human.owl#NCI_C12999  
+http://human.owl#NCI_C12234  
+http://humanowl#NCI_C33249  
+http://human.owl#NCI_C32987
+http://mouse.owl#MA_0000344
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49264  
+http://human.owl#NCI_C49595  
+http://human.owl#NCI_C13180
+http://mouse.owl#MA_0000343
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12223  
+http://human.owl#NCI_C12220  
+http://human.owl#NCI_C12221  
+http://human.owl#NCI_C12222  
+http://human.owl#NCI_C12226  
+http://human.owl#NCI_C12291
+http://mouse.owl#MA_0000342
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32677
+http://mouse.owl#MA_0000340
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12388
+http://mouse.owl#MA_0002519
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13321  
+http://humanowl#NCI_C32661  
+http://human.owl#NCI_C52555
+http://mouse.owl#MA_0002518
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13270  
+http://human.owl#NCI_C33256  
+http://human.owl#NCI_C33255  
+http://human.owl#NCI_C13321
+http://mouse.owl#MA_0002517
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33255  
+http://human.owl#NCI_C32509  
+http://human.owl#NCI_C12945  
+http://human.owl#NCI_C33256  
+http://human.owl#NCI_C13270  
+http://human.owl#NCI_C12704
+http://mouse.owl#MA_0002516
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33256  
+http://human.owl#NCI_C13270  
+http://human.owl#NCI_C33255
+http://mouse.owl#MA_0002515
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32875  
+http://human owl#NCI_C13321  
+http://human.owl#NCI_C32661
+http://mouse.owl#MA_0002514
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52555  
+http://human.owl#NCI_C34062  
+http://human.owl#NCI_C13321
+http://mouse.owl#MA_0002513
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13192  
+http://human.owl#NCI_C32875
+http://mouse.owl#MA_0002512
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13270  
+http://human.owl#NCI_C13321  
+http://human.owl#NCI_C32875  
+http://human.owl#NCI_C32661  
+http://human.owl#NCI_C52555
+http://mouse.owl#MA_0002511
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52556  
+http://human.owl#NCI_C32589  
+http://human.owl#NCI_C33099  
+http://human.owl#NCI_C32297
+http://mouse.owl#MA_0002510
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52556  
+http://human.owl#NCI_C33099  
+http://human.owl#NCI_C32297  
+http://human.owl#NCI_C32589
+http://mouse.owl#MA_0001429
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32902  
+http://human.owl#NCI_C32899  
+http://human.owl#NCI_C32900  
+http://human.owl#NCI_C32901  
+http://human.owl#NCI_C32903
+http://mouse.owl#MA_0001428
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32902  
+http://human.owl#NCI_C32899  
+http://human.owl#NCI_C32900  
+http://human.owl#NCI_C33720  
+http://human.owl#NCI_C32239  
+http://human.owl#NCI_C32903  
+http://human.owl#NCI_C32901  
+http://human.owl#NCI_C12744
+http://mouse.owl#MA_0001427
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32245  
+http://human.owl#NCI_C32244  
+http://humanowl#NCI_C32243  
+http://human.owl#NCI_C32242  
+http://human.owl#NCI_C32241  
+http://humanowl#NCI_C32240  
+http://human.owl#NCI_C32239  
+http://humanowl#NCI_C12693
+http://mouse.owl#MA_0001789
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49294  
+http://human.owl#NCI_C33754  
+http://human.owl#NCI_C49279  
+http://human.owl#NCI_C33465  
+http://human.owl#NCI_C49255  
+http://human.owl#NCI_C48942  
+http://human.owl#NCI_C33755
+http://mouse.owl#MA_0001426
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32244  
+http://human.owl#NCI_C32241  
+http://human.owl#NCI_C32240  
+http://human.owl#NCI_C32239  
+http://human.owl#NCI_C32245  
+http://human.owl#NCI_C12693  
+http://human.owl#NCI_C33728
+http://mouse.owl#MA_0001788
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49285  
+http://human.owl#NCI_C33465  
+http://human.owl#NCI_C49279  
+http://human.owl#NCI_C49255  
+http://human.owl#NCI_C49252  
+http://human.owl#NCI_C49294  
+http://human.owl#NCI_C33483  
+http://humanowl#NCI_C12468  
+http://human.owl#NCI_C32998  
+http://human.owl#NCI_C41266  
+http://human.owl#NCI_C41268  
+http://humanowl#NCI_C33754  
+http://human.owl#NCI_C12684
+http://mouse.owl#MA_0001425
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32243  
+http://human.owl#NCI_C32245  
+http://human.owl#NCI_C32244  
+http://human.owl#NCI_C32241  
+http://human.owl#NCI_C32240  
+http://human.owl#NCI_C12693
+http://mouse.owl#MA_0001787
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49279  
+http://humanowl#NCI_C49254  
+http://human.owl#NCI_C49285  
+http://human.owl#NCI_C33754  
+http://human.owl#NCI_C12684  
+http://human.owl#NCI_C33465
+http://mouse.owl#MA_0001424
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32242  
+http://human.owl#NCI_C12693  
+http://human.owl#NCI_C32239
+http://mouse.owl#MA_0001786
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49278  
+http://human.owl#NCI_C12986  
+http://human.owl#NCI_C49251
+http://mouse.owl#MA_0001423
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32241  
+http://human.owl#NCI_C32243  
+http://human.owl#NCI_C32245  
+http://human.owl#NCI_C32240  
+http://human.owl#NCI_C32242  
+http://human.owl#NCI_C32239  
+http://human.owl#NCI_C32244
+http://mouse.owl#MA_0001785
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49277  
+http://human.owl#NCI_C32056  
+http://human.owl#NCI_C49278
+http://mouse.owl#MA_0001422
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32243  
+http://humanowl#NCI_C32242  
+http://human.owl#NCI_C32240  
+http://human.owl#NCI_C32241  
+http://human.owl#NCI_C32244  
+http://human.owl#NCI_C32245  
+http://human.owl#NCI_C32239  
+http://human.owl#NCI_C12893  
+http://human.owl#NCI_C12892  
+http://human.owl#NCI_C32900  
+http://human.owl#NCI_C33499  
+http://humanowl#NCI_C32899  
+http://human.owl#NCI_C32174  
+http://humanowl#NCI_C12693
+http://mouse.owl#MA_0001784
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49278  
+http://humanowl#NCI_C49277  
+http://human.owl#NCI_C12986
+http://mouse.owl#MA_0001421
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32245  
+http://humanowl#NCI_C12693  
+http://human.owl#NCI_C32240  
+http://human.owl#NCI_C32239  
+http://humanowl#NCI_C32241  
+http://human.owl#NCI_C32243  
+http://humanowl#NCI_C32244  
+http://human.owl#NCI_C12693  
+http://humanowl#NCI_C32245
+http://mouse.owl#MA_0001783
+ <think>
+
+</think>
+
+http://human.owl#NCI_C48943  
+http://human.owl#NCI_C33755  
+http://human.owl#NCI_C48942  
+http://human.owl#NCI_C12867
+http://mouse.owl#MA_0001420
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32334  
+http://human.owl#NCI_C33501  
+http://human.owl#NCI_C33498  
+http://human.owl#NCI_C33500  
+http://human.owl#NCI_C33499  
+http://human.owl#NCI_C33502  
+http://human.owl#NCI_C12853  
+http://humanowl#NCI_C12933
+http://mouse.owl#MA_0001782
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32450  
+http://human.owl#NCI_C32882  
+http://human.owl#NCI_C33459  
+http://human.owl#NCI_C49226  
+http://human.owl#NCI_C32369  
+http://human.owl#NCI_C49482  
+http://human.owl#NCI_C12374  
+http://human.owl#NCI_C49211  
+http://human.owl#NCI_C33453  
+http://humanowl#NCI_C49473  
+http://human.owl#NCI_C49210  
+http://human.owl#NCI_C33007  
+http://human.owl#NCI_C33024  
+http://human.owl#NCI_C12468  
+http://human.owl#NCI_C32192  
+http://human.owl#NCI_C40373  
+http://humanowl#NCI_C32495  
+http://human.owl#NCI_C33428
+http://mouse.owl#MA_0001781
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49253  
+http://human.owl#NCI_C49254  
+http://human.owl#NCI_C32967
+http://mouse.owl#MA_0000339
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12387  
+http://human.owl#NCI_C33757
+http://mouse.owl#MA_0001780
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49255  
+http://human.owl#NCI_C33754  
+http://human.owl#NCI_C49252  
+http://human.owl#NCI_C33755  
+http://human.owl#NCI_C49294
+http://mouse.owl#MA_0000338
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12263
+http://mouse.owl#MA_0000699
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0000335
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12268
+http://mouse.owl#MA_0000697
+ <think>
+
+</think>
+
+No relevant entity found.
+http://mouse.owl#MA_0000696
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12933  
+http://human.owl#NCI_C33868
+http://mouse.owl#MA_0000333
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12379
+http://mouse.owl#MA_0000695
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12818  
+http://human.owl#NCI_C32212
+http://mouse.owl#MA_0000332
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13066
+http://mouse.owl#MA_0000694
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52750  
+http://human.owl#NCI_C53276  
+http://human.owl#NCI_C12297  
+http://human.owl#NCI_C52751  
+http://human.owl#NCI_C49481  
+http://human.owl#NCI_C52755  
+http://human.owl#NCI_C52749  
+http://human.owl#NCI_C52753  
+http://human.owl#NCI_C52752  
+http://human.owl#NCI_C12742
+http://mouse.owl#MA_0000693
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12742
+http://mouse.owl#MA_0000330
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12375
+http://mouse.owl#MA_0000692
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12671  
+http://human.owl#NCI_C12742  
+http://human.owl#NCI_C32145
+http://mouse.owl#MA_0002509
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13234
+http://mouse.owl#MA_0000691
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12742
+http://mouse.owl#MA_0002508
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33739  
+http://human.owl#NCI_C34062  
+http://human.owl#NCI_C52555  
+http://human.owl#NCI_C13259  
+http://human.owl#NCI_C13401  
+http://human.owl#NCI_C33574  
+http://human.owl#NCI_C13275
+http://mouse.owl#MA_0000690
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32608  
+http://human.owl#NCI_C33788  
+http://human.owl#NCI_C40186
+http://mouse.owl#MA_0002507
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13275  
+http://human.owl#NCI_C34062  
+http://human.owl#NCI_C33574  
+http://human.owl#NCI_C33739  
+http://human.owl#NCI_C52555
+http://mouse.owl#MA_0002506
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32293  
+http://human.owl#NCI_C32294  
+http://human.owl#NCI_C32296  
+http://human.owl#NCI_C34062
+http://mouse.owl#MA_0002505
+ <think>
+
+</think>
+
+http://human.owl#NCI_C13257  
+http://human.owl#NCI_C13401  
+http://human.owl#NCI_C34062
+http://mouse.owl#MA_0002504
+ <think>
+
+</think>
+
+http://human.owl#NCI_C34062  
+http://humanowl#NCI_C13401  
+http://human.owl#NCI_C32589  
+http://humanowl#NCI_C33574  
+http://human.owl#NCI_C33739  
+http://humanowl#NCI_C32293  
+http://human.owl#NCI_C13275
+http://mouse.owl#MA_0002503
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12692
+http://mouse.owl#MA_0002500
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33427  
+http://human.owl#NCI_C33489  
+http://human.owl#NCI_C12774  
+http://human.owl#NCI_C32971
+http://mouse.owl#MA_0001419
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12782
+http://mouse.owl#MA_0001779
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49254  
+http://human.owl#NCI_C33465  
+http://human.owl#NCI_C49252  
+http://human.owl#NCI_C12684
+http://mouse.owl#MA_0001416
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52728
+http://mouse.owl#MA_0001778
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49255  
+http://human.owl#NCI_C33754  
+http://human.owl#NCI_C12684  
+http://human.owl#NCI_C33465  
+http://human.owl#NCI_C49254  
+http://human.owl#NCI_C49252
+http://mouse.owl#MA_0001415
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52727
+http://mouse.owl#MA_0001777
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49251  
+http://human.owl#NCI_C49250  
+http://human.owl#NCI_C12986
+http://mouse.owl#MA_0001776
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49250  
+http://human.owl#NCI_C49277  
+http://human.owl#NCI_C32056
+http://mouse.owl#MA_0001413
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12782  
+http://human.owl#NCI_C52759  
+http://human.owl#NCI_C52761  
+http://human.owl#NCI_C52765  
+http://human.owl#NCI_C52768  
+http://human.owl#NCI_C52770  
+http://human.owl#NCI_C52764  
+http://humanowl#NCI_C52769  
+http://human.owl#NCI_C52766  
+http://human.owl#NCI_C52760  
+http://human.owl#NCI_C52762  
+http://humanowl#NCI_C52763  
+http://human.owl#NCI_C52767
+http://mouse.owl#MA_0001775
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49251  
+http://human.owl#NCI_C32056  
+http://human.owl#NCI_C49250  
+http://human.owl#NCI_C32057  
+http://human.owl#NCI_C12986
+http://mouse.owl#MA_0001412
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52767  
+http://human.owl#NCI_C12782
+http://mouse.owl#MA_0001774
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33755  
+http://human.owl#NCI_C48942  
+http://human.owl#NCI_C48943
+http://mouse.owl#MA_0001411
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52768  
+http://human.owl#NCI_C12782
+http://mouse.owl#MA_0001773
+ <think>
+
+</think>
+
+http://human.owl#NCI_C48943  
+http://human.owl#NCI_C48942  
+http://human.owl#NCI_C33755
+http://mouse.owl#MA_0001410
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52769  
+http://human.owl#NCI_C12782
+http://mouse.owl#MA_0001772
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33755  
+http://human.owl#NCI_C49285  
+http://human.owl#NCI_C49279  
+http://human.owl#NCI_C48942  
+http://human.owl#NCI_C48943
+http://mouse.owl#MA_0001771
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12867  
+http://human.owl#NCI_C32053  
+http://human.owl#NCI_C13144
+http://mouse.owl#MA_0000329
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32069  
+http://human.owl#NCI_C25419
+http://mouse.owl#MA_0001770
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32149  
+http://human.owl#NCI_C33510  
+http://human.owl#NCI_C32398  
+http://human.owl#NCI_C53178  
+http://human.owl#NCI_C32934  
+http://human.owl#NCI_C33776  
+http://human.owl#NCI_C32148  
+http://human.owl#NCI_C32405  
+http://human owl#NCI_C33639  
+http://human.owl#NCI_C32401  
+http://human.owl#NCI_C33780  
+http://human.owl#NCI_C32462  
+http://human.owl#NCI_C13075  
+http://human.owl#NCI_C32400  
+http://human.owl#NCI_C32526  
+http://human.owl#NCI_C32417  
+http://human.owl#NCI_C32403  
+http://human.owl#NCI_C33778  
+http://human.owl#NCI_C32404  
+http://human.owl#NCI_C32146
+http://mouse.owl#MA_0000328
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12736
+http://mouse.owl#MA_0000327
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12779  
+http://human.owl#NCI_C33839  
+http://humanowl#NCI_C33012
+http://mouse.owl#MA_0000689
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32369
+http://mouse.owl#MA_0000326
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12841
+http://mouse.owl#MA_0000688
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12751  
+http://human.owl#NCI_C12752  
+http://human.owl#NCI_C12752  
+http://human.owl#NCI_C12688  
+http://human.owl#NCI_C33003  
+http://human.owl#NCI_C33317  
+http://human.owl#NCI_C12752  
+http://human.owl#NCI_C52796  
+http://human.owl#NCI_C52793
+http://mouse.owl#MA_0000325
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12413  
+http://human.owl#NCI_C12415  
+http://human.owl#NCI_C12810  
+http://human.owl#NCI_C13048  
+http://human.owl#NCI_C12957  
+http://human.owl#NCI_C33101  
+http://human.owl#NCI_C12414  
+http://human.owl#NCI_C48939  
+http://human.owl#NCI_C33879  
+http://human.owl#NCI_C12887  
+http://human.owl#NCI_C12331  
+http://human.owl#NCI_C12337
+http://mouse.owl#MA_0000324
+ <think>
+
+</think>
+
+http://human.owl#NCI_C43612  
+http://human.owl#NCI_C12678  
+http://human.owl#NCI_C43614  
+http://human.owl#NCI_C12392  
+http://human.owl#NCI_C12377
+http://mouse.owl#MA_0000686
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52749  
+http://human.owl#NCI_C53276  
+http://human.owl#NCI_C12470  
+http://human.owl#NCI_C52751  
+http://human.owl#NCI_C52754
+http://mouse.owl#MA_0000323
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12378  
+http://human.owl#NCI_C34082  
+http://human.owl#NCI_C12391  
+http://human.owl#NCI_C12389  
+http://human.owl#NCI_C12377  
+http://human.owl#NCI_C12380  
+http://humanowl#NCI_C12387  
+http://human.owl#NCI_C12263  
+http://human.owl#NCI_C12380  
+http://human.owl#NCI_C12388  
+http://human.owl#NCI_C12379  
+http://humanowl#NCI_C33883  
+http://human.owl#NCI_C43612  
+http://humanowl#NCI_C33837  
+http://human.owl#NCI_C32668  
+http://humanowl#NCI_C12386
+http://mouse.owl#MA_0000685
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52814  
+http://human.owl#NCI_C52807  
+http://human.owl#NCI_C52810  
+http://human owl#NCI_C52809  
+http://human.owl#NCI_C52816
+http://mouse.owl#MA_0000322
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32461  
+http://human.owl#NCI_C33716  
+http://human.owl#NCI_C32898  
+http://human.owl#NCI_C13044  
+http://human.owl#NCI_C33718  
+http://human.owl#NCI_C13059
+http://mouse.owl#MA_0000684
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53039  
+http://human.owl#NCI_C52935  
+http://human.owl#NCI_C32764  
+http://human.owl#NCI_C53175  
+http://human.owl#NCI_C52978
+http://mouse.owl#MA_0000321
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33716  
+http://human.owl#NCI_C32061  
+http://human.owl#NCI_C33425  
+http://human.owl#NCI_C13044  
+http://human.owl#NCI_C32461
+http://mouse.owl#MA_0000683
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33007  
+http://human.owl#NCI_C33453  
+http://human.owl#NCI_C32369  
+http://human.owl#NCI_C32450  
+http://human.owl#NCI_C12374
+http://mouse.owl#MA_0000320
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32461  
+http://human.owl#NCI_C32889  
+http://human.owl#NCI_C13044  
+http://human.owl#NCI_C32061  
+http://human.owl#NCI_C33716
+http://mouse.owl#MA_0000682
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12717  
+http://human.owl#NCI_C12800  
+http://human.owl#NCI_C33282  
+http://human.owl#NCI_C12809  
+http://human.owl#NCI_C12718
+http://mouse.owl#MA_0000681
+ <think>
+
+</think>
+
+No relevant entity found
+http://mouse.owl#MA_0000680
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52749  
+http://human.owl#NCI_C52751  
+http://human.owl#NCI_C52750  
+http://human.owl#NCI_C53276  
+http://human.owl#NCI_C52719
+http://mouse.owl#MA_0001409
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52759
+http://mouse.owl#MA_0001408
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52760  
+http://human.owl#NCI_C12782
+http://mouse.owl#MA_0001407
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52761
+http://mouse.owl#MA_0001769
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32398  
+http://human.owl#NCI_C33672  
+http://human.owl#NCI_C32401  
+http://human.owl#NCI_C33886  
+http://human.owl#NCI_C32146  
+http://human.owl#NCI_C33778  
+http://human.owl#NCI_C32404  
+http://human.owl#NCI_C32149  
+http://human.owl#NCI_C53178  
+http://human.owl#NCI_C33639  
+http://human.owl#NCI_C33776  
+http://human.owl#NCI_C32934
+http://mouse.owl#MA_0001406
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52762  
+http://human.owl#NCI_C12782
+http://mouse.owl#MA_0001768
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32934  
+http://human.owl#NCI_C33886  
+http://human.owl#NCI_C53178  
+http://human.owl#NCI_C33776  
+http://human.owl#NCI_C33778  
+http://human.owl#NCI_C32146  
+http://humanowl#NCI_C32404  
+http://human.owl#NCI_C32398
+http://mouse.owl#MA_0001405
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52763
+http://mouse.owl#MA_0001767
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49244  
+http://human.owl#NCI_C33141  
+http://human.owl#NCI_C49246
+http://mouse.owl#MA_0001404
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52764  
+http://human.owl#NCI_C12782
+http://mouse.owl#MA_0001766
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49246
+http://human.owl#NCI_C33886
+http://human.owl#NCI_C32149
+http://human.owl#NCI_C32398
+http://mouse.owl#MA_0001403
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52765  
+http://human.owl#NCI_C12782  
+http://human.owl#NCI_C52760  
+http://human.owl#NCI_C52761  
+http://human.owl#NCI_C52759  
+http://human.owl#NCI_C52768  
+http://human.owl#NCI_C52764  
+http://human.owl#NCI_C52770  
+http://human.owl#NCI_C52767  
+http://human.owl#NCI_C52769  
+http://human.owl#NCI_C52762  
+http://human.owl#NCI_C52766  
+http://human.owl#NCI_C52763  
+http://humanowl#NCI_C52761
+http://mouse.owl#MA_0001765
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49247  
+http://human.owl#NCI_C48943  
+http://human.owl#NCI_C49261  
+http://human.owl#NCI_C49263  
+http://human.owl#NCI_C49264
+http://mouse.owl#MA_0001402
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52766  
+http://human.owl#NCI_C12782
+http://mouse.owl#MA_0001764
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33780  
+http://human.owl#NCI_C12281  
+http://human.owl#NCI_C32146  
+http://human.owl#NCI_C32526  
+http://human.owl#NCI_C32144  
+http://human.owl#NCI_C32400  
+http://human.owl#NCI_C32417  
+http://human.owl#NCI_C32148  
+http://human.owl#NCI_C32373  
+http://human.owl#NCI_C32149  
+http://human.owl#NCI_C32398  
+http://human.owl#NCI_C33778  
+http://human.owl#NCI_C32403  
+http://human.owl#NCI_C33779  
+http://human.owl#NCI_C32259  
+http://humanowl#NCI_C49209  
+http://human.owl#NCI_C32934  
+http://humanowl#NCI_C12373
+http://mouse.owl#MA_0001401
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52770  
+http://human.owl#NCI_C12782
+http://mouse.owl#MA_0001763
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32526  
+http://human.owl#NCI_C12281
+http://mouse.owl#MA_0001400
+ <think>
+
+</think>
+
+No relevant entity found.
+http://mouse.owl#MA_0001762
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49209  
+http://human.owl#NCI_C12281  
+http://human.owl#NCI_C32400  
+http://human.owl#NCI_C32148  
+http://human.owl#NCI_C32405  
+http://human.owl#NCI_C32149  
+http://human.owl#NCI_C32373  
+http://human.owl#NCI_C32403  
+http://human.owl#NCI_C32526  
+http://human.owl#NCI_C32404  
+http://human.owl#NCI_C33776  
+http://human.owl#NCI_C32398  
+http://human.owl#NCI_C33780  
+http://human.owl#NCI_C49256  
+http://human.owl#NCI_C3240  
+http://human.owl#NCI_C32934  
+http://human.owl#NCI_C49593  
+http://human.owl#NCI_C49304  
+http://human.owl#NCI_C33358  
+http://humanowl#NCI_C49245  
+http://human.owl#NCI_C33780  
+http://human.owl#NCI_C49256  
+http://humanowl#NCI_C32149
+http://mouse.owl#MA_0001761
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32148  
+http://human.owl#NCI_C32400  
+http://human.owl#NCI_C32373  
+http://human.owl#NCI_C33780  
+http://human.owl#NCI_C32417  
+http://human.owl#NCI_C12281
+http://mouse.owl#MA_0000319
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33716  
+http://human.owl#NCI_C32461  
+http://human.owl#NCI_C32889  
+http://human.owl#NCI_C13044  
+http://human.owl#NCI_C49577
+http://mouse.owl#MA_0001760
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32148  
+http://human.owl#NCI_C12281  
+http://human.owl#NCI_C32417  
+http://human.owl#NCI_C32526  
+http://human.owl#NCI_C32373
+http://mouse.owl#MA_0000318
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12789  
+http://human.owl#Cranium  
+http://human.owl#Skull
+http://mouse.owl#MA_0000679
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52816  
+http://human.owl#NCI_C52814  
+http://human.owl#NCI_C52809  
+http://human.owl#NCI_C52810  
+http://human.owl#NCI_C52815  
+http://human.owl#NCI_C52807
+http://mouse.owl#MA_0000316
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12789
+http://mouse.owl#MA_0000678
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52978  
+http://humanowl#NCI_C33340  
+http://human.owl#NCI_C52935  
+http://human.owl#NCI_C53171  
+http://human.owl#NCI_C32764  
+http://human.owl#NCI_C53175  
+http://human.owl#NCI_C53076  
+http://human.owl#NCI_C53039  
+http://human.owl#NCI_C32666  
+http://human.owl#NCI_C53079  
+http://humanowl#NCI_C53075
+http://mouse.owl#MA_0000315
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52765  
+http://human.owl#NCI_C52767  
+http://human.owl#NCI_C52769  
+http://human.owl#NCI_C52762  
+http://human.owl#NCI_C12782  
+http://humanowl#NCI_C52766  
+http://human.owl#NCI_C52764  
+http://human.owl#NCI_C52759  
+http://humanowl#NCI_C52770  
+http://human.owl#NCI_C52763  
+http://human.owl#NCI_C52761  
+http://humanowl#NCI_C52768  
+http://human.owl#NCI_C52760
+http://mouse.owl#MA_0000677
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33007  
+http://human.owl#NCI_C32369  
+http://human.owl#NCI_C32450  
+http://human.owl#NCI_C49482  
+http://human.owl#NCI_C49226
+http://mouse.owl#MA_0000314
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12933  
+http://human.owl#NCI_C12798  
+http://human.owl#NCI_C33722  
+http://human.owl#NCI_C33730  
+http://human.owl#NCI_C33720  
+http://human.owl#NCI_C33723  
+http://human.owl#NCI_C33728  
+http://human.owl#NCI_C33724
+http://mouse.owl#MA_0000676
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12800  
+http://humanowl#NCI_C12718  
+http://human.owl#NCI_C33541
+http://mouse.owl#MA_0000313
+ <think>
+
+</think>
+
+http://human.owl#NCI_C33498  
+http://human.owl#NCI_C33501  
+http://human.owl#NCI_C33500  
+http://human.owl#NCI_C33499  
+http://humanowl#NCI_C33502  
+http://human.owl#NCI_C12853  
+http://human.owl#NCI_C33508
+http://mouse.owl#MA_0000675
+ <think>
+
+</think>
+
+No relevant entity found.
+http://mouse.owl#MA_0000312
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12744  
+http://human.owl#NCI_C32899  
+http://human.owl#NCI_C32900  
+http://human.owl#NCI_C32901  
+http://human.owl#NCI_C32902  
+http://human.owl#NCI_C32903
+http://mouse.owl#MA_0000674
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52749  
+http://human.owl#NCI_C52757  
+http://human.owl#NCI_C12470  
+http://human owl#NCI_C53276
+http://mouse.owl#MA_0000311
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32241  
+http://human.owl#NCI_C32240  
+http://human.owl#NCI_C32242  
+http://human.owl#NCI_C32245  
+http://humanowl#NCI_C32239  
+http://human.owl#NCI_C32243  
+http://humanowl#NCI_C32244  
+http://human.owl#NCI_C12693  
+http://human.owl#NCI_C12933
+http://mouse.owl#MA_0000673
+ <think>
+
+</think>
+
+http://human.owl#NCI_C52810  
+http://human.owl#NCI_C52809  
+http://human.owl#NCI_C52816  
+http://human.owl#NCI_C52814  
+http://human.owl#NCI_C12768
+http://mouse.owl#MA_0000310
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32334  
+http://human.owl#NCI_C12933  
+http://human.owl#NCI_C33868  
+http://human.owl#NCI_C12696
+http://mouse.owl#MA_0000672
+ <think>
+
+</think>
+
+http://human.owl#NCI_C53039  
+http://human.owl#NCI_C53079  
+http://human.owl#NCI_C12742
+http://mouse.owl#MA_0000671
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32369
+http://mouse.owl#MA_0000670
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12717  
+http://human.owl#NCI_C12800  
+http://human.owl#NCI_C12718
+http://mouse.owl#MA_0001759
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32148  
+http://human.owl#NCI_C12281  
+http://human.owl#NCI_C32404  
+http://human.owl#NCI_C33886  
+http://human.owl#NCI_C32146  
+http://human.owl#NCI_C32526  
+http://human.owl#NCI_C32373  
+http://human.owl#NCI_C32400
+http://mouse.owl#MA_0001758
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12373  
+http://humanowl#NCI_C32417  
+http://human.owl#NCI_C49245  
+http://human.owl#NCI_C33780  
+http://human.owl#NCI_C49304  
+http://human.owl#NCI_C32373  
+http://human.owl#NCI_C32148  
+http://human.owl#NCI_C32526  
+http://human.owl#NCI_C12281
+http://mouse.owl#MA_0001757
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32751  
+http://human.owl#NCI_C32405  
+http://human.owl#NCI_C32403  
+http://human.owl#NCI_C32398  
+http://human.owl#NCI_C32373  
+http://human.owl#NCI_C32259  
+http://human.owl#NCI_C33777  
+http://human.owl#NCI_C32933  
+http://human.owl#NCI_C33779  
+http://human.owl#NCI_C32950  
+http://human.owl#NCI_C33128
+http://mouse.owl#MA_0001756
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32933  
+http://human.owl#NCI_C32259  
+http://human.owl#NCI_C32751  
+http://human.owl#NCI_C32403  
+http://human.owl#NCI_C33777  
+http://human.owl#NCI_C33358  
+http://human owl#NCI_C32405  
+http://human.owl#NCI_C33779
+http://mouse.owl#MA_0001755
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32933  
+http://human.owl#NCI_C32403  
+http://human.owl#NCI_C33777  
+http://human.owl#NCI_C33358  
+http://human.owl#NCI_C32405  
+http://human.owl#NCI_C32259  
+http://human.owl#NCI_C32751  
+http://humanowl#NCI_C33779
+http://mouse.owl#MA_0001754
+ <think>
+
+</think>
+
+http://human.owl#NCI_C32405  
+http://human.owl#NCI_C32259  
+http://human.owl#NCI_C32403  
+http://human.owl#NCI_C49245
+http://mouse.owl#MA_0001753
+ <think>
+
+</think>
+
+http://human.owl#NCI_C49270
+http://mouse.owl#MA_0001752
+ <think>
+
+</think>
+
+http://human.owl#NCI_C12405
