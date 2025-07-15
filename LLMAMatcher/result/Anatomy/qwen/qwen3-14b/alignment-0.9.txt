@@ -25,6 +25,7 @@ http://human.owl#NCI_C53056, http://mouse.owl#MA_0002183, 0.9013591344260775
 http://human.owl#NCI_C52702, http://mouse.owl#MA_0002304, 0.9175582940107958
 http://human.owl#NCI_C32359, http://mouse.owl#MA_0002143, 0.9076365900864714
 http://human.owl#NCI_C49222, http://mouse.owl#MA_0001567, 0.944277479509884
+http://human.owl#NCI_C32352, http://mouse.owl#MA_0001926, 0.9387843401902046
 http://human.owl#NCI_C53045, http://mouse.owl#MA_0002114, 0.9004767709940672
 http://human.owl#NCI_C48947, http://mouse.owl#MA_0002208, 0.9031426537740278
 http://human.owl#NCI_C52802, http://mouse.owl#MA_0001272, 0.9137258204925479
@@ -66,7 +67,6 @@ http://human.owl#NCI_C49311, http://mouse.owl#MA_0001688, 0.9223734628766654
 http://human.owl#NCI_C32849, http://mouse.owl#MA_0002157, 0.9033648329733409
 http://human.owl#NCI_C52793, http://mouse.owl#MA_0001367, 0.9161901881950482
 http://human.owl#NCI_C33249, http://mouse.owl#MA_0001584, 0.9099998292983074
-http://human.owl#NCI_C52737, http://mouse.owl#MA_0002056, 0.9046321716522162
 http://human.owl#NCI_C12687, http://mouse.owl#MA_0001925, 0.9137736168218511
 http://human.owl#NCI_C52779, http://mouse.owl#MA_0001382, 0.9156328183660511
 http://human.owl#NCI_C53063, http://mouse.owl#MA_0002213, 0.9107435635763893
@@ -106,10 +106,9 @@ http://human.owl#NCI_C52685, http://mouse.owl#MA_0002079, 0.9108463936571954
 http://human.owl#NCI_C33812, http://mouse.owl#MA_0002400, 0.9030277633377043
 http://human.owl#NCI_C13323, http://mouse.owl#MA_0001286, 0.9446251498645859
 http://human.owl#NCI_C32769, http://mouse.owl#MA_0000349, 0.9124846246456854
-http://human.owl#NCI_C32352, http://mouse.owl#MA_0001928, 0.9117326146736843
 http://human.owl#NCI_C52783, http://mouse.owl#MA_0001380, 0.9065218922587394
-http://human.owl#NCI_C49254, http://mouse.owl#MA_0001779, 0.9215562835665059
 http://human.owl#NCI_C52773, http://mouse.owl#MA_0001393, 0.9337516968420421
+http://human.owl#NCI_C49254, http://mouse.owl#MA_0001779, 0.9215562835665059
 http://human.owl#NCI_C52795, http://mouse.owl#MA_0001365, 0.920365392770801
 http://human.owl#NCI_C12399, http://mouse.owl#MA_0000176, 0.9197157025122823
 http://human.owl#NCI_C52787, http://mouse.owl#MA_0001373, 0.9194170030980308
@@ -134,6 +133,7 @@ http://human.owl#NCI_C49323, http://mouse.owl#MA_0001746, 0.915967910667236
 http://human.owl#NCI_C52886, http://mouse.owl#MA_0001254, 0.9300090561091475
 http://human.owl#NCI_C12284, http://mouse.owl#MA_0000438, 0.460692108804594
 http://human.owl#NCI_C52781, http://mouse.owl#MA_0001384, 0.9193090674788622
+http://human.owl#NCI_C52737, http://mouse.owl#MA_0001914, 0.934930903918452
 http://human.owl#NCI_C52704, http://mouse.owl#MA_0002315, 0.9179493720719966
 http://human.owl#NCI_C52560, http://mouse.owl#MA_0002309, 0.9425515378352529
 http://human.owl#NCI_C52782, http://mouse.owl#MA_0001385, 0.9165602087777895

@@ -294,37 +294,96 @@ public class Agent {
                 continue;
             }
 
-            String message =
-                    "You are an assistant helping to select relevant entity pairs for alignment.\n" +
-                    "You have been provided with an entity from one ontology, and a set of entity from another ontology.\n" +
-                    "Your task is to prioritize the relevance of entities of another ontology from high to low " +
-                            "based on the provided contents.\n\n" +
-                    "<Entity to align>:\n" +
-                    entityVerbos.get(selfURI).toString() + "\n\n" +
-                    "<Set of Entities>:\n";
-            for (Belief<String> belief : beliefs) {
-                message = message +
-                        "<Entity from another agent>\n" +
-                        "URI: " + belief.obj + "\n" +
-                        entityVerbosOtherAgent.get(belief.obj).toString() + "\n";
+            Set<Belief<String>>[] beliefsArray = null;
+            if (beliefs.size() > 10) {
+                beliefsArray = new Set[beliefs.size() / 10 + 1];  // Split into chunks of 10
+                int index = 0;
+                for (Belief<String> belief : beliefs) {
+                    if (beliefsArray[index] == null) {
+                        beliefsArray[index] = new HashSet<>();
+                    }
+                    beliefsArray[index].add(belief);
+                    if (beliefsArray[index].size() >= 10) {
+                        index++;
+                    }
+                }
             }
-            message = message +
-                    "Please select all possible entities, from the given set, you find likely to be aligned to the given entity.\n" +
-                    "Provide your response in the following format:\n" +
-                    "<Possible Entity URI>\n" +
-                    "<Possible Entity URI>\n" +
-                    "<Possible Entity URI>\n" +
-                    "...\n\n" +
-                    "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
 
-            // Call the LLM API to get the selected correspondences
-            String response = llm.prompt(message);
-            try {
-                fw.write(selfURI + "\n " + response + "\n");
-                fw.flush();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+            String response = "";
+            if (beliefsArray != null) {
+                for (var beliefsSet : beliefsArray) {
+                    String message =
+                            "You are an assistant helping to select relevant entity pairs for alignment.\n" +
+                                    "You have been provided with an entity from one ontology, and a set of entity from another ontology.\n" +
+                                    "Your task is to prioritize the relevance of entities of another ontology from high to low " +
+                                    "based on the provided contents.\n\n" +
+                                    "<Entity to align>:\n" +
+                                    entityVerbos.get(selfURI).toString() + "\n\n" +
+                                    "<Set of Entities>:\n";
+                    for (Belief<String> belief : beliefsSet) {
+                        message = message +
+                                "<Entity from another agent>\n" +
+                                "URI: " + belief.obj + "\n" +
+                                entityVerbosOtherAgent.get(belief.obj).toString() + "\n";
+                    }
+                    message = message +
+                            "Please select all possible entities, from the given set, you find likely to be aligned to the given entity.\n" +
+                            "Provide your response in the following format:\n" +
+                            "<Possible Entity URI>\n" +
+                            "<Possible Entity URI>\n" +
+                            "<Possible Entity URI>\n" +
+                            "...\n\n" +
+                            "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
+
+                    System.out.println(message.length());
+                    // Call the LLM API to get the selected correspondences
+                    response += llm.prompt(message);
+                    try {
+                        fw.write(selfURI + "\n " + response + "\n");
+                        fw.flush();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+                try {
+                    fw.write(selfURI + "\n " + response + "\n");
+                    fw.flush();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
+
+//            String message =
+//                    "You are an assistant helping to select relevant entity pairs for alignment.\n" +
+//                    "You have been provided with an entity from one ontology, and a set of entity from another ontology.\n" +
+//                    "Your task is to prioritize the relevance of entities of another ontology from high to low " +
+//                            "based on the provided contents.\n\n" +
+//                    "<Entity to align>:\n" +
+//                    entityVerbos.get(selfURI).toString() + "\n\n" +
+//                    "<Set of Entities>:\n";
+//            for (Belief<String> belief : beliefs) {
+//                message = message +
+//                        "<Entity from another agent>\n" +
+//                        "URI: " + belief.obj + "\n" +
+//                        entityVerbosOtherAgent.get(belief.obj).toString() + "\n";
+//            }
+//            message = message +
+//                    "Please select all possible entities, from the given set, you find likely to be aligned to the given entity.\n" +
+//                    "Provide your response in the following format:\n" +
+//                    "<Possible Entity URI>\n" +
+//                    "<Possible Entity URI>\n" +
+//                    "<Possible Entity URI>\n" +
+//                    "...\n\n" +
+//                    "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
+//
+//            // Call the LLM API to get the selected correspondences
+//            response = llm.prompt(message);
+//            try {
+//                fw.write(selfURI + "\n " + response + "\n");
+//                fw.flush();
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
         }
         try {
             fw.close();
