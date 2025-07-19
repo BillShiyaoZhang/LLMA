@@ -28,10 +28,6 @@ public class Agent {
     public Alignment initialCorrespondences;
     public Alignment privateCorrespondences;
 
-//    private List<Belief<OntClass>> entityBeliefs;
-//    private List<Belief<OntClass>> unrevealedEntitiesWithDescendingBelief;
-//    public Weaviate db;
-
     public Agent(Dictionary stringDict, LLMApiCaller apiCaller, double threshold) {
         this.stringDict = stringDict;
         this.name = stringDict.get("collectionName").toString();
@@ -168,21 +164,6 @@ public class Agent {
         return null;
     }
 
-//    public boolean hasUnrevealedEntity() {
-//        if (unrevealedEntitiesWithDescendingBelief.isEmpty()) {
-//            return false;
-//        }
-//        return true;
-//    }
-
-//    public OntClass nextUnrevealedEntity() {
-//        if (unrevealedEntitiesWithDescendingBelief.isEmpty()) {
-//            System.out.println("No unrevealed entities left.");
-//            return null;
-//        }
-//        return unrevealedEntitiesWithDescendingBelief.get(0).obj;
-//    }
-
     /**
      * Pairs the given entity with entities from the agent's ontology model.
      * Threshold.
@@ -312,6 +293,9 @@ public class Agent {
             String response = "";
             if (beliefsArray != null) {
                 for (var beliefsSet : beliefsArray) {
+                    if (beliefsSet == null) {
+                        continue; // Skip null sets
+                    }
                     String message =
                             "You are an assistant helping to select relevant entity pairs for alignment.\n" +
                                     "You have been provided with an entity from one ontology, and a set of entity from another ontology.\n" +
@@ -335,61 +319,32 @@ public class Agent {
                             "...\n\n" +
                             "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
 
-                    System.out.println(message.length());
-                    // Call the LLM API to get the selected correspondences
                     response += llm.prompt(message);
-                    try {
-                        fw.write(selfURI + "\n " + response + "\n");
-                        fw.flush();
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
                 }
                 try {
-                    fw.write(selfURI + "\n " + response + "\n");
+                    String formatedResponse = formatResponse(response);
+                    System.out.println(formatedResponse);
+                    fw.write(selfURI + "\n " + formatedResponse + "\n");
                     fw.flush();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             }
-
-//            String message =
-//                    "You are an assistant helping to select relevant entity pairs for alignment.\n" +
-//                    "You have been provided with an entity from one ontology, and a set of entity from another ontology.\n" +
-//                    "Your task is to prioritize the relevance of entities of another ontology from high to low " +
-//                            "based on the provided contents.\n\n" +
-//                    "<Entity to align>:\n" +
-//                    entityVerbos.get(selfURI).toString() + "\n\n" +
-//                    "<Set of Entities>:\n";
-//            for (Belief<String> belief : beliefs) {
-//                message = message +
-//                        "<Entity from another agent>\n" +
-//                        "URI: " + belief.obj + "\n" +
-//                        entityVerbosOtherAgent.get(belief.obj).toString() + "\n";
-//            }
-//            message = message +
-//                    "Please select all possible entities, from the given set, you find likely to be aligned to the given entity.\n" +
-//                    "Provide your response in the following format:\n" +
-//                    "<Possible Entity URI>\n" +
-//                    "<Possible Entity URI>\n" +
-//                    "<Possible Entity URI>\n" +
-//                    "...\n\n" +
-//                    "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
-//
-//            // Call the LLM API to get the selected correspondences
-//            response = llm.prompt(message);
-//            try {
-//                fw.write(selfURI + "\n " + response + "\n");
-//                fw.flush();
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
         }
         try {
             fw.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private String formatResponse(String response) {
+        String prompt = "You are a helpful formatter.  The below is the response from the LLM on the task " +
+                "finding the relevant entities regarding a given entity. Please format it to a list of URIs, " +
+                "one URI per line, and remove any other text.  " +
+                "If there are no URIs, please respond with an empty space only.\n\n" +
+                response;
+        return llm.prompt(prompt);
     }
 
     private void writePotentialEntityPairsToFile(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict) {

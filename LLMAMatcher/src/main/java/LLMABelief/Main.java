@@ -42,7 +42,7 @@ public class Main {
 
     public static void initStringDictionaries() {
         commonStringsDict.put("llmApiCaller", LLMApiCallers.LMStudio);
-        commonStringsDict.put("modelName", "qwen/qwen3-30b-a3b");
+        commonStringsDict.put("modelName", "qwen/qwen3-14b");
         commonStringsDict.put("dataSet", "Anatomy");
         commonStringsDict.put("threshold", 0.6);
         commonStringsDict.put("initCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/init_correspondences/init_correspondences-");
@@ -254,18 +254,18 @@ public class Main {
         return entitiesVerbos;
     }
 
-    private static void loadEmbeddings() {
-        loadEmbedding(humanStringsDict.get("embeddingPath").toString(), humanStringsDict.get("collectionName").toString());
-        loadEmbedding(mouseStringsDict.get("embeddingPath").toString(), mouseStringsDict.get("collectionName").toString());
-    }
+//    private static void loadEmbeddings() {
+//        loadEmbedding(humanStringsDict.get("embeddingPath").toString(), humanStringsDict.get("collectionName").toString());
+//        loadEmbedding(mouseStringsDict.get("embeddingPath").toString(), mouseStringsDict.get("collectionName").toString());
+//    }
 
-    private static void loadEmbedding(String embeddingPath, String collectionName) {
-        Map<String, Float[]> map = readEmbeddings(embeddingPath);
-        Weaviate db = new Weaviate(collectionName);
-        for (Map.Entry<String, Float[]> entry : map.entrySet()) {
-            db.add(collectionName, entry.getKey(), entry.getValue());
-        }
-    }
+//    private static void loadEmbedding(String embeddingPath, String collectionName) {
+//        Map<String, Float[]> map = readEmbeddings(embeddingPath);
+//        Weaviate db = new Weaviate(collectionName);
+//        for (Map.Entry<String, Float[]> entry : map.entrySet()) {
+//            db.add(collectionName, entry.getKey(), entry.getValue());
+//        }
+//    }
 
     private static Map<String, Float[]>  readEmbeddings(String embeddingPath) {
         Map<String, Float[]> map = new HashMap<>();

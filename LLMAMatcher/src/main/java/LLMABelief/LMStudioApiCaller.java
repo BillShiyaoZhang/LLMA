@@ -66,8 +66,8 @@ public class LMStudioApiCaller implements LLMApiCaller {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            System.out.println("Status Code: " + response.statusCode());
-            System.out.println("Response Body: " + response.body());
+//            System.out.println("Status Code: " + response.statusCode());
+//            System.out.println("Response Body: " + response.body());
 
             if (response.statusCode() != 200) {
                 System.err.println("Error: " + response.statusCode() + " - " + response.body());
@@ -83,7 +83,7 @@ public class LMStudioApiCaller implements LLMApiCaller {
                     .get("content")
                     .getAsString();
 
-            System.out.println(content);
+//            System.out.println(content);
 
             return content;
 
