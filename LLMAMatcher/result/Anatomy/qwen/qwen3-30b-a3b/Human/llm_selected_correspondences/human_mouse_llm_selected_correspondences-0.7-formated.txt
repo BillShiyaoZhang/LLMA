@@ -750,8 +750,7 @@ http://human.owl#NCI_C12925, http://mouse.owl#MA_0000232, http://mouse.owl#MA_00
 http://human.owl#NCI_C12924, http://mouse.owl#MA_0001181  , http://mouse.owl#MA_0001163  , http://mouse.owl#MA_0000235  , http://mouse.owl#MA_0001181  , http://mouse.owl#MA_0000234
 http://human.owl#NCI_C12919, http://mouse.owl#MA_0000003, http://mouse.owl#MA_0000019
 http://human.owl#NCI_C34082, http://mouse.owl#MA_0000323
-http://human.owl#NCI_C12911, http://mouse.owl#MA_0001090  
-http://mouse.owl#MA_000888  , http://mouse.owl#MA_0000233
+http://human.owl#NCI_C12911, http://mouse.owl#MA_0001090, http://mouse.owl#MA_0001088  , http://mouse.owl#MA_0000233
 http://human.owl#NCI_C12910, http://mouse.owl#MA_0000140  , http://mouse.owl#MA_0000752  , http://mouse.owl#MA_0000135  , http://mouse.owl#MA_0000136
 http://human.owl#NCI_C12909, http://mouse.owl#MA_0002434
 http://human.owl#NCI_C12908, http://mouse.owl#MA_0002435

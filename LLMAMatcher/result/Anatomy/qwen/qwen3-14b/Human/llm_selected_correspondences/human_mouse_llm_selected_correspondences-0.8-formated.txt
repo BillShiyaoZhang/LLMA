@@ -542,8 +542,6 @@ http://human.owl#NCI_C52787, http://mouse.owl#MA_0001373  , http://mouse.owl#MA_
 http://human.owl#NCI_C49245, http://mouse.owl#MA_0001754  , http://mouse.owl#MA_0001755  , http://mouse.owl#MA_0001782
 http://human.owl#NCI_C52786, http://mouse.owl#MA_0001395  , http://mouse.owl#MA_0000306  , http://mouse.owl#MA_0001387  
 http://mouseowl#MA_0001389  , http://mouse.owl#MA_0001388
-http://human.owl#NCI_C49244
-No relevant entity found
 http://human.owl#NCI_C52785, http://mouse.owl#MA_0001387  , http://mouse.owl#MA_0001381  , http://mouse.owl#MA_0001386  , http://mouse.owl#MA_0001380
 http://human.owl#NCI_C49243, http://mouse.owl#MA_0001539  , http://mouse.owl#MA_0002440
 http://human.owl#NCI_C52784, http://mouse.owl#MA_0001388  , http://mouse.owl#MA_0000306  , http://mouse.owl#MA_0001394  , http://mouse.owl#MA_0001395  , http://mouse.owl#MA_0001389  , http://mouse.owl#MA_0001380
