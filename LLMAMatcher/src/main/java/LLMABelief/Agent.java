@@ -276,8 +276,13 @@ public class Agent {
             }
 
             Set<Belief<String>>[] beliefsArray = null;
-            if (beliefs.size() > 10) {
-                beliefsArray = new Set[beliefs.size() / 10 + 1];  // Split into chunks of 10
+
+            if (beliefs.size() > 0) {
+                int size = beliefs.size() / 10;
+                if (beliefs.size() % 10 != 0) {
+                    size++;
+                }
+                beliefsArray = new Set[size];
                 int index = 0;
                 for (Belief<String> belief : beliefs) {
                     if (beliefsArray[index] == null) {
