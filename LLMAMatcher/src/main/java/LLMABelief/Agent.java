@@ -180,8 +180,8 @@ public class Agent {
     }
 
     public void selectCorrespondences(Alignment alignment, boolean isSource, Dictionary<String, String> entityVerbosOtherAgent) {
-//        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = extractPotentialEntityPairs(alignment, isSource);
-//        writePotentialEntityPairsToFile(potentialEntityPairsDict);
+        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = extractPotentialEntityPairs(alignment, isSource);
+        writePotentialEntityPairsToFile(potentialEntityPairsDict);
 
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictReload = loadPotentialEntityPairsFromFile(
                 stringDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
