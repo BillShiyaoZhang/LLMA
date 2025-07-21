@@ -47,6 +47,7 @@ public class Agent {
 
         initialCorrespondences = NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences(
                 Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
+        privateCorrespondences = new Alignment();
 
         // NOTE: the below line is used to load the selected correspondences from the LLM.
         // Only use it if you have already run the LLM to select correspondences.
@@ -181,8 +182,8 @@ public class Agent {
     }
 
     public void selectCorrespondences(Alignment alignment, boolean isSource, Dictionary<String, String> entityVerbosOtherAgent) {
-        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = extractPotentialEntityPairs(alignment, isSource);
-        writePotentialEntityPairsToFile(potentialEntityPairsDict);
+//        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = extractPotentialEntityPairs(alignment, isSource);
+//        writePotentialEntityPairsToFile(potentialEntityPairsDict);
 
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictReload = loadPotentialEntityPairsFromFile(
                 stringDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
