@@ -9,10 +9,7 @@ import org.apache.jena.ontology.OntProperty;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDFS;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class Agent {
@@ -48,6 +45,7 @@ public class Agent {
         initialCorrespondences = NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences(
                 Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
 
+        privateCorrespondences = new Alignment();
         // NOTE: the below line is used to load the selected correspondences from the LLM.
         // Only use it if you have already run the LLM to select correspondences.
 //        privateCorrespondences = loadSelectedCorrespondencesFromFile();
@@ -187,12 +185,7 @@ public class Agent {
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictReload = loadPotentialEntityPairsFromFile(
                 stringDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
         askLLMToSelectCorrespondences(potentialEntityPairsDictReload, entityVerbosOtherAgent);
-        privateCorrespondences = loadSelectedCorrespondencesFromFile();
-    }
-
-    private Alignment loadSelectedCorrespondencesFromFile() {
-        return loadSelectedCorrespondencesFromFile(
-                stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+        privateCorrespondences = loadSelectedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
 
     private Dictionary<String, Set<Belief<String>>> loadPotentialEntityPairsFromFile(String filePath) {
@@ -268,8 +261,29 @@ public class Agent {
 
     private void askLLMToSelectCorrespondences(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict,
                                                Dictionary<String, String> entityVerbosOtherAgent) {
+        Set<String> selected = new HashSet<>();
+        // read file from
+        try (BufferedReader reader = new BufferedReader(
+                new FileReader(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.startsWith("http://" + name.trim().toLowerCase())) {
+                    selected.add(line.trim());
+                } else {
+                    continue;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         FileWriter fw = Main.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt", true);
         for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
+            if (selected.contains(selfURI.trim())) {
+                continue; // Skip URIs that have already been selected
+            }
             Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
             if (beliefs.isEmpty()) {
                 continue;
