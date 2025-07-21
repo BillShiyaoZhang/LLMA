@@ -4,6 +4,7 @@ import LLMABelief.Agent;
 import LLMABelief.Main;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
+import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.CorrespondenceRelation;
 import org.xml.sax.SAXException;
 
 import java.io.BufferedReader;
@@ -30,11 +31,11 @@ public class Statistics {
     }
 
     private static void statistics(Alignment reference) {
-//        calculateStatistics(reference, 0.9);
+        calculateStatistics(reference, 0.9);
         calculateStatistics(reference, 0.8);
-//        calculateStatistics(reference, 0.7);
-//        calculateStatistics(reference, 0.6);
-//        calculateStatistics(reference, 0.5);
+        calculateStatistics(reference, 0.7);
+        calculateStatistics(reference, 0.6);
+        calculateStatistics(reference, 0.5);
     }
 
     private static void calculateStatistics(Alignment reference, double threshold) {
@@ -42,9 +43,49 @@ public class Statistics {
         System.out.println("Statistics for potential pairs with threshold: " + threshold);
         System.out.println("Total correspondences: " + reference.size());
 
+        initCorrespondencesToAlignment(reference, threshold);
         potentialPairsToAlignment(reference, threshold);
         llmSelectedPairsToAlignment(reference, threshold);
 
+    }
+
+    private static void initCorrespondencesToAlignment(Alignment reference, double threshold) {
+        Main.initStringDictionaries();
+        String initCorrespondencesPath = Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt";
+
+        Alignment initCorrespondences = new Alignment();
+        try (BufferedReader reader = new BufferedReader(new FileReader(initCorrespondencesPath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.trim().isEmpty()) {
+                    continue; // skip empty lines
+                }
+                String[] parts = line.split(", ");
+                if (parts.length < 2) {
+                    System.out.println("Skipping line due to insufficient information: " + line);
+                    continue; // skip lines that do not have enough information
+                }
+                initCorrespondences.add(new Correspondence(parts[1].trim(), parts[0].trim(), CorrespondenceRelation.EQUIVALENCE));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        int count = 0;
+        for (Correspondence c : initCorrespondences) {
+            if (reference.contains(c)) {
+//                System.out.println("Found correspondence in reference: " + c);
+                count++;
+            } else {
+//                System.out.println("Correspondence not found in reference: " + c);
+            }
+        }
+
+        System.out.println("Initial correspondences -----");
+        System.out.println("Total in initial correspondences: " + initCorrespondences.size());
+        System.out.println("Total found in reference: " + count);
+        System.out.println("Total not found in reference: " + (initCorrespondences.size() - count));
+        System.out.println("Reference not appear in init: " + (reference.size() - count));
     }
 
     private static void llmSelectedPairsToAlignment(Alignment reference, double threshold) {
