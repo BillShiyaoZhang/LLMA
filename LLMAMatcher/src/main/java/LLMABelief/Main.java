@@ -90,7 +90,7 @@ public class Main {
         commonStringsDict.put("llmApiCaller", LLMApiCallers.LMStudio);
         commonStringsDict.put("modelName", "qwen/qwen3-8b");
         commonStringsDict.put("dataSet", "Anatomy");
-        commonStringsDict.put("threshold", 0.7);
+        commonStringsDict.put("threshold", 0.6);
         commonStringsDict.put("initCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/init_correspondences/init_correspondences-");
         commonStringsDict.put("DataSetRoot", "src/main/java/DataSet/");
         commonStringsDict.put("reference", "reference.rdf");
