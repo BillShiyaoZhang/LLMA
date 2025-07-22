@@ -183,7 +183,7 @@ public class Agent {
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictReload = loadPotentialEntityPairsFromFile(
                 Main.commonStringsDict.get("potentiCorrespondencesPath").toString() + threshold + "-" + name + ".txt");
         askLLMToSelectCorrespondences(potentialEntityPairsDictReload, entityVerbosOtherAgent);
-        privateCorrespondences = loadSelectedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+//        privateCorrespondences = loadSelectedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
 
     private Dictionary<String, Set<Belief<String>>> loadPotentialEntityPairsFromFile(String filePath) {
@@ -260,21 +260,22 @@ public class Agent {
     private void askLLMToSelectCorrespondences(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict,
                                                Dictionary<String, String> entityVerbosOtherAgent) {
         Set<String> selected = new HashSet<>();
-        // read file from
-        try (BufferedReader reader = new BufferedReader(
-                new FileReader(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt"))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                if (line.startsWith("http://" + name.trim().toLowerCase())) {
-                    selected.add(line.trim());
-                } else {
-                    continue;
+        String path = stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt";
+        if (new File(path).exists()) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    if (line.startsWith("http://" + name.trim().toLowerCase())) {
+                        selected.add(line.trim());
+                    } else {
+                        continue;
+                    }
                 }
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
 
         FileWriter fw = Main.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt", true);
