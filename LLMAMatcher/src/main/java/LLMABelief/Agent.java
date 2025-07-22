@@ -259,6 +259,13 @@ public class Agent {
                 continue;
             }
 
+            System.out.println(selfURI);
+            try {
+                fw.write(selfURI + "\n ");
+                fw.flush();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             Set<Belief<String>>[] beliefsArray = null;
 
             if (beliefs.size() > 0) {
@@ -279,7 +286,6 @@ public class Agent {
                 }
             }
 
-            String response = "";
             if (beliefsArray != null) {
                 for (var beliefsSet : beliefsArray) {
                     if (beliefsSet == null) {
@@ -308,16 +314,17 @@ public class Agent {
                             "...\n\n" +
                             "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
 
-                    response += llm.prompt(message);
+                    String response = llm.prompt(message);
+
+                    try {
+                        String formatedResponse = formatResponse(response);
+                        fw.write(formatedResponse + "\n");
+                        fw.flush();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
-                try {
-                    String formatedResponse = formatResponse(response);
-                    System.out.println(formatedResponse);
-                    fw.write(selfURI + "\n " + formatedResponse + "\n");
-                    fw.flush();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+
             }
         }
         try {
