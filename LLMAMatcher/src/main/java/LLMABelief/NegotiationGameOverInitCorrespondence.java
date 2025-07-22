@@ -45,7 +45,7 @@ public class NegotiationGameOverInitCorrespondence extends NegotiationGameOverCo
                 + Main.commonStringsDict.get("threshold").toString() + "-statistics.csv");
         for (int i = 0; i < iterations; i++) {
             NegotiationGameOverInitCorrespondence game = new NegotiationGameOverInitCorrespondence(
-                    Main.humanStringsDict, Main.mouseStringsDict, null, (double) Main.commonStringsDict.get("threshold"),
+                    Main.sourceStringsDict, Main.targetStringsDict, null, (double) Main.commonStringsDict.get("threshold"),
                     Main.commonStringsDict.get("initCorrespondencesPath").toString()
                             + Main.commonStringsDict.get("threshold").toString() + ".txt");
             Alignment alignment = game.play();

@@ -13,10 +13,12 @@ import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
-public class Main {
-    public static Dictionary humanStringsDict = new Hashtable();
+import static LLMABelief.NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences;
 
-    public static Dictionary mouseStringsDict = new Hashtable();
+public class Main {
+    public static Dictionary sourceStringsDict = new Hashtable();
+
+    public static Dictionary targetStringsDict = new Hashtable();
 
     public static Dictionary commonStringsDict = new Hashtable();
 
@@ -30,6 +32,8 @@ public class Main {
 //                mouseStringsDict.get("embeddingPath").toString(),
 //                commonStringsDict.get("initCorrespondencesPath").toString(), 0.5);
 
+//        computePotentialPairs();
+
         // init database
         // NOTE: The below embedding loading loads the embeddings from the "result/" folder.
         // Use the above lines to generate the embeddings first.
@@ -37,7 +41,56 @@ public class Main {
 
         // run the game.
         // NOTE: The below game is dependent on the embeddings loaded to the db above.
-        play(NegotiationGameOverLLMGeneratedCorrespondence.class, commonStringsDict, humanStringsDict, mouseStringsDict);
+        play(NegotiationGameOverLLMGeneratedCorrespondence.class, commonStringsDict, sourceStringsDict, targetStringsDict);
+    }
+
+    private static void computePotentialPairs() {
+        Alignment alignment = loadCorrespondences(commonStringsDict.get("initCorrespondencesPath").toString()
+                + commonStringsDict.get("threshold").toString() + ".txt");
+        Set<String> selfURIs = new HashSet<>();
+        Set<String> selfURIS = alignment.getDistinctSourcesAsSet();
+        Set<String> selfURIT = alignment.getDistinctTargetsAsSet();
+
+        // Dict: selfURI -> Set of Belief<otherEntityURI>
+        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictS = new Hashtable<>();
+        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictT = new Hashtable<>();
+        for (String selfURI : selfURIS) {
+            potentialEntityPairsDictS.put(selfURI, new HashSet<>());
+        }
+        for (String selfURI : selfURIT) {
+            potentialEntityPairsDictT.put(selfURI, new HashSet<>());
+        }
+
+        // Populate the potentialEntityPairsDict with beliefs based on the alignment
+        for (Correspondence c : alignment) {
+                potentialEntityPairsDictS.get(c.getEntityOne()).add(new Belief<>(c.getEntityTwo(), c.getConfidence()));
+                potentialEntityPairsDictT.get(c.getEntityTwo()).add(new Belief<>(c.getEntityOne(), c.getConfidence()));
+        }
+
+        writePotentialEntityPairsToFile(potentialEntityPairsDictS, sourceStringsDict.get("collectionName").toString());
+        writePotentialEntityPairsToFile(potentialEntityPairsDictT, targetStringsDict.get("collectionName").toString());
+    }
+
+    private static void writePotentialEntityPairsToFile(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict, String postfix) {
+        FileWriter fw = Main.createFileWriter(commonStringsDict.get("potentiCorrespondencesPath").toString() + commonStringsDict.get("threshold").toString() + "-" + postfix + ".txt");
+        try {
+            for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
+                Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
+                if (beliefs.isEmpty()) {
+                    continue;
+                }
+                fw.write("Self URI: " + selfURI + "\n");
+                for (Belief<String> belief : beliefs) {
+                    String otherEntityURI = belief.obj;
+                    double confidence = belief.value;
+                    fw.write("  - Other Entity URI: " + otherEntityURI + ", Confidence: " + confidence + "\n");
+                }
+            }
+            fw.flush();
+            fw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void initStringDictionaries() {
@@ -48,24 +101,25 @@ public class Main {
         commonStringsDict.put("initCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/init_correspondences/init_correspondences-");
         commonStringsDict.put("DataSetRoot", "src/main/java/DataSet/");
         commonStringsDict.put("reference", "reference.rdf");
+        commonStringsDict.put("potentiCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/potential_pairs/init_correspondences-");
 
-        humanStringsDict.put("ontologyPath", commonStringsDict.get("DataSetRoot").toString() + "/" + commonStringsDict.get("dataSet").toString() + "/human.owl");
-        humanStringsDict.put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
-        humanStringsDict.put("entityURIPrefix", "http://human.owl#NCI");
-        humanStringsDict.put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-        humanStringsDict.put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
-        humanStringsDict.put("collectionName", "Human");
-        humanStringsDict.put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/" + humanStringsDict.get("collectionName").toString() + "/potential_pairs/human_mouse_potential_pairs-");
-        humanStringsDict.put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/" + humanStringsDict.get("collectionName").toString() + "/llm_selected_correspondences/human_mouse_llm_selected_correspondences-");
+        sourceStringsDict.put("ontologyPath", commonStringsDict.get("DataSetRoot").toString() + "/" + commonStringsDict.get("dataSet").toString() + "/human.owl");
+        sourceStringsDict.put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/human_verbo-remove_null-remove_non_nl-remove_properties.txt");
+        sourceStringsDict.put("entityURIPrefix", "http://human.owl#NCI");
+        sourceStringsDict.put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+        sourceStringsDict.put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/human_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+        sourceStringsDict.put("collectionName", "Human");
+        sourceStringsDict.put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/" + sourceStringsDict.get("collectionName").toString() + "/potential_pairs/human_mouse_potential_pairs-");
+        sourceStringsDict.put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/" + sourceStringsDict.get("collectionName").toString() + "/llm_selected_correspondences/human_mouse_llm_selected_correspondences-");
 
-        mouseStringsDict.put("ontologyPath", commonStringsDict.get("DataSetRoot").toString() + "/" + commonStringsDict.get("dataSet").toString() + "/mouse.owl");
-        mouseStringsDict.put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
-        mouseStringsDict.put("entityURIPrefix", "http://mouse.owl#MA");
-        mouseStringsDict.put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
-        mouseStringsDict.put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
-        mouseStringsDict.put("collectionName", "Mouse");
-        mouseStringsDict.put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/"+ mouseStringsDict.get("collectionName").toString() + "/potential_pairs/mouse_human_potential_pairs-");
-        mouseStringsDict.put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/"+ mouseStringsDict.get("collectionName").toString() + "/llm_selected_correspondences/mouse_human_llm_selected_correspondences-");
+        targetStringsDict.put("ontologyPath", commonStringsDict.get("DataSetRoot").toString() + "/" + commonStringsDict.get("dataSet").toString() + "/mouse.owl");
+        targetStringsDict.put("verbosePath", "result/" + commonStringsDict.get("dataSet").toString() + "/verbos/mouse_verbo-remove_null-remove_non_nl-remove_properties.txt");
+        targetStringsDict.put("entityURIPrefix", "http://mouse.owl#MA");
+        targetStringsDict.put("propertyUri", "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym");
+        targetStringsDict.put("embeddingPath", "result/" + commonStringsDict.get("dataSet").toString() + "/embeddings/mouse_embeddings-remove_null-remove_non_nl-remove_properties.txt");
+        targetStringsDict.put("collectionName", "Mouse");
+        targetStringsDict.put("potentialEntityPairsPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/"+ targetStringsDict.get("collectionName").toString() + "/potential_pairs/mouse_human_potential_pairs-");
+        targetStringsDict.put("llmSelectedCorrespondencesPath", "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/"+ targetStringsDict.get("collectionName").toString() + "/llm_selected_correspondences/mouse_human_llm_selected_correspondences-");
     }
 
     private static void play(Class type, Dictionary commonStringsDict, Dictionary sourceStringDict, Dictionary targetStringDict) {
@@ -115,7 +169,7 @@ public class Main {
         }
     }
 
-    private static void compareWithReference(Alignment alignment, String statisticsPath) {
+    public static void compareWithReference(Alignment alignment, String statisticsPath) {
         try {
             Alignment reference = new Alignment(new File(
                     commonStringsDict.get("DataSetRoot").toString() + commonStringsDict.get("dataSet").toString() + "/" +  commonStringsDict.get("reference").toString()));
@@ -151,14 +205,14 @@ public class Main {
 
     private static void computeVerboes() {
         // Anatomy
-        verbalize(humanStringsDict.get("ontologyPaht").toString(),
-                humanStringsDict.get("verbosePath").toString(),
-                humanStringsDict.get("entityURIPrefix").toString(),
-                humanStringsDict.get("propertyUri").toString());
-        verbalize(mouseStringsDict.get("ontologyPath").toString(),
-                mouseStringsDict.get("verbosePath").toString(),
-                mouseStringsDict.get("entityURIPrefix").toString(),
-                mouseStringsDict.get("propertyUri").toString());
+        verbalize(sourceStringsDict.get("ontologyPaht").toString(),
+                sourceStringsDict.get("verbosePath").toString(),
+                sourceStringsDict.get("entityURIPrefix").toString(),
+                sourceStringsDict.get("propertyUri").toString());
+        verbalize(targetStringsDict.get("ontologyPath").toString(),
+                targetStringsDict.get("verbosePath").toString(),
+                targetStringsDict.get("entityURIPrefix").toString(),
+                targetStringsDict.get("propertyUri").toString());
     }
 
     private static void verbalize(String ontologyPath, String verbosePath, String entityURIPrefix, String propertyUri) {
@@ -184,8 +238,8 @@ public class Main {
 
     private static void computeEmbeddings() {
         // Anatomy
-        embed(humanStringsDict.get("verbosePath").toString(), humanStringsDict.get("embeddingPath").toString());
-        embed(mouseStringsDict.get("verbosePath").toString(), mouseStringsDict.get("embeddingPath").toString());
+        embed(sourceStringsDict.get("verbosePath").toString(), sourceStringsDict.get("embeddingPath").toString());
+        embed(targetStringsDict.get("verbosePath").toString(), targetStringsDict.get("embeddingPath").toString());
     }
 
     private static void embed(String verboPath, String embeddingPath) {

@@ -1,1 +1,0 @@
-human_mouse_potential_pairs-0.5.txt filter=lfs diff=lfs merge=lfs -text

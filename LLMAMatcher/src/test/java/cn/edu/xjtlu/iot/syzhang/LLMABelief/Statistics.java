@@ -1,6 +1,5 @@
 package cn.edu.xjtlu.iot.syzhang.LLMABelief;
 
-import LLMABelief.Agent;
 import LLMABelief.Main;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
@@ -90,9 +89,9 @@ public class Statistics {
 
     private static void llmSelectedPairsToAlignment(Alignment reference, double threshold) {
         Map<String, Set<String>> potentialPairsH = loadLLMSelectedPairs(
-                Main.humanStringsDict.get("llmSelectedCorrespondencesPath").toString() + threshold +"-formated.txt");
+                Main.sourceStringsDict.get("llmSelectedCorrespondencesPath").toString() + threshold +"-formated.txt");
         Map<String, Set<String>> potentialPairsM = loadLLMSelectedPairs(
-                Main.mouseStringsDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+                Main.targetStringsDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
 
         System.out.println("LLM selected pairs -----");
         compareStatics(potentialPairsH, potentialPairsM, reference);
@@ -131,9 +130,9 @@ public class Statistics {
     private static void potentialPairsToAlignment(Alignment reference, double threshold) {
         Main.initStringDictionaries();
         Map<String, Set<String>> potentialPairsH = loadPotentialPairs(
-                Main.humanStringsDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
+                Main.sourceStringsDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
         Map<String, Set<String>> potentialPairsM = loadPotentialPairs(
-                Main.mouseStringsDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
+                Main.targetStringsDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
 
         System.out.println("Potential pairs -----");
         compareStatics(potentialPairsH, potentialPairsM, reference);
