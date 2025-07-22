@@ -13,8 +13,6 @@ import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
-import static LLMABelief.NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences;
-
 public class Main {
     public static Dictionary sourceStringsDict = new Hashtable();
 
@@ -34,18 +32,13 @@ public class Main {
 
 //        computePotentialPairs();
 
-        // init database
-        // NOTE: The below embedding loading loads the embeddings from the "result/" folder.
-        // Use the above lines to generate the embeddings first.
-//        loadEmbeddings();
-
         // run the game.
         // NOTE: The below game is dependent on the embeddings loaded to the db above.
         play(NegotiationGameOverLLMGeneratedCorrespondence.class, commonStringsDict, sourceStringsDict, targetStringsDict);
     }
 
     private static void computePotentialPairs() {
-        Alignment alignment = loadCorrespondences(commonStringsDict.get("initCorrespondencesPath").toString()
+        Alignment alignment = Helper.loadCorrespondences(commonStringsDict.get("initCorrespondencesPath").toString()
                 + commonStringsDict.get("threshold").toString() + ".txt");
         Set<String> selfURIs = new HashSet<>();
         Set<String> selfURIS = alignment.getDistinctSourcesAsSet();
@@ -72,7 +65,7 @@ public class Main {
     }
 
     private static void writePotentialEntityPairsToFile(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict, String postfix) {
-        FileWriter fw = Main.createFileWriter(commonStringsDict.get("potentiCorrespondencesPath").toString() + commonStringsDict.get("threshold").toString() + "-" + postfix + ".txt");
+        FileWriter fw = Helper.createFileWriter(commonStringsDict.get("potentiCorrespondencesPath").toString() + commonStringsDict.get("threshold").toString() + "-" + postfix + ".txt");
         try {
             for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
                 Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
@@ -148,7 +141,7 @@ public class Main {
 
             String path = "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/";
             String alignmentPath = path + "alignment-" + commonStringsDict.get("threshold").toString() + ".txt";
-            FileWriter fw = createFileWriter(alignmentPath);
+            FileWriter fw = Helper.createFileWriter(alignmentPath);
             for (Correspondence c : alignment) {
                 fw.write(c.getEntityOne() + ", " + c.getEntityTwo() + ", " + c.getConfidence() + "\n");
             }
@@ -190,7 +183,7 @@ public class Main {
                 }
             }
 
-            FileWriter fw = createFileWriter(statisticsPath);
+            FileWriter fw = Helper.createFileWriter(statisticsPath);
             fw.write("Alignment in reference: " + alignmentInReference);
             fw.write("\nAlignment not in reference: " + (alignment.size() - alignmentInReference));
             fw.write("\nReference in alignment: " + referenceInAlignment);
@@ -227,7 +220,7 @@ public class Main {
         }
 
         // write the verbos to the file
-        try (FileWriter writer = createFileWriter(verbosePath)) {
+        try (FileWriter writer = Helper.createFileWriter(verbosePath)) {
             for (String verbo : verbos) {
                 writer.write(verbo + "\n");
             }
@@ -249,7 +242,7 @@ public class Main {
             return;
         }
 
-        try (FileWriter writer = createFileWriter(embeddingPath)) {
+        try (FileWriter writer = Helper.createFileWriter(embeddingPath)) {
             var it = entitiesVerbos.keys().asIterator();
             while (it.hasNext()) {
                 String uri = it.next();
@@ -308,19 +301,6 @@ public class Main {
         return entitiesVerbos;
     }
 
-//    private static void loadEmbeddings() {
-//        loadEmbedding(humanStringsDict.get("embeddingPath").toString(), humanStringsDict.get("collectionName").toString());
-//        loadEmbedding(mouseStringsDict.get("embeddingPath").toString(), mouseStringsDict.get("collectionName").toString());
-//    }
-
-//    private static void loadEmbedding(String embeddingPath, String collectionName) {
-//        Map<String, Float[]> map = readEmbeddings(embeddingPath);
-//        Weaviate db = new Weaviate(collectionName);
-//        for (Map.Entry<String, Float[]> entry : map.entrySet()) {
-//            db.add(collectionName, entry.getKey(), entry.getValue());
-//        }
-//    }
-
     private static Map<String, Float[]>  readEmbeddings(String embeddingPath) {
         Map<String, Float[]> map = new HashMap<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(embeddingPath))) {
@@ -354,7 +334,7 @@ public class Main {
         Map<String, Float[]> mapS = readEmbeddings(embeddingPathS);
         Map<String, Float[]> mapT = readEmbeddings(embeddingPathT);
 
-        try (FileWriter writer = createFileWriter(initCorrespondencesPath + "-" + threshold+".txt")) {
+        try (FileWriter writer = Helper.createFileWriter(initCorrespondencesPath + "-" + threshold+".txt")) {
             for (Map.Entry<String, Float[]> entryS : mapS.entrySet()) {
                 for (Map.Entry<String, Float[]> entryT : mapT.entrySet()) {
                     Float[] embeddingS = entryS.getValue();
@@ -363,8 +343,6 @@ public class Main {
                     if (embeddingS != null && embeddingT != null) {
                         double similarity = cosineSimilarity(embeddingS, embeddingT);
                         if (similarity > threshold) {
-//                            Correspondence correspondence = new Correspondence(
-//                                    entryS.getKey(), entryT.getKey(), similarity);
                             writer.write(entryS.getKey() + ", " + entryT.getKey() + ", " + similarity + "\n");
                         }
                     } else {
@@ -389,25 +367,5 @@ public class Main {
         }
 
         return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
-    }
-
-    public static FileWriter createFileWriter(String filePath) {
-        return createFileWriter(filePath, false);
-    }
-
-    public static FileWriter createFileWriter(String filePath, boolean append) {
-        File file = new File(filePath);
-        if (!file.getParentFile().exists()) {
-            file.getParentFile().mkdirs();
-        }
-        try {
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-            return new FileWriter(file, append);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 }

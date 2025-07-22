@@ -3,13 +3,9 @@ package LLMABelief;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.CorrespondenceRelation;
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.ontology.OntModelSpec;
-import org.apache.jena.rdf.model.ModelFactory;
 
 import java.util.Dictionary;
 import java.util.List;
-import java.util.Set;
 
 /***
  * This class defines the game, in which two agents negotiate over correspondences (i.e., entity pairs and their beliefs)

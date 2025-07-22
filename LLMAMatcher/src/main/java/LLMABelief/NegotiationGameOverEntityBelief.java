@@ -1,10 +1,6 @@
 package LLMABelief;
 
-import org.apache.jena.ontology.OntClass;
-import org.apache.jena.ontology.OntModel;
-
 import java.util.Dictionary;
-import java.util.Set;
 
 /***
  * This class defines the game, in which two agents negotiate over entities' beliefs, which are calculated by LLMs.
@@ -36,61 +32,6 @@ public class NegotiationGameOverEntityBelief extends NegotiationGameOverCorrespo
      */
     @Override
     protected void retrieveCorrespondences(){
-//        selectFirstProposer();
-//
-//        while (source.hasUnrevealedEntity() || target.hasUnrevealedEntity()) {
-//            if (nextProposer.hasUnrevealedEntity()) {
-//                Agent proposer = nextProposer;
-//                Agent receiver = (proposer == source) ? target : source;
-//                OntClass entity = proposer.nextUnrevealedEntity();
-//                Set<OntClass> entities = receiver.pair(entity);
-//
-//                // Each agent examines received entities and updates private correspondences.
-//                // If correspondences with self-confidence above the threshold are found, the corresponding entities
-//                // are shared to the other agent.
-//                while(true) {
-//                    if (entities == null) {
-//                        System.out.println("No entities found for pairing by the receiver.");
-//                        break;
-//                    }
-//
-//                    // The Proposer receives entities from the receiver, and updates its correspondences.
-//                    entities = proposer.pair(entities);
-//                    if (entities == null) {
-//                        System.out.println("No entities found for pairing by the proposer.");
-//                        break;
-//                    }
-//                    // The Receiver receives entities from the proposer, and updates its correspondences.
-//                    entities = receiver.pair(entities);
-//                }
-//
-//                switchProposer();
-//            } else {
-//                switchProposer();
-//            }
-//        }
-//        System.out.println("Game over: both agents have no entities left to propose.");
     }
-
-    private void selectFirstProposer() {
-        if (Math.random() < 0.5) {
-            nextProposer = source;
-            System.out.println("Agent 1 is selected as the first proposer.");
-        } else {
-            nextProposer = target;
-            System.out.println("Agent 2 is selected as the first proposer.");
-        }
-    }
-
-    private void switchProposer() {
-        if (nextProposer == source) {
-            nextProposer = target; // Switch to the other agent
-            System.out.println("Switching to Agent 2 for the next proposal.");
-        } else {
-            nextProposer = source; // Switch back to the first agent
-            System.out.println("Switching to Agent 1 for the next proposal.");
-        }
-    }
-
 
 }

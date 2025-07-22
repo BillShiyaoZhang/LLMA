@@ -13,8 +13,8 @@ import java.io.*;
 import java.util.*;
 
 public class Agent {
-    public String name;
-    public LLMApiCaller llm;
+    private String name;
+    private LLMApiCaller llm;
     private OntModel ontology;
     private Dictionary stringDict;
     private double threshold;
@@ -37,14 +37,9 @@ public class Agent {
 
         entities = extractEntities(ontology, stringDict.get("entityURIPrefix").toString());
         entityVerbos = Main.loadEntityVerbos(stringDict.get("verbosePath").toString());
-//        entityBeliefs = initConfidence(entities);
-//        unrevealedEntitiesWithDescendingBelief = descending(entityBeliefs);
 
-//        this.db = new Weaviate(this.name);
-
-        initialCorrespondences = NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences(
+        initialCorrespondences = Helper.loadCorrespondences(
                 Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
-        privateCorrespondences = new Alignment();
 
         privateCorrespondences = new Alignment();
         // NOTE: the below line is used to load the selected correspondences from the LLM.
@@ -155,30 +150,6 @@ public class Agent {
     }
 
 
-    private List<Belief<OntClass>> initConfidence(List<OntClass> entities) {
-        return null;
-    }
-
-    private List<Belief<OntClass>> descending(List<Belief<OntClass>> entityConfidences) {
-        return null;
-    }
-
-    /**
-     * Pairs the given entity with entities from the agent's ontology model.
-     * Threshold.
-     * Updates the private correspondences.
-     *
-     * @param entity The entity to pair with.
-     * @return A set of paired entities.
-     */
-    public Set<OntClass> pair(OntClass entity) {
-        return null;
-    }
-
-    public Set<OntClass> pair(Set<OntClass> entities) {
-        return null;
-    }
-
     public void selectCorrespondences(Dictionary<String, String> entityVerbosOtherAgent) {
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictReload = loadPotentialEntityPairsFromFile(
                 Main.commonStringsDict.get("potentiCorrespondencesPath").toString() + threshold + "-" + name + ".txt");
@@ -220,7 +191,7 @@ public class Agent {
         return potentialEntityPairsDict;
     }
 
-    private Alignment loadSelectedCorrespondencesFromFile(String filePath) {
+    public Alignment loadSelectedCorrespondencesFromFile(String filePath) {
         Alignment llmSelectedPairs = new Alignment();
         try (BufferedReader reader = new BufferedReader(
                 new FileReader(filePath))) {
@@ -278,7 +249,7 @@ public class Agent {
             }
         }
 
-        FileWriter fw = Main.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt", true);
+        FileWriter fw = Helper.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt", true);
         for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
             if (selected.contains(selfURI.trim())) {
                 continue; // Skip URIs that have already been selected
@@ -365,28 +336,7 @@ public class Agent {
         return llm.prompt(prompt);
     }
 
-    private void writePotentialEntityPairsToFile(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict) {
-        FileWriter fw = Main.createFileWriter(stringDict.get("potentialEntityPairsPath").toString() + threshold + ".txt");
-        try {
-            for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
-                Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
-                if (beliefs.isEmpty()) {
-                    continue;
-                }
-                fw.write("Self URI: " + selfURI + "\n");
-                for (Belief<String> belief : beliefs) {
-                    String otherEntityURI = belief.obj;
-                    double confidence = belief.value;
-                    fw.write("  - Other Entity URI: " + otherEntityURI + ", Confidence: " + confidence + "\n");
-                }
-            }
-            fw.flush();
-            fw.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
+    // NOTE: maybe not used
     private Dictionary<String, Set<Belief<String>>> extractPotentialEntityPairs(
             Alignment alignment, boolean isSource) {
         Set<String> selfURIs = new HashSet<>();

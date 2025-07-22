@@ -11,8 +11,6 @@ import java.io.IOException;
 import java.util.Dictionary;
 import java.util.Random;
 
-import static LLMABelief.NegotiationGameOverLLMGeneratedCorrespondence.loadCorrespondences;
-
 public class NegotiationGameOverInitCorrespondence extends NegotiationGameOverCorrespondence{
     private String initCorrespondencesPath;
 
@@ -23,7 +21,7 @@ public class NegotiationGameOverInitCorrespondence extends NegotiationGameOverCo
 
     @Override
     protected void retrieveCorrespondences() {
-        Alignment alignment = loadCorrespondences(initCorrespondencesPath);
+        Alignment alignment = Helper.loadCorrespondences(initCorrespondencesPath);
 
         // randomly split the correspondences into two sets, one for each agent
         for (Correspondence c : alignment) {
@@ -41,7 +39,7 @@ public class NegotiationGameOverInitCorrespondence extends NegotiationGameOverCo
         Main.commonStringsDict.put("threshold", 0.8);
         int iterations = 20;
 
-        FileWriter fw = Main.createFileWriter(Main.commonStringsDict.get("initCorrespondencesPath").toString()
+        FileWriter fw = Helper.createFileWriter(Main.commonStringsDict.get("initCorrespondencesPath").toString()
                 + Main.commonStringsDict.get("threshold").toString() + "-statistics.csv");
         for (int i = 0; i < iterations; i++) {
             NegotiationGameOverInitCorrespondence game = new NegotiationGameOverInitCorrespondence(
