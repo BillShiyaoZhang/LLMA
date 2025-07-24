@@ -38,7 +38,7 @@ public class Main {
     }
 
     private static void computePotentialPairs() {
-        Alignment alignment = Helper.loadCorrespondences(commonStringsDict.get("initCorrespondencesPath").toString()
+        Alignment alignment = Helper.loadInitCorrespondences(commonStringsDict.get("initCorrespondencesPath").toString()
                 + commonStringsDict.get("threshold").toString() + ".txt");
         Set<String> selfURIs = new HashSet<>();
         Set<String> selfURIS = alignment.getDistinctSourcesAsSet();

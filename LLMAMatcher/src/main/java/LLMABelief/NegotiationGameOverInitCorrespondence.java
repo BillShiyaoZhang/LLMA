@@ -21,7 +21,7 @@ public class NegotiationGameOverInitCorrespondence extends NegotiationGameOverCo
 
     @Override
     protected void retrieveCorrespondences() {
-        Alignment alignment = Helper.loadCorrespondences(initCorrespondencesPath);
+        Alignment alignment = Helper.loadInitCorrespondences(initCorrespondencesPath);
 
         // randomly split the correspondences into two sets, one for each agent
         for (Correspondence c : alignment) {

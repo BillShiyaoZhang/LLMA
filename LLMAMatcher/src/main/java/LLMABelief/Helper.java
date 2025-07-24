@@ -7,7 +7,7 @@ import java.io.*;
 
 public class Helper {
 
-    public static Alignment loadCorrespondences(String initCorrespondencesPath) {
+    public static Alignment loadInitCorrespondences(String initCorrespondencesPath) {
         if (initCorrespondencesPath == null || initCorrespondencesPath.isEmpty()) {
             System.err.println("No initial correspondences path provided.");
             return null;

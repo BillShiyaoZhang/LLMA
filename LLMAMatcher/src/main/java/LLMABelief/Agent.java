@@ -38,7 +38,7 @@ public class Agent {
         entities = extractEntities(ontology, stringDict.get("entityURIPrefix").toString());
         entityVerbos = Main.loadEntityVerbos(stringDict.get("verbosePath").toString());
 
-        initialCorrespondences = Helper.loadCorrespondences(
+        initialCorrespondences = Helper.loadInitCorrespondences(
                 Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
 
         privateCorrespondences = new Alignment();
