@@ -44,7 +44,7 @@ public class Agent {
         privateCorrespondences = new Alignment();
         // NOTE: the below line is used to load the selected correspondences from the LLM.
         // Only use it if you have already run the LLM to select correspondences.
-//        privateCorrespondences = loadSelectedCorrespondencesFromFile();
+//        privateCorrespondences = loadSelectedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
 
     public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
