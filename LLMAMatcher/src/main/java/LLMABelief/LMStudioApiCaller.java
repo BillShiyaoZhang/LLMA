@@ -33,7 +33,6 @@ public class LMStudioApiCaller implements LLMApiCaller {
      */
     @Override
     public String prompt(String message) {
-        message = message + "/no_think";
         message = message.replaceAll("\n", "");
 
         String requestBody = "{\n" +

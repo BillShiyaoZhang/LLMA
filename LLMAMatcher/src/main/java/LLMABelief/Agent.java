@@ -335,12 +335,14 @@ public class Agent {
     }
 
     private String formatResponse(String response) {
+        String removeThinking = response.split("</think>")[1];
         String prompt = "You are a helpful formatter.  The below is the response from the LLM on the task " +
                 "finding the relevant entities regarding a given entity. Please format it to a list of URIs, " +
                 "one URI per line, and remove any other text.  " +
                 "If there are no URIs, please respond with an empty space only.\n\n" +
-                response;
-        return llm.prompt(prompt);
+                removeThinking;
+        String formattedResponse = llm.prompt(prompt);
+        return formattedResponse.split("</think>")[1];
     }
 
     // NOTE: maybe not used
