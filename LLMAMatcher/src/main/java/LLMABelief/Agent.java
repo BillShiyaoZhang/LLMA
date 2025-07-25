@@ -341,8 +341,12 @@ public class Agent {
                 "one URI per line, and remove any other text.  " +
                 "If there are no URIs, please respond with an empty space only.\n\n" +
                 removeThinking;
-        String formattedResponse = llm.prompt(prompt);
-        return formattedResponse.split("</think>")[1];
+        String[] formattedResponse = llm.prompt(prompt).split("</think>");
+        if (formattedResponse.length < 2) {
+            System.out.println("Warning: LLM response is not formatted correctly. Response: " + response);
+            return formattedResponse[0]; // Return empty string if the response is not formatted correctly
+        }
+        return formattedResponse[1];
     }
 
     // NOTE: maybe not used
