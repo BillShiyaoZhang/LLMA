@@ -1,5 +1,9 @@
 package LLMABelief;
 
+import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
+
+import java.util.Dictionary;
+
 public class NegotiationGameOverLLMSelectCorrespondence extends NegotiationGameOverCorrespondence {
     private String llmSelectedCorrespondencesPath;
 
@@ -19,6 +23,10 @@ public class NegotiationGameOverLLMSelectCorrespondence extends NegotiationGameO
     private void retrieveLLMShortListedCorrespondences() {
         source.privateCorrespondences = loadSelectedCorrespondencesFromFile(llmSelectedCorrespondencesPath);
         target.privateCorrespondences = loadSelectedCorrespondencesFromFile(llmSelectedCorrespondencesPath);
+    }
+
+    private Alignment loadSelectedCorrespondencesFromFile(String llmSelectedCorrespondencesPath) {
+        return null;
     }
 
     private void llmSelectCorrespondences() {
