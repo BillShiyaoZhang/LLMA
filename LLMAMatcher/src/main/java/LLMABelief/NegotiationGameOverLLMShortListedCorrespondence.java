@@ -22,7 +22,7 @@ public class NegotiationGameOverLLMShortListedCorrespondence extends Negotiation
     protected void retrieveCorrespondences() {
         // NOTE: the results of the below codes are stored in the "result/" folder.
         // Only use the below codes if you want to generate the correspondences for each agent.
-        source.selectCorrespondences(target.entityVerbos);
-        target.selectCorrespondences(source.entityVerbos);
+        source.shortListCorrespondences(target.entityVerbos);
+        target.shortListCorrespondences(source.entityVerbos);
     }
 }

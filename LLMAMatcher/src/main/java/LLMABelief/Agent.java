@@ -150,7 +150,7 @@ public class Agent {
     }
 
 
-    public void selectCorrespondences(Dictionary<String, String> entityVerbosOtherAgent) {
+    public void shortListCorrespondences(Dictionary<String, String> entityVerbosOtherAgent) {
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictReload = loadPotentialEntityPairsFromFile(
                 Main.commonStringsDict.get("potentiCorrespondencesPath").toString() + threshold + "-" + name + ".txt");
         askLLMToSelectCorrespondences(potentialEntityPairsDictReload, entityVerbosOtherAgent);
