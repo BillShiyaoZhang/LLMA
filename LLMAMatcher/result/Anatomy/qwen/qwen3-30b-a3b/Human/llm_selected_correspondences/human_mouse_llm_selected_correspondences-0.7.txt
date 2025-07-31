@@ -17299,3 +17299,11 @@ http://human.owl#NCI_C32041
 <http://mouse.owl#MA_0001088>
 <http://mouse.owl#MA_0001089>
 <http://mouse.owl#MA_0000215>
+http://human.owl#NCI_C53058
+ 
+
+http://mouse.owl#MA_0002186
+http://mouse.owl#MA_0002193
+
+
+No relevant entity found
