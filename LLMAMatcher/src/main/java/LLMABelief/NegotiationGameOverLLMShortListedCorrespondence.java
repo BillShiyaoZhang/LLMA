@@ -2,10 +2,10 @@ package LLMABelief;
 
 import java.util.Dictionary;
 
-public class NegotiationGameOverLLMGeneratedCorrespondence extends NegotiationGameOverCorrespondence{
+public class NegotiationGameOverLLMShortListedCorrespondence extends NegotiationGameOverCorrespondence{
     private String initCorrespondencesPath;
 
-    public NegotiationGameOverLLMGeneratedCorrespondence(
+    public NegotiationGameOverLLMShortListedCorrespondence(
             Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, String initCorrespondencesPath,
             double threshold) {
         super(sourceStringDict, targetStringDict, apiCaller, threshold);

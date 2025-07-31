@@ -34,7 +34,7 @@ public class Main {
 
         // run the game.
         // NOTE: The below game is dependent on the embeddings loaded to the db above.
-        play(NegotiationGameOverLLMGeneratedCorrespondence.class, commonStringsDict, sourceStringsDict, targetStringsDict);
+        play(NegotiationGameOverLLMShortListedCorrespondence.class, commonStringsDict, sourceStringsDict, targetStringsDict);
     }
 
     private static void computePotentialPairs() {
