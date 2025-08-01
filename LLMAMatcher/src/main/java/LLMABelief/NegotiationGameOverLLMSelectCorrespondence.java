@@ -21,12 +21,8 @@ public class NegotiationGameOverLLMSelectCorrespondence extends NegotiationGameO
     }
 
     private void retrieveLLMShortListedCorrespondences() {
-        source.privateCorrespondences = loadSelectedCorrespondencesFromFile(llmSelectedCorrespondencesPath);
-        target.privateCorrespondences = loadSelectedCorrespondencesFromFile(llmSelectedCorrespondencesPath);
-    }
-
-    private Alignment loadSelectedCorrespondencesFromFile(String llmSelectedCorrespondencesPath) {
-        return null;
+        source.privateCorrespondences = source.loadSelectedCorrespondencesFromFile(llmSelectedCorrespondencesPath);
+        target.privateCorrespondences = target.loadSelectedCorrespondencesFromFile(llmSelectedCorrespondencesPath);
     }
 
     private void llmSelectCorrespondences() {

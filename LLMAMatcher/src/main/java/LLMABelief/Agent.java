@@ -154,7 +154,7 @@ public class Agent {
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictReload = loadPotentialEntityPairsFromFile(
                 Main.commonStringsDict.get("potentiCorrespondencesPath").toString() + threshold + "-" + name + ".txt");
         askLLMToSelectCorrespondences(potentialEntityPairsDictReload, entityVerbosOtherAgent);
-        //privateCorrespondences = loadSelectedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+//        privateCorrespondences = loadShortListedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
 
     private Dictionary<String, Set<Belief<String>>> loadPotentialEntityPairsFromFile(String filePath) {
@@ -191,7 +191,7 @@ public class Agent {
         return potentialEntityPairsDict;
     }
 
-    public Alignment loadSelectedCorrespondencesFromFile(String filePath) {
+    public Alignment loadShortListedCorrespondencesFromFile(String filePath) {
         Alignment llmSelectedPairs = new Alignment();
         try (BufferedReader reader = new BufferedReader(
                 new FileReader(filePath))) {
@@ -374,5 +374,9 @@ public class Agent {
             }
         }
         return potentialEntityPairsDict;
+    }
+
+    public Alignment loadSelectedCorrespondencesFromFile(String llmSelectedCorrespondencesPath) {
+        return null;
     }
 }
