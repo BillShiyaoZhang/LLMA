@@ -55,4 +55,9 @@ public class OllamaApiCaller implements LLMApiCaller{
         }
         return new Float[0];
     }
+
+    @Override
+    public String getUrisOnlyFromStringForThinkingModel(String text) {
+        return null;
+    }
 }

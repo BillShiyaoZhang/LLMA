@@ -141,4 +141,9 @@ public class QwenApiCaller implements LLMApiCaller {
         }
         return result;
     }
+
+    @Override
+    public String getUrisOnlyFromStringForThinkingModel(String text) {
+        return null;
+    }
 }

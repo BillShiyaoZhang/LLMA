@@ -141,4 +141,28 @@ public class LMStudioApiCaller implements LLMApiCaller {
         }
         return result;
     }
+
+    @Override
+    public String getUrisOnlyFromStringForThinkingModel(String text) {
+        String[] parts = text.split("</think>");
+        String removeThinking = "";
+        if (parts.length < 2) {
+            System.out.println("Warning: LLM response is not formatted correctly. Response: " + text);
+            removeThinking = parts[0]; // Return empty string if the response is not formatted correctly
+        } else {
+            removeThinking = parts[1];
+        }
+        String prompt = "You are a helpful formatter.  The below is the response from the LLM on the task " +
+                "finding the relevant entities regarding a given entity. Please format it to a list of URIs, " +
+                "one URI per line, and remove any other text.  " +
+                "If there are no URIs, please respond with an empty space only.\n\n" +
+                removeThinking;
+        String[] formattedResponse = prompt(prompt).split("</think>");
+        if (formattedResponse.length < 2) {
+            System.out.println("Warning: LLM response is not formatted correctly. Response: " + text);
+            return formattedResponse[0]; // Return empty string if the response is not formatted correctly
+        }
+        return formattedResponse[1];
+    }
+
 }

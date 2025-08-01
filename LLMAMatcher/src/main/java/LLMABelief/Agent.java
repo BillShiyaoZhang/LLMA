@@ -13,11 +13,11 @@ import java.io.*;
 import java.util.*;
 
 public class Agent {
-    private String name;
-    private LLMApiCaller llm;
-    private OntModel ontology;
+    public String name;
+    public LLMApiCaller llm;
+    public OntModel ontology;
     private Dictionary stringDict;
-    private double threshold;
+    public double threshold;
 
     public List<OntClass> entities;
     public Dictionary<String, String> entityVerbos;
@@ -317,7 +317,7 @@ public class Agent {
                     String response = llm.prompt(message);
 
                     try {
-                        String formatedResponse = formatResponse(response);
+                        String formatedResponse = llm.getUrisOnlyFromStringForThinkingModel(response);
                         fw.write(formatedResponse + "\n");
                         fw.flush();
                     } catch (IOException e) {
@@ -335,7 +335,11 @@ public class Agent {
     }
 
     private String formatResponse(String response) {
-        String removeThinking = response.split("</think>")[1];
+        String[] parts = response.split("</think>");
+        String removeThinking = parts[0];
+        if (parts.length >= 2) {
+            removeThinking = parts[1];
+        }
         String prompt = "You are a helpful formatter.  The below is the response from the LLM on the task " +
                 "finding the relevant entities regarding a given entity. Please format it to a list of URIs, " +
                 "one URI per line, and remove any other text.  " +
@@ -349,34 +353,4 @@ public class Agent {
         return formattedResponse[1];
     }
 
-    // NOTE: maybe not used
-    private Dictionary<String, Set<Belief<String>>> extractPotentialEntityPairs(
-            Alignment alignment, boolean isSource) {
-        Set<String> selfURIs = new HashSet<>();
-        if (isSource) {
-            selfURIs = alignment.getDistinctSourcesAsSet();
-        } else {
-            selfURIs = alignment.getDistinctTargetsAsSet();
-        }
-
-        // Dict: selfURI -> Set of Belief<otherEntityURI>
-        Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = new Hashtable<>();
-        for (String selfURI : selfURIs) {
-            potentialEntityPairsDict.put(selfURI, new HashSet<>());
-        }
-
-        // Populate the potentialEntityPairsDict with beliefs based on the alignment
-        for (Correspondence c : alignment) {
-            if (isSource) {
-                potentialEntityPairsDict.get(c.getEntityOne()).add(new Belief<>(c.getEntityTwo(), c.getConfidence()));
-            } else {
-                potentialEntityPairsDict.get(c.getEntityTwo()).add(new Belief<>(c.getEntityOne(), c.getConfidence()));
-            }
-        }
-        return potentialEntityPairsDict;
-    }
-
-    public Alignment loadSelectedCorrespondencesFromFile(String llmSelectedCorrespondencesPath) {
-        return null;
-    }
 }
