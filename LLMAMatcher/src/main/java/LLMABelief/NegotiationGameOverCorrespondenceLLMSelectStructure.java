@@ -1,10 +1,11 @@
 package LLMABelief;
 
+import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
+import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
 import org.apache.jena.ontology.OntClass;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Dictionary;
 
 public class NegotiationGameOverCorrespondenceLLMSelectStructure extends NegotiationGameOverCorrespondence {
@@ -44,23 +45,58 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
     }
 
     private void selectCorrespondencesBasedOnStrucutralInfo() {
-        agentSelectCorrespondencesBasedOnStrucutralInfo(source, target);
-        agentSelectCorrespondencesBasedOnStrucutralInfo(target, source);
+        agentSelectCorrespondencesBasedOnStrucutralInfo(source, target, true);
+        agentSelectCorrespondencesBasedOnStrucutralInfo(target, source, false);
     }
 
-    private void agentSelectCorrespondencesBasedOnStrucutralInfo(Agent source, Agent target) {
-        FileWriter fw = Helper.createFileWriter(Main.commonStringsDict.get("dataSetResultBase").toString() +
+    private void agentSelectCorrespondencesBasedOnStrucutralInfo(Agent source, Agent target, boolean isSource) {
+        String filePath = Main.commonStringsDict.get("dataSetResultBase").toString() +
                 Main.commonStringsDict.get("modelName").toString() + "/" + source.name +
                 "/llm_selected-structural/llm_selected-structural-" + Main.commonStringsDict.get("threshold").toString() +
-                ".txt", true);
-        int i = 1;
+                ".txt";
+
+        Alignment remains = new Alignment();
         for (Correspondence c : source.privateCorrespondences) {
-            String entityUri = c.getEntityOne();
+            remains.add(c);
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.startsWith("http://" + source.name.toLowerCase())) {
+                    String uri = line.trim();
+                    // Check if the URI is already in the alignment
+                    if (remains.getCorrespondencesSource(uri) != null) {
+                        remains.removeCorrespondencesSource(uri);
+                    }
+                }
+            }
+        } catch (FileNotFoundException e) {
+            // File does not exist, we will create it.
+            System.out.println("File not found, creating new file: " + filePath);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        FileWriter fw = Helper.createFileWriter(filePath, true);
+        int i = 1;
+        for (Correspondence c : remains) {  // c = <source entity, target entity, confidence>
+            String entityUri;
+            if (isSource) {
+                entityUri = c.getEntityOne();
+            } else {
+                entityUri = c.getEntityTwo();
+            }
             String entityVerbose = getNeighborhoodVerbose(entityUri, source);
             String targetVerbose = "";
-            for (Correspondence targetC : target.privateCorrespondences) {
-                if (targetC.getEntityOne().equals(entityUri)) {
-                    targetVerbose = targetVerbose + targetC.getEntityTwo() + "\n" + getNeighborhoodVerbose(targetC.getEntityTwo(), target) + "\n";
+            for (Correspondence targetC : target.privateCorrespondences) {  // targetC = <source entity, target entity, confidence>
+                if (isSource) {
+                    if (targetC.getEntityOne().equals(entityUri)) {
+                        targetVerbose = targetVerbose + targetC.getEntityTwo() + "\n" + getNeighborhoodVerbose(targetC.getEntityTwo(), target) + "\n";
+                    }
+                } else {
+                    if (targetC.getEntityTwo().equals(entityUri)) {
+                        targetVerbose = targetVerbose + targetC.getEntityOne() + "\n" + getNeighborhoodVerbose(targetC.getEntityOne(), target) + "\n";
+                    }
                 }
             }
             String message =
