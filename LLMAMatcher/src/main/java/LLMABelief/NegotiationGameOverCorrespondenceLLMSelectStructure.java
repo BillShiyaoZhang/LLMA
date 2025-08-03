@@ -26,7 +26,19 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
                 "result/" + Main.commonStringsDict.get("dataSet").toString() + "/" +
                         Main.commonStringsDict.get("modelName").toString(),
                 (double) Main.commonStringsDict.get("threshold"));
-        game.play();
+        Alignment alignment = game.play();
+        FileWriter fw = Helper.createFileWriter("result/" + Main.commonStringsDict.get("dataSet").toString() + "/" +
+                        Main.commonStringsDict.get("modelName").toString() + "/alignment-llm_selected-structural-" +
+                        Main.commonStringsDict.get("threshold") + ".txt",
+                true);
+        for (Correspondence c : alignment) {
+            try {
+                fw.write(c.getEntityOne() + " " + c.getEntityTwo() + " " + c.getConfidence() + "\n");
+                fw.flush();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     @Override
@@ -60,6 +72,8 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
             remains.add(c);
         }
 
+        int i = 1;
+
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -68,6 +82,7 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
                     // Check if the URI is already in the alignment
                     if (remains.getCorrespondencesSource(uri) != null) {
                         remains.removeCorrespondencesSource(uri);
+                        i++;
                     }
                 }
             }
@@ -78,7 +93,6 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
             throw new RuntimeException(e);
         }
         FileWriter fw = Helper.createFileWriter(filePath, true);
-        int i = 1;
         for (Correspondence c : remains) {  // c = <source entity, target entity, confidence>
             String entityUri;
             if (isSource) {
