@@ -72,7 +72,6 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
             remains.add(c);
         }
 
-        int i = 1;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -82,7 +81,9 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
                     // Check if the URI is already in the alignment
                     if (remains.getCorrespondencesSource(uri) != null) {
                         remains.removeCorrespondencesSource(uri);
-                        i++;
+                    }
+                    if (remains.getCorrespondencesTarget(uri) != null) {
+                        remains.removeCorrespondencesTarget(uri);
                     }
                 }
             }
@@ -92,6 +93,8 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        int i = remains.size();
         FileWriter fw = Helper.createFileWriter(filePath, true);
         for (Correspondence c : remains) {  // c = <source entity, target entity, confidence>
             String entityUri;
@@ -131,7 +134,7 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
             String response = source.llm.prompt(message);
             String formatedResponse = source.llm.getUrisOnlyFromStringForThinkingModel(response);
             try {
-                System.out.println(i++ + entityUri);
+                System.out.println(i-- + entityUri);
                 fw.write(entityUri + "\n" + formatedResponse + "\n\n");
                 fw.flush();
             } catch (IOException e) {
