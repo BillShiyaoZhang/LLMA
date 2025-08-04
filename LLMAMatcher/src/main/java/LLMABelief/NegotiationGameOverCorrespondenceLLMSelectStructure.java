@@ -27,24 +27,37 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
                         Main.commonStringsDict.get("modelName").toString(),
                 (double) Main.commonStringsDict.get("threshold"));
         Alignment alignment = game.play();
-        FileWriter fw = Helper.createFileWriter("result/" + Main.commonStringsDict.get("dataSet").toString() + "/" +
-                        Main.commonStringsDict.get("modelName").toString() + "/alignment-llm_selected-structural-" +
-                        Main.commonStringsDict.get("threshold") + ".txt",
-                true);
+        String path = "result/" + Main.commonStringsDict.get("dataSet").toString() + "/" +
+                Main.commonStringsDict.get("modelName").toString() + "/alignment-llm_selected-structural-" +
+                Main.commonStringsDict.get("threshold");
+        FileWriter fw = Helper.createFileWriter(path + ".txt", true);
+        try {
         for (Correspondence c : alignment) {
-            try {
-                fw.write(c.getEntityOne() + " " + c.getEntityTwo() + " " + c.getConfidence() + "\n");
-                fw.flush();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            fw.write(c.getEntityOne() + ", " + c.getEntityTwo() + ", " + c.getConfidence() + "\n");
+            fw.flush();
         }
+            fw.flush();
+            fw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Main.compareWithReference(alignment, path + "-statistics.txt");
     }
 
     @Override
     protected void retrieveCorrespondences() {
         retrieveLLMShortListedCorrespondences();
         selectCorrespondencesBasedOnStrucutralInfo();
+        source.privateCorrespondences = source.loadShortListedCorrespondencesFromFile(
+                Main.commonStringsDict.get("dataSetResultBase").toString() +
+                        Main.commonStringsDict.get("modelName").toString() + "/" + source.name +
+                        "/llm_selected-structural/llm_selected-structural-" +
+                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
+        target.privateCorrespondences = target.loadShortListedCorrespondencesFromFile(
+                Main.commonStringsDict.get("dataSetResultBase").toString() +
+                        Main.commonStringsDict.get("modelName").toString() + "/" + target.name +
+                        "/llm_selected-structural/llm_selected-structural-" +
+                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
     }
 
     private void retrieveLLMShortListedCorrespondences() {
