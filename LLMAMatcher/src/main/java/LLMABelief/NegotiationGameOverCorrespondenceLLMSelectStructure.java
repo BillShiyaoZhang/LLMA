@@ -20,7 +20,7 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
 
     public static void main(String[] args) {
         Main.initStringDictionaries();
-        Main.commonStringsDict.put("threshold", 0.7);
+        Main.commonStringsDict.put("threshold", 0.9);
         var game = new NegotiationGameOverCorrespondenceLLMSelectStructure(
                 Main.sourceStringsDict, Main.targetStringsDict, Main.getAPICaller(),
                 "result/" + Main.commonStringsDict.get("dataSet").toString() + "/" +
@@ -47,16 +47,16 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
     protected void retrieveCorrespondences() {
         retrieveLLMShortListedCorrespondences();
         selectCorrespondencesBasedOnStrucutralInfo();
-//        source.privateCorrespondences = source.loadShortListedCorrespondencesFromFile(
-//                Main.commonStringsDict.get("dataSetResultBase").toString() +
-//                        Main.commonStringsDict.get("modelName").toString() + "/" + source.name +
-//                        "/llm_selected-structural/llm_selected-structural-" +
-//                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
-//        target.privateCorrespondences = target.loadShortListedCorrespondencesFromFile(
-//                Main.commonStringsDict.get("dataSetResultBase").toString() +
-//                        Main.commonStringsDict.get("modelName").toString() + "/" + target.name +
-//                        "/llm_selected-structural/llm_selected-structural-" +
-//                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
+        source.privateCorrespondences = source.loadShortListedCorrespondencesFromFile(
+                Main.commonStringsDict.get("dataSetResultBase").toString() +
+                        Main.commonStringsDict.get("modelName").toString() + "/" + source.name +
+                        "/llm_selected-structural/llm_selected-structural-" +
+                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
+        target.privateCorrespondences = target.loadShortListedCorrespondencesFromFile(
+                Main.commonStringsDict.get("dataSetResultBase").toString() +
+                        Main.commonStringsDict.get("modelName").toString() + "/" + target.name +
+                        "/llm_selected-structural/llm_selected-structural-" +
+                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
     }
 
     private void retrieveLLMShortListedCorrespondences() {
