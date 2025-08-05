@@ -24,18 +24,96 @@ public class NegotiationGameOverEntityEntropy extends NegotiationGameOverCorresp
     @Override
     protected void retrieveCorrespondences(){
         // load private correspondences from potential_pairs for each agent
-        Dictionary<String, Set<Belief<String>>> potentialEntityPairsS = Agent.loadPotentialEntityPairsFromFile(
+        source.privateCorrespondences = toAlignment(Agent.loadPotentialEntityPairsFromFile(
                 Main.commonStringsDict.get("potentiCorrespondencesPath").toString() +
-                        Main.commonStringsDict.get("threshold")+ "-" + source.name + ".txt");
-        source.privateCorrespondences = toAlignment(potentialEntityPairsS, true);
-        Dictionary<String, Set<Belief<String>>> potentialEntityPairsT = Agent.loadPotentialEntityPairsFromFile(
-                Main.commonStringsDict.get("potentiCorrespondencesPath").toString() +
-                        Main.commonStringsDict.get("threshold")+ "-" + source.name + ".txt");
-        target.privateCorrespondences = toAlignment(potentialEntityPairsT, false);
+                        Main.commonStringsDict.get("threshold")+ "-" + source.name + ".txt"), true);
 
-        calculateStructuralEntropy(source.entityBeliefs, entropyType);
-        calculateStructuralEntropy(target.entityBeliefs, entropyType);
+        target.privateCorrespondences = toAlignment(Agent.loadPotentialEntityPairsFromFile(
+                Main.commonStringsDict.get("potentiCorrespondencesPath").toString() +
+                        Main.commonStringsDict.get("threshold")+ "-" + target.name + ".txt"), false);
+
+        calculateEntityEntropy(source.entityBeliefs, entropyType);
+        calculateEntityEntropy(target.entityBeliefs, entropyType);
+        FileWriter fwES = Helper.createFileWriter("result/" + Main.commonStringsDict.get("dataSet").toString() +
+                "/entropy/entity_entropy-" + source.name + "-" + this.entropyType.toString() +
+                Main.commonStringsDict.get("threshold").toString() + ".txt");
+        try {
+            for (Belief<OntClass> belief : source.entityBeliefs) {
+                fwES.write(belief.obj + "," + belief.value + "\n");
+                fwES.flush();
+            }
+            fwES.flush();
+            fwES.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        FileWriter fwET = Helper.createFileWriter("result/" + Main.commonStringsDict.get("dataSet").toString() +
+                "/entropy/entity_entropy-" + target.name + "-" + this.entropyType.toString() +
+                Main.commonStringsDict.get("threshold").toString() + ".txt");
+        try {
+            for (Belief<OntClass> belief : target.entityBeliefs) {
+                fwET.write(belief.obj + "," + belief.value + "\n");
+                fwET.flush();
+            }
+            fwET.flush();
+            fwET.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        calculatePrivateCorrespondencesEntropy(source, true);
+        calculatePrivateCorrespondencesEntropy(target, false);
+
+        FileWriter fwS = Helper.createFileWriter("result/" + Main.commonStringsDict.get("dataSet").toString() +
+                "/entropy/correspondence_confidence-" + source.name + "-" + this.entropyType.toString() +
+                Main.commonStringsDict.get("threshold").toString() + ".txt");
+        try {
+            for (Correspondence c : source.privateCorrespondences) {
+                fwS.write(c.getEntityOne() + ", " + c.getEntityTwo() + ", " + c.getConfidence() + "\n");
+                fwS.flush();
+            }
+            fwS.flush();
+            fwS.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        FileWriter fwT = Helper.createFileWriter("result/" + Main.commonStringsDict.get("dataSet").toString() +
+                "/entropy/correspondence_confidence-" + target.name + "-" + this.entropyType.toString() +
+                Main.commonStringsDict.get("threshold").toString() + ".txt");
+        try {
+            for (Correspondence c : target.privateCorrespondences) {
+                fwT.write(c.getEntityOne() + ", " + c.getEntityTwo() + ", " + c.getConfidence() + "\n");
+                fwT.flush();
+            }
+            fwT.flush();
+            fwT.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
+    private void calculatePrivateCorrespondencesEntropy(Agent agent, boolean isSource) {
+        for (Correspondence c : agent.privateCorrespondences) {
+            String entityURI;
+            if (isSource) {
+                entityURI= c.getEntityOne();
+            } else {
+                entityURI= c.getEntityTwo();
+            }
+            OntClass entity = agent.ontology.getOntClass(entityURI);
+            if (entity != null) {
+                for (Belief<OntClass> belief : agent.entityBeliefs) {
+                    if (belief.obj.equals(entity)) {
+                        c.setConfidence(c.getConfidence() * belief.value);
+                        break;
+                    }
+                }
+            } else {
+                System.out.println("Entity not found: " + entityURI);
+            }
+        }
+    }
+
 
     private Alignment toAlignment(Dictionary<String, Set<Belief<String>>> potentialEntityPairs, boolean isSource) {
         Alignment alignment = new Alignment();
@@ -64,9 +142,9 @@ public class NegotiationGameOverEntityEntropy extends NegotiationGameOverCorresp
                 Main.targetStringsDict, null);
         Alignment alignment = game.play();
 
-        String path = "result/" + Main.commonStringsDict.get("dataSet").toString() + "/entropy/" +
+        String path = "result/" + Main.commonStringsDict.get("dataSet").toString() + "/entropy/alignment-" +
                 game.entropyType.toString() + Main.commonStringsDict.get("threshold").toString();
-        FileWriter fw = Helper.createFileWriter(path + ".txt", true);
+        FileWriter fw = Helper.createFileWriter(path + ".txt");
         try {
             for (Correspondence c : alignment) {
                 fw.write(c.getEntityOne() + ", " + c.getEntityTwo() + ", " + c.getConfidence() + "\n");
@@ -80,7 +158,7 @@ public class NegotiationGameOverEntityEntropy extends NegotiationGameOverCorresp
         Main.compareWithReference(alignment, path + "-statistics.txt");
     }
 
-    private void calculateStructuralEntropy(List<Belief<OntClass>> entityBeliefs, EntropyType entropyType) {
+    private void calculateEntityEntropy(List<Belief<OntClass>> entityBeliefs, EntropyType entropyType) {
         for (Belief<OntClass> belief : entityBeliefs) {
             OntClass entity = belief.obj;
             int superClassCount = entity.listSuperClasses().toList().size();
@@ -100,25 +178,26 @@ public class NegotiationGameOverEntityEntropy extends NegotiationGameOverCorresp
             int totalUniqueEdges = uniquePredicates.size();
             long totalEdgeCount = entity.getOntModel().size();
 
-            double entropy = 0;
+            double probability = 0;
             switch(entropyType) {
                 case ORIGINAL_ENTROPY:
-                    entropy = originalEntropy(superClassCount, subClassCount, equivalentClassCount,
+                    probability = originalEntropy(superClassCount, subClassCount, equivalentClassCount,
                             disjointClassCount, relatedSynonymCount, propertiesCount, totalEdgeCount);
                     break;
                 case LANGUAGE_ENTROPY:
-                    entropy = languageEntropy(superClassCount, subClassCount, equivalentClassCount,
+                    probability = languageEntropy(superClassCount, subClassCount, equivalentClassCount,
                             disjointClassCount, relatedSynonymCount, propertiesCount);
                     break;
                 case DOMAIN_ENTROPY:
-                    entropy = domainEntropy(superClassCount, subClassCount, equivalentClassCount,
+                    probability = domainEntropy(superClassCount, subClassCount, equivalentClassCount,
                             disjointClassCount, relatedSynonymCount, propertiesCount);
                     break;
                 case IMPROVED_ENTROPY:
-                    entropy = improvedEntropy(superClassCount, subClassCount, equivalentClassCount,
+                    probability = improvedEntropy(superClassCount, subClassCount, equivalentClassCount,
                             disjointClassCount, relatedSynonymCount, propertiesCount);
                     break;
             }
+            double entropy = Math.log(probability + 1) / Math.log(2); // log base 2
             belief.value = entropy;
         }
     }
