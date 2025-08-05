@@ -1,0 +1,4 @@
+Alignment in reference: 794
+Alignment not in reference: 119
+Reference in alignment: 794
+Reference not in alignment: 722
