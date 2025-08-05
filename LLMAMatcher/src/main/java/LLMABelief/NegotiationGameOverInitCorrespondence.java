@@ -14,8 +14,8 @@ import java.util.Random;
 public class NegotiationGameOverInitCorrespondence extends NegotiationGameOverCorrespondence{
     private String initCorrespondencesPath;
 
-    public NegotiationGameOverInitCorrespondence(Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, double threshold, String initCorrespondencesPath) {
-        super(sourceStringDict, targetStringDict, apiCaller, threshold);
+    public NegotiationGameOverInitCorrespondence(Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, String initCorrespondencesPath) {
+        super(sourceStringDict, targetStringDict, apiCaller);
         this.initCorrespondencesPath = initCorrespondencesPath;
     }
 
@@ -43,7 +43,7 @@ public class NegotiationGameOverInitCorrespondence extends NegotiationGameOverCo
                 + Main.commonStringsDict.get("threshold").toString() + "-statistics.csv");
         for (int i = 0; i < iterations; i++) {
             NegotiationGameOverInitCorrespondence game = new NegotiationGameOverInitCorrespondence(
-                    Main.sourceStringsDict, Main.targetStringsDict, null, (double) Main.commonStringsDict.get("threshold"),
+                    Main.sourceStringsDict, Main.targetStringsDict, null,
                     Main.commonStringsDict.get("initCorrespondencesPath").toString()
                             + Main.commonStringsDict.get("threshold").toString() + ".txt");
             Alignment alignment = game.play();

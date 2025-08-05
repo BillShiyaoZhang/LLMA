@@ -2,7 +2,6 @@ package LLMABelief;
 
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
-import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
 import org.apache.jena.ontology.OntClass;
 
 import java.io.*;
@@ -10,11 +9,12 @@ import java.util.Dictionary;
 
 public class NegotiationGameOverCorrespondenceLLMSelectStructure extends NegotiationGameOverCorrespondence {
     private String llmShortListedCorrespondencesPathBase;
+    private LLMApiCaller llm;
 
     public NegotiationGameOverCorrespondenceLLMSelectStructure(
-            Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, String llmShortListedCorrespondencesPath,
-            double threshold) {
-        super(sourceStringDict, targetStringDict, apiCaller, threshold);
+            Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, String llmShortListedCorrespondencesPath) {
+        super(sourceStringDict, targetStringDict, apiCaller);
+        this.llm = apiCaller;
         this.llmShortListedCorrespondencesPathBase = llmShortListedCorrespondencesPath;
     }
 
@@ -24,8 +24,7 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
         var game = new NegotiationGameOverCorrespondenceLLMSelectStructure(
                 Main.sourceStringsDict, Main.targetStringsDict, Main.getAPICaller(),
                 "result/" + Main.commonStringsDict.get("dataSet").toString() + "/" +
-                        Main.commonStringsDict.get("modelName").toString(),
-                (double) Main.commonStringsDict.get("threshold"));
+                        Main.commonStringsDict.get("modelName").toString());
         Alignment alignment = game.play();
         String path = "result/" + Main.commonStringsDict.get("dataSet").toString() + "/" +
                 Main.commonStringsDict.get("modelName").toString() + "/alignment-llm_selected-structural-" +
@@ -48,16 +47,16 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
     protected void retrieveCorrespondences() {
         retrieveLLMShortListedCorrespondences();
         selectCorrespondencesBasedOnStrucutralInfo();
-        source.privateCorrespondences = source.loadShortListedCorrespondencesFromFile(
-                Main.commonStringsDict.get("dataSetResultBase").toString() +
-                        Main.commonStringsDict.get("modelName").toString() + "/" + source.name +
-                        "/llm_selected-structural/llm_selected-structural-" +
-                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
-        target.privateCorrespondences = target.loadShortListedCorrespondencesFromFile(
-                Main.commonStringsDict.get("dataSetResultBase").toString() +
-                        Main.commonStringsDict.get("modelName").toString() + "/" + target.name +
-                        "/llm_selected-structural/llm_selected-structural-" +
-                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
+//        source.privateCorrespondences = source.loadShortListedCorrespondencesFromFile(
+//                Main.commonStringsDict.get("dataSetResultBase").toString() +
+//                        Main.commonStringsDict.get("modelName").toString() + "/" + source.name +
+//                        "/llm_selected-structural/llm_selected-structural-" +
+//                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
+//        target.privateCorrespondences = target.loadShortListedCorrespondencesFromFile(
+//                Main.commonStringsDict.get("dataSetResultBase").toString() +
+//                        Main.commonStringsDict.get("modelName").toString() + "/" + target.name +
+//                        "/llm_selected-structural/llm_selected-structural-" +
+//                        Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
     }
 
     private void retrieveLLMShortListedCorrespondences() {
@@ -144,8 +143,8 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
                     "<Possible Entity URI>\n" +
                     "...\n\n" +
                     "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
-            String response = source.llm.prompt(message);
-            String formatedResponse = source.llm.getUrisOnlyFromStringForThinkingModel(response);
+            String response = llm.prompt(message);
+            String formatedResponse = llm.getUrisOnlyFromStringForThinkingModel(response);
             try {
                 System.out.println(i-- + entityUri);
                 fw.write(entityUri + "\n" + formatedResponse + "\n\n");
@@ -165,21 +164,21 @@ public class NegotiationGameOverCorrespondenceLLMSelectStructure extends Negotia
      * @return A verbose String that describes the entity and its neighborhood
      */
     private String getNeighborhoodVerbose(String uri, Agent agent) {
-        StringBuilder verbose = new StringBuilder(agent.entityVerbos.get(uri));
+        StringBuilder verbose = new StringBuilder(agent.getVerbose().get(uri));
         OntClass ontClass = agent.ontology.getOntClass(uri);
         for (OntClass superClass : ontClass.listSuperClasses().toList()) {
             if (!superClass.isURIResource()) {
                 continue; // Skip blank nodes
             }
             verbose.append("  The super class of this entity is: `\n");
-            verbose.append(agent.entityVerbos.get(superClass.getURI()));
+            verbose.append(agent.getVerbose().get(superClass.getURI()));
         }
         for (OntClass subClass : ontClass.listSubClasses().toList()) {
             if (!subClass.isURIResource()) {
                 continue; // Skip blank nodes
             }
             verbose.append("  The sub classes of this entity are:\n");
-            verbose.append(agent.entityVerbos.get(subClass.getURI()));
+            verbose.append(agent.getVerbose().get(subClass.getURI()));
         }
         return verbose.toString();
     }

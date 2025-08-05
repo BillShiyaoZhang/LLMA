@@ -15,9 +15,9 @@ public class NegotiationGameOverCorrespondence {
     protected Agent source;
     protected Agent target;
 
-    public NegotiationGameOverCorrespondence(Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, double threshold) {
-        this.source = new Agent(sourceStringDict, apiCaller, threshold);
-        this.target = new Agent(targetStringDict, apiCaller, threshold);
+    public NegotiationGameOverCorrespondence(Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller) {
+        this.source = new Agent(sourceStringDict, apiCaller);
+        this.target = new Agent(targetStringDict, apiCaller);
     }
 
     public Alignment play() {
@@ -45,7 +45,7 @@ public class NegotiationGameOverCorrespondence {
     private Alignment correspondencesNegotiation() {
         Alignment alignment = new Alignment();
 
-        for (var c : source.initialCorrespondences) {
+        for (var c : source.getInitialCorrespondences()) {
             boolean sourceMatched = false;
             boolean targetMatched = false;
             double sourceBelief = 0;

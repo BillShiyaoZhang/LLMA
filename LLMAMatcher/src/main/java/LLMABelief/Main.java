@@ -120,11 +120,10 @@ public class Main {
         try {
             LLMApiCaller apiCaller = getAPICaller();
             NegotiationGameOverCorrespondence game = (NegotiationGameOverCorrespondence) type
-                    .getConstructor(Dictionary.class, Dictionary.class, LLMApiCaller.class, String.class, double.class)
+                    .getConstructor(Dictionary.class, Dictionary.class, LLMApiCaller.class, String.class)
                     .newInstance(sourceStringDict, targetStringDict, apiCaller,
                             commonStringsDict.get("initCorrespondencesPath").toString()
-                                    + commonStringsDict.get("threshold").toString() + ".txt",
-                            commonStringsDict.get("threshold"));
+                                    + commonStringsDict.get("threshold").toString() + ".txt");
             Alignment alignment = game.play();
 
             String path = "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/";
@@ -153,7 +152,8 @@ public class Main {
     public static void compareWithReference(Alignment alignment, String statisticsPath) {
         try {
             Alignment reference = new Alignment(new File(
-                    commonStringsDict.get("DataSetRoot").toString() + commonStringsDict.get("dataSet").toString() + "/" +  commonStringsDict.get("reference").toString()));
+                    commonStringsDict.get("DataSetRoot").toString() + commonStringsDict.get("dataSet").toString() +
+                            "/" +  commonStringsDict.get("reference").toString()));
             System.out.println("=========================================");
             System.out.println("Reference size: " + reference.size());
             System.out.println("Alignment size: " + alignment.size());
@@ -201,8 +201,8 @@ public class Main {
         ontology.read(ontologyPath);
 
         ArrayList<String> verbos = new ArrayList<>();
-        for (OntClass entity: Agent.extractEntities(ontology, entityURIPrefix)) {
-            String verbo = Agent.verbalize(entity, propertyUri);
+        for (OntClass entity: Helper.extractEntities(ontology, entityURIPrefix)) {
+            String verbo = Helper.verbalize(entity, propertyUri);
 
             verbos.add(verbo);
         }

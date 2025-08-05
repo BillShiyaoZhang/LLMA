@@ -1,158 +1,68 @@
 package LLMABelief;
 
 import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Alignment;
-import de.uni_mannheim.informatik.dws.melt.yet_another_alignment_api.Correspondence;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
-import org.apache.jena.ontology.OntProperty;
 import org.apache.jena.rdf.model.*;
-import org.apache.jena.vocabulary.RDFS;
 
 import java.io.*;
 import java.util.*;
 
 public class Agent {
     public String name;
-    public LLMApiCaller llm;
+    private LLMApiCaller llm;
     public OntModel ontology;
     private Dictionary stringDict;
-    public double threshold;
 
-    public List<OntClass> entities;
-    public Dictionary<String, String> entityVerbos;
+    private List<OntClass> entities;
+    private Dictionary<String, String> entityVerbos;
 
-    public Alignment initialCorrespondences;
+    private Alignment initialCorrespondences;
     public Alignment privateCorrespondences;
 
-    public Agent(Dictionary stringDict, LLMApiCaller apiCaller, double threshold) {
+    public List<Belief<OntClass>> entityBeliefs;
+
+    public Agent(Dictionary stringDict, LLMApiCaller apiCaller) {
         this.stringDict = stringDict;
         this.name = stringDict.get("collectionName").toString();
         this.llm = apiCaller;
-        this.threshold = threshold;
 
         OntModel s = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         s.read(stringDict.get("ontologyPath").toString());
         this.ontology = s;
 
-        entities = extractEntities(ontology, stringDict.get("entityURIPrefix").toString());
+        entities = Helper.extractEntities(ontology, stringDict.get("entityURIPrefix").toString());
         entityVerbos = Main.loadEntityVerbos(stringDict.get("verbosePath").toString());
 
         initialCorrespondences = Helper.loadInitCorrespondences(
-                Main.commonStringsDict.get("initCorrespondencesPath").toString() + threshold + ".txt");
+                Main.commonStringsDict.get("initCorrespondencesPath").toString() +
+                        Main.commonStringsDict.get("threshold")+ ".txt");
 
         privateCorrespondences = new Alignment();
+
+        entityBeliefs = new ArrayList<>();
+        for (OntClass entity : entities) {
+            Belief<OntClass> belief = new Belief<>(entity, 0.1);
+            entityBeliefs.add(belief);
+        }
         // NOTE: the below line is used to load the selected correspondences from the LLM.
         // Only use it if you have already run the LLM to select correspondences.
 //        privateCorrespondences = loadSelectedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
 
-    public static List<OntClass> extractEntities(OntModel ontology, String entityURIPrefix) {
-        List<OntClass> entities = new ArrayList<>();
-        for (OntClass ontClass : ontology.listClasses().toList()) {
-            if (ontClass.isURIResource()
-                    && !ontClass.getURI().isEmpty()
-                    && ontClass.getURI().startsWith(entityURIPrefix)) {
-                entities.add(ontClass);
-            }
-        }
-
-        System.out.println("Agent " + "finds " + entities.size() + " entities.");
-        return entities;
+    public Dictionary<String, String> getVerbose() {
+        return this.entityVerbos;
     }
 
-    //    propertyURI = "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"
-    public static String verbalize(OntClass ontClass, String propertyUri) {
-        if (ontClass.asNode().isBlank()) {
-            return "";
-        }
-
-        String output = "";
-        output += "URI: " + ontClass.getURI() + "\n";
-        output += "  - Label: " + ontClass.getLabel(null) + "\n";
-
-        if (ontClass.getComment(null) != null) {
-            output += "  - Comment: " + ontClass.getComment(null) + "\n";
-        }
-        output += "  - Local name: " + ontClass.getLocalName() + "\n";
-
-        if (ontClass.hasSuperClass()) {
-            output += "  - Super classes: \n";
-        }
-        for (OntClass superClass : ontClass.listSuperClasses().toList()) {
-            if (!superClass.isURIResource()) {
-                continue; // Skip blank nodes
-            }
-            output += "    - " + superClass.getURI() + "\n";
-            output += "      - Label: " + superClass.getLabel(null) + "\n";
-            if (superClass.getComment(null) != null) {
-                output += "      - Comment: " + superClass.getComment(null) + "\n";
-            }
-            output += "      - Local name: " + superClass.getLocalName() + "\n";
-        }
-
-        if (ontClass.hasSubClass()) {
-            output += "  - Sub classes: \n";
-        }
-        for (OntClass subClass : ontClass.listSubClasses().toList()) {
-            output += "    - " + subClass.getURI() + "\n";
-            output += "      - Label: " + subClass.getLabel(null) + "\n";
-            output += "      - Comment: " + subClass.getComment(null) + "\n";
-            output += "      - Local name: " + subClass.getLocalName() + "\n";
-        }
-
-        if (!ontClass.listEquivalentClasses().toList().isEmpty()) {
-            output += "  - Equivalent classes: \n";
-        }
-        for (OntClass equivalentClass : ontClass.listEquivalentClasses().toList()) {
-            output += "    - " + equivalentClass.getURI() + "\n";
-            output += "      - Label: " + equivalentClass.getLabel(null) + "\n";
-            output += "      - Comment: " + equivalentClass.getComment(null) + "\n";
-            output += "      - Local name: " + equivalentClass.getLocalName() + "\n";
-        }
-
-        if (!ontClass.listDisjointWith().toList().isEmpty()) {
-            output += "  - Disjoint classes: \n";
-        }
-        for (OntClass disjointClass : ontClass.listDisjointWith().toList()) {
-            output += "    - " + disjointClass.getURI() + "\n";
-            output += "      - Label: " + disjointClass.getLabel(null) + "\n";
-            output += "      - Comment: " + disjointClass.getComment(null) + "\n";
-            output += "      - Local name: " + disjointClass.getLocalName() + "\n";
-        }
-
-        OntModel model = ontClass.getOntModel();
-        OntProperty hasRelatedSynonym = model.getOntProperty(propertyUri);
-        Resource cls = model.getResource(ontClass.getURI());
-        if (!cls.listProperties().toList().isEmpty()) {
-            output += "  - Related Synonyms: \n";
-            for (StmtIterator it = cls.listProperties(hasRelatedSynonym); it.hasNext(); ) {
-                Statement stmt = it.nextStatement();
-                // 获取rdf:resource的值
-                Resource relatedSynonymResource = stmt.getObject().asResource();
-                output += "    - URI: " + relatedSynonymResource.getURI() + "\n";
-                // 获取rdfs:label属性
-                Property labelProperty = model.getProperty(RDFS.label.getURI());
-                output += "      - Label: " + model.getResource(relatedSynonymResource.getURI()).getProperty(labelProperty).getString() + "\n";
-            }
-        }
-
-        if (!ontClass.listDeclaredProperties().toList().isEmpty()) {
-            output += "  - Properties: " + "\n";
-            for (OntProperty property : ontClass.listDeclaredProperties().toList()) {
-                output += "    - URI: " + property.getURI() + "\n";
-                output += "      - Local name: " + property.getLocalName() + "\n";
-                output += "      - Property value: " + property.getPropertyValue(null) + "\n";
-            }
-        }
-
-        return output;
+    public Alignment getInitialCorrespondences() {
+        return initialCorrespondences;
     }
-
 
     public void shortListCorrespondences(Dictionary<String, String> entityVerbosOtherAgent) {
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDictReload = loadPotentialEntityPairsFromFile(
-                Main.commonStringsDict.get("potentiCorrespondencesPath").toString() + threshold + "-" + name + ".txt");
+                Main.commonStringsDict.get("potentiCorrespondencesPath").toString() +
+                        Main.commonStringsDict.get("threshold")+ "-" + name + ".txt");
         askLLMToSelectCorrespondences(potentialEntityPairsDictReload, entityVerbosOtherAgent);
 //        privateCorrespondences = loadShortListedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
@@ -231,7 +141,8 @@ public class Agent {
     private void askLLMToSelectCorrespondences(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict,
                                                Dictionary<String, String> entityVerbosOtherAgent) {
         Set<String> selected = new HashSet<>();
-        String path = stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt";
+        String path = stringDict.get("llmSelectedCorrespondencesPath").toString() +
+                Main.commonStringsDict.get("threshold")+ ".txt";
         if (new File(path).exists()) {
             try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
                 String line;
@@ -249,7 +160,8 @@ public class Agent {
             }
         }
 
-        FileWriter fw = Helper.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + ".txt", true);
+        FileWriter fw = Helper.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() +
+                Main.commonStringsDict.get("threshold")+ ".txt", true);
         for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
             if (selected.contains(selfURI.trim())) {
                 continue; // Skip URIs that have already been selected
@@ -297,7 +209,7 @@ public class Agent {
                                     "Your task is to prioritize the relevance of entities of another ontology from high to low " +
                                     "based on the provided contents.\n\n" +
                                     "<Entity to align>:\n" +
-                                    entityVerbos.get(selfURI).toString() + "\n\n" +
+                                    this.getVerbose().get(selfURI).toString() + "\n\n" +
                                     "<Set of Entities>:\n";
                     for (Belief<String> belief : beliefsSet) {
                         message = message +
@@ -332,25 +244,6 @@ public class Agent {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    private String formatResponse(String response) {
-        String[] parts = response.split("</think>");
-        String removeThinking = parts[0];
-        if (parts.length >= 2) {
-            removeThinking = parts[1];
-        }
-        String prompt = "You are a helpful formatter.  The below is the response from the LLM on the task " +
-                "finding the relevant entities regarding a given entity. Please format it to a list of URIs, " +
-                "one URI per line, and remove any other text.  " +
-                "If there are no URIs, please respond with an empty space only.\n\n" +
-                removeThinking;
-        String[] formattedResponse = llm.prompt(prompt).split("</think>");
-        if (formattedResponse.length < 2) {
-            System.out.println("Warning: LLM response is not formatted correctly. Response: " + response);
-            return formattedResponse[0]; // Return empty string if the response is not formatted correctly
-        }
-        return formattedResponse[1];
     }
 
 }

@@ -6,9 +6,8 @@ public class NegotiationGameOverLLMShortListedCorrespondence extends Negotiation
     private String initCorrespondencesPath;
 
     public NegotiationGameOverLLMShortListedCorrespondence(
-            Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, String initCorrespondencesPath,
-            double threshold) {
-        super(sourceStringDict, targetStringDict, apiCaller, threshold);
+            Dictionary sourceStringDict, Dictionary targetStringDict, LLMApiCaller apiCaller, String initCorrespondencesPath) {
+        super(sourceStringDict, targetStringDict, apiCaller);
         this.initCorrespondencesPath = initCorrespondencesPath;
     }
 
@@ -22,7 +21,7 @@ public class NegotiationGameOverLLMShortListedCorrespondence extends Negotiation
     protected void retrieveCorrespondences() {
         // NOTE: the results of the below codes are stored in the "result/" folder.
         // Only use the below codes if you want to generate the correspondences for each agent.
-        source.shortListCorrespondences(target.entityVerbos);
-        target.shortListCorrespondences(source.entityVerbos);
+        source.shortListCorrespondences(target.getVerbose());
+        target.shortListCorrespondences(source.getVerbose());
     }
 }
