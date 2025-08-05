@@ -46,32 +46,19 @@ public class NegotiationGameOverCorrespondence {
         Alignment alignment = new Alignment();
 
         for (var c : source.getInitialCorrespondences()) {
-            boolean sourceMatched = false;
-            boolean targetMatched = false;
             double sourceBelief = 0;
             double targetBelief = 0;
             for (var s : source.privateCorrespondences.getCorrespondencesSource(c.getEntityOne())) {
                 if (s.getEntityTwo().equals(c.getEntityTwo())) {
-                    sourceMatched = true;
                     sourceBelief = s.getConfidence();
                 }
             }
             for (var t : target.privateCorrespondences.getCorrespondencesTarget(c.getEntityTwo())) {
                 if (t.getEntityOne().equals(c.getEntityOne())) {
-                    targetMatched = true;
                     targetBelief = t.getConfidence();
                 }
             }
-            if (sourceMatched && targetMatched) {
-                // Both agents have the same correspondence, so they can agree on it.
-                alignment.add(c.getEntityOne(), c.getEntityTwo(), (sourceBelief + targetBelief) / 2.0, CorrespondenceRelation.EQUIVALENCE);
-            } else if (sourceMatched) {
-                // Only source agent has the correspondence, so it is added to the joint belief.
-                alignment.add(c.getEntityOne(), c.getEntityTwo(), sourceBelief / 2, CorrespondenceRelation.EQUIVALENCE);
-            } else if (targetMatched) {
-                // Only target agent has the correspondence, so it is added to the joint belief.
-                alignment.add(c.getEntityOne(), c.getEntityTwo(), targetBelief / 2, CorrespondenceRelation.EQUIVALENCE);
-            }
+            alignment.add(c.getEntityOne(), c.getEntityTwo(), (sourceBelief + targetBelief) / 2, CorrespondenceRelation.EQUIVALENCE);
         }
 
         return alignment;

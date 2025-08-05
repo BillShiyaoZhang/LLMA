@@ -43,7 +43,7 @@ public class Agent {
 
         entityBeliefs = new ArrayList<>();
         for (OntClass entity : entities) {
-            Belief<OntClass> belief = new Belief<>(entity, 0.1);
+            Belief<OntClass> belief = new Belief<>(entity, 1);
             entityBeliefs.add(belief);
         }
         // NOTE: the below line is used to load the selected correspondences from the LLM.
@@ -67,7 +67,7 @@ public class Agent {
 //        privateCorrespondences = loadShortListedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
     }
 
-    private Dictionary<String, Set<Belief<String>>> loadPotentialEntityPairsFromFile(String filePath) {
+    public static Dictionary<String, Set<Belief<String>>> loadPotentialEntityPairsFromFile(String filePath) {
         Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict = new Hashtable<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
