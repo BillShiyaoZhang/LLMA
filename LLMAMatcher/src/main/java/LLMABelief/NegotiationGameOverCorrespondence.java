@@ -23,6 +23,7 @@ public class NegotiationGameOverCorrespondence {
     public Alignment play() {
         retrieveCorrespondences();
 //        return null;
+        modifyCorrespondenceConfidencesBeforeNegotiation();
         Alignment correspondencesJointBelief = correspondencesNegotiation();
 
         Alignment alignment = resolveConflicts(correspondencesJointBelief);
@@ -36,6 +37,14 @@ public class NegotiationGameOverCorrespondence {
     protected void retrieveCorrespondences() {
         // Leave this empty, as Terry's approach assumes that both agents know their private correspondences
         // prior to the encounter.
+    }
+
+    /***
+     * Allow child classes to modify the confidences of the correspondences before the negotiation.
+     */
+    protected void modifyCorrespondenceConfidencesBeforeNegotiation() {
+        // Leave this empty, as Terry's approach does not require any modification of the confidences before the negotiation.
+        // However, child classes can override this method to implement their own logic.
     }
 
     /***
@@ -75,6 +84,10 @@ public class NegotiationGameOverCorrespondence {
             }
             if (output.getCorrespondencesTarget(c.getEntityTwo()).iterator().hasNext()) {
                 // If the target of the correspondence is already in the output, skip it.
+                continue;
+            }
+            if (c.getConfidence() < 0.01) {
+                // If the confidence of the correspondence is below the threshold, skip it.
                 continue;
             }
             output.add(c);
