@@ -64,7 +64,7 @@ public class Agent {
                 Main.commonStringsDict.get("potentiCorrespondencesPath").toString() +
                         Main.commonStringsDict.get("threshold")+ "-" + name + ".txt");
         askLLMToSelectCorrespondences(potentialEntityPairsDictReload, entityVerbosOtherAgent);
-//        privateCorrespondences = loadShortListedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + threshold + "-formated.txt");
+//        privateCorrespondences = loadShortListedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() + Main.commonStringsDict.get("threshold").toString() + "-formated.txt");
     }
 
     public static Dictionary<String, Set<Belief<String>>> loadPotentialEntityPairsFromFile(String filePath) {
