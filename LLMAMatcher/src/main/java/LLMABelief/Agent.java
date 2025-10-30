@@ -8,6 +8,7 @@ import org.apache.jena.rdf.model.*;
 
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.*;
 
 public class Agent {
     public String name;
@@ -140,6 +141,7 @@ public class Agent {
 
     private void askLLMToSelectCorrespondences(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict,
                                                Dictionary<String, String> entityVerbosOtherAgent) {
+        // Load already selected URIs to avoid duplication
         Set<String> selected = new HashSet<>();
         String path = stringDict.get("llmSelectedCorrespondencesPath").toString() +
                 Main.commonStringsDict.get("threshold")+ ".txt";
@@ -162,81 +164,116 @@ public class Agent {
 
         FileWriter fw = Helper.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() +
                 Main.commonStringsDict.get("threshold")+ ".txt", true);
-        for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
-            if (selected.contains(selfURI.trim())) {
-                continue; // Skip URIs that have already been selected
-            }
-            Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
-            if (beliefs.isEmpty()) {
-                continue;
-            }
+        ExecutorService executor = Executors.newFixedThreadPool(Math.max(1, Runtime.getRuntime().availableProcessors()));
+        try {
+            for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
+                if (selected.contains(selfURI.trim())) {
+                    continue; // Skip URIs that have already been selected
+                }
+                Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
+                if (beliefs.isEmpty()) {
+                    continue;
+                }
 
-            System.out.println(selfURI);
+                System.out.println(selfURI);
+                try {
+                    fw.write(selfURI + "\n ");
+                    fw.flush();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                Set<Belief<String>>[] beliefsArray = null;
+
+                if (beliefs.size() > 0) {
+                    int size = beliefs.size() / 10;
+                    if (beliefs.size() % 10 != 0) {
+                        size++;
+                    }
+                    beliefsArray = new Set[size];
+                    int index = 0;
+                    for (Belief<String> belief : beliefs) {
+                        if (beliefsArray[index] == null) {
+                            beliefsArray[index] = new HashSet<>();
+                        }
+                        beliefsArray[index].add(belief);
+                        if (beliefsArray[index].size() >= 10) {
+                            index++;
+                        }
+                    }
+                }
+
+                if (beliefsArray != null) {
+                    final String entityVerbose = this.getVerbose().get(selfURI).toString();
+                    List<Callable<String>> tasks = new ArrayList<>();
+                    for (var beliefsSet : beliefsArray) {
+                        if (beliefsSet == null) {
+                            continue; // Skip null sets
+                        }
+                        tasks.add(() -> {
+                            StringBuilder messageBuilder = new StringBuilder()
+                                    .append("You are an assistant helping to select relevant entity pairs for alignment.\n")
+                                    .append("You have been provided with an entity from one ontology, and a set of entity from another ontology.\n")
+                                    .append("Your task is to prioritize the relevance of entities of another ontology from high to low ")
+                                    .append("based on the provided contents.\n\n")
+                                    .append("<Entity to align>:\n")
+                                    .append(entityVerbose)
+                                    .append("\n\n")
+                                    .append("<Set of Entities>:\n");
+                            for (Belief<String> belief : beliefsSet) {
+                                messageBuilder
+                                        .append("<Entity from another agent>\n")
+                                        .append("URI: ")
+                                        .append(belief.obj)
+                                        .append("\n")
+                                        .append(entityVerbosOtherAgent.get(belief.obj).toString())
+                                        .append("\n");
+                            }
+                            messageBuilder
+                                    .append("Please select all possible entities, from the given set, you find likely to be aligned to the given entity.\n")
+                                    .append("Provide your response in the following format:\n")
+                                    .append("<Possible Entity URI>\n")
+                                    .append("<Possible Entity URI>\n")
+                                    .append("<Possible Entity URI>\n")
+                                    .append("...\n\n")
+                                    .append("If you do not find any relevant entity, please respond with 'No relevant entity found'.\n");
+                            String response = llm.prompt(messageBuilder.toString());
+                            return llm.getUrisOnlyFromStringForThinkingModel(response);
+                        });
+                    }
+
+                    if (!tasks.isEmpty()) {
+                        try {
+                            List<Future<String>> futures = executor.invokeAll(tasks);
+                            for (Future<String> future : futures) {
+                                try {
+                                    String formattedResponse = future.get();
+                                    fw.write(formattedResponse + "\n");
+                                    fw.flush();
+                                } catch (ExecutionException e) {
+                                    throw new RuntimeException("Failed to process correspondences for " + selfURI, e);
+                                } catch (InterruptedException e) {
+                                    Thread.currentThread().interrupt();
+                                    throw new RuntimeException("Thread interrupted while retrieving correspondences.", e);
+                                } catch (IOException e) {
+                                    throw new RuntimeException(e);
+                                }
+                            }
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                            throw new RuntimeException("Thread interrupted while selecting correspondences.", e);
+                        }
+                    }
+                }
+            }
+        } finally {
+            executor.shutdown();
             try {
-                fw.write(selfURI + "\n ");
-                fw.flush();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            Set<Belief<String>>[] beliefsArray = null;
-
-            if (beliefs.size() > 0) {
-                int size = beliefs.size() / 10;
-                if (beliefs.size() % 10 != 0) {
-                    size++;
+                if (!executor.awaitTermination(30, TimeUnit.SECONDS)) {
+                    executor.shutdownNow();
                 }
-                beliefsArray = new Set[size];
-                int index = 0;
-                for (Belief<String> belief : beliefs) {
-                    if (beliefsArray[index] == null) {
-                        beliefsArray[index] = new HashSet<>();
-                    }
-                    beliefsArray[index].add(belief);
-                    if (beliefsArray[index].size() >= 10) {
-                        index++;
-                    }
-                }
-            }
-
-            if (beliefsArray != null) {
-                for (var beliefsSet : beliefsArray) {
-                    if (beliefsSet == null) {
-                        continue; // Skip null sets
-                    }
-                    String message =
-                            "You are an assistant helping to select relevant entity pairs for alignment.\n" +
-                                    "You have been provided with an entity from one ontology, and a set of entity from another ontology.\n" +
-                                    "Your task is to prioritize the relevance of entities of another ontology from high to low " +
-                                    "based on the provided contents.\n\n" +
-                                    "<Entity to align>:\n" +
-                                    this.getVerbose().get(selfURI).toString() + "\n\n" +
-                                    "<Set of Entities>:\n";
-                    for (Belief<String> belief : beliefsSet) {
-                        message = message +
-                                "<Entity from another agent>\n" +
-                                "URI: " + belief.obj + "\n" +
-                                entityVerbosOtherAgent.get(belief.obj).toString() + "\n";
-                    }
-                    message = message +
-                            "Please select all possible entities, from the given set, you find likely to be aligned to the given entity.\n" +
-                            "Provide your response in the following format:\n" +
-                            "<Possible Entity URI>\n" +
-                            "<Possible Entity URI>\n" +
-                            "<Possible Entity URI>\n" +
-                            "...\n\n" +
-                            "If you do not find any relevant entity, please respond with 'No relevant entity found'.\n";
-
-                    String response = llm.prompt(message);
-
-                    try {
-                        String formatedResponse = llm.getUrisOnlyFromStringForThinkingModel(response);
-                        fw.write(formatedResponse + "\n");
-                        fw.flush();
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-
+            } catch (InterruptedException e) {
+                executor.shutdownNow();
+                Thread.currentThread().interrupt();
             }
         }
         try {
