@@ -94,7 +94,7 @@ public class Main {
 
         commonStringsDict.put("dataSet", "Anatomy");
         commonStringsDict.put("dataSetResultBase", "result/" + commonStringsDict.get("dataSet").toString()+ "/");
-        commonStringsDict.put("threshold", 0.8);
+        commonStringsDict.put("threshold", 0.5);
         commonStringsDict.put("initCorrespondencesPath", commonStringsDict.get("dataSetResultBase").toString() + "init_correspondences/init_correspondences-");
         commonStringsDict.put("DataSetRoot", "src/main/java/DataSet/");
         commonStringsDict.put("reference", "reference.rdf");
