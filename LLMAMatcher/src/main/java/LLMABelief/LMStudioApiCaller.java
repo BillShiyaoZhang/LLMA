@@ -9,6 +9,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.time.LocalDateTime;
 
 public class LMStudioApiCaller implements LLMApiCaller {
     private static String endpoint = "http://localhost:1234/v1/";
@@ -55,6 +56,8 @@ public class LMStudioApiCaller implements LLMApiCaller {
                 .connectTimeout(Duration.ofSeconds(20))
                 .build();
 
+        System.out.println("正在向 LMStudio API 发送请求..." + LocalDateTime.now());
+
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(endpoint + "chat/completions"))
                 .header("Content-Type", "application/json")
@@ -82,7 +85,7 @@ public class LMStudioApiCaller implements LLMApiCaller {
                     .get("content")
                     .getAsString();
 
-//            System.out.println(content);
+            System.out.println(content);
 
             return content;
 

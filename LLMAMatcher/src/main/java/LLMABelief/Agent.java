@@ -65,8 +65,76 @@ public class Agent {
                 Main.commonStringsDict.get("potentiCorrespondencesPath").toString() +
                         Main.commonStringsDict.get("threshold") + "-" + name + ".txt");
         askLLMToSelectCorrespondences(potentialEntityPairsDictReload, entityVerbosOtherAgent);
-//        privateCorrespondences = loadShortListedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() +
-//                Main.commonStringsDict.get("threshold") + "-formated.txt");
+        
+        formatLlmSelectedCorrespondences();
+
+        privateCorrespondences = loadShortListedCorrespondencesFromFile(stringDict.get("llmSelectedCorrespondencesPath").toString() +
+                Main.commonStringsDict.get("threshold") + "-formated.txt");
+    }
+
+    public void formatLlmSelectedCorrespondences() {
+        String basePath = stringDict.get("llmSelectedCorrespondencesPath").toString() +
+                Main.commonStringsDict.get("threshold");
+        String rawPath = basePath + ".txt";
+        String formattedPath = basePath + "-formated.txt";
+
+        File rawFile = new File(rawPath);
+        if (!rawFile.exists()) {
+            System.out.println("Warning: Raw LLM selection file does not exist: " + rawPath);
+            return;
+        }
+
+        System.out.println("Formatting raw LLM selection file: " + rawPath + " -> " + formattedPath);
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(rawFile));
+             FileWriter writer = Helper.createFileWriter(formattedPath)) {
+            
+            String line;
+            String currentSourceURI = null;
+            List<String> targetURIs = new ArrayList<>();
+
+            while ((line = reader.readLine()) != null) {
+                String trimmed = line.trim();
+                if (trimmed.isEmpty()) {
+                    continue;
+                }
+
+                // If the line is a source URI (starts with http:// followed by the source agent name)
+                if (trimmed.startsWith("http://" + name.trim().toLowerCase())) {
+                    // Before switching to the new source URI, write the previous source and its targets
+                    if (currentSourceURI != null && !targetURIs.isEmpty()) {
+                        writeFormattedLine(writer, currentSourceURI, targetURIs);
+                    }
+                    currentSourceURI = trimmed;
+                    targetURIs.clear();
+                } else {
+                    // It's a target URI or other text. Keep only valid URIs (clean brackets)
+                    if (trimmed.contains("http://") || trimmed.contains("https://")) {
+                        String cleanedUri = trimmed.replace("<", "").replace(">", "").trim();
+                        targetURIs.add(cleanedUri);
+                    }
+                }
+            }
+
+            // Write the last source URI and its targets
+            if (currentSourceURI != null && !targetURIs.isEmpty()) {
+                writeFormattedLine(writer, currentSourceURI, targetURIs);
+            }
+
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void writeFormattedLine(FileWriter writer, String sourceURI, List<String> targetURIs) throws IOException {
+        StringBuilder sb = new StringBuilder();
+        sb.append(sourceURI);
+        for (String targetURI : targetURIs) {
+            sb.append(", ").append(targetURI);
+        }
+        sb.append("\n");
+        writer.write(sb.toString());
     }
 
     public static Dictionary<String, Set<Belief<String>>> loadPotentialEntityPairsFromFile(String filePath) {
@@ -140,6 +208,49 @@ public class Agent {
         return llmSelectedPairs;
     }
 
+    private int getOptimalThreadPoolSize(int totalTasks) {
+        int defaultThreads = 5; // Safe default
+        if (llm instanceof MiniMaxApiCaller) {
+            MiniMaxApiCaller.MiniMaxQuotaUsage usage = ((MiniMaxApiCaller) llm).getQuotaUsage();
+            if (usage != null) {
+                long intervalTotal = usage.getIntervalTotal();
+                long intervalRemains = usage.getIntervalRemains();
+                
+                System.out.println("[MiniMax Quota Info] " + usage.toString());
+                System.out.println("预计需要发送的请求数 (Tasks): " + totalTasks);
+                
+                // Determine tier based on total credits in the 5-hour window
+                // Concurrency = Upper limit of recommended range + 1
+                int recommendedThreads = 5;
+                if (intervalTotal <= 1500) {
+                    recommendedThreads = 6; // Plus (4 + 1 = 5)
+                } else if (intervalTotal <= 3000) {
+                    recommendedThreads = 7; // Max (5 + 1 = 6)
+                } else {
+                    recommendedThreads = 9; // Ultra (7 + 1 = 8)
+                }
+                
+                // If remaining quota is extremely low, reduce concurrency to 1 to avoid abrupt 429s
+                if (intervalRemains > 0 && intervalRemains < 20) {
+                    System.out.println("[WARNING] Quota is low (" + intervalRemains + " credits remaining). Reducing concurrency to 1.");
+                    recommendedThreads = 1;
+                }
+                recommendedThreads = 20;
+
+                // Warning if remaining quota is insufficient for the batch of tasks
+                if (intervalRemains > 0 && totalTasks > intervalRemains) {
+                    System.out.println(String.format(
+                        "[WARNING] 当前 Token Plan 剩余配额为 %d，但预计需要发送 %d 个请求。额度不足，执行中途可能会用尽并暂停等待刷新...",
+                        intervalRemains, totalTasks
+                    ));
+                }
+                
+                return recommendedThreads;
+            }
+        }
+        return defaultThreads;
+    }
+
     private void askLLMToSelectCorrespondences(Dictionary<String, Set<Belief<String>>> potentialEntityPairsDict,
                                                Dictionary<String, String> entityVerbosOtherAgent) {
         // Load already selected URIs to avoid duplication
@@ -163,9 +274,28 @@ public class Agent {
             }
         }
 
+        // Calculate expected number of tasks
+        int totalTasks = 0;
+        for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
+            if (selected.contains(selfURI.trim())) {
+                continue;
+            }
+            Set<Belief<String>> beliefs = potentialEntityPairsDict.get(selfURI);
+            if (beliefs == null || beliefs.isEmpty()) {
+                continue;
+            }
+            int size = beliefs.size() / 10;
+            if (beliefs.size() % 10 != 0) {
+                size++;
+            }
+            totalTasks += size;
+        }
+
         FileWriter fw = Helper.createFileWriter(stringDict.get("llmSelectedCorrespondencesPath").toString() +
                 Main.commonStringsDict.get("threshold")+ ".txt", true);
-        ExecutorService executor = Executors.newFixedThreadPool(Math.max(1, Runtime.getRuntime().availableProcessors()));
+//        ExecutorService executor = Executors.newFixedThreadPool(Math.max(1, Runtime.getRuntime().availableProcessors()));
+        int poolSize = getOptimalThreadPoolSize(totalTasks);
+        ExecutorService executor = Executors.newFixedThreadPool(poolSize);
         try {
             for (String selfURI : ((Hashtable<String, Set<Belief<String>>>) potentialEntityPairsDict).keySet()) {
                 if (selected.contains(selfURI.trim())) {

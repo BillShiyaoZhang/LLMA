@@ -21,6 +21,30 @@ public class NegotiationGameOverEntityEntropy extends NegotiationGameOverCorresp
         entropyType = EntropyType.ORIGINAL_ENTROPY;
     }
 
+    public static void main(String[] args) {
+        Main.initStringDictionaries();
+        Main.commonStringsDict.put("threshold", 0.9);
+
+        NegotiationGameOverEntityEntropy game = new NegotiationGameOverEntityEntropy(Main.sourceStringsDict,
+                Main.targetStringsDict, null);
+        Alignment alignment = game.play();
+
+        String path = "result/" + Main.commonStringsDict.get("dataSet").toString() + "/entropy/alignment-" +
+                game.entropyType.toString() + Main.commonStringsDict.get("threshold").toString();
+        FileWriter fw = Helper.createFileWriter(path + ".txt");
+        try {
+            for (Correspondence c : alignment) {
+                fw.write(c.getEntityOne() + ", " + c.getEntityTwo() + ", " + c.getConfidence() + "\n");
+                fw.flush();
+            }
+            fw.flush();
+            fw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Main.compareWithReference(alignment, path + "-statistics.txt");
+    }
+
     @Override
     protected void retrieveCorrespondences(){
         // load private correspondences from potential_pairs for each agent
@@ -132,30 +156,6 @@ public class NegotiationGameOverEntityEntropy extends NegotiationGameOverCorresp
             }
         }
         return alignment;
-    }
-
-    public static void main(String[] args) {
-        Main.initStringDictionaries();
-        Main.commonStringsDict.put("threshold", 0.9);
-
-        NegotiationGameOverEntityEntropy game = new NegotiationGameOverEntityEntropy(Main.sourceStringsDict,
-                Main.targetStringsDict, null);
-        Alignment alignment = game.play();
-
-        String path = "result/" + Main.commonStringsDict.get("dataSet").toString() + "/entropy/alignment-" +
-                game.entropyType.toString() + Main.commonStringsDict.get("threshold").toString();
-        FileWriter fw = Helper.createFileWriter(path + ".txt");
-        try {
-            for (Correspondence c : alignment) {
-                fw.write(c.getEntityOne() + ", " + c.getEntityTwo() + ", " + c.getConfidence() + "\n");
-                fw.flush();
-            }
-            fw.flush();
-            fw.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Main.compareWithReference(alignment, path + "-statistics.txt");
     }
 
     private void calculateEntityEntropy(List<Belief<OntClass>> entityBeliefs, EntropyType entropyType) {

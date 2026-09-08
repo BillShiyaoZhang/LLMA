@@ -21,20 +21,18 @@ public class Main {
     public static Dictionary commonStringsDict = new Hashtable();
 
     public static void main(String[] args) {
-        initStringDictionaries();
+        double[] thresholds = {0.5};
+        for (double t : thresholds) {
+            System.out.println("=========================================");
+            System.out.println("开始测试 MiniMax-M3，阈值: " + t);
+            System.out.println("=========================================");
+            
+            initStringDictionaries(LLMApiCallers.MiniMax, "MiniMax-M3", t);
 
-        // prepare verboes and embeddings for entities
-//        computeVerboes();
-//        computeEmbeddings();
-//        cosineDistance(humanStringsDict.get("embeddingPath").toString(),
-//                mouseStringsDict.get("embeddingPath").toString(),
-//                commonStringsDict.get("initCorrespondencesPath").toString(), 0.5);
-
-//        computePotentialPairs();
-
-        // run the game.
-        // NOTE: The below game is dependent on the embeddings loaded to the db above.
-        play(NegotiationGameOverLLMShortListedCorrespondence.class, commonStringsDict, sourceStringsDict, targetStringsDict);
+            // run the game.
+            // NOTE: The below game is dependent on the embeddings loaded to the db above.
+            play(NegotiationGameOverLLMShortListedCorrespondence.class, commonStringsDict, sourceStringsDict, targetStringsDict);
+        }
     }
 
     private static void computePotentialPairs() {
@@ -87,14 +85,16 @@ public class Main {
     }
 
     public static void initStringDictionaries() {
-//        commonStringsDict.put("llmApiCaller", LLMApiCallers.LMStudio);
-        commonStringsDict.put("llmApiCaller", LLMApiCallers.MiniMax);
-//        commonStringsDict.put("modelName", "qwen/qwen3-30b-a3b");
-        commonStringsDict.put("modelName", "MiniMax-M2");
+        initStringDictionaries(LLMApiCallers.LMStudio, "qwen/qwen3-8b", 0.5);
+    }
+
+    public static void initStringDictionaries(LLMApiCallers caller, String modelName, double threshold) {
+        commonStringsDict.put("llmApiCaller", caller);
+        commonStringsDict.put("modelName", modelName);
 
         commonStringsDict.put("dataSet", "Anatomy");
         commonStringsDict.put("dataSetResultBase", "result/" + commonStringsDict.get("dataSet").toString()+ "/");
-        commonStringsDict.put("threshold", 0.5);
+        commonStringsDict.put("threshold", threshold);
         commonStringsDict.put("initCorrespondencesPath", commonStringsDict.get("dataSetResultBase").toString() + "init_correspondences/init_correspondences-");
         commonStringsDict.put("DataSetRoot", "src/main/java/DataSet/");
         commonStringsDict.put("reference", "reference.rdf");
@@ -373,7 +373,9 @@ public class Main {
                 apiCaller = new LMStudioApiCaller(commonStringsDict.get("modelName").toString());
                 break;
             case MiniMax:
-                apiCaller = new MiniMaxApiCaller(commonStringsDict.get("modelName").toString());
+                String path = "result/" + commonStringsDict.get("dataSet").toString() + "/" + commonStringsDict.get("modelName").toString() + "/";
+                String errorLogPath = path + "error-" + commonStringsDict.get("threshold").toString() + ".txt";
+                apiCaller = new MiniMaxApiCaller(commonStringsDict.get("modelName").toString(), errorLogPath);
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported LLM API caller: " + commonStringsDict.get("llmApiCaller"));
